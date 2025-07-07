@@ -11,7 +11,10 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
+    "@auth/prisma-adapter": "^2.10.0",
+    "@prisma/client": "^6.11.1",
     "@repo/ui": "*",
+    "@repo/db": "*",
     "next": "^15.3.0",
     "next-auth": "^4.24.11",
     "react": "^19.1.0",
@@ -24,6 +27,7 @@
     "@types/react": "19.1.0",
     "@types/react-dom": "19.1.1",
     "eslint": "^9.28.0",
+    "prisma": "^6.11.1",
     "typescript": "5.8.2"
   }
 }

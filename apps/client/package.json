@@ -12,8 +12,11 @@
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.10.0",
+    "@hookform/resolvers": "^5.1.1",
     "@prisma/client": "^6.11.1",
     "@radix-ui/react-dialog": "^1.1.14",
+    "@radix-ui/react-label": "^2.1.7",
+    "@radix-ui/react-slot": "^1.2.3",
     "@repo/db": "*",
     "@repo/ui": "*",
     "@tailwindcss/postcss": "^4.1.11",
@@ -24,7 +27,10 @@
     "next-auth": "^4.24.11",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "tailwind-merge": "^3.3.1"
+    "react-hook-form": "^7.60.0",
+    "tailwind-merge": "^3.3.1",
+    "twilio": "^5.7.2",
+    "zod": "^3.25.76"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",

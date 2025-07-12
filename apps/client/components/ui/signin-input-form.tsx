@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import toast from "react-hot-toast"
 import { Form } from "./form"
 import { Input } from "./input";
@@ -10,6 +10,7 @@ import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { sendSMSOTP } from "@/actions/OTP/sendOtp";
 import { LoaderCircle } from "lucide-react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 interface SigninFormProps {
     setShowOTP: (value: boolean) => void
@@ -22,9 +23,9 @@ const InputFormSchema = z.object({
     })
 })
 
-const SigninInputForm = ({ setShowOTP, setphonePhone }: SigninFormProps) => {
+const SigninInputFormInner = ({ setShowOTP, setphonePhone }: SigninFormProps) => {
     const [phone, setPhone] = useState<string>("");
-    const phonePrefix = process.env.NEXT_PUBLIC_PHONE_NO_PREFIX;
+    const phonePrefix = process.env.NEXT_PUBLIC_PHONE_NO_PREFIX ?? "+91";
 
     const form = useForm<z.infer<typeof InputFormSchema>>({
         resolver: zodResolver(InputFormSchema),
@@ -46,13 +47,15 @@ const SigninInputForm = ({ setShowOTP, setphonePhone }: SigninFormProps) => {
         return sendSmsActionResult;
     }
 
-    if (mutation.isError) {
-        toast.error("Could not sent OTP, Please try again");
-        setShowOTP(false);
-    }
-    if (mutation.data?.success) {
-        setShowOTP(true);
-    }
+    useEffect(() => {
+        if (mutation.isError) {
+            toast.error("Could not sent OTP, Please try again");
+            setShowOTP(false);
+        }
+        if (mutation.data?.success) {
+            setShowOTP(true);
+        }
+    }, [mutation.isError, mutation.data?.success, setShowOTP]);
 
     return (
         <Form {...form}>
@@ -88,5 +91,16 @@ const SigninInputForm = ({ setShowOTP, setphonePhone }: SigninFormProps) => {
     )
 
 }
+
+const SigninInputForm = (props: SigninFormProps) => {
+    // Only create one QueryClient instance per app
+    const [queryClient] = useState(() => new QueryClient());
+
+    return (
+        <QueryClientProvider client={queryClient}>
+            <SigninInputFormInner {...props} />
+        </QueryClientProvider>
+    );
+};
 
 export default SigninInputForm

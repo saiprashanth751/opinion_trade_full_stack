@@ -23,6 +23,7 @@ export const sendSMSOTP = async(phoneNumber: string) => {
                 otpID: phoneNumber,
             }
         })
+
         if(isOtpDataExists){
             const updateOtp = await prisma.OTP.update({
                 where: {
@@ -40,7 +41,7 @@ export const sendSMSOTP = async(phoneNumber: string) => {
                     message: "Failed to update OTP"
                 };
             }else{
-                // Send Message Here...
+                // Send OTP Here...
                 const res = await sendTwilioMsg(OTP, phoneNumber)
                 return res;
             }
@@ -74,15 +75,15 @@ export const sendSMSOTP = async(phoneNumber: string) => {
     }
 }  
 
+// Sending OTP from twilio...
 async function sendTwilioMsg(OTP: string, phoneNumber: string){
     try{
         const message = await twilioClient.messages.create({
-            body: `Your OTP for OpiniX is ${OTP}, do not share it with anyone!`,
+            body: `Your One Time Password for Opinion_Trade Login is ${OTP}, do not share it with anyone!`,
             from: process.env.TWOLIO_NUMBER,
             to: phoneNumber,
         })
-        console.log(message); // just to get rid of linting error
-
+        console.log(message); // avoid linting error. Not required actually.
         return{
             success: true,
             message: "Sent OTP"

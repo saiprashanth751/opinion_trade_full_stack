@@ -2,7 +2,7 @@
 // import { verifySMSOTPAction } from "@/actions/OTP/validateOTP";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { Form, FormControl, FormField, FormItem, FormMessage } from "./form"
 import { z } from "zod";

@@ -9,7 +9,6 @@ import { useForm } from "react-hook-form"
 import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { LoaderCircle } from "lucide-react";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { auth } from "@/lib/firebase"
 import { RecaptchaVerifier, ConfirmationResult, signInWithPhoneNumber } from "firebase/auth"
 
@@ -37,7 +36,7 @@ const SigninInputFormInner = ({ setShowOTP, setphonePhone, setConfirmationResult
         }
     })
 
-    useEffect(() => {
+        useEffect(() => {
         if (typeof window !== "undefined" && !window.recaptchaVerifier) {
             window.recaptchaVerifier = new RecaptchaVerifier(auth, "recaptcha-container", {
                 "size": "invisible",
@@ -52,11 +51,9 @@ const SigninInputFormInner = ({ setShowOTP, setphonePhone, setConfirmationResult
                     });
                 }
             });
-            window.recaptchaVerifier.render().then((widgetId: any) => {
-                window.grecaptcha.reset(widgetId);
-            });
         }
     }, [])
+
 
     const mutation = useMutation({ mutationFn: onSubmit });
 
@@ -97,8 +94,7 @@ const SigninInputFormInner = ({ setShowOTP, setphonePhone, setConfirmationResult
 
     return (
         <Form {...form}>
-            <form
-                onSubmit={form.handleSubmit(onSubmit)}>
+            <form>
                 <p className="text-sm text-gray-500 mb-4">
                     We will send you an OTP to this number.
                 </p>
@@ -117,8 +113,11 @@ const SigninInputFormInner = ({ setShowOTP, setphonePhone, setConfirmationResult
                         }} />
                 </div>
                 <Button
+                    // type="submit"
                     className="w-full mb-4 bg-black text-white"
-                    onClick={() => mutation.mutate()}
+                    onClick={() => {
+                        mutation.mutate();
+                    }}
                     disabled={mutation.isPending || phone.length !== 10}>
                     {!mutation.isPending ? (
                         "Get OTP"
@@ -140,13 +139,9 @@ declare global {
 }
 
 const SigninInputForm = (props: SigninFormProps) => {
-    // Only create one QueryClient instance per app
-    const [queryClient] = useState(() => new QueryClient());
 
     return (
-        <QueryClientProvider client={queryClient}>
             <SigninInputFormInner {...props} />
-        </QueryClientProvider>
     );
 };
 

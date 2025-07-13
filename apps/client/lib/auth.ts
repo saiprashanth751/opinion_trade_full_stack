@@ -30,7 +30,7 @@ declare module "next-auth/jwt" {
     }
 }
 
-export const authOptions = {
+export const authOptions:NextAuthOptions = {
     adapter: PrismaAdapter(prisma),
     providers: [
         CredentialsProvider({
@@ -73,11 +73,11 @@ export const authOptions = {
                     data: {
                         phoneNumber: credentials?.phoneNumber as string,
                         role: "USER",
-                        balance: 0.0,
+                        balance: 0,
                     }
                 })
 
-                await prisma.OTP.update({
+                await prisma.oTP.update({
                     where: {
                         otpID: credentials?.phoneNumber
                     },
@@ -106,7 +106,7 @@ export const authOptions = {
 
             const isUserExists = await prisma.user.findUnique({
                 where: {
-                    phoneNumber: credentials?.phoneNumber as String,
+                    phoneNumber: credentials?.phoneNumber as string,
                 },
             })
 

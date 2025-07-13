@@ -19,7 +19,7 @@ model User {
   balance     Int      @default(0)
   role        UserRole
   createdAt   DateTime @default(now())
-  expiresAt   DateTime
+  // expiresAt   DateTime
   OTP         OTP[]
 }
 
@@ -29,7 +29,7 @@ model OTP {
   otp        String
   createdAt  DateTime @default(now())
   expiresAt  DateTime
-  otpID      String
+  otpID      String   @unique
   isVerified Boolean  @default(false)
   user       User?    @relation(fields: [userId], references: [id])
 }

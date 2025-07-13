@@ -25,15 +25,12 @@ export const verifySMSOTPAction = async (phoneNumber: string, otp: string) => {
             }
         }
 
-        if (otpData.expiresAt <= Date.now()) {
+        if (otpData.expiresAt.getTime() <= Date.now()) {
             await prisma.oTP.delete({
                 where: {
                     otpID: phoneNumber,
                     otp
                 },
-                data: {
-                    otp
-                }
             })
             return {
                 verified: false,

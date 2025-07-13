@@ -21,19 +21,18 @@ model User {
   role        UserRole
   createdAt   DateTime @default(now())
   // expiresAt   DateTime
-  OTP         OTP[]
 }
-
-model OTP {
-  id         String   @id @default(cuid())
-  userId     String?
-  otp        String
-  createdAt  DateTime @default(now())
-  expiresAt  DateTime
-  otpID      String   @unique
-  isVerified Boolean  @default(false)
-  user       User?    @relation(fields: [userId], references: [id])
-}
+// Removed this table because we are using FireBase for OTP Authentication...
+// model OTP {
+//   id         String   @id @default(cuid())
+//   userId     String?
+//   otp        String
+//   createdAt  DateTime @default(now())
+//   expiresAt  DateTime
+//   otpID      String   @unique
+//   isVerified Boolean  @default(false)
+//   user       User?    @relation(fields: [userId], references: [id])
+// }
 
 enum UserRole {
   ADMIN

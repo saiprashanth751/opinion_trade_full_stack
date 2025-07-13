@@ -26,10 +26,9 @@ const InputFormSchema = z.object({
 })
 
 // Note that setConfirmationResult is not passed as the parameter. If error occurs, need to check with that...
-const SigninInputFormInner = ({ setShowOTP, setphonePhone}: SigninFormProps) => {
+const SigninInputFormInner = ({ setShowOTP, setphonePhone, setConfirmationResult }: SigninFormProps) => {
     const [phone, setPhone] = useState<string>("");
     const phonePrefix = process.env.NEXT_PUBLIC_PHONE_NO_PREFIX ?? "+91";
-    const [confirmationResult, setConfirmationResult] = useState<ConfirmationResult | null>(null);
 
     const form = useForm<z.infer<typeof InputFormSchema>>({
         resolver: zodResolver(InputFormSchema),
@@ -43,7 +42,8 @@ const SigninInputFormInner = ({ setShowOTP, setphonePhone}: SigninFormProps) => 
             window.recaptchaVerifier = new RecaptchaVerifier(auth, "recaptcha-container", {
                 "size": "invisible",
                 "callback": (response: any) => {
-
+                    // reCAPTCHA solved, allow signInWithPhoneNumber.
+                    // You can add logic here if you want to do something after reCAPTCHA is solved
                 },
                 "expired-callback": () => {
                     toast.error("reCAPTCHA expired. Please try again,");
@@ -62,25 +62,25 @@ const SigninInputFormInner = ({ setShowOTP, setphonePhone}: SigninFormProps) => 
 
     async function onSubmit() {
         if (phone.length != 10) {
-            toast.error("Incorrect Phone Number!");
+            toast.error("Incorrect Phone Number. Please enter a 10-digit number.");
             setPhone("");
             return;
         }
         const fullPhoneNumber = phonePrefix + phone;
 
-        try{
+        try {
             // Sending OTP using Firebase
             const appVerifier = window.recaptchaVerifier;
             const result = await signInWithPhoneNumber(auth, fullPhoneNumber, appVerifier);
             setConfirmationResult(result);
             setShowOTP(true);
             toast.success("OTP sent successfully");
-            return { success: true};
-        }catch(error: any){
+            return { success: true };
+        } catch (error: any) {
             console.error("Error sending OTP: ", error);
             toast.error(`Failed to sendOTP: ${error.message || "An unknown error occurred."}`);
             setShowOTP(false);
-            return {success: false};
+            return { success: false };
         }
     }
 
@@ -100,7 +100,7 @@ const SigninInputFormInner = ({ setShowOTP, setphonePhone}: SigninFormProps) => 
             <form
                 onSubmit={form.handleSubmit(onSubmit)}>
                 <p className="text-sm text-gray-500 mb-4">
-                    {!confirmationResult ? "We will send you an OTP" : "Please enter otp to proceed"}
+                    We will send you an OTP to this number.
                 </p>
                 <div className="flex mb-4">
                     <Input className="w-16 mr-2" type="text" value="+91" disabled />
@@ -119,7 +119,7 @@ const SigninInputFormInner = ({ setShowOTP, setphonePhone}: SigninFormProps) => 
                 <Button
                     className="w-full mb-4 bg-black text-white"
                     onClick={() => mutation.mutate()}
-                    disabled={mutation.isPending ? true : false}>
+                    disabled={mutation.isPending || phone.length !== 10}>
                     {!mutation.isPending ? (
                         "Get OTP"
                     ) : (<LoaderCircle className="animate-spin" />)}

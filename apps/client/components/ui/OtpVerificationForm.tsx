@@ -1,5 +1,5 @@
 "use-client";
-import { verifySMSOTPAction } from "@/actions/OTP/validateOTP";
+// import { verifySMSOTPAction } from "@/actions/OTP/validateOTP";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
 import { useRouter } from "next/router";
@@ -11,18 +11,22 @@ import { signIn } from "next-auth/react"
 import { InputOTP, InputOTPGroup, InputOTPSlot } from "./input-otp";
 import { Button } from "./button";
 import { Loader2 } from "lucide-react";
+import { ConfirmationResult } from "firebase/auth";
 
 export interface InputOTPFormProps {
-    phoneNumber: string
+    phoneNumber: string;
+    confirmationResult: ConfirmationResult | null;
 }
 
 const FormSchema = z.object({
-    otp: z.string().min(4, {
-        message: "Invalid OTP",
+    otp: z.string().min(6, {
+        message: "Your one-time password must be 6 characters.",
+    }).max(6, {
+        message: "Your one-time password must be 6 characters."
     })
 })
 
-export function InputOTPForm({ phoneNumber }: InputOTPFormProps) {
+export function InputOTPForm({ phoneNumber, confirmationResult  }: InputOTPFormProps) {
     const form = useForm<z.infer<typeof FormSchema>>({
         resolver: zodResolver(FormSchema),
         defaultValues: {
@@ -34,29 +38,38 @@ export function InputOTPForm({ phoneNumber }: InputOTPFormProps) {
     const { isError, isPending } = useMutation({ mutationFn: onSubmit })
 
     async function onSubmit(data: z.infer<typeof FormSchema>) {
-        try {
-            const isVerified = await verifySMSOTPAction(phoneNumber, data.otp);
-
-            if (!isVerified.verified) {
-                toast.error("Invalid OTP")
-                return;
-            }
+        if(!confirmationResult){
+            toast.error("OTP not sent. Please go back and try again");
+            return;
+        }
+        
+        try { 
+            //Verifying OTP here...
+            const userCredential = await confirmationResult.confirm(data.otp);
+            const idToken = await userCredential.user.getIdToken();
 
             const res = await signIn("credentials", {
                 redirect: false,
                 phoneNumber,
-                isVerified: isVerified.verified,
-            })
+                idToken: idToken
+            });
 
-            if (isVerified.verified && res?.ok) {
+            if (res?.ok) {
                 toast.success("User Loggedin Successfully!");
                 router.push("/");
             } else {
-                toast.error("Error while logging in");
+                toast.error("Error while logging in or verifying. Please try again.");
+                console.error("NextAuth signIn error:", res?.error);
             }
-        } catch (error) {
-            toast.error("Something Went wrong. Kindly Report");
-            return;
+        } catch (error: any) {
+            console.error("Error verifying OTP or signing in: ", error);
+            if(error.code === "auth/invalid-verification-code"){
+                toast.error("Invalid OTP. Please try again.");
+            } else if(error.code == "auth/code-expired"){
+                toast.error("OTP expired. Please request a new one.")
+            } else {
+                toast.error(`Something went wrong: ${error.message} || "An unknown error occurred.`);
+            }
         }
     }
 

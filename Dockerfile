@@ -1,5 +1,11 @@
 FROM node:20-alpine
 
+# Install bash for better shell compatibility with turbo
+RUN apk add --no-cache bash
+
+# Set bash as the default shell
+SHELL ["/bin/bash", "-c"]
+
 ARG DATABASE_URL
 
 WORKDIR /usr/src/app
@@ -22,5 +28,3 @@ EXPOSE 3000 3001
 RUN npm run build 
 
 CMD ["npm", "run", "dev"]
-
-

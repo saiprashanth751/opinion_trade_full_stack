@@ -2,6 +2,7 @@
 import twilio from "twilio"
 import prisma from "@repo/db/client"
 
+
 const twilioClient = twilio(
     process.env.TWILIO_ACCOUNT_SID,
     process.env.TWILIO_AUTH_TOKEN
@@ -18,14 +19,14 @@ export const sendSMSOTP = async(phoneNumber: string) => {
     try{
         const OTP = Math.floor(100000 + Math.random() * 9000).toString();
         
-        const isOtpDataExists = await prisma.OTP.findUnique({
+        const isOtpDataExists = await prisma.oTP.findUnique({
             where: {
                 otpID: phoneNumber,
             }
         })
 
         if(isOtpDataExists){
-            const updateOtp = await prisma.OTP.update({
+            const updateOtp = await prisma.oTP.update({
                 where: {
                     otpID: phoneNumber
                 },
@@ -47,7 +48,7 @@ export const sendSMSOTP = async(phoneNumber: string) => {
             }
         }else{
             // Create new OTP
-            const newOTP = await prisma.OTP.create({
+            const newOTP = await prisma.oTP.create({
                 data:{
                     otpID: phoneNumber,
                     otp: OTP,

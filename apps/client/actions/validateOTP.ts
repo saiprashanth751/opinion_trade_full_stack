@@ -4,7 +4,7 @@ import prisma from "@repo/db/client"
 
 export const verifySMSOTPAction = async (phoneNumber: string, otp: string) => {
     try {
-        const otpData = await prisma.OTP.findUnique({
+        const otpData = await prisma.oTP.findUnique({
             where: {
                 otpID: phoneNumber,
                 otp
@@ -26,7 +26,7 @@ export const verifySMSOTPAction = async (phoneNumber: string, otp: string) => {
         }
 
         if (otpData.expiresAt <= Date.now()) {
-            await prisma.OTP.delete({
+            await prisma.oTP.delete({
                 where: {
                     otpID: phoneNumber,
                     otp
@@ -41,7 +41,7 @@ export const verifySMSOTPAction = async (phoneNumber: string, otp: string) => {
             }
         }
 
-        await prisma.OTP.update({
+        await prisma.oTP.update({
             where: {
                 otpID: phoneNumber,
                 otp

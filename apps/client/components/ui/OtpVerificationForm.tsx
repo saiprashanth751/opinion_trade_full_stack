@@ -1,5 +1,5 @@
 "use-client";
-import { verifySMSOTPAction } from "@/actions/validateOTP";
+import { verifySMSOTPAction } from "@/actions/OTP/validateOTP";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
 import { useRouter } from "next/router";

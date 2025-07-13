@@ -36,5 +36,7 @@ yarn-error.log*
 next-env.d.ts
 
 #files
+./user-otp-auth-83792-firebase-adminsdk-fbsvc-a741487270.json
+/user-otp-auth-83792-firebase-adminsdk-fbsvc-a741487270.json
 user-otp-auth-83792-firebase-adminsdk-fbsvc-a741487270.json
 C:\Projects\trade_app\apps\client\user-otp-auth-83792-firebase-adminsdk-fbsvc-a741487270.json

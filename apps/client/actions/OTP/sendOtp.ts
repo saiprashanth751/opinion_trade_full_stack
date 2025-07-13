@@ -2,6 +2,9 @@
 import twilio from "twilio"
 import prisma from "@repo/db/client"
 
+// console.log("SID " + process.env.TWILIO_ACCOUNT_SID)
+// console.log("TOKEN " + process.env.TWILIO_AUTH_TOKEN)
+console.log(process.env.TWILIO_NUMBER)
 
 const twilioClient = twilio(
     process.env.TWILIO_ACCOUNT_SID,
@@ -17,7 +20,7 @@ export const sendSMSOTP = async(phoneNumber: string) => {
     }
 
     try{
-        const OTP = Math.floor(100000 + Math.random() * 9000).toString();
+        const OTP = Math.floor(100000 + Math.random() * 900000).toString();
         
         const isOtpDataExists = await prisma.oTP.findUnique({
             where: {
@@ -81,7 +84,7 @@ async function sendTwilioMsg(OTP: string, phoneNumber: string){
     try{
         const message = await twilioClient.messages.create({
             body: `Your One Time Password for Opinion_Trade Login is ${OTP}, do not share it with anyone!`,
-            from: process.env.TWOLIO_NUMBER,
+            from: process.env.TWILIO_NUMBER,
             to: phoneNumber,
         })
         console.log(message); // avoid linting error. Not required actually.

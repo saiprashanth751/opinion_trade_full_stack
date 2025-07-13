@@ -15,6 +15,7 @@ datasource db {
 
 model User {
   id          String   @id @default(cuid())
+  firebaseUid String?  @unique
   phoneNumber String   @unique
   balance     Int      @default(0)
   role        UserRole

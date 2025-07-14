@@ -2,7 +2,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import prisma from "@repo/db/client"
 import { DefaultSession, NextAuthOptions } from "next-auth";
-import { adminAuth } from "@/lib/firebase-admin"
+import { getAdminAuth } from "@/lib/firebase-admin";
 
 declare module "next-auth" {
     interface User {
@@ -58,6 +58,7 @@ export const authOptions: NextAuthOptions = {
                 }
 
                 try {
+                    const adminAuth = await getAdminAuth();
                     const decodedToken = await adminAuth.verifyIdToken(credentials.idToken)
                     const firebaseUid = decodedToken.uid;
                     const phoneNumber = decodedToken.phone_number;

@@ -1,284 +1,199 @@
-// "use client"
-// import { useEffect, useState } from "react"
-// import toast from "react-hot-toast"
-// import { Form } from "./form"
-// import { Input } from "./input";
-// import { Button } from "./button";
-// import { useMutation } from '@tanstack/react-query';
-// import { useForm } from "react-hook-form"
-// import { z } from "zod"
-// import { zodResolver } from "@hookform/resolvers/zod"
-// import { LoaderCircle } from "lucide-react";
-// import { auth } from "@/lib/firebase"
-// import { RecaptchaVerifier, ConfirmationResult, signInWithPhoneNumber } from "firebase/auth"
+"use client";
 
-// interface SigninFormProps {
-//     setShowOTP: (value: boolean) => void
-//     setphonePhone: (value: string) => void
-//     setConfirmationResult: (result: ConfirmationResult | null) => void;
-// }
-
-// const InputFormSchema = z.object({
-//     phoneNumber: z.string().min(10, {
-//         message: "Invalid phone number"
-//     })
-// })
-
-// // Note that setConfirmationResult is not passed as the parameter. If error occurs, need to check with that...
-// const SigninInputFormInner = ({ setShowOTP, setphonePhone, setConfirmationResult }: SigninFormProps) => {
-//     const [phone, setPhone] = useState<string>("");
-//     const phonePrefix = process.env.NEXT_PUBLIC_PHONE_NO_PREFIX ?? "+91";
-
-//     const form = useForm<z.infer<typeof InputFormSchema>>({
-//         resolver: zodResolver(InputFormSchema),
-//         defaultValues: {
-//             phoneNumber: "",
-//         }
-//     })
-
-//         useEffect(() => {
-//         if (typeof window !== "undefined" && !window.recaptchaVerifier) {
-//             window.recaptchaVerifier = new RecaptchaVerifier(auth, "recaptcha-container", {
-//                 "size": "invisible",
-//                 "callback": (response: any) => {
-//                     // reCAPTCHA solved, allow signInWithPhoneNumber.
-//                     // You can add logic here if you want to do something after reCAPTCHA is solved
-//                 },
-//                 "expired-callback": () => {
-//                     toast.error("reCAPTCHA expired. Please try again,");
-//                     window.recaptchaVerifier.render().then((widgetId: any) => {
-//                         window.grecaptcha.reset(widgetId);
-//                     });
-//                 }
-//             });
-//         }
-//     }, [])
-
-
-//     const mutation = useMutation({ mutationFn: onSubmit });
-
-//     async function onSubmit() {
-//         if (phone.length != 10) {
-//             toast.error("Incorrect Phone Number. Please enter a 10-digit number.");
-//             setPhone("");
-//             return;
-//         }
-//         const fullPhoneNumber = phonePrefix + phone;
-
-//         try {
-//             // Sending OTP using Firebase
-//             const appVerifier = window.recaptchaVerifier;
-//             const result = await signInWithPhoneNumber(auth, fullPhoneNumber, appVerifier);
-//             setConfirmationResult(result);
-//             setShowOTP(true);
-//             toast.success("OTP sent successfully");
-//             return { success: true };
-//         } catch (error: any) {
-//             console.error("Error sending OTP: ", error);
-//             toast.error(`Failed to sendOTP: ${error.message || "An unknown error occurred."}`);
-//             setShowOTP(false);
-//             return { success: false };
-//         }
-//     }
-
-//     // Error handling is now done directly in onSubmit catch block
-//     // useEffect(() => {
-//     //     if (mutation.isError) {
-//     //         toast.error("Could not sent OTP, Please try again");
-//     //         setShowOTP(false);
-//     //     }
-//     //     if (mutation.data?.success) {
-//     //         setShowOTP(true);
-//     //     }
-//     // }, [mutation.isError, mutation.data?.success, setShowOTP]);
-
-//     return (
-//         <Form {...form}>
-//             <form>
-//                 <p className="text-sm text-gray-500 mb-4">
-//                     We will send you an OTP to this number.
-//                 </p>
-//                 <div className="flex mb-4">
-//                     <Input className="w-16 mr-2" type="text" value="+91" disabled />
-
-//                     <Input
-//                         className="flex-grow"
-//                         type="tel"
-//                         placeholder="Phone Number"
-//                         value={phone}
-//                         onChange={(e) => {
-//                             const typedPhone = e.target.value;
-//                             setPhone(typedPhone);
-//                             setphonePhone(typedPhone);
-//                         }} />
-//                 </div>
-//                 <Button
-//                     // type="submit"
-//                     className="w-full mb-4 bg-black text-white"
-//                     onClick={() => {
-//                         mutation.mutate();
-//                     }}
-//                     disabled={mutation.isPending || phone.length !== 10}>
-//                     {!mutation.isPending ? (
-//                         "Get OTP"
-//                     ) : (<LoaderCircle className="animate-spin" />)}
-//                 </Button>
-//                 {/* //recaptcha-renders-here if exists */}
-//                 <div id="recaptcha-container"></div>
-//             </form>
-//         </Form>
-//     )
-
-// }
-
-// declare global {
-//     interface Window {
-//         recaptchaVerifier: RecaptchaVerifier;
-//         grecaptcha: any;
-//     }
-// }
-
-// const SigninInputForm = (props: SigninFormProps) => {
-
-//     return (
-//             <SigninInputFormInner {...props} />
-//     );
-// };
-
-// export default SigninInputForm
-
-
-"use client"
-import { useEffect, useState } from "react"
-import toast from "react-hot-toast"
-import { Form } from "./form"
+import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
+import { useMutation } from "@tanstack/react-query";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { LoaderCircle } from "lucide-react";
+import { app } from "@/lib/firebase";
+import {
+  getAuth,
+  RecaptchaVerifier,
+  signInWithPhoneNumber,
+  ConfirmationResult,
+} from "firebase/auth";
+import { Form } from "./form";
 import { Input } from "./input";
 import { Button } from "./button";
-import { useMutation } from '@tanstack/react-query';
-import { useForm } from "react-hook-form"
-import { z } from "zod"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { LoaderCircle } from "lucide-react";
-import { auth } from "@/lib/firebase"
-import { RecaptchaVerifier, ConfirmationResult, signInWithPhoneNumber } from "firebase/auth"
 
 interface SigninFormProps {
-    setShowOTP: (value: boolean) => void
-    setphonePhone: (value: string) => void
-    setConfirmationResult: (result: ConfirmationResult | null) => void;
+  setShowOTP: (value: boolean) => void;
+  setphonePhone: (value: string) => void;
+  setConfirmationResult: (result: ConfirmationResult | null) => void;
 }
 
 const InputFormSchema = z.object({
-    phoneNumber: z.string().min(10, {
-        message: "Invalid phone number"
-    }).max(10, {
-        message: "Invalid phone number"
-    }).regex(/^\d+$/, "Phone number must contain only digits")
-})
+  phoneNumber: z
+    .string()
+    .min(10, { message: "Invalid phone number" })
+    .max(10, { message: "Invalid phone number" })
+    .regex(/^\d+$/, "Phone number must contain only digits"),
+});
 
-const SigninInputFormInner = ({ setShowOTP, setphonePhone, setConfirmationResult }: SigninFormProps) => {
-    const phonePrefix = process.env.NEXT_PUBLIC_PHONE_NO_PREFIX ?? "+91";
-    const [recaptchaWidgetId, setRecaptchaWidgetId] = useState<number | null>(null);
+const SigninInputFormInner = ({
+  setShowOTP,
+  setphonePhone,
+  setConfirmationResult,
+}: SigninFormProps) => {
+  const phonePrefix = process.env.NEXT_PUBLIC_PHONE_NO_PREFIX ?? "+91";
+  const [isRecaptchaReady, setIsRecaptchaReady] = useState(false);
 
-    const form = useForm<z.infer<typeof InputFormSchema>>({
-        resolver: zodResolver(InputFormSchema),
-        defaultValues: {
-            phoneNumber: "",
-        }
-    })
+  const form = useForm<z.infer<typeof InputFormSchema>>({
+    resolver: zodResolver(InputFormSchema),
+    defaultValues: { phoneNumber: "" },
+  });
 
-    useEffect(() => {
-        if (typeof window !== "undefined" && !window.recaptchaVerifier) {
-            window.recaptchaVerifier = new RecaptchaVerifier(auth, "recaptcha-container", {
-                "size": "invisible",
-                "callback": (response: any) => {
-                    // reCAPTCHA solved, allow signInWithPhoneNumber.
-                    // You can add logic here if you want to do something after reCAPTCHA is solved
-                },
-                "expired-callback": () => {
-                    toast.error("reCAPTCHA expired. Please try again,");
-                    if (window.grecaptcha && recaptchaWidgetId !== null) {
-                        window.grecaptcha.reset(recaptchaWidgetId);
-                    }
-                }
-            });
-            window.recaptchaVerifier.render().then((widgetId: number) => {
-                setRecaptchaWidgetId(widgetId);
-            });
-        }
-    }, [recaptchaWidgetId])
+  useEffect(() => {
+    const setupRecaptcha = () => {
+      const auth = getAuth(app);
 
-    async function sendOtpFirebase(phoneNumber: string) {
-        const fullPhoneNumber = phonePrefix + phoneNumber;
-
+      if (
+        typeof window !== "undefined" &&
+        typeof window.grecaptcha !== "undefined" &&
+        !window.recaptchaVerifier
+      ) {
         try {
-            if (window.grecaptcha && recaptchaWidgetId !== null) {
-                window.grecaptcha.reset(recaptchaWidgetId);
+          window.recaptchaVerifier = new RecaptchaVerifier(
+            auth,
+            "recaptcha-container",
+            {
+              size: "invisible",
+              callback: () => {},
             }
+          );
 
-            const appVerifier = window.recaptchaVerifier;
-            const result = await signInWithPhoneNumber(auth, fullPhoneNumber, appVerifier);
-            setConfirmationResult(result);
-            setShowOTP(true);
-            setphonePhone(phoneNumber);
-            toast.success("OTP sent successfully");
-            return { success: true };
-        } catch (error: any) {
-            console.error("Error sending OTP: ", error);
-            toast.error(`Failed to send OTP: ${error.message || "An unknown error occurred."}`);
-            setShowOTP(false);
-            return { success: false };
+          window.recaptchaVerifier.render().then(() => {
+            setIsRecaptchaReady(true);
+            console.log("reCAPTCHA initialized");
+          });
+        } catch (err) {
+          console.error("reCAPTCHA init failed:", err);
+          toast.error("Failed to initialize security features");
         }
-    }
-
-    const mutation = useMutation({ mutationFn: sendOtpFirebase });
-
-    const handleFormSubmission = async (values: z.infer<typeof InputFormSchema>) => {
-        mutation.mutate(values.phoneNumber);
+      }
     };
 
-    return (
-        <Form {...form}>
-            <form onSubmit={form.handleSubmit(handleFormSubmission)}>
-                <p className="text-sm text-gray-500 mb-4">
-                    We will send you an OTP to this number.
-                </p>
-                <div className="flex mb-4">
-                    <Input className="w-16 mr-2" type="text" value="+91" disabled />
+    const loadScript = () => {
+      if (!window.grecaptcha) {
+        const script = document.createElement("script");
+        script.src = "https://www.google.com/recaptcha/api.js";
+        script.async = true;
+        script.defer = true;
+        script.onload = setupRecaptcha;
+        document.head.appendChild(script);
+      } else {
+        setupRecaptcha();
+      }
+    };
 
-                    <Input
-                        className="flex-grow"
-                        type="tel"
-                        placeholder="Phone Number"
-                        {...form.register("phoneNumber")}
-                    />
-                </div>
-                <Button
-                    type="submit"
-                    className="w-full mb-4 bg-black text-white"
-                    disabled={mutation.isPending || !form.formState.isValid}>
-                    {!mutation.isPending ? (
-                        "Get OTP"
-                    ) : (<LoaderCircle className="animate-spin" />)}
-                </Button>
-                <div id="recaptcha-container"></div>
-            </form>
-        </Form>
-    )
-
-}
-
-declare global {
-    interface Window {
-        recaptchaVerifier: RecaptchaVerifier;
-        grecaptcha: any;
+    if (typeof window !== "undefined") {
+      loadScript();
     }
-}
 
-const SigninInputForm = (props: SigninFormProps) => {
-    return (
-        <SigninInputFormInner {...props} />
-    );
+    return () => {
+      if (window.recaptchaVerifier) {
+        window.recaptchaVerifier.clear();
+        delete window.recaptchaVerifier;
+        setIsRecaptchaReady(false);
+      }
+    };
+  }, []);
+
+  const sendOtpFirebase = async (phoneNumber: string) => {
+    const auth = getAuth(app);
+
+    if (!window.recaptchaVerifier || !isRecaptchaReady) {
+      toast.error("Security not ready. Please refresh and try again.");
+      return { success: false };
+    }
+
+    try {
+      const fullPhone = phonePrefix + phoneNumber;
+
+      const result = await signInWithPhoneNumber(
+        auth,
+        fullPhone,
+        window.recaptchaVerifier
+      );
+
+      setConfirmationResult(result);
+      setShowOTP(true);
+      setphonePhone(fullPhone);
+      toast.success("OTP sent successfully!");
+      return { success: true };
+    } catch (error: any) {
+      console.error("OTP send error:", error);
+      toast.error(error?.message || "Failed to send OTP. Try again later.");
+
+      if (window.recaptchaVerifier) {
+        try {
+          window.recaptchaVerifier.clear();
+          delete window.recaptchaVerifier;
+          setIsRecaptchaReady(false);
+        } catch (cleanupError) {
+          console.error("reCAPTCHA cleanup failed:", cleanupError);
+        }
+      }
+
+      setShowOTP(false);
+      return { success: false };
+    }
+  };
+
+  const mutation = useMutation({
+    mutationFn: sendOtpFirebase,
+  });
+
+  const handleFormSubmit = (data: { phoneNumber: string }) => {
+    mutation.mutate(data.phoneNumber);
+  };
+
+  return (
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(handleFormSubmit)} className="space-y-4">
+        <p className="text-sm text-gray-500">
+          We will send you an OTP to this number.
+        </p>
+
+        <div className="flex">
+          <Input className="w-16 mr-2" type="text" value={phonePrefix} disabled />
+          <Input
+            className="flex-grow"
+            type="tel"
+            placeholder="Phone Number"
+            {...form.register("phoneNumber")}
+          />
+        </div>
+
+        <Button
+          type="submit"
+          className="w-full bg-black text-white"
+          disabled={!isRecaptchaReady || mutation.isPending}
+        >
+          {mutation.isPending ? (
+            <span className="flex items-center justify-center">
+              <LoaderCircle className="animate-spin mr-2" size={18} />
+              Sending...
+            </span>
+          ) : (
+            "Get OTP"
+          )}
+        </Button>
+
+        <div id="recaptcha-container" />
+      </form>
+    </Form>
+  );
 };
 
-export default SigninInputForm
+declare global {
+  interface Window {
+    recaptchaVerifier?: RecaptchaVerifier;
+    grecaptcha?: any;
+  }
+}
+
+export const SigninInputForm = SigninInputFormInner;
+export default SigninInputForm;

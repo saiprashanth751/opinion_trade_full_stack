@@ -10,7 +10,7 @@ import { ConfirmationResult } from "firebase/auth";
 export function Login() {
     const [showOTP, setShowOTP] = useState<boolean>(false);
     const [phone, setPhone] = useState<string>("");
-    const phonePrefix = process.env.NEXT_PUBLIC_PHONE_NO_PREFIX;
+    // const phonePrefix = process.env.NEXT_PUBLIC_PHONE_NO_PREFIX;
     const [confirmationResult, setConfirmationResult] = useState<ConfirmationResult | null>(null);
 
     return (
@@ -40,11 +40,11 @@ export function Login() {
             <div className="relative  overflow-hidden flex justify-center items-center">
                 <div className="bg-muted">
                     <Image
-                        src={login}
-                        alt="Image"
-                        width="1920"
-                        height="1000"
-                        className="object-cover"
+                    src={login.src}
+                    alt="Description"
+                    width={500}
+                    height={300}
+                    priority
                     />
                 </div>
             </div>

@@ -1,13 +1,16 @@
-import * as admin from "firebase-admin";
-import serviceAccount from "../user-otp-auth-83792-firebase-adminsdk-fbsvc-a741487270.json"
-// import { ServiceAccount } from "firebase-admin";
-
+import admin from "firebase-admin";
+import type { Auth } from "firebase-admin/auth";
 
 if (!admin.apps.length) {
-  // TypeScript will infer the correct type from JSON
   admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount as admin.ServiceAccount),
+    credential: admin.credential.cert({
+      projectId: process.env.FIREBASE_PROJECT_ID!,
+      clientEmail: process.env.FIREBASE_CLIENT_EMAIL!,
+      privateKey: process.env.FIREBASE_PRIVATE_KEY!.replace(/\\n/g, "\n"),
+    }),
   });
 }
 
-export const adminAuth:admin.auth.Auth = admin.auth();
+export async function getAdminAuth(): Promise<Auth> {
+  return admin.auth();
+}

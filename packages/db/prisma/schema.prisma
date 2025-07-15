@@ -20,8 +20,45 @@ model User {
   balance     Int      @default(0)
   role        UserRole
   createdAt   DateTime @default(now())
+  updatedAt DateTime @default(now())
+  events Event[] @relation("EventParticipants")
   // expiresAt   DateTime
 }
+
+model Event {
+  id String @id @default(cuid())
+  eventId Int @unique
+  slug String
+  description String
+  title String
+  start_date DateTime
+  end_date DateTime
+  expiresAt DateTime
+  min_bet Float
+  max_bet Float
+  quantity Int
+  sot String
+  status EventStatus @default(ONGOING)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  participants User[] @relation("EventParticipants")
+}
+
+enum EventStatus {
+  ONGOING
+  ENDED
+}
+
+enum UserRole {
+  ADMIN
+  USER
+}
+
+
+
+
+
+
 // Removed this table because we are using FireBase for OTP Authentication...
 // model OTP {
 //   id         String   @id @default(cuid())
@@ -34,7 +71,3 @@ model User {
 //   user       User?    @relation(fields: [userId], references: [id])
 // }
 
-enum UserRole {
-  ADMIN
-  USER
-}

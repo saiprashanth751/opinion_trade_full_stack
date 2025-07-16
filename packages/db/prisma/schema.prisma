@@ -20,28 +20,29 @@ model User {
   balance     Int      @default(0)
   role        UserRole
   createdAt   DateTime @default(now())
-  updatedAt DateTime @default(now())
-  events Event[] @relation("EventParticipants")
+  updatedAt   DateTime @default(now())
+  events      Event[]  @relation("EventParticipants")
   // expiresAt   DateTime
 }
 
 model Event {
-  id String @id @default(cuid())
-  eventId Int @unique
-  slug String
-  description String
-  title String
-  start_date DateTime
-  end_date DateTime
-  expiresAt DateTime
-  min_bet Float
-  max_bet Float
-  quantity Int
-  sot String
-  status EventStatus @default(ONGOING)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  participants User[] @relation("EventParticipants")
+  id           String      @id @default(cuid())
+  eventId      Int         @unique
+  slug         String
+  description  String
+  title        String
+  start_date   DateTime
+  end_date     DateTime
+  expiresAt    DateTime
+  min_bet      Float
+  max_bet      Float
+  quantity     Int
+  sot          String
+  traders      Int         @default(0)
+  status       EventStatus @default(ONGOING)
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+  participants User[]      @relation("EventParticipants")
 }
 
 enum EventStatus {
@@ -54,11 +55,6 @@ enum UserRole {
   USER
 }
 
-
-
-
-
-
 // Removed this table because we are using FireBase for OTP Authentication...
 // model OTP {
 //   id         String   @id @default(cuid())
@@ -70,4 +66,3 @@ enum UserRole {
 //   isVerified Boolean  @default(false)
 //   user       User?    @relation(fields: [userId], references: [id])
 // }
-

@@ -1,9 +1,13 @@
 {
-  "name": "@trade/types",
+  "name": "@trade/zod-schema",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "exports": {
     ".": "./src/index.ts"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "type": "module"
 }

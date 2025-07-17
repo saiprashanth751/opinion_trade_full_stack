@@ -13,3 +13,120 @@ export type TEvent = {
     traders: string;
     quantity: number
 }
+
+export const TRADE_ADDED = "TRADE_ADDED"
+export const ORDER_UPDATE = "ORDER_UPDATE"
+
+// DB Operation Types
+
+export type DbMessage =  
+| {
+    type: typeof TRADE_ADDED;
+    data: {
+        id: string;
+        isBuyerMaker: string;
+        price: number;
+        quantity: number;
+        timestamp: number;
+        market: string;
+    };
+}
+| {
+    type: typeof ORDER_UPDATE;
+    data: {
+        orderId: string;
+        executedQty: number;
+        market?: string;
+        price?: number;
+        quantity?: number;
+        side?: "yes" | "no";
+    };
+};
+
+// Sever Types: Responding to Server
+
+export interface Order {
+    price: number
+    quantity: number;
+    orderId: string;
+    filled: number;
+    side: "yes" | "no";
+    userId: string;
+}
+
+export type MessageToApi = 
+| {
+    type: "DEPTH";
+    payload: {
+        bids: [string, string[]];
+        asks: [string, string[]];
+    }
+}
+| {
+    type: "ORDER_PLACED";
+    payload: {
+        orderId: string;
+        executedQty: number;
+        fills: {
+            price: number;
+            qty: number;
+            tradeId: string;
+        }[];
+    };
+}
+| {
+    type: "ORDER_CANCELLED";
+    payload: {
+        orderId: string;
+        executedQty: number;
+        remainingQty: number;
+    };
+}
+| {
+    type: "OPEN_ORDERS";
+    payload: Order[];
+};
+
+
+// Web Socket Types...
+// Need to dig deep into these..
+export type TickerUpdateMessage = {
+    stream: string;
+    data: {
+        c?: string;
+        h?: string;
+        l?: string;
+        v?: string;
+        V?: string;
+        s?: string;
+        id: number;
+        e: "ticker";
+    }
+}
+
+export type DepthUpdateMessage = {
+    stream: string;
+    data: {
+        b?: [string, string[]];
+        a?: [string, string[]];
+        e: "depth";
+    }
+}
+
+export type TradeAddedMessage = {
+    stream: string;
+    data: {
+        e: "trade";
+        t: string;
+        m: boolean;
+        p: number;
+        q: string;
+        s: string
+    }
+}
+
+export type WsMessage = 
+| TickerUpdateMessage
+| DepthUpdateMessage
+| TradeAddedMessage
+| any;

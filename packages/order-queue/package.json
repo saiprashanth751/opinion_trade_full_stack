@@ -9,5 +9,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "redis": "^5.6.0",
+    "@trade/types": "*"
+  }
 }

@@ -1,0 +1,18 @@
+{
+  "name": "@trade/engine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "npx esbuild ./src/index.ts --bundle --platform=node --outfile=dist/index.js",
+    "dev": "npm run build && npm run start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

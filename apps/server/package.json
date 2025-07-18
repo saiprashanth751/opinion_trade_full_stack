@@ -16,6 +16,7 @@
     "@repo/db": "*",
     "@trade/types": "*",
     "@trade/zod-schema": "*",
+    "@trade/order-queue": "*",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "uuid": "^8.3.2",

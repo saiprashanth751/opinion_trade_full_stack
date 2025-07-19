@@ -72,7 +72,8 @@ export type MessageFromApi =
         market: string;
         price: number;
         quantity: number;
-        side: "yes" | "no";
+        action: "buy" | "sell";
+        outcome: "yes" | "no";
         userId: string;
     }
   }

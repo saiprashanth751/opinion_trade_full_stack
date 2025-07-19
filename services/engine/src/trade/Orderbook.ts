@@ -7,7 +7,7 @@ export interface Order {
     quantity: number;
     filled: number;
     orderId: string;
-    side: "yes" | "no";
+    type: "bid" | "ask";
     userId: string;
 }
 
@@ -36,7 +36,7 @@ export class Orderbook {
 
     // Typescript class methods...
     addOrder(order: Order){
-        if(order.side === "yes"){
+        if(order.type === "bid"){
             console.log("Order in orderbook", order)
             //match Bid to Ask
             const {executedQty, fills} = this.matchBid(order);
@@ -117,7 +117,7 @@ export class Orderbook {
         
         for(let i=0; i<this.bids.length; i++){
             if(this.bids[i]?.price! >= order.price && executedQty < order.quantity){
-                const filledQty = Math.min(executedQty - order.quantity, this.bids[i]?.quantity!);
+                const filledQty = Math.min(order.quantity - executedQty, this.bids[i]?.quantity!);
 
                 executedQty += filledQty;
                 //@ts-ignore

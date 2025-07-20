@@ -21,7 +21,7 @@ export const createEventhandler = AsyncWrapper( async (req: Request<{}, {}, Omit
     } = req.body;
 
     let slug = slugify(title);
-    let eventCode = eventCodeGenerator();
+    let eventCode = eventCodeGenerator().toString();
 
     const isEventExists = await prisma.event.findFirst({
         where: {
@@ -49,8 +49,11 @@ export const createEventhandler = AsyncWrapper( async (req: Request<{}, {}, Omit
         }
     });
 
-    let response = new SuccessResponse("Event created successfully", eventCode);
-    return res.json(201).json(response);
+    let response = new SuccessResponse("Event created successfully", 201);
+    return res.json({
+        response,
+        eventId: eventCode
+    });
 });
 
 // Get trade summary for an event
@@ -73,7 +76,7 @@ export const getTradeSummaryHandler = AsyncWrapper(async(req, res: Response<Succ
 
     const event = await prisma.event.findUnique({
         where:{
-            eventId: parseInt(eventId as unknown as string),
+            eventId: eventId as unknown as string,
         }
     })
 

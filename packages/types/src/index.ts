@@ -4,6 +4,11 @@ export enum sides {
     NO = "no",
 }
 
+export enum orderType {
+    BUY = "buy",
+    SELL = "sell",
+}
+
 export type TEvent = {
     id: string;
     title: string;

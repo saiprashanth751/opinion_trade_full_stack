@@ -90,11 +90,11 @@ export class Engine {
     }
 
     processOrders({
-        message,
-        clientId
+        clientId,
+        message
     }: {
-        message: MessageFromApi;
         clientId: string;
+        message: MessageFromApi;
     }) {
         console.log("message", message, " clientId", clientId);
 

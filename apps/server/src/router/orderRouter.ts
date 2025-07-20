@@ -3,6 +3,8 @@ import { initiateOrderValidator } from "../middlewares/validators/initiate.valid
 import { placeHandler } from "../controllers/order";
 
 const app = express.Router();
+//Are you sure that you have implemented all the routes?? 
+//The ans is clearly no...
 
 app.post("/initiate", initiateOrderValidator, placeHandler)
 

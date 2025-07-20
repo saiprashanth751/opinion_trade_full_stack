@@ -1,5 +1,8 @@
-import z from "zod"
+//need to go through this...
+//recheck
 
+
+import z from "zod"
 export const userZodSchema = z.object({
     phoneNumber: z.string().min(10),
     balance: z.number(),

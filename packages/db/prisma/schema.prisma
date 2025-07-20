@@ -27,7 +27,7 @@ model User {
 
 model Event {
   id           String      @id @default(cuid())
-  eventId      Int         @unique
+  eventId      String         @unique
   slug         String
   description  String
   title        String

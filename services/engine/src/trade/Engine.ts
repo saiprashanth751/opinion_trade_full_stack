@@ -170,6 +170,8 @@ export class Engine {
                         console.log("No order found to cancel with ID: ", orderId);
                         throw new Error("No order found to cancel");
                     }
+                    
+                    const userBalance = this.balances.get(orderToCancel.userId);
 
                     let price: number | undefined;
                     if (orderToCancel.type == "bid") {
@@ -178,9 +180,9 @@ export class Engine {
 
                         //Recheck
                         //@ts-ignore
-                        this.balances.get(orderToCancel.userId)?.available += leftQunatityAmount;
+                        userBalance?.available += leftQunatityAmount;
                         //@ts-ignore
-                        this.balances.get(orderToCancel.userId)?.locked -= leftQunatityAmount;
+                        userBalance?.locked -= leftQunatityAmount;
                     } else {
                         price = targetOrderbook.cancelAsk(orderToCancel);
 
@@ -188,15 +190,17 @@ export class Engine {
 
                         if (cancelledOrderOutcome === "yes") {
                             //@ts-ignore
-                            this.balances.get(orderToCancel.userId)?.yesContracts += leftQunatity;
+                            userBalance?.yesContracts += leftQunatity;
                             //@ts-ignore
-                            this.balances.get(orderToCancel.userId)?.lockedYesContracts -= leftQunatity;
+                            userBalance?.lockedYesContracts -= leftQunatity;
                         } else {
                             //@ts-ignore
-                            this.balances.get(orderToCancel.userId)?.noContracts += leftQunatity
+                            userBalance?.noContracts += leftQunatity;
+                            //@ts-ignore
+                            userBalance?.lockedNoContracts -= leftQunatity;
                         }
                         //@ts-ignore
-                        this.balances.get(orderToCancel.userId)?.noContracts -= leftQunatity
+                        userBalance?.noContracts -= leftQunatity
                     }
 
                     if (price) {
@@ -208,8 +212,8 @@ export class Engine {
                         payload: {
                             orderId,
                             // Need to recheck
-                            executedQty: 0,
-                            remainingQty: 0,
+                            executedQty: orderToCancel.filled,
+                            remainingQty: orderToCancel.quantity - orderToCancel.filled,
                         }
                     })
                 } catch (error) {
@@ -232,7 +236,9 @@ export class Engine {
 
                     RedisManager.getInstance().sendToApi(clientId, {
                         type: "OPEN_ORDERS",
-                        payload: openOrders,
+                        payload: {
+                            openOrders
+                        },
                     })
                 } catch (error) {
                     console.log(error);
@@ -374,72 +380,73 @@ export class Engine {
         console.log(`User ${userId} balance after locking funds: `, userBalance);
     }
 
-    updateBalance(
-        orderType: "bid" | "ask",
-        outcome: "yes" | "no",
-        userId: string,
-        fills: Fill[]
-    ) {
-        console.log("----------------Balance updating------------");
-        fills.forEach((fill) => {
-            const takerBalance = this.balances.get(userId); //user who places order
-            const makerBalance = this.balances.get(fill.otherUserId); // user whose trade was matched with.
+    // services/engine/src/trade/Engine.ts
 
-            if (!takerBalance || !makerBalance) {
-                console.error("Error: Taker or Maker balance not found during update.")
-                return;
-            }
+//What is the optimal implementation? !!!Finance feature!!!
+updateBalance(
+    orderType: "bid" | "ask",
+    outcome: "yes" | "no",
+    userId: string,
+    fills: Fill[]
+) {
+    console.log("----------------Balance updating------------");
+    fills.forEach((fill) => {
+        //user who placed the original order
+        const takerBalance = this.balances.get(userId); 
+        //user whose order was matched
+        const makerBalance = this.balances.get(fill.otherUserId); 
 
-            if (orderType === "bid") {
-                //Architecture:
-                //Taker (buyer) receives 'outcome' contracts, pays currency
-                //Maker (seller) receives currency, gives 'outcome' contracts
+        if (!takerBalance || !makerBalance) {
+            console.error("Error: Taker or Maker balance not found during update.")
+            return;
+        }
 
-                //Taker's locked currency is released and converted to contracts
-                takerBalance.locked -= fill.qty * fill.price;
-                if (outcome === "yes") {
-                    //@ts-ignore
-                    takerBalance.yesContracts = (takerBalance.yesContracts || 0) + fill.qty;
-                } else {
-                    //@ts-ignore
-                    takerBalance.noContracts = (takerBalance.noContracts || 0) + fill.qty;
-                }
+        if (orderType === "bid") { 
+            //buy order (taker is buyer)
+            //taker(buyer) receives contracts pays currency
+            //maker(seller) receives currency give contracts
 
-
-                //Maker's locked contracts are released, and they receive currency
-                if (outcome === "yes") {
-                    //@ts-ignore
-                    makerBalance.lockedYesContracts = (makerBalance.lockedYesContracts || 0) - fill.qty;
-                } else {
-                    //@ts-ignore
-                    makerBalance.lockedNoContracts = (makerBalance.lockedNoContracts || 0) - fill.qty;
-                }
-
-                makerBalance.available += fill.qty * fill.price;
+            //taker's locked currency is released and converted to contracts
+            takerBalance.locked -= fill.qty * fill.price;
+            if (outcome === "yes") {
+                takerBalance.yesContracts += fill.qty;
             } else {
-                //handling sell
-                //Taker -> pays currency receives contracts
-                //Maker -> gives contracts, receives currency
-
-                takerBalance.locked -= fill.qty * fill.price;
-
-                if(outcome == "yes"){
-                    takerBalance.yesContracts = (takerBalance.yesContracts || 0) + fill.qty;
-                } else {
-                    takerBalance.noContracts =(takerBalance.noContracts || 0) + fill.qty;
-                }
-
-                if(outcome == "yes"){
-                    makerBalance.lockedYesContracts = (makerBalance.lockedYesContracts || 0) - fill.qty;
-                } else {
-                    makerBalance.lockedNoContracts = (makerBalance.lockedNoContracts || 0) - fill.qty;
-                }
-
-                makerBalance.available +- fill.qty * fill.price;
+                takerBalance.noContracts += fill.qty;
             }
-        })
-        console.log("----------------Balance updated------------");
-    }
+
+            //maker's locked contracts are released, and they receive currency
+            if (outcome === "yes") {
+                makerBalance.lockedYesContracts -= fill.qty;
+            } else {
+                makerBalance.lockedNoContracts -= fill.qty;
+            }
+            makerBalance.available += fill.qty * fill.price;
+        } else { 
+            //sell order (taker is seller)
+            //taker (userId) is the seller of contracts, RECEIVES currency!!!
+            //maker (fill.otherUserId) is the BUYER of contracts, PAYS currency!!!
+
+            //taker -> release locked contracts
+            if (outcome === "yes") {
+                takerBalance.lockedYesContracts -= fill.qty;
+            } else {
+                takerBalance.lockedNoContracts -= fill.qty;
+            }
+            //seller receives currency
+            takerBalance.available += fill.qty * fill.price;
+
+            //maker -> Release locked currency
+            makerBalance.locked -= fill.qty * fill.price;
+            //maker -> buyer receives contracts
+            if (outcome === "yes") {
+                makerBalance.yesContracts += fill.qty;
+            } else {
+                makerBalance.noContracts += fill.qty;
+            }
+        }
+    })
+    console.log("----------------Balance updated------------");
+}
 
     createDbTrades(
         fills: Fill[],
@@ -476,6 +483,7 @@ export class Engine {
                 orderId: order.orderId,
                 executedQty,
                 market,
+                //Recheck
                 price: order.price, //converting to string -> type error
                 quantity: order.quantity, //converting to string -> type error
                 side: outcome,
@@ -512,7 +520,7 @@ export class Engine {
         const depth = targetOrderbook.getMarketDepth();
 
         //send to API (using wsMessge contoller in Redis Manager)...
-        RedisManager.getInstance().sendToApi(`depth@${market} - ${outcome}`, {
+        RedisManager.getInstance().publishMessage(`depth@${market} - ${outcome}`, {
             stream: `depthj@${market}-${outcome}`,
             data: {
                 b: depth.bids,
@@ -532,7 +540,7 @@ export class Engine {
 
         fills.forEach((fill) => {
             //send to API (using wsMessge contoller in Redis Manager)...
-            RedisManager.getInstance().sendToApi(`trade@${market} - ${outcome}`, {
+            RedisManager.getInstance().publishMessage(`trade@${market} - ${outcome}`, {
                 stream: `trade@${market} - ${outcome}`,
                 //Recheck required
                 data: {
@@ -574,7 +582,7 @@ export class Engine {
 
         //Publish to the specific outcome's depth channel
         //send to API (using wsMessge contoller in Redis Manager)...
-        RedisManager.getInstance().sendToApi(`depth@${market}-${outcome}`, {
+        RedisManager.getInstance().publishMessage(`depth@${market}-${outcome}`, {
             stream: `depth@${market}-${outcome}`,
             data: {
                 b: depth.bids,

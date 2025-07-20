@@ -57,11 +57,11 @@ export type DbMessage =
 // Sever Types: Responding to Server
 
 export interface Order {
-    price: number
+    price: number;
     quantity: number;
-    orderId: string;
     filled: number;
-    side: "yes" | "no";
+    orderId: string;
+    type: "bid" | "ask";
     userId: string;
 }
 
@@ -140,7 +140,9 @@ export type MessageToApi =
 }
 | {
     type: "OPEN_ORDERS";
-    payload: Order[];
+    payload: {
+        openOrders: Order[]
+    };
 };
 
 
@@ -163,8 +165,8 @@ export type TickerUpdateMessage = {
 export type DepthUpdateMessage = {
     stream: string;
     data: {
-        b?: [string, string[]];
-        a?: [string, string[]];
+        b?: [string, string][];
+        a?: [string, string][];
         e: "depth";
     }
 }
@@ -184,5 +186,4 @@ export type TradeAddedMessage = {
 export type WsMessage = 
 | TickerUpdateMessage
 | DepthUpdateMessage
-| TradeAddedMessage
-| any;
+| TradeAddedMessage;

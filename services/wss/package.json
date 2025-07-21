@@ -1,14 +1,11 @@
 {
-  "name": "@repo/engine",
+  "name": "@repo/wss",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "exports": {
-    ".": "./src/index.ts"
-  },
   "scripts": {
-    "start": "node dist/index.js",
     "build": "npx esbuild ./src/index.ts --bundle --platform=node --outfile=dist/index.js",
+    "start": "node ./dist/index.js",
     "dev": "npm run build && npm run start"
   },
   "keywords": [],
@@ -16,8 +13,10 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "fs": "^0.0.1-security",
-    "@trade/types": "*",
-    "@trade/order-queue": "*"
+    "redis": "^5.6.0",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.18.1"
   }
 }

@@ -19,8 +19,8 @@ app.use(
     })
 )
 
-app.use("/events", eventRouter);
-app.use("/order", orderRouter);
+app.use("/api/v1/events", eventRouter);
+app.use("/api/v1/order", orderRouter);
 
 app.listen(3001, () => {
     logger.info("SERVER | Listening on port 3001")

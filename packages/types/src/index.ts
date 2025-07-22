@@ -20,7 +20,7 @@ export type TEvent = {
     min_bet: number;
     max_bet: number;
     sot: string;
-    traders: string;
+    traders: number;
     quantity: number
 }
 

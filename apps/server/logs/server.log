@@ -1,0 +1,14 @@
+[ 2025-07-22 19:34:21 ] -  [32minfo[39m  - WORKER | Starting order worker
+[ 2025-07-22 19:42:34 ] -  [32minfo[39m  - WORKER | Starting order worker
+[ 2025-07-22 19:42:34 ] -  [32minfo[39m  - SERVER | Listening on port 3001
+[ 2025-07-22 20:08:06 ] -  [32minfo[39m  - WORKER | Starting order worker
+[ 2025-07-22 20:08:06 ] -  [32minfo[39m  - SERVER | Listening on port 3001
+[ 2025-07-22 20:15:09 ] -  [32minfo[39m  - POST - /api/v1/events/create - 500 - 529.210 ms
+[ 2025-07-22 20:17:03 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 66.786 ms
+[ 2025-07-22 20:23:39 ] -  [32minfo[39m  - POST - /api/v1/events/create - 500 - 23.555 ms
+[ 2025-07-22 20:24:11 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 211.969 ms
+[ 2025-07-22 20:24:19 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 7.831 ms
+[ 2025-07-22 20:24:25 ] -  [32minfo[39m  - POST - /api/v1/events/create - 500 - 1.803 ms
+[ 2025-07-22 20:24:29 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 24.204 ms
+[ 2025-07-22 20:24:41 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 8.514 ms
+[ 2025-07-22 20:24:49 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 9.011 ms

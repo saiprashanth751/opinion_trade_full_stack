@@ -28,8 +28,8 @@ export const placeHandler = AsyncWrapper(async (req: Request<{}, {}, TPlaceOrder
             market: event_id,
             price: l1_expected_price,
             quantity: l1_order_quantity,
-            orderType: action,
-            marketSide: outcome,
+            action,
+            outcome,
             userId: userId,
         }
     }

@@ -138,7 +138,7 @@ export class Engine {
                         console.log(`Initializing new orderbooks for market: ${market}`);
                         const eventDetails = await prisma.event.findUnique({
                             where: {
-                                eventId: market
+                                id: market
                             }
                         })
 

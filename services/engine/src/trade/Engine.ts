@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 import { RedisManager } from "@trade/order-queue"
 import prisma from "@repo/db/client"
 
-export const EXAMPLE_EVENT = "gta6-trailer-3-to-be-released-by-the-end-of-the-day";
+// export const EXAMPLE_EVENT = "gta6-trailer-3-to-be-released-by-the-end-of-the-day";
 export const CURRENCY = "INR";
 
 //Declaring funds and asset balance interface...
@@ -36,20 +36,29 @@ export class Engine {
         if (snapshot) {
             const parsedSnapShot = JSON.parse(snapshot.toString());
             //recheck
-            console.log("Snapshot loading is not fully implemented for new orderbook structure.");
-            this.marketOrderbooks.set(EXAMPLE_EVENT, {
-                yes: new Orderbook([], [], EXAMPLE_EVENT, 1, 0),
-                no: new Orderbook([], [], EXAMPLE_EVENT, 1, 0),
-            });
+            // console.log("Snapshot loading is not fully implemented for new orderbook structure.");
+            // this.marketOrderbooks.set(EXAMPLE_EVENT, {
+            //     yes: new Orderbook([], [], EXAMPLE_EVENT, 1, 0),
+            //     no: new Orderbook([], [], EXAMPLE_EVENT, 1, 0),
+            // });
+            //Load orderbooks
+            parsedSnapShot.orderbooks.forEach((obData: any) => {
+                this.marketOrderbooks.set(obData.market, {
+                    yes: new Orderbook(obData.yes.bids, obData.yes.asks, obData.market, obData.yes.lastTradeId, obData.yes.currentPrice),
+                    no: new Orderbook(obData.no.bids, obData.no.asks, obData.market, obData.no.lastTradeId, obData.no.currentPrice)
+                })
+            })
             this.balances = new Map(parsedSnapShot.balances);
-        } else {
-            //Need to comeback for verification...
-            this.marketOrderbooks.set(EXAMPLE_EVENT, {
-                yes: new Orderbook([], [], EXAMPLE_EVENT, 1, 0),
-                no: new Orderbook([], [], EXAMPLE_EVENT, 1, 0),
-            });
-            this.setBaseBalances();
-        }
+            console.log("Snapshot loaded successfully.");
+        } //else {
+        //     //Need to comeback for verification...
+        //     // this.marketOrderbooks.set(EXAMPLE_EVENT, {
+        //     //     yes: new Orderbook([], [], EXAMPLE_EVENT, 1, 0),
+        //     //     no: new Orderbook([], [], EXAMPLE_EVENT, 1, 0),
+        //     // });
+        //     //is there any conflict, what is the optimal solution
+        //     this.setBaseBalances();
+        // }
         setInterval(() => {
             this.saveSnapshot();
         }, 1000 * 3);
@@ -71,25 +80,25 @@ export class Engine {
         fs.writeFileSync("./snapshot.json", JSON.stringify(toSaveSnapshot))
     }
 
-    setBaseBalances() {
-        this.balances.set("1", {
-            available: 1000,
-            locked: 0,
-            yesContracts: 0,
-            noContracts: 0,
-            lockedYesContracts: 0,
-            lockedNoContracts: 0
-        });
+    // setBaseBalances() {
+    //     this.balances.set("1", {
+    //         available: 1000,
+    //         locked: 0,
+    //         yesContracts: 0,
+    //         noContracts: 0,
+    //         lockedYesContracts: 0,
+    //         lockedNoContracts: 0
+    //     });
 
-        this.balances.set("2", {
-            available: 1000,
-            locked: 0,
-            yesContracts: 0,
-            noContracts: 0,
-            lockedYesContracts: 0,
-            lockedNoContracts: 0
-        })
-    }
+    //     this.balances.set("2", {
+    //         available: 1000,
+    //         locked: 0,
+    //         yesContracts: 0,
+    //         noContracts: 0,
+    //         lockedYesContracts: 0,
+    //         lockedNoContracts: 0
+    //     })
+    // }
 
     async processOrders({
         clientId,
@@ -124,7 +133,7 @@ export class Engine {
                         })
                     }
 
-                    const { executedQty, fills, orderId } = this.createOrders(
+                    const { executedQty, fills, orderId } = await this.createOrders(
                         market,
                         price,
                         quantity,
@@ -191,7 +200,8 @@ export class Engine {
                         throw new Error("No order found to cancel");
                     }
                     
-                    const userBalance = this.balances.get(orderToCancel.userId);
+                    // const userBalance = this.balances.get(orderToCancel.userId);
+                    const userBalance = await this.getUserBalance(orderToCancel.userId);
                     if(!userBalance) {
                         console.log("User Balance not found to cancel order for user", orderToCancel.userId);
                         throw new Error("User Balance not found to cancel order");
@@ -224,8 +234,10 @@ export class Engine {
                             userBalance.lockedNoContracts -= leftQunatity;
                         }
                         //@ts-ignore
-                        userBalance.noContracts -= leftQunatity
+                        // userBalance.noContracts -= leftQunatity
                     }
+
+                    await this.saveUserBalance(orderToCancel.userId, userBalance);
 
                     if (price) {
                         this.sendUpdatedDepthAt(price.toString(), cancelMarket, cancelledOrderOutcome)
@@ -271,7 +283,8 @@ export class Engine {
             case ON_RAMP:
                 const userId = message.data.userId;
                 const amount = message.data.amount;
-                this.onRamp(userId, amount);
+                // this.onRamp(userId, amount);
+                await this.onRamp(userId, amount);
                 break;
             case GET_DEPTH:
                 try {
@@ -317,18 +330,18 @@ export class Engine {
         }
     }
 
-    createOrders(
+   async createOrders(
         market: string,
         price: number,
         quantity: number,
         orderType: "bid" | "ask",
         outcome: "yes" | "no",
         userId: string
-    ): {
+    ): Promise<{
         executedQty: number;
         fills: Fill[];
         orderId: string;
-    } {
+    }> {
         const marketOrderbooks = this.marketOrderbooks.get(market);
         if (!marketOrderbooks) {
             throw new Error("No orderbooks found for this market");
@@ -336,8 +349,8 @@ export class Engine {
 
         const targetOrderbook = outcome === "yes" ? marketOrderbooks.yes : marketOrderbooks.no;
 
-        this.checkAndLockFundsAndAssets(orderType, outcome, userId, price, quantity);
-
+        // this.checkAndLockFundsAndAssets(orderType, outcome, userId, price, quantity);
+        await this.checkAndLockFundsAndAssets(orderType, outcome, userId, price, quantity);
         const order: Order = {
             price: Number(price),
             quantity: Number(quantity),
@@ -348,7 +361,7 @@ export class Engine {
         };
         const { fills, executedQty } = targetOrderbook.addOrder(order);
 
-        this.updateBalance(orderType, outcome, userId, fills);
+        await this.updateBalance(orderType, outcome, userId, fills);
         this.createDbTrades(fills, market); //do we actually need to pass outcome parameter...
         this.updateDbOrders(order, executedQty, fills, market, outcome);
         this.publishWsDepthUpdates(fills, price, orderType, market, outcome);
@@ -357,17 +370,23 @@ export class Engine {
         return { executedQty, fills, orderId: order.orderId }
     }
 
-    checkAndLockFundsAndAssets(
+   async checkAndLockFundsAndAssets(
         orderType: "bid" | "ask",
         outcome: "yes" | "no",
         userId: string,
         price: number,
         quantity: number
     ) {
-        const userBalance = this.balances.get(userId);
-        if (!userBalance) {
+        // const userBalance = this.balances.get(userId);
+        // if (!userBalance) {
+        //     throw new Error(`User balance is not found for user: ${userId}`);
+        // }
+
+        const userBalance = await this.getUserBalance(userId);
+        if(!userBalance) {
             throw new Error(`User balance is not found for user: ${userId}`);
         }
+
         if (orderType === "bid") {
             const cost = price * quantity;
             if (userBalance.available < cost) {
@@ -400,6 +419,7 @@ export class Engine {
                 userBalance.lockedNoContracts = (userBalance.lockedNoContracts || 0) + quantity;
             }
         }
+        await this.saveUserBalance(userId, userBalance);
 
         console.log(`User ${userId} balance after locking funds: `, userBalance);
     }
@@ -407,18 +427,18 @@ export class Engine {
     // services/engine/src/trade/Engine.ts
 
 //What is the optimal implementation? !!!Finance feature!!!
-updateBalance(
+async updateBalance(
     orderType: "bid" | "ask",
     outcome: "yes" | "no",
     userId: string,
     fills: Fill[]
 ) {
     console.log("----------------Balance updating------------");
-    fills.forEach((fill) => {
+   for(const fill of fills)  {
         //user who placed the original order
-        const takerBalance = this.balances.get(userId); 
+        const takerBalance = await this.getUserBalance(userId); 
         //user whose order was matched
-        const makerBalance = this.balances.get(fill.otherUserId); 
+        const makerBalance = await this.getUserBalance(fill.otherUserId); 
 
         if (!takerBalance || !makerBalance) {
             console.error("Error: Taker or Maker balance not found during update.")
@@ -437,7 +457,7 @@ updateBalance(
             } else {
                 takerBalance.noContracts += fill.qty;
             }
-
+            await this.saveUserBalance(userId, takerBalance);
             //maker's locked contracts are released, and they receive currency
             if (outcome === "yes") {
                 makerBalance.lockedYesContracts -= fill.qty;
@@ -445,6 +465,7 @@ updateBalance(
                 makerBalance.lockedNoContracts -= fill.qty;
             }
             makerBalance.available += fill.qty * fill.price;
+            await this.saveUserBalance(fill.otherUserId, makerBalance);
         } else { 
             //sell order (taker is seller)
             //taker (userId) is the seller of contracts, RECEIVES currency!!!
@@ -458,6 +479,7 @@ updateBalance(
             }
             //seller receives currency
             takerBalance.available += fill.qty * fill.price;
+            await this.saveUserBalance(userId, takerBalance);
 
             //maker -> Release locked currency
             makerBalance.locked -= fill.qty * fill.price;
@@ -467,8 +489,9 @@ updateBalance(
             } else {
                 makerBalance.noContracts += fill.qty;
             }
+            await this.saveUserBalance(fill.otherUserId, makerBalance);
         }
-    })
+    }
     console.log("----------------Balance updated------------");
 }
 
@@ -580,21 +603,50 @@ updateBalance(
     }
 
     //Never Used here.
-    onRamp(userId: string, amount: number) {
-        const userBalance = this.balances.get(userId);
-        if (!userBalance) {
-            this.balances.set(userId, {
-                available: amount,
-                locked: 0,
-                yesContracts: 0,
-                noContracts: 0,
-                lockedYesContracts: 0,
-                lockedNoContracts: 0,
-            });
-        } else {
-            userBalance.available += amount;
+    // onRamp(userId: string, amount: number) {
+    //     const userBalance = this.balances.get(userId);
+    //     if (!userBalance) {
+    //         this.balances.set(userId, {
+    //             available: amount,
+    //             locked: 0,
+    //             yesContracts: 0,
+    //             noContracts: 0,
+    //             lockedYesContracts: 0,
+    //             lockedNoContracts: 0,
+    //         });
+    //     } else {
+    //         userBalance.available += amount;
+    //     }
+    // }
+
+    async onRamp(userId: string, amount: number) {
+        const user = await prisma.user.findUnique({
+            where: {
+                id: userId
+            }
+        });
+
+        if(!user) {
+            console.error(`User not found for on-ramp: ${userId}`)
+            throw new Error(`User not found for on-ramp: ${userId}`);
+        }
+
+        const newBalance = user.balance + amount;
+        await prisma.user.update({
+            data: {
+                balance: newBalance
+            },
+            where: {
+                id: userId
+            }
+        })
+        const cachedBalance  = this.balances.get(userId);
+        if(cachedBalance) {
+            cachedBalance.available = newBalance;
+            this.balances.set(userId, cachedBalance);
         }
     }
+    
 
     sendUpdatedDepthAt(price: string, market: string, outcome: "yes" | "no") {
         const marketBooks = this.marketOrderbooks.get(market);
@@ -616,4 +668,57 @@ updateBalance(
         });
     }
 
-}
+    private async getUserBalance(userId:string): Promise<UserBalance> {
+        let userBalance = this.balances.get(userId);
+
+        if(!userBalance) {
+            const user = await prisma.user.findUnique({
+                where: {
+                    id: userId,
+                }
+            });
+            if(!user) {
+                // Auth must be soo good that this should not happen
+                console.warn(`User ${userId} not found in DB. Initializing with default balance.`);
+
+                userBalance = {
+                    available: 0,
+                    locked: 0,
+                    yesContracts: 0,
+                    noContracts: 0,
+                    lockedYesContracts: 0,
+                    lockedNoContracts: 0,
+                }
+            } else {
+                //contracts to be persistent or not...think...
+                userBalance = {
+                    available: user.balance,
+                    locked: 0,
+                    yesContracts: 0,
+                    noContracts: 0,
+                    lockedYesContracts: 0,
+                    lockedNoContracts: 0,
+                };
+            }
+            this.balances.set(userId, userBalance);
+        }
+        return userBalance;
+    } 
+
+    private async saveUserBalance(userId: string, balance: UserBalance) {
+        this.balances.set(userId, balance);
+        //what are  ledger/contract tables
+        try {
+            await prisma.user.update({
+                where: {
+                    id: userId,
+                },
+                data: {
+                    balance: balance.available
+                }
+            })
+        } catch(error) {
+            console.error(`Failed to save balance for user ${userId} to DB:`, error)
+        }
+    }
+ }

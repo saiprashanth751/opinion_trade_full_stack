@@ -19,7 +19,8 @@
   "packageManager": "npm@11.1.0",
   "workspaces": [
     "apps/*",
-    "packages/*"
+    "packages/*",
+    "services/*"
   ],
   "dependencies": {
     "next": "^15.4.2"

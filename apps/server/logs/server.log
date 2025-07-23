@@ -28,3 +28,19 @@
 [ 2025-07-23 12:36:06 ] -  [32minfo[39m  - SERVER | Listening on port 3001
 [ 2025-07-23 12:41:58 ] -  [32minfo[39m  - WORKER | Starting order worker
 [ 2025-07-23 12:41:58 ] -  [32minfo[39m  - SERVER | Listening on port 3001
+[ 2025-07-23 12:46:40 ] -  [32minfo[39m  - WORKER | Starting order worker
+[ 2025-07-23 12:46:40 ] -  [32minfo[39m  - SERVER | Listening on port 3001
+[ 2025-07-23 12:50:38 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 422 - 8.789 ms
+[ 2025-07-23 12:52:58 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 422 - 3.641 ms
+[ 2025-07-23 12:53:25 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 422 - 3.680 ms
+[ 2025-07-23 12:55:53 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 422 - 4.397 ms
+[ 2025-07-23 12:56:00 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 422 - 5.338 ms
+[ 2025-07-23 12:59:19 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 422 - 11.721 ms
+[ 2025-07-23 12:59:35 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 422 - 2.561 ms
+[ 2025-07-23 13:07:20 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 422 - 25.816 ms
+[ 2025-07-23 13:09:25 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 422 - 4.340 ms
+[ 2025-07-23 13:09:44 ] -  [32minfo[39m  - WORKER | Starting order worker
+[ 2025-07-23 13:09:44 ] -  [32minfo[39m  - SERVER | Listening on port 3001
+[ 2025-07-23 13:09:46 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"8781bfc6-2554-4a3d-9765-20adaed17c96","message":{"type":"CREATE_ORDER","data":{"orderType":"buy","marketSide":"no"}}}
+[ 2025-07-23 13:09:46 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 17.066 ms
+[ 2025-07-23 14:05:29 ] -  [32minfo[39m  - SERVER | Listening on port 3001

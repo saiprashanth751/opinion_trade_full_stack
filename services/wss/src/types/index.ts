@@ -24,4 +24,11 @@ export type DepthUpdateMessage = {
     }
 }
 
-export type OutgoingMessage = DepthUpdateMessage;
+export type ClientIdMessage = {
+    type: "CLIENT_ID";
+    payload: {
+        clientId: string;
+    };
+};
+
+export type OutgoingMessage = DepthUpdateMessage | ClientIdMessage;

@@ -1,4 +1,3 @@
-import { CREATE_ORDER, MessageFromApi } from "@trade/types";
 import { RedisManager } from "../classes/RedisManager.js";
 import { logger } from "@trade/logger"
 
@@ -17,25 +16,25 @@ export const addToOrderQueue  = async (order: object) => {
     }
 }
 
-export const processOrderQueue = async () => {
-    while(true){
-        try {
-            const order = await redisClient.lPop(QUEUE_NAME);
+// export const processOrderQueue = async () => {
+//     while(true){
+//         try {
+//             const order = await redisClient.lPop(QUEUE_NAME);
 
-            let orderObj: MessageFromApi | null = null;
-            if(order){
-                orderObj = JSON.parse(order);
-            }
+//             let orderObj: MessageFromApi | null = null;
+//             if(order){
+//                 orderObj = JSON.parse(order);
+//             }
 
-            const userId = (orderObj?.type == CREATE_ORDER)  ? orderObj?.data.userId : null;
+//             const userId = (orderObj?.type == CREATE_ORDER)  ? orderObj?.data.userId : null;
 
-            if(!userId){
-                logger.error(`Error processing order: userId not found`);
-            }
-        }catch(err){
-            if(err instanceof Error){
-                logger.error(`Error processing order: ${err.message}`);
-            }
-        }
-    }
-}
+//             if(!userId){
+//                 logger.error(`Error processing order: userId not found`);
+//             }
+//         }catch(err){
+//             if(err instanceof Error){
+//                 logger.error(`Error processing order: ${err.message}`);
+//             }
+//         }
+//     }
+// }

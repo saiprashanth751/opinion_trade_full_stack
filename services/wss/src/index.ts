@@ -1,7 +1,11 @@
 import { WebSocketServer } from "ws";
 import { UserManager } from "./classes/UserManager";
+import dotenv from "dotenv"
+
+dotenv.config();
 
 const port = process.env.PORT as unknown as number;
+
 const wss = new WebSocketServer({ port: port });
 
 wss.on("listening", () => {

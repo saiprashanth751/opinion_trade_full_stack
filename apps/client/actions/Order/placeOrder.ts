@@ -25,6 +25,9 @@ export const placeOrder = async ({ eventId, price, quantity, action, outcome }: 
             };
         }
 
+        // console.log("EventID: ", eventId)
+        // console.log("Outcome: ", outcome)
+
         const userId = session.user.id;
 
         const response = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/order/initiate`, {

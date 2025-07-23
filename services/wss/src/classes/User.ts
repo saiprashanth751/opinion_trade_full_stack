@@ -11,6 +11,7 @@ export class User {
         this.id = id;
         this.ws = ws;
         this.addListeners();
+        this.ws.send(JSON.stringify({ type: "CLIENT_ID", payload: { clientId: this.id } }));
     }
 
     private addListeners() {

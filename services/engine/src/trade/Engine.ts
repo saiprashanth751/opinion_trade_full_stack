@@ -5,6 +5,9 @@ import { v4 as uuidv4 } from "uuid";
 import { RedisManager } from "@trade/order-queue"
 import prisma from "@repo/db/client"
 import { Prisma } from "@prisma/client"
+import dotenv from "dotenv";
+
+dotenv.config();
 
 //imp-todo : implement transactions for balance updates -> optimal
 
@@ -24,10 +27,10 @@ interface UserBalance {
 
 //implementing synthetic market maker -> for dynamic price changing according to the orderbook
 
-const SYNTHETIC_MARKET_MAKER_USER_ID = "synthetic_market_maker_user_id"; // Unique ID for the market maker
-const SYNTHETIC_ORDER_QUANTITY = 10; // Quantity of shares the market maker will offer/bid for
-const PRICE_ADJUSTMENT_INTERVAL_MS = 5000; // How often the market maker checks and adjusts prices (e.g., 5 seconds)
-const MARKET_MAKER_SPREAD = 1; // A small value to create a bid-ask spread for the synthetic orders (e.g., 1 unit of price)
+const SYNTHETIC_MARKET_MAKER_USER_ID = process.env.SYNTHETIC_MARKET_MAKER_USER_ID as string; // Unique ID for the market maker
+const SYNTHETIC_ORDER_QUANTITY = Number(process.env.SYNTHETIC_ORDER_QUANTITY); // Quantity of shares the market maker will offer/bid for
+const PRICE_ADJUSTMENT_INTERVAL_MS = Number(process.env.PRICE_ADJUSTMENT_INTERVAL_MS); // How often the market maker checks and adjusts prices (e.g., 5 seconds)
+const MARKET_MAKER_SPREAD = Number(process.env.MARKET_MAKER_SPREAD); // A small value to create a bid-ask spread for the synthetic orders (e.g., 1 unit of price)
 
 export class Engine {
     //balances -> funds and asset balances

@@ -61,8 +61,11 @@ export class SubscriptionManager {
 
     private redisCallbackHandler = (message: string, channel: string) => {
         const parsedMessage = JSON.parse(message);
-        this.reverseSubscriptions.get(channel).forEach((subscriber) => {
-            UserManager.getInstance().getUser(subscriber).emitMessage(parsedMessage);
+        this.reverseSubscriptions.get(channel)?.forEach((subscriber) => {
+            const user = UserManager.getInstance().getUser(subscriber);
+            if (user) {
+                user.emitMessage(parsedMessage);
+            }
         })
     }
 
@@ -76,7 +79,7 @@ export class SubscriptionManager {
         if(reverseSubscriptions) {
             this.reverseSubscriptions.set(subscription, reverseSubscriptions.filter((s) => s !== userId));
             
-            if(this.reverseSubscriptions.get(subscription).length === 0) {
+            if(this.reverseSubscriptions.get(subscription)?.length === 0) {
                 this.reverseSubscriptions.delete(subscription);
                 this.redisClient.unsubscribe(subscription);
             }
@@ -85,7 +88,7 @@ export class SubscriptionManager {
 
     public userLeft(userId: string) {
         console.log("User Left: " + userId);
-        this.subscriptions.get(userId).forEach((s) => this.unsubscribe(userId, s));
+        this.subscriptions.get(userId)?.forEach((s) => this.unsubscribe(userId, s));
     }
 
     getSubscriptions(userId: string) {

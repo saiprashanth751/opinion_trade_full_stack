@@ -6,7 +6,6 @@ import { slugify, eventCodeGenerator } from "../../utils/utils"
 import { SuccessResponse, SuccessResponseType } from "../../utils/wrappers/success.res"
 import { ErrorHandler } from "../../utils/wrappers/error.res"
 
-
 // when the client sends the request body (req.body), it should not include the slug. By using Omit<TEvent, "slug">, you are explicitly telling TypeScript that the req.body object will have all the properties of TEvent except for slug. generated on the server-side using the slugify utility function (let slug = slugify(title);).
 export const createEventhandler = AsyncWrapper( async (req: Request<{}, {}, Omit<TEvent, "slug">>, res: Response) => {
     const {
@@ -62,6 +61,17 @@ export const createEventhandler = AsyncWrapper( async (req: Request<{}, {}, Omit
             quantity
         }
     });
+    const SYNTHETIC_MARKET_MAKER_USER_ID = process.env.SYNTHETIC_MARKET_MAKER_USER_ID as string;
+    await prisma.userContract.create({
+        data: {
+            userId: SYNTHETIC_MARKET_MAKER_USER_ID,
+            eventId: eventCode,
+            yesContracts: 1000000,
+            noContracts: 1000000,
+            lockedYesContracts: 0,
+            lockedNoContracts: 0
+        }
+    })
 
     let response = new SuccessResponse("Event created successfully", 201);
     return res.json({

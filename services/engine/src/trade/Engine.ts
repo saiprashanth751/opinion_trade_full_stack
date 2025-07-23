@@ -4,6 +4,9 @@ import { CANCEL_ORDER, CREATE_ORDER, GET_DEPTH, GET_OPEN_ORDERS, MessageFromApi,
 import { v4 as uuidv4 } from "uuid";
 import { RedisManager } from "@trade/order-queue"
 import prisma from "@repo/db/client"
+import { Prisma } from "@prisma/client"
+
+//imp-todo : implement transactions for balance updates -> optimal
 
 // export const EXAMPLE_EVENT = "gta6-trailer-3-to-be-released-by-the-end-of-the-day";
 export const CURRENCY = "INR";
@@ -12,10 +15,11 @@ export const CURRENCY = "INR";
 interface UserBalance {
     available: number;
     locked: number;
-    yesContracts: number;
-    noContracts: number;
-    lockedYesContracts: number;
-    lockedNoContracts: number;
+    // managed by db...
+    // yesContracts: number;
+    // noContracts: number;
+    // lockedYesContracts: number;
+    // lockedNoContracts: number;
 }
 
 export class Engine {
@@ -114,8 +118,8 @@ export class Engine {
                 try {
                     const { market, price, quantity, action, outcome, userId } = message.data
                     const orderType = action === "buy" ? "bid" : "ask";
-                    
-                    if(!this.marketOrderbooks.has(market)) {
+
+                    if (!this.marketOrderbooks.has(market)) {
                         console.log(`Initializing new orderbooks for market: ${market}`);
                         const eventDetails = await prisma.event.findUnique({
                             where: {
@@ -123,7 +127,7 @@ export class Engine {
                             }
                         })
 
-                        if(!eventDetails) {
+                        if (!eventDetails) {
                             throw new Error(`Event details not fount for market: ${market}`)
                         }
 
@@ -132,15 +136,18 @@ export class Engine {
                             no: new Orderbook([], [], market, 0, eventDetails.initialNoPrice),
                         })
                     }
-
-                    const { executedQty, fills, orderId } = await this.createOrders(
-                        market,
-                        price,
-                        quantity,
-                        orderType,
-                        outcome,
-                        userId
-                    );
+                    //transactions for atomicity...
+                    const { executedQty, fills, orderId } = await prisma.$transaction(async (tx) => {
+                        return this.createOrders(
+                            market,
+                            price,
+                            quantity,
+                            orderType,
+                            outcome,
+                            userId,
+                            tx
+                        );
+                    })
 
                     RedisManager.getInstance().sendToApi(clientId, {
                         type: "ORDER_PLACED",
@@ -152,7 +159,7 @@ export class Engine {
                     })
 
                     console.log("Pushed ORDER_PLACED into REDIS");
-                    console.log(`usesr ${userId} : balance`, this.balances.get(userId))
+                    console.log(`user ${userId} : balance`, await this.getUserBalance(userId));
                 } catch (error) {
                     console.log(error);
 
@@ -199,12 +206,16 @@ export class Engine {
                         console.log("No order found to cancel with ID: ", orderId);
                         throw new Error("No order found to cancel");
                     }
-                    
+
                     // const userBalance = this.balances.get(orderToCancel.userId);
                     const userBalance = await this.getUserBalance(orderToCancel.userId);
-                    if(!userBalance) {
+                    if (!userBalance) {
                         console.log("User Balance not found to cancel order for user", orderToCancel.userId);
                         throw new Error("User Balance not found to cancel order");
+                    }
+                    const userContract = await this.getUserContract(orderToCancel.userId, cancelMarket);
+                    if (!userContract) {
+                        throw new Error(`User contract not found for user: ${orderToCancel.userId} and event: ${cancelMarket}`);
                     }
 
                     let price: number | undefined;
@@ -223,21 +234,26 @@ export class Engine {
                         const leftQunatity = orderToCancel.quantity - orderToCancel.filled;
 
                         if (cancelledOrderOutcome === "yes") {
-                            //@ts-ignore
-                            userBalance.yesContracts += leftQunatity;
-                            //@ts-ignore
-                            userBalance.lockedYesContracts -= leftQunatity;
+                            // //@ts-ignore
+                            // userBalance.yesContracts += leftQunatity;
+                            // //@ts-ignore
+                            // userBalance.lockedYesContracts -= leftQunatity;
+                            userContract.yesContracts += leftQunatity;
+                            userContract.lockedYesContracts -= leftQunatity;
                         } else {
                             //@ts-ignore
-                            userBalance.noContracts += leftQunatity;
-                            //@ts-ignore
-                            userBalance.lockedNoContracts -= leftQunatity;
+                            // userBalance.noContracts += leftQunatity;
+                            // //@ts-ignore
+                            // userBalance.lockedNoContracts -= leftQunatity;
+                            userContract.noContracts += leftQunatity;
+                            userContract.lockedNoContracts -= leftQunatity;
                         }
                         //@ts-ignore
                         // userBalance.noContracts -= leftQunatity
                     }
 
                     await this.saveUserBalance(orderToCancel.userId, userBalance);
+                    await this.saveUserContract(userContract);
 
                     if (price) {
                         this.sendUpdatedDepthAt(price.toString(), cancelMarket, cancelledOrderOutcome)
@@ -330,13 +346,14 @@ export class Engine {
         }
     }
 
-   async createOrders(
+    async createOrders(
         market: string,
         price: number,
         quantity: number,
         orderType: "bid" | "ask",
         outcome: "yes" | "no",
-        userId: string
+        userId: string,
+        tx: Prisma.TransactionClient
     ): Promise<{
         executedQty: number;
         fills: Fill[];
@@ -350,7 +367,7 @@ export class Engine {
         const targetOrderbook = outcome === "yes" ? marketOrderbooks.yes : marketOrderbooks.no;
 
         // this.checkAndLockFundsAndAssets(orderType, outcome, userId, price, quantity);
-        await this.checkAndLockFundsAndAssets(orderType, outcome, userId, price, quantity);
+        await this.checkAndLockFundsAndAssets(orderType, outcome, userId, price, quantity, market, tx);
         const order: Order = {
             price: Number(price),
             quantity: Number(quantity),
@@ -361,7 +378,7 @@ export class Engine {
         };
         const { fills, executedQty } = targetOrderbook.addOrder(order);
 
-        await this.updateBalance(orderType, outcome, userId, fills);
+        await this.updateBalance(orderType, outcome, userId, fills, market, tx);
         this.createDbTrades(fills, market); //do we actually need to pass outcome parameter...
         this.updateDbOrders(order, executedQty, fills, market, outcome);
         this.publishWsDepthUpdates(fills, price, orderType, market, outcome);
@@ -370,21 +387,28 @@ export class Engine {
         return { executedQty, fills, orderId: order.orderId }
     }
 
-   async checkAndLockFundsAndAssets(
+    async checkAndLockFundsAndAssets(
         orderType: "bid" | "ask",
         outcome: "yes" | "no",
         userId: string,
         price: number,
-        quantity: number
+        quantity: number,
+        eventId: string,
+        tx: Prisma.TransactionClient
     ) {
         // const userBalance = this.balances.get(userId);
         // if (!userBalance) {
         //     throw new Error(`User balance is not found for user: ${userId}`);
         // }
 
-        const userBalance = await this.getUserBalance(userId);
-        if(!userBalance) {
+        const userBalance = await this.getUserBalance(userId, tx);
+        if (!userBalance) {
             throw new Error(`User balance is not found for user: ${userId}`);
+        }
+
+        const userContract = await this.getUserContract(userId, eventId, tx); // Get user contract
+        if (!userContract) {
+            throw new Error(`User contract not found for user: ${userId} and event: ${eventId}`);
         }
 
         if (orderType === "bid") {
@@ -403,97 +427,227 @@ export class Engine {
         } else {
             // TODO: Assumptions are bring made. Come up with an optimal solution...
 
-            const userContracts = outcome === "yes" ? userBalance.yesContracts : userBalance.noContracts;
+            // const userContracts = outcome === "yes" ? userBalance.yesContracts : userBalance.noContracts;
+            const userContracts = outcome === "yes" ? userContract.yesContracts : userContract.noContracts;
 
             if (userContracts === undefined || userContracts < quantity) {
                 throw new Error(`Insufficient ${outcome} contracts to sell.`)
             }
 
             if (outcome === "yes") {
-                userBalance.yesContracts -= quantity;
-                //@ts-ignore
-                userBalance.lockedYesContracts = (userBalance.lockedYesContracts || 0) + quantity;
+                // userBalance.yesContracts -= quantity;
+                // //@ts-ignore
+                // userBalance.lockedYesContracts = (userBalance.lockedYesContracts || 0) + quantity;
+                userContract.yesContracts -= quantity;
+                userContract.lockedYesContracts += quantity;
             } else {
-                userBalance.noContracts -= quantity;
-                //@ts-ignore
-                userBalance.lockedNoContracts = (userBalance.lockedNoContracts || 0) + quantity;
+                // userBalance.noContracts -= quantity;
+                // //@ts-ignore
+                // userBalance.lockedNoContracts = (userBalance.lockedNoContracts || 0) + quantity;
+                userContract.noContracts -= quantity;
+                userContract.lockedNoContracts += quantity;
             }
         }
-        await this.saveUserBalance(userId, userBalance);
+        await this.saveUserBalance(userId, userBalance, tx);
+        await this.saveUserContract(userContract, tx);
 
         console.log(`User ${userId} balance after locking funds: `, userBalance);
     }
 
     // services/engine/src/trade/Engine.ts
 
-//What is the optimal implementation? !!!Finance feature!!!
-async updateBalance(
-    orderType: "bid" | "ask",
-    outcome: "yes" | "no",
-    userId: string,
-    fills: Fill[]
-) {
-    console.log("----------------Balance updating------------");
-   for(const fill of fills)  {
-        //user who placed the original order
-        const takerBalance = await this.getUserBalance(userId); 
-        //user whose order was matched
-        const makerBalance = await this.getUserBalance(fill.otherUserId); 
+    //What is the optimal implementation? !!!Finance feature!!!
+    async updateBalance(
+        orderType: "bid" | "ask",
+        outcome: "yes" | "no",
+        userId: string,
+        fills: Fill[],
+        eventId: string,
+        tx: Prisma.TransactionClient
+    ) {
+        console.log("----------------Balance updating------------");
+        // for (const fill of fills) {
+        //     //user who placed the original order
+        //     const takerBalance = await this.getUserBalance(userId, tx);
+        //     //user whose order was matched
+        //     const makerBalance = await this.getUserBalance(fill.otherUserId, tx);
+        //     const takerContract = await this.getUserContract(userId, eventId, tx);
+        //     const makerContract = await this.getUserContract(fill.otherUserId, eventId, tx);
 
-        if (!takerBalance || !makerBalance) {
-            console.error("Error: Taker or Maker balance not found during update.")
+        //     if (!takerBalance || !makerBalance || !takerContract || !makerContract) {
+        //         console.error("Error: Taker or Maker balance not found during update.")
+        //         return;
+        //     }
+
+        //     if (orderType === "bid") {
+        //         //buy order (taker is buyer)
+        //         //taker(buyer) receives contracts pays currency
+        //         //maker(seller) receives currency give contracts
+
+        //         //taker's locked currency is released and converted to contracts
+        //         takerBalance.locked -= fill.qty * fill.price;
+        //         if (outcome === "yes") {
+        //             takerContract.yesContracts += fill.qty;
+        //         } else {
+        //             takerContract.noContracts += fill.qty;
+        //         }
+        //         await this.saveUserBalance(userId, takerBalance);
+        //         await this.saveUserContract(takerContract);
+        //         //maker's locked contracts are released, and they receive currency
+        //         if (outcome === "yes") {
+        //             makerContract.lockedYesContracts -= fill.qty;
+        //         } else {
+        //             makerContract.lockedNoContracts -= fill.qty;
+        //         }
+        //         makerBalance.available += fill.qty * fill.price;
+        //         await this.saveUserBalance(fill.otherUserId, makerBalance, tx);
+        //         await this.saveUserContract(makerContract, tx);
+        //     } else {
+        //         //sell order (taker is seller)
+        //         //taker (userId) is the seller of contracts, RECEIVES currency!!!
+        //         //maker (fill.otherUserId) is the BUYER of contracts, PAYS currency!!!
+
+        //         //taker -> release locked contracts
+        //         if (outcome === "yes") {
+        //             takerContract.lockedYesContracts -= fill.qty;
+        //         } else {
+        //             takerContract.lockedNoContracts -= fill.qty;
+        //         }
+        //         //seller receives currency
+        //         takerBalance.available += fill.qty * fill.price;
+        //         await this.saveUserBalance(userId, takerBalance, tx);
+        //         await this.saveUserContract(takerContract, tx);
+
+        //         //maker -> Release locked currency
+        //         makerBalance.locked -= fill.qty * fill.price;
+        //         //maker -> buyer receives contracts
+        //         if (outcome === "yes") {
+        //             makerContract.yesContracts += fill.qty;;
+        //         } else {
+        //             makerContract.noContracts += fill.qty;
+        //         }
+        //         await this.saveUserBalance(fill.otherUserId, makerBalance, tx);
+        //         await this.saveUserContract(makerContract, tx);
+        //     }
+        // }
+
+// -----------------------------------v2-----------------------------------------
+
+        // Optimized version. To reduce db calls round-trip.. complex to understand
+        const userIdsToUpdate = new Set<string>();
+        userIdsToUpdate.add(userId); // Taker
+        fills.forEach(fill => userIdsToUpdate.add(fill.otherUserId)); // Makers
+
+        // Fetch all necessary balances and contracts in one go
+        const [users, userContracts] = await Promise.all([
+            tx.user.findMany({ where: { id: { in: Array.from(userIdsToUpdate) } } }),
+            tx.userContract.findMany({
+                where: {
+                    userId: { in: Array.from(userIdsToUpdate) },
+                    eventId: eventId
+                }
+            })
+        ]);
+
+        const userMap = new Map(users.map(u => [u.id, u]));
+        const userContractMap = new Map(userContracts.map(uc => [uc.userId, uc]));
+
+        // Prepare updates
+        const balanceUpdates: { id: string, data: { balance: number } }[] = [];
+        const contractUpdates: { id: string, data: { yesContracts?: number, noContracts?: number, lockedYesContracts?: number, lockedNoContracts?: number } }[] = [];
+
+        // Process taker's balance/contracts
+        const takerDbUser = userMap.get(userId);
+        const takerDbContract = userContractMap.get(userId);
+
+        if (!takerDbUser || !takerDbContract) {
+            console.error("Error: Taker user or contract not found during batch update preparation.");
             return;
         }
 
-        if (orderType === "bid") { 
-            //buy order (taker is buyer)
-            //taker(buyer) receives contracts pays currency
-            //maker(seller) receives currency give contracts
+        // Simulate in-memory UserBalance and UserContract objects for calculations
+        const currentTakerBalance: UserBalance = { available: takerDbUser.balance, locked: 0 }; // Locked is transient
+        const currentTakerContract = { ...takerDbContract };
 
-            //taker's locked currency is released and converted to contracts
-            takerBalance.locked -= fill.qty * fill.price;
-            if (outcome === "yes") {
-                takerBalance.yesContracts += fill.qty;
-            } else {
-                takerBalance.noContracts += fill.qty;
-            }
-            await this.saveUserBalance(userId, takerBalance);
-            //maker's locked contracts are released, and they receive currency
-            if (outcome === "yes") {
-                makerBalance.lockedYesContracts -= fill.qty;
-            } else {
-                makerBalance.lockedNoContracts -= fill.qty;
-            }
-            makerBalance.available += fill.qty * fill.price;
-            await this.saveUserBalance(fill.otherUserId, makerBalance);
-        } else { 
-            //sell order (taker is seller)
-            //taker (userId) is the seller of contracts, RECEIVES currency!!!
-            //maker (fill.otherUserId) is the BUYER of contracts, PAYS currency!!!
+        // Apply initial lock from checkAndLockFundsAndAssets (which already saved to DB)
+        // Now, apply the changes from fills
+        for (const fill of fills) {
+            const makerDbUser = userMap.get(fill.otherUserId);
+            const makerDbContract = userContractMap.get(fill.otherUserId);
 
-            //taker -> release locked contracts
-            if (outcome === "yes") {
-                takerBalance.lockedYesContracts -= fill.qty;
-            } else {
-                takerBalance.lockedNoContracts -= fill.qty;
+            if (!makerDbUser || !makerDbContract) {
+                console.error("Error: Maker user or contract not found during batch update preparation.");
+                continue;
             }
-            //seller receives currency
-            takerBalance.available += fill.qty * fill.price;
-            await this.saveUserBalance(userId, takerBalance);
 
-            //maker -> Release locked currency
-            makerBalance.locked -= fill.qty * fill.price;
-            //maker -> buyer receives contracts
-            if (outcome === "yes") {
-                makerBalance.yesContracts += fill.qty;
-            } else {
-                makerBalance.noContracts += fill.qty;
+            const currentMakerBalance: UserBalance = { available: makerDbUser.balance, locked: 0 }; // Locked is transient
+            const currentMakerContract = { ...makerDbContract };
+
+            if (orderType === "bid") { // Taker is buyer (userId), Maker is seller (fill.otherUserId)
+                // Taker (buyer)
+                currentTakerBalance.locked -= fill.qty * fill.price; // Release locked funds
+                if (outcome === "yes") {
+                    currentTakerContract.yesContracts += fill.qty;
+                } else {
+                    currentTakerContract.noContracts += fill.qty;
+                }
+
+                // Maker (seller)
+                if (outcome === "yes") {
+                    currentMakerContract.lockedYesContracts -= fill.qty; // Release locked contracts
+                } else {
+                    currentMakerContract.lockedNoContracts -= fill.qty; // Release locked contracts
+                }
+                currentMakerBalance.available += fill.qty * fill.price; // Receive funds
+
+            } else { // Taker is seller (userId), Maker is buyer (fill.otherUserId)
+                // Taker (seller)
+                if (outcome === "yes") {
+                    currentTakerContract.lockedYesContracts -= fill.qty; // Release locked contracts
+                } else {
+                    currentTakerContract.lockedNoContracts -= fill.qty; // Release locked contracts
+                }
+                currentTakerBalance.available += fill.qty * fill.price; // Receive funds
+
+                // Maker (buyer)
+                currentMakerBalance.locked -= fill.qty * fill.price; // Release locked funds
+                if (outcome === "yes") {
+                    currentMakerContract.yesContracts += fill.qty;
+                } else {
+                    currentMakerContract.noContracts += fill.qty;
+                }
             }
-            await this.saveUserBalance(fill.otherUserId, makerBalance);
+
+            // Update maps with calculated values
+            userMap.set(userId, { ...takerDbUser, balance: currentTakerBalance.available });
+            userContractMap.set(userId, currentTakerContract);
+            userMap.set(fill.otherUserId, { ...makerDbUser, balance: currentMakerBalance.available });
+            userContractMap.set(fill.otherUserId, currentMakerContract);
+         }
+
+        // Collect all final updates
+        for (const [id, user] of userMap.entries()) {
+            balanceUpdates.push({ id: user.id, data: { balance: user.balance } });
         }
+        for (const [userId, contract] of userContractMap.entries()) {
+            contractUpdates.push({ id: contract.id, data: {
+                yesContracts: contract.yesContracts,
+                noContracts: contract.noContracts,
+                lockedYesContracts: contract.lockedYesContracts,
+                lockedNoContracts: contract.lockedNoContracts,
+            }});
+        }
+
+        // Execute batch updates
+        await Promise.all([
+            ...balanceUpdates.map(update => tx.user.update({ where: { id: update.id }, data: update.data })),
+            ...contractUpdates.map(update => tx.userContract.update({ where: { id: update.id }, data: update.data }))
+        ]);
+
+   //----------------------------v2-close----------------------------------------
+
+        console.log("----------------Balance updated------------");
     }
-    console.log("----------------Balance updated------------");
-}
 
     createDbTrades(
         fills: Fill[],
@@ -626,7 +780,7 @@ async updateBalance(
             }
         });
 
-        if(!user) {
+        if (!user) {
             console.error(`User not found for on-ramp: ${userId}`)
             throw new Error(`User not found for on-ramp: ${userId}`);
         }
@@ -640,13 +794,13 @@ async updateBalance(
                 id: userId
             }
         })
-        const cachedBalance  = this.balances.get(userId);
-        if(cachedBalance) {
+        const cachedBalance = this.balances.get(userId);
+        if (cachedBalance) {
             cachedBalance.available = newBalance;
             this.balances.set(userId, cachedBalance);
         }
     }
-    
+
 
     sendUpdatedDepthAt(price: string, market: string, outcome: "yes" | "no") {
         const marketBooks = this.marketOrderbooks.get(market);
@@ -668,48 +822,53 @@ async updateBalance(
         });
     }
 
-    private async getUserBalance(userId:string): Promise<UserBalance> {
+    private async getUserBalance(userId: string, tx?: Prisma.TransactionClient): Promise<UserBalance> {
         let userBalance = this.balances.get(userId);
 
-        if(!userBalance) {
-            const user = await prisma.user.findUnique({
+        if (!userBalance) {
+            //for secure transaction...
+            const client = tx || prisma;
+            const user = await client.user.findUnique({
                 where: {
                     id: userId,
                 }
             });
-            if(!user) {
+            if (!user) {
                 // Auth must be soo good that this should not happen
                 console.warn(`User ${userId} not found in DB. Initializing with default balance.`);
 
                 userBalance = {
                     available: 0,
                     locked: 0,
-                    yesContracts: 0,
-                    noContracts: 0,
-                    lockedYesContracts: 0,
-                    lockedNoContracts: 0,
+                    // yesContracts: 0,
+                    // noContracts: 0,
+                    // lockedYesContracts: 0,
+                    // lockedNoContracts: 0,
                 }
             } else {
                 //contracts to be persistent or not...think...
                 userBalance = {
                     available: user.balance,
                     locked: 0,
-                    yesContracts: 0,
-                    noContracts: 0,
-                    lockedYesContracts: 0,
-                    lockedNoContracts: 0,
-                };
+                    //     yesContracts: 0,
+                    //     noContracts: 0,
+                    //     lockedYesContracts: 0,
+                    //     lockedNoContracts: 0,
+                    // };
+                }
+                this.balances.set(userId, userBalance);
             }
-            this.balances.set(userId, userBalance);
         }
         return userBalance;
-    } 
+    }
 
-    private async saveUserBalance(userId: string, balance: UserBalance) {
+    private async saveUserBalance(userId: string, balance: UserBalance, tx?: Prisma.TransactionClient) {
         this.balances.set(userId, balance);
         //what are  ledger/contract tables
         try {
-            await prisma.user.update({
+            //for transactions
+            const client = tx || prisma
+            await client.user.update({
                 where: {
                     id: userId,
                 },
@@ -717,8 +876,51 @@ async updateBalance(
                     balance: balance.available
                 }
             })
-        } catch(error) {
+        } catch (error) {
             console.error(`Failed to save balance for user ${userId} to DB:`, error)
         }
     }
- }
+
+    private async getUserContract(userId: string, eventId: string, tx?: Prisma.TransactionClient): Promise<any> {
+        const client = tx || prisma;
+        let userContract = await client.userContract.findUnique({
+            where: {
+                userId_eventId: {
+                    userId: userId,
+                    eventId: eventId,
+                },
+            },
+        });
+
+        if (!userContract) {
+            userContract = await client.userContract.create({
+                data: {
+                    userId: userId,
+                    eventId: eventId,
+                    yesContracts: 0,
+                    noContracts: 0,
+                    lockedYesContracts: 0,
+                    lockedNoContracts: 0,
+                },
+            });
+        }
+        return userContract;
+    }
+
+    private async saveUserContract(contract: any, tx?: Prisma.TransactionClient) {
+        try {
+            const client = tx || prisma;
+            await client.userContract.update({
+                where: { id: contract.id },
+                data: {
+                    yesContracts: contract.yesContracts,
+                    noContracts: contract.noContracts,
+                    lockedYesContracts: contract.lockedYesContracts,
+                    lockedNoContracts: contract.lockedNoContracts,
+                },
+            });
+        } catch (error) {
+            console.error(`Failed to save user contract for user ${contract.userId} and event ${contract.eventId} to DB:`, error);
+        }
+    }
+}

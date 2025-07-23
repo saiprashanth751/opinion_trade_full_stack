@@ -20,5 +20,18 @@
     "dotenv": "^17.0.1",
     "prisma": "^6.11.1",
     "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.5",
+    "@types/caseless": "^0.12.5",
+    "@types/minimatch": "^5.1.2",
+    "@types/ms": "^0.7.34",
+    "@types/node": "^20.14.10",
+    "@types/qs": "^6.9.15",
+    "@types/range-parser": "^1.2.7",
+    "@types/send": "^0.17.4",
+    "@types/serve-static": "^1.15.3",
+    "@types/through": "^0.0.32",
+    "@types/tough-cookie": "^4.0.5"
   }
 }

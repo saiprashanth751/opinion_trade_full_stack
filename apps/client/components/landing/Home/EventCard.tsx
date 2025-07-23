@@ -5,7 +5,7 @@ export const EventCard = ({ event }) => {
         <div className="rounded-lg shadow-lg p-4 flex flex-col justify-between bg-white over">
             <div className="flex flex-col mb-2">
                 <Image
-                    src={"https://plus.unsplash.com/premium_photo-1682310075673-b408eb1ca6fd?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dHJhZGluZ3xlbnwwfHwwfHx8MA%3D%3D"}
+                    src={"/assets/event1.png"}
                     alt="Something"
                     className="w-10 h-10 mr-4"
                     width={200}
@@ -13,7 +13,7 @@ export const EventCard = ({ event }) => {
                 />
                 <div className="flex mt-2">
                     <Image
-                        src={"https://plus.unsplash.com/premium_photo-1682310075673-b408eb1ca6fd?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dHJhZGluZ3xlbnwwfHwwfHx8MA%3D%3D"}
+                        src={"/assets/event1.png"}
                         alt="Something"
                         className="w-5 h-5"
                         width={200}

@@ -14,8 +14,8 @@ export const createEventhandler = AsyncWrapper( async (req: Request<{}, {}, Omit
         description,
         start_date,
         end_date,
-        min_bet,   
-        max_bet,
+        initialYesPrice,   
+        initialNoPrice,
         sot,
         quantity
     } = req.body;
@@ -41,8 +41,8 @@ export const createEventhandler = AsyncWrapper( async (req: Request<{}, {}, Omit
             description,
             start_date,
             end_date,
-            min_bet,
-            max_bet,
+            initialYesPrice,
+            initialNoPrice,
             sot,
             expiresAt: end_date,
             quantity

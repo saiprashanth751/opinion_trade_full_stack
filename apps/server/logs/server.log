@@ -44,3 +44,11 @@
 [ 2025-07-23 13:09:46 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"8781bfc6-2554-4a3d-9765-20adaed17c96","message":{"type":"CREATE_ORDER","data":{"orderType":"buy","marketSide":"no"}}}
 [ 2025-07-23 13:09:46 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 17.066 ms
 [ 2025-07-23 14:05:29 ] -  [32minfo[39m  - SERVER | Listening on port 3001
+[ 2025-07-23 14:44:07 ] -  [32minfo[39m  - Order Queue Started
+[ 2025-07-23 14:44:07 ] -  [32minfo[39m  - SERVER | Listening on port 3001
+[ 2025-07-23 14:47:29 ] -  [32minfo[39m  - Order Queue Started
+[ 2025-07-23 14:47:29 ] -  [32minfo[39m  - SERVER | Listening on port 3001
+[ 2025-07-23 14:47:58 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"4f2cb17b-8434-452d-bbdb-efb0e348d10a","message":{"type":"CREATE_ORDER","data":{"orderType":"buy","marketSide":"no"}}}
+[ 2025-07-23 14:47:58 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 7.594 ms
+[ 2025-07-23 14:49:29 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"295127c5-c986-4dd8-a9a9-5a8653aae5b5","message":{"type":"CREATE_ORDER","data":{"orderType":"sell","marketSide":"no"}}}
+[ 2025-07-23 14:49:29 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.375 ms

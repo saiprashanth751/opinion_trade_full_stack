@@ -34,6 +34,7 @@ export class Engine {
 
         if (snapshot) {
             const parsedSnapShot = JSON.parse(snapshot.toString());
+            //recheck
             console.log("Snapshot loading is not fully implemented for new orderbook structure.");
             this.marketOrderbooks.set(EXAMPLE_EVENT, {
                 yes: new Orderbook([], [], EXAMPLE_EVENT, 1, 0),
@@ -172,6 +173,10 @@ export class Engine {
                     }
                     
                     const userBalance = this.balances.get(orderToCancel.userId);
+                    if(!userBalance) {
+                        console.log("User Balance not found to cancel order for user", orderToCancel.userId);
+                        throw new Error("User Balance not found to cancel order");
+                    }
 
                     let price: number | undefined;
                     if (orderToCancel.type == "bid") {
@@ -180,9 +185,9 @@ export class Engine {
 
                         //Recheck
                         //@ts-ignore
-                        userBalance?.available += leftQunatityAmount;
+                        userBalance.available += leftQunatityAmount;
                         //@ts-ignore
-                        userBalance?.locked -= leftQunatityAmount;
+                        userBalance.locked -= leftQunatityAmount;
                     } else {
                         price = targetOrderbook.cancelAsk(orderToCancel);
 
@@ -190,17 +195,17 @@ export class Engine {
 
                         if (cancelledOrderOutcome === "yes") {
                             //@ts-ignore
-                            userBalance?.yesContracts += leftQunatity;
+                            userBalance.yesContracts += leftQunatity;
                             //@ts-ignore
-                            userBalance?.lockedYesContracts -= leftQunatity;
+                            userBalance.lockedYesContracts -= leftQunatity;
                         } else {
                             //@ts-ignore
-                            userBalance?.noContracts += leftQunatity;
+                            userBalance.noContracts += leftQunatity;
                             //@ts-ignore
-                            userBalance?.lockedNoContracts -= leftQunatity;
+                            userBalance.lockedNoContracts -= leftQunatity;
                         }
                         //@ts-ignore
-                        userBalance?.noContracts -= leftQunatity
+                        userBalance.noContracts -= leftQunatity
                     }
 
                     if (price) {

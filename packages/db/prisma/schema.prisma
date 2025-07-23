@@ -26,23 +26,23 @@ model User {
 }
 
 model Event {
-  id           String      @id @default(cuid())
-  eventId      String         @unique
-  slug         String
-  description  String
-  title        String
-  start_date   DateTime
-  end_date     DateTime
-  expiresAt    DateTime
-  min_bet      Float
-  max_bet      Float
-  quantity     Int
-  sot          String
-  traders      Int         @default(0)
-  status       EventStatus @default(ONGOING)
-  createdAt    DateTime    @default(now())
-  updatedAt    DateTime    @updatedAt
-  participants User[]      @relation("EventParticipants")
+  id              String      @id @default(cuid())
+  eventId         String      @unique
+  slug            String
+  description     String
+  title           String
+  start_date      DateTime
+  end_date        DateTime
+  expiresAt       DateTime
+  initialYesPrice Float
+  initialNoPrice  Float
+  quantity        Int
+  sot             String
+  traders         Int         @default(0)
+  status          EventStatus @default(ONGOING)
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+  participants    User[]      @relation("EventParticipants")
 }
 
 enum EventStatus {

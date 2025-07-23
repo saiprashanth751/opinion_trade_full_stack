@@ -17,8 +17,8 @@ export type TEvent = {
     start_date: Date;
     end_date: Date;
     createdAt: Date;
-    min_bet: number;
-    max_bet: number;
+    initialYesPrice: number;
+    initialNoPrice: number;
     sot: string;
     traders: number;
     quantity: number
@@ -35,29 +35,29 @@ export const GET_OPEN_ORDERS = "GET_OPEN_ORDERS"
 
 // DB Operation Types
 
-export type DbMessage =  
-| {
-    type: typeof TRADE_ADDED;
-    data: {
-        id: string;
-        isBuyerMaker: string;
-        price: number;
-        quantity: number;
-        timestamp: number;
-        market: string;
+export type DbMessage =
+    | {
+        type: typeof TRADE_ADDED;
+        data: {
+            id: string;
+            isBuyerMaker: string;
+            price: number;
+            quantity: number;
+            timestamp: number;
+            market: string;
+        };
+    }
+    | {
+        type: typeof ORDER_UPDATE;
+        data: {
+            orderId: string;
+            executedQty: number;
+            market?: string;
+            price?: number;
+            quantity?: number;
+            side?: "yes" | "no";
+        };
     };
-}
-| {
-    type: typeof ORDER_UPDATE;
-    data: {
-        orderId: string;
-        executedQty: number;
-        market?: string;
-        price?: number;
-        quantity?: number;
-        side?: "yes" | "no";
-    };
-};
 
 // Sever Types: Responding to Server
 
@@ -70,85 +70,85 @@ export interface Order {
     userId: string;
 }
 
-export type MessageFromApi = 
-  | {
-    type: typeof CREATE_ORDER;
-    data: {
-        market: string;
-        price: number;
-        quantity: number;
-        action: "buy" | "sell";
-        outcome: "yes" | "no";
-        userId: string;
-    }
-  }
-  | {
-    type: typeof CANCEL_ORDER;
-    data: {
-        orderId: string;
-        market: string;
-    }
-  }
-  | {
-    type: typeof ON_RAMP;
-    data: {
-        amount: number;
-        userId: string;
-        txnId: string;
-    }
-  }
-  | {
-    type: typeof GET_DEPTH;
-    data: {
-        market: string;
-    }
-  }
-  | {
-    type: typeof GET_OPEN_ORDERS;
-    data: {
-        userId: string;
-        market: string;
-    };
-  }
-
-export type MessageToApi = 
-| {
-    type: "DEPTH";
-    payload: {
-        bids: [string, string][];
-        asks: [string, string][];
-        yesBids: [string, string][];
-        yesAsks: [string, string][];
-        noBids: [string, string][];
-        noAsks: [string, string][];
-    }
-}
-| {
-    type: "ORDER_PLACED";
-    payload: {
-        orderId: string;
-        executedQty: number;
-        fills: {
+export type MessageFromApi =
+    | {
+        type: typeof CREATE_ORDER;
+        data: {
+            market: string;
             price: number;
-            qty: number;
-            tradeId: string;
-        }[];
+            quantity: number;
+            action: "buy" | "sell";
+            outcome: "yes" | "no";
+            userId: string;
+        }
+    }
+    | {
+        type: typeof CANCEL_ORDER;
+        data: {
+            orderId: string;
+            market: string;
+        }
+    }
+    | {
+        type: typeof ON_RAMP;
+        data: {
+            amount: number;
+            userId: string;
+            txnId: string;
+        }
+    }
+    | {
+        type: typeof GET_DEPTH;
+        data: {
+            market: string;
+        }
+    }
+    | {
+        type: typeof GET_OPEN_ORDERS;
+        data: {
+            userId: string;
+            market: string;
+        };
+    }
+
+export type MessageToApi =
+    | {
+        type: "DEPTH";
+        payload: {
+            bids: [string, string][];
+            asks: [string, string][];
+            yesBids: [string, string][];
+            yesAsks: [string, string][];
+            noBids: [string, string][];
+            noAsks: [string, string][];
+        }
+    }
+    | {
+        type: "ORDER_PLACED";
+        payload: {
+            orderId: string;
+            executedQty: number;
+            fills: {
+                price: number;
+                qty: number;
+                tradeId: string;
+            }[];
+        };
+    }
+    | {
+        type: "ORDER_CANCELLED";
+        payload: {
+            orderId: string;
+            executedQty: number;
+            remainingQty: number;
+        };
+    }
+    | {
+        type: "OPEN_ORDERS";
+        payload: {
+            openOrders: Order[]
+        };
     };
-}
-| {
-    type: "ORDER_CANCELLED";
-    payload: {
-        orderId: string;
-        executedQty: number;
-        remainingQty: number;
-    };
-}
-| {
-    type: "OPEN_ORDERS";
-    payload: {
-        openOrders: Order[]
-    };
-};
 
 
 // Web Socket Types...
@@ -188,7 +188,7 @@ export type TradeAddedMessage = {
     }
 }
 
-export type WsMessage = 
-| TickerUpdateMessage
-| DepthUpdateMessage
-| TradeAddedMessage;
+export type WsMessage =
+    | TickerUpdateMessage
+    | DepthUpdateMessage
+    | TradeAddedMessage;

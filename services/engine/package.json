@@ -18,6 +18,7 @@
   "dependencies": {
     "fs": "^0.0.1-security",
     "@trade/types": "*",
-    "@trade/order-queue": "*"
+    "@trade/order-queue": "*",
+    "@repo/db": "*"
   }
 }

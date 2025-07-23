@@ -23,6 +23,20 @@ export const createEventhandler = AsyncWrapper( async (req: Request<{}, {}, Omit
     let slug = slugify(title);
     let eventCode = eventCodeGenerator().toString();
 
+    //validate that initialYesPrice + initialNoPrice equals 100..the actual game :)
+    //prices -> precentage -> 70 => 0.70
+    const PRICE_SUM_TARGET = 100;
+    const EPSILON = 0.0001; // for comparision
+
+    //CHECK: did you implement this architecture globally
+
+    if(Math.abs(initialYesPrice + initialNoPrice - PRICE_SUM_TARGET) > EPSILON) {
+        throw new ErrorHandler (
+            `Initial YES and NO prices must sum to ${PRICE_SUM_TARGET}. Provided: YES=${initialYesPrice}, NO=${initialNoPrice}, Sum=${initialYesPrice + initialNoPrice}`,
+            "BAD_REQUEST"
+        )
+    }
+
     const isEventExists = await prisma.event.findFirst({
         where: {
             slug: slug

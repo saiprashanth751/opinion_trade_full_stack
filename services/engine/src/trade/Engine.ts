@@ -3,6 +3,7 @@ import fs from "fs"
 import { CANCEL_ORDER, CREATE_ORDER, GET_DEPTH, GET_OPEN_ORDERS, MessageFromApi, ON_RAMP, ORDER_UPDATE, sides } from "@trade/types"
 import { v4 as uuidv4 } from "uuid";
 import { RedisManager } from "@trade/order-queue"
+import prisma from "@repo/db/client"
 
 export const EXAMPLE_EVENT = "gta6-trailer-3-to-be-released-by-the-end-of-the-day";
 export const CURRENCY = "INR";
@@ -90,7 +91,7 @@ export class Engine {
         })
     }
 
-    processOrders({
+    async processOrders({
         clientId,
         message
     }: {
@@ -104,6 +105,24 @@ export class Engine {
                 try {
                     const { market, price, quantity, action, outcome, userId } = message.data
                     const orderType = action === "buy" ? "bid" : "ask";
+                    
+                    if(!this.marketOrderbooks.has(market)) {
+                        console.log(`Initializing new orderbooks for market: ${market}`);
+                        const eventDetails = await prisma.event.findUnique({
+                            where: {
+                                eventId: market
+                            }
+                        })
+
+                        if(!eventDetails) {
+                            throw new Error(`Event details not fount for market: ${market}`)
+                        }
+
+                        this.marketOrderbooks.set(market, {
+                            yes: new Orderbook([], [], market, 0, eventDetails.initialYesPrice),
+                            no: new Orderbook([], [], market, 0, eventDetails.initialNoPrice),
+                        })
+                    }
 
                     const { executedQty, fills, orderId } = this.createOrders(
                         market,

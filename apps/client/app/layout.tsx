@@ -1,8 +1,10 @@
+// apps/client/app/layout.tsx
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { QueryProvider } from "@/components/providers/QueryProvider";
-import { NextAuthProvider } from "@/components/providers/NextAuthProvider"; // Import the new NextAuthProvider
+import { NextAuthProvider } from "@/components/providers/NextAuthProvider";
+import Link from "next/link"; // Import Link from next/link
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,9 +28,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {/* Wrap with NextAuthProvider first, as SessionProvider is often needed by other client providers */}
+        {/* Add a simple navigation bar */}
+        <nav className="bg-gray-800 p-4 text-white flex justify-between items-center">
+          <div className="flex space-x-4">
+            <Link href="/events" className="hover:text-gray-300">
+              Events
+            </Link>
+            <Link href="/dashboard" className="hover:text-gray-300">
+              Dashboard
+            </Link>
+          </div>
+          {/* You can add more navigation items or user-specific links here */}
+        </nav>
+
         <NextAuthProvider>
-          {/* Then wrap with QueryProvider */}
           <QueryProvider>
             {children}
           </QueryProvider>

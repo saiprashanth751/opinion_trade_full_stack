@@ -65,15 +65,18 @@ export class Engine {
             })
             this.balances = new Map(parsedSnapShot.balances);
             console.log("Snapshot loaded successfully.");
-        } //else {
-        //     //Need to comeback for verification...
-        //     // this.marketOrderbooks.set(EXAMPLE_EVENT, {
-        //     //     yes: new Orderbook([], [], EXAMPLE_EVENT, 1, 0),
-        //     //     no: new Orderbook([], [], EXAMPLE_EVENT, 1, 0),
-        //     // });
-        //     //is there any conflict, what is the optimal solution
-        //     this.setBaseBalances();
-        // }
+        } else {
+            //     //Need to comeback for verification...
+            //     // this.marketOrderbooks.set(EXAMPLE_EVENT, {
+            //     //     yes: new Orderbook([], [], EXAMPLE_EVENT, 1, 0),
+            //     //     no: new Orderbook([], [], EXAMPLE_EVENT, 1, 0),
+            //     // });
+            //     //is there any conflict, what is the optimal solution
+            //     this.setBaseBalances();
+            // -> constructors cannot be async. 
+            // ->  no snapshot -> initialize orderbooks from existing events in the database
+            this.initializeFromDatabase();
+        }
         setInterval(() => {
             this.saveSnapshot();
         }, 1000 * 3);
@@ -81,6 +84,39 @@ export class Engine {
         setInterval(() => {
             this.runSyntheticMarketMaker();
         }, PRICE_ADJUSTMENT_INTERVAL_MS)
+    }
+
+    private async initializeFromDatabase() {
+        console.log("Initializing engine from database...");
+        try {
+            const events = await prisma.event.findMany();
+            events.forEach(event => {
+                this.marketOrderbooks.set(event.id, {
+                    yes: new Orderbook([], [], event.id, 0, event.initialYesPrice),
+                    no: new Orderbook([], [], event.id, 0, event.initialNoPrice),
+                });
+            });
+
+            //imp -> ensure market maker user balance is loaded/initialized
+            const marketMakerUser = await prisma.user.findUnique({
+                where: { id: SYNTHETIC_MARKET_MAKER_USER_ID }
+            });
+            
+            //marketMaker -> synthetic user
+            if (marketMakerUser) {
+                this.balances.set(SYNTHETIC_MARKET_MAKER_USER_ID, {
+                    available: marketMakerUser.balance,
+                    locked: 0,
+                });
+                console.log(`Market maker balance initialized: ${marketMakerUser.balance}`);
+            } else {
+                console.warn(`Market maker user with ID ${SYNTHETIC_MARKET_MAKER_USER_ID} not found in DB. Please ensure it exists and has sufficient balance.`);
+            }
+
+            console.log(`Initialized ${events.length} event orderbooks from database.`);
+        } catch (error) {
+            console.error("Error initializing engine from database:", error);
+        }
     }
 
     saveSnapshot() {

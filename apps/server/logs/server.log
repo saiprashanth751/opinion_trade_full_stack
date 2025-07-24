@@ -158,3 +158,9 @@
 [ 2025-07-24 21:17:50 ] -  [32minfo[39m  - SERVER | Listening on port 3000
 [ 2025-07-24 21:23:14 ] -  [32minfo[39m  - SERVER | Listening on port 3000
 [ 2025-07-24 22:57:08 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-24 23:08:13 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-24 23:10:41 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"64f667f9-6405-4c75-9b1e-ab63dd9e2f6f","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":10,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
+[ 2025-07-24 23:10:41 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 17.901 ms
+[ 2025-07-24 23:15:16 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-24 23:15:38 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"0b875104-efa2-489b-ab64-444f0a1af399","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":10,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
+[ 2025-07-24 23:15:38 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 7.824 ms

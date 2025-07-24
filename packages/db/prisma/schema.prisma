@@ -23,6 +23,8 @@ model User {
   updatedAt   DateTime       @default(now())
   events      Event[]        @relation("EventParticipants")
   contracts   UserContract[]
+  boughtTrades Trade[]       @relation("BuyerTrades") // Added inverse relation for buyer
+  soldTrades  Trade[]        @relation("SellerTrades") // Added inverse relation for seller
   // expiresAt   DateTime
 }
 
@@ -44,7 +46,8 @@ model Event {
   createdAt       DateTime       @default(now())
   updatedAt       DateTime       @updatedAt
   participants    User[]         @relation("EventParticipants")
-  userContracts   UserContract[] //what
+  userContracts   UserContract[]
+  trades          Trade[]        // Added inverse relation for trades
 }
 
 model UserContract {
@@ -60,7 +63,25 @@ model UserContract {
   createdAt          DateTime @default(now())
   updatedAt          DateTime @updatedAt
 
-  @@unique([userId, eventId]) //unique
+  @@unique([userId, eventId])
+}
+
+model Trade {
+  id        String   @id @default(cuid())
+  tradeId   String   @unique // Unique ID for the trade from the engine
+  eventId   String
+  event     Event    @relation(fields: [eventId], references: [id])
+  buyerId   String
+  buyer     User     @relation("BuyerTrades", fields: [buyerId], references: [id])
+  sellerId  String
+  seller    User     @relation("SellerTrades", fields: [sellerId], references: [id])
+  price     Float
+  quantity  Int
+  timestamp DateTime @default(now())
+
+  @@index([buyerId])
+  @@index([sellerId])
+  @@index([eventId])
 }
 
 enum EventStatus {

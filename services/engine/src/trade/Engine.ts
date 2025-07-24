@@ -435,7 +435,7 @@ export class Engine {
         const { fills, executedQty } = targetOrderbook.addOrder(order);
 
         await this.updateBalance(orderType, outcome, userId, fills, market, tx);
-        this.createDbTrades(fills, market, orderType); //do we actually need to pass outcome parameter...
+        await this.createDbTrades(fills, market, orderType, userId, tx); //do we actually need to pass outcome parameter...
         this.updateDbOrders(order, executedQty, fills, market, outcome);
         this.publishWsDepthUpdates(fills, price, orderType, market, outcome);
         this.publishWsTrades(fills, userId, market, outcome);
@@ -708,35 +708,53 @@ export class Engine {
         console.log("----------------Balance updated------------");
     }
 
-    createDbTrades(
+    async createDbTrades(
         fills: Fill[],
         market: string,
-        orderType: "bid" | "ask"
-        // outcome: "yes" | "no"
+        orderType: "bid" | "ask",
+        takerUserId: string, 
+        tx: Prisma.TransactionClient
     ) {
         console.log("-------------Creating DB Trades------------");
-        fills.forEach((fill) => {
-            //Explanation of the concept : need for another optimal implementation:
-             // isBuyerMaker is true if the buyer was the maker.
-            // If the original order (taker's order) was a 'bid' (buy), then the taker is the buyer.
-            // The maker (fill.otherUserId) is the seller. So, the buyer is NOT the maker. isBuyerMaker = false.
-            // If the original order (taker's order) was an 'ask' (sell), then the taker is the seller.
-            // The maker (fill.otherUserId) is the buyer. So, the buyer IS the maker. isBuyerMaker = true.
+        for (const fill of fills) {
+            let buyerId: string;
+            let sellerId: string;
 
-            const isBuyerMaker = (orderType === "ask");
+            
+            if (orderType === "bid") {
+                buyerId = takerUserId;
+                sellerId = fill.otherUserId;
+            } else {
+                buyerId = fill.otherUserId;
+                sellerId = takerUserId;
+            }
 
+            // Create the trade record in the database using the provided transaction client
+            await tx.trade.create({
+                data: {
+                    tradeId: fill.tradeId,
+                    eventId: market,
+                    buyerId: buyerId,
+                    sellerId: sellerId,
+                    price: fill.price,
+                    quantity: fill.qty,
+                    timestamp: new Date(),
+                },
+            });
+
+            // Also push message to Redis for real-time updates (existing logic)
             RedisManager.getInstance().pushMessage({
                 type: "TRADE_ADDED",
                 data: {
                     market,
                     id: fill.tradeId.toString(),
-                    isBuyerMaker: isBuyerMaker,
+                    isBuyerMaker: (orderType === "ask"), 
                     price: fill.price,
                     quantity: fill.qty,
                     timestamp: Date.now(),
                 }
-            })
-        })
+            });
+        }
     }
 
     updateDbOrders(

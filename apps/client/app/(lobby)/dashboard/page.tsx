@@ -7,7 +7,7 @@ import { getUserContracts } from '@/actions/User/getUserContracts';
 import { getEvents } from '@/actions/Event/getEvents';
 import { useOpenOrdersSocket } from '@/hooks/useOpenOrdersSocket';
 import { getTradeHistory } from '@/actions/User/getTradeHistory';
-import { rechargeBalance } from '@/actions/User/rechargeBalance'; /
+import { rechargeBalance } from '@/actions/User/rechargeBalance';
 import { toast } from 'react-hot-toast';
 import { UserContract, Event, Trade } from "@prisma/client";
 // import { Order } from '@trade/types';

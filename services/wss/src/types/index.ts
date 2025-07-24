@@ -31,4 +31,17 @@ export type ClientIdMessage = {
     };
 };
 
-export type OutgoingMessage = DepthUpdateMessage | ClientIdMessage;
+export type EventSummary = {
+    eventId: string;
+    yesPrice: number;
+    noPrice: number;
+}
+
+export type EventSummaryMessage = {
+    type: "EVENT_SUMMARY",
+    payload: {
+        events: EventSummary[];
+    }
+}
+
+export type OutgoingMessage = DepthUpdateMessage | ClientIdMessage | EventSummaryMessage;

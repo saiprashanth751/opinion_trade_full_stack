@@ -7,9 +7,11 @@ import { OrderPlacementDialog } from "../Order/OrderPlacementDialog";
 
 interface EventCardProps {
   event: TEvent;
+  liveYesPrice: number;
+  liveNoPrice: number;
 }
 
-export const EventCard = ({ event }: EventCardProps) => {
+export const EventCard = ({ event, liveYesPrice, liveNoPrice }: EventCardProps) => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [selectedPrice, setSelectedPrice] = useState(0);
   const [selectedOutcome, setSelectedOutcome] = useState<sides>(sides.YES);
@@ -53,15 +55,15 @@ export const EventCard = ({ event }: EventCardProps) => {
         <div className="flex justify-between">
           <button
             className="bg-blue-100 text-blue-600 px-6 py-2 rounded font-bold"
-            onClick={() => handleOpenDialog(event.min_bet, sides.YES)}
+            onClick={() => handleOpenDialog(event.initialYesPrice, sides.YES)}
           >
-            Yes ₹{event.min_bet}
+            Yes ₹{liveYesPrice}
           </button>
           <button
             className="bg-red-100 text-red-600 px-6 py-2 rounded font-bold"
-            onClick={() => handleOpenDialog(event.max_bet, sides.NO)}
+            onClick={() => handleOpenDialog(event.initialNoPrice, sides.NO)}
           >
-            No ₹{event.max_bet}
+            No ₹{liveNoPrice}
           </button>
         </div>
       </div>

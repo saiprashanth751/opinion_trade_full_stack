@@ -156,6 +156,10 @@ export class Engine {
     //     })
     // }
 
+    public getAllEventOrderbooks() {
+        return this.marketOrderbooks;
+    }
+
     async processOrders({
         clientId,
         message

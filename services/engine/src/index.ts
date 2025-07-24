@@ -25,7 +25,8 @@ async function main (){
         const parsedQueueItem:{clientId: string, message: MessageFromApi} = JSON.parse(response);
         const clientId = parsedQueueItem.clientId;
         const message = parsedQueueItem.message;
-
+        
+        //handing over to the engine for further processing...
         engine.processOrders({
             clientId,
             message

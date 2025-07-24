@@ -1,3 +1,4 @@
+import { OutgoingMessage } from "../types";
 import { SubscriptionManager } from "./SubscriptionManager";
 import { User } from "./User";
 import { WebSocket} from "ws";
@@ -36,5 +37,11 @@ export class UserManager {
 
     private getRandomId() {
         return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+    }
+
+    public broadcastMessage(message: OutgoingMessage) {
+        this.users.forEach((user: User) => {
+            user.emitMessage(message);
+        })
     }
 }

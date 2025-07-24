@@ -94,3 +94,13 @@
 [ 2025-07-24 14:07:34 ] -  [32minfo[39m  - SERVER | Listening on port 3000
 [ 2025-07-24 14:07:48 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"e3a8c962-facf-4bff-8b38-ae59b46e3bba","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":61,"quantity":5,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
 [ 2025-07-24 14:07:48 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 5.482 ms
+[ 2025-07-24 18:06:04 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-24 18:07:35 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-24 19:44:23 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-24 19:45:54 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-24 19:49:27 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-24 19:49:34 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-24 19:49:49 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-24 19:52:37 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-24 19:53:04 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-24 19:54:49 ] -  [32minfo[39m  - SERVER | Listening on port 3000

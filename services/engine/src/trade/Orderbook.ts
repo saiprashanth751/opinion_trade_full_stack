@@ -23,6 +23,7 @@ export class Orderbook {
     bids: Order[];
     asks: Order[];
     market: string;
+    //lastTradeId is not properly updated -> need to check
     lastTradeId: number;
     currentPrice: number;
 
@@ -30,6 +31,7 @@ export class Orderbook {
         this.bids = bids;
         this.asks = asks;
         this.market = market;
+        //lastTradeId is not properly updated for every trade...-> need to check
         this.lastTradeId = lastTradeId;
         this.currentPrice = currentPrice || 0;
     }

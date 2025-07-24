@@ -59,6 +59,7 @@ export class Engine {
             //Load orderbooks
             parsedSnapShot.orderbooks.forEach((obData: any) => {
                 this.marketOrderbooks.set(obData.market, {
+                    //lastTradeId is not properly updated -> need to check
                     yes: new Orderbook(obData.yes.bids, obData.yes.asks, obData.market, obData.yes.lastTradeId, obData.yes.currentPrice),
                     no: new Orderbook(obData.no.bids, obData.no.asks, obData.market, obData.no.lastTradeId, obData.no.currentPrice)
                 })
@@ -430,7 +431,7 @@ export class Engine {
         const { fills, executedQty } = targetOrderbook.addOrder(order);
 
         await this.updateBalance(orderType, outcome, userId, fills, market, tx);
-        this.createDbTrades(fills, market); //do we actually need to pass outcome parameter...
+        this.createDbTrades(fills, market, orderType); //do we actually need to pass outcome parameter...
         this.updateDbOrders(order, executedQty, fills, market, outcome);
         this.publishWsDepthUpdates(fills, price, orderType, market, outcome);
         this.publishWsTrades(fills, userId, market, outcome);
@@ -706,16 +707,26 @@ export class Engine {
     createDbTrades(
         fills: Fill[],
         market: string,
+        orderType: "bid" | "ask"
         // outcome: "yes" | "no"
     ) {
         console.log("-------------Creating DB Trades------------");
         fills.forEach((fill) => {
+            //Explanation of the concept : need for another optimal implementation:
+             // isBuyerMaker is true if the buyer was the maker.
+            // If the original order (taker's order) was a 'bid' (buy), then the taker is the buyer.
+            // The maker (fill.otherUserId) is the seller. So, the buyer is NOT the maker. isBuyerMaker = false.
+            // If the original order (taker's order) was an 'ask' (sell), then the taker is the seller.
+            // The maker (fill.otherUserId) is the buyer. So, the buyer IS the maker. isBuyerMaker = true.
+
+            const isBuyerMaker = (orderType === "ask");
+
             RedisManager.getInstance().pushMessage({
                 type: "TRADE_ADDED",
                 data: {
                     market,
                     id: fill.tradeId.toString(),
-                    isBuyerMaker: "kuch bi", //incomplete, need clarity
+                    isBuyerMaker: isBuyerMaker,
                     price: fill.price,
                     quantity: fill.qty,
                     timestamp: Date.now(),

@@ -40,7 +40,7 @@ export type DbMessage =
         type: typeof TRADE_ADDED;
         data: {
             id: string;
-            isBuyerMaker: string;
+            isBuyerMaker: boolean; 
             price: number;
             quantity: number;
             timestamp: number;

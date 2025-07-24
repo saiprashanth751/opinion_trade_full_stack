@@ -5,7 +5,7 @@ import { useEventSummarySocket } from "@/hooks/useEventSummarySocket";
 import { TEvent } from "@trade/types"
 import { useEffect, useState } from "react";
 
-const Page = async() => {
+const Page = () => {
     const [events, setEvents] = useState<TEvent[]>([]);
     const eventPrices = useEventSummarySocket();
 

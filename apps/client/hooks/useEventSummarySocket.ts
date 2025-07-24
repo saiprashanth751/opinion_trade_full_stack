@@ -1,4 +1,4 @@
-import { error } from "console";
+
 import { useEffect, useState } from "react";
 
 
@@ -40,6 +40,7 @@ export const useEventSummarySocket = () => {
                                 noPrice: summary.noPrice,
                             });
                         });
+                        console.log(newPrices);
                         return newPrices;
                     })
                 } 

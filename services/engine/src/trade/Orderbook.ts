@@ -76,12 +76,16 @@ export class Orderbook {
     // Understanding the orderbook in the real-word trading systems is the great way to implement these methods. It is very interesting. 
 
     matchBid(order: Order): { fills: Fill[]; executedQty: number } {
+        //to get lowest ask first -> sort in ascending order...
+        this.asks.sort((a, b) => a.price - b.price);
+
         const fills: Fill[] = [];
         let executedQty = 0;
         // TODO: Sort your array because it helps you to match the perfect orders.
         for (let i = 0; i < this.asks.length; i++) {
             if (this.asks[i]?.price! <= order.price && executedQty < order.quantity) {
-                const filledQty = Math.min(order.quantity - executedQty, this.asks[i]?.quantity!);
+                //available qty is trading with another available qty (after correctly subtracing them)
+                const filledQty = Math.min(order.quantity - executedQty, this.asks[i]?.quantity! - this.asks[i]?.filled!); 
 
                 executedQty += filledQty;
                 //@ts-ignore
@@ -112,12 +116,15 @@ export class Orderbook {
     }
 
     matchAsk(order: Order): { fills: Fill[]; executedQty: number } {
+         //to get highest bid first -> sort in descending order...
+        this.bids.sort((a, b) => b.price - a.price);
+
         let fills: Fill[] = [];
         let executedQty = 0;
 
         for (let i = 0; i < this.bids.length; i++) {
             if (this.bids[i]?.price! >= order.price && executedQty < order.quantity) {
-                const filledQty = Math.min(order.quantity - executedQty, this.bids[i]?.quantity!);
+                const filledQty = Math.min(order.quantity - executedQty, this.bids[i]?.quantity! - this.bids[i]?.filled!);
 
                 executedQty += filledQty;
                 //@ts-ignore
@@ -162,7 +169,7 @@ export class Orderbook {
             if (!bidsObj[bidsObjPriceKey]) {
                 bidsObj[bidsObjPriceKey] = 0;
             }
-            bidsObj[bidsObjPriceKey] += order?.quantity!;
+            bidsObj[bidsObjPriceKey] += order?.quantity! - order?.filled!;
         }
 
         //depth of the asks
@@ -173,7 +180,7 @@ export class Orderbook {
             if (!asksObj[asksObjPriceKey]) {
                 asksObj[asksObjPriceKey] = 0;
             }
-            asksObj[asksObjPriceKey] += order?.quantity!;
+            asksObj[asksObjPriceKey] += order?.quantity! - order?.filled!;
         }
 
         for (const price in bidsObj) {

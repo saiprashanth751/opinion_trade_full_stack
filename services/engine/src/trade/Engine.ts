@@ -516,6 +516,7 @@ export class Engine {
         eventId: string,
         tx: Prisma.TransactionClient
     ) {
+        //what is optimistic locking or row-level DB locks....
         console.log("----------------Balance updating------------");
         // for (const fill of fills) {
         //     //user who placed the original order

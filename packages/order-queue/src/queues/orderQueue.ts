@@ -1,4 +1,4 @@
-import { RedisManager } from "../classes/RedisManager.js";
+import { RedisManager } from "../classes/RedisManager";
 import { logger } from "@trade/logger"
 
 let redisClient = RedisManager.getInstance().getClient();

@@ -1,5 +1,5 @@
-import { logger } from "@trade/logger";
-import { addToOrderQueue } from "./queues/orderQueue.js";
+// import { logger } from "@trade/logger";
+import { addToOrderQueue } from "./queues/orderQueue";
 import { RedisManager} from "./classes/RedisManager";
 import { SubscribeManager } from "./classes/SubscriberManager"
 import { createClient } from "redis";

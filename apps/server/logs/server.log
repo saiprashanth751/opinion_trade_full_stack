@@ -164,3 +164,8 @@
 [ 2025-07-24 23:15:16 ] -  [32minfo[39m  - SERVER | Listening on port 3000
 [ 2025-07-24 23:15:38 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"0b875104-efa2-489b-ab64-444f0a1af399","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":10,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
 [ 2025-07-24 23:15:38 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 7.824 ms
+[ 2025-07-25 01:08:06 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-25 01:09:50 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-25 01:18:21 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-25 01:20:38 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-25 01:22:22 ] -  [32minfo[39m  - SERVER | Listening on port 3000

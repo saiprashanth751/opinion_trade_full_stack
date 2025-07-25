@@ -1,3 +1,5 @@
+import dotenv from "dotenv";
+dotenv.config();
 import { Fill, Order, Orderbook } from "./Orderbook";
 import fs from "fs"
 import { CANCEL_ORDER, CREATE_ORDER, GET_DEPTH, GET_OPEN_ORDERS, MessageFromApi, ON_RAMP, ORDER_UPDATE, sides } from "@trade/types"
@@ -5,9 +7,8 @@ import { v4 as uuidv4 } from "uuid";
 import { RedisManager } from "@trade/order-queue"
 import prisma from "@repo/db/client"
 import { Prisma } from "@prisma/client"
-import dotenv from "dotenv";
+import { logger } from "@trade/logger";
 
-dotenv.config();
 
 //imp-todo : implement transactions for balance updates -> optimal
 
@@ -27,10 +28,10 @@ interface UserBalance {
 
 //implementing synthetic market maker -> for dynamic price changing according to the orderbook
 
-const SYNTHETIC_MARKET_MAKER_USER_ID = process.env.SYNTHETIC_MARKET_MAKER_USER_ID as string; // Unique ID for the market maker
-const SYNTHETIC_ORDER_QUANTITY = Number(process.env.SYNTHETIC_ORDER_QUANTITY); // Quantity of shares the market maker will offer/bid for
-const PRICE_ADJUSTMENT_INTERVAL_MS = Number(process.env.PRICE_ADJUSTMENT_INTERVAL_MS); // How often the market maker checks and adjusts prices (e.g., 5 seconds)
-const MARKET_MAKER_SPREAD = Number(process.env.MARKET_MAKER_SPREAD); // A small value to create a bid-ask spread for the synthetic orders (e.g., 1 unit of price)
+const SYNTHETIC_MARKET_MAKER_USER_ID = process.env.SYNTHETIC_MARKET_MAKER_USER_ID as string;
+const SYNTHETIC_ORDER_QUANTITY = Number(process.env.SYNTHETIC_ORDER_QUANTITY) || 10;
+const PRICE_ADJUSTMENT_INTERVAL_MS = Number(process.env.PRICE_ADJUSTMENT_INTERVAL_MS) || 5000;
+const MARKET_MAKER_SPREAD = Number(process.env.MARKET_MAKER_SPREAD) || 1;
 
 export class Engine {
     //balances -> funds and asset balances
@@ -41,17 +42,17 @@ export class Engine {
     constructor() {
         let snapshot = null;
         try {
-            if (process.env.WITH_SNAPSHOT) {
+            if (process.env.WITH_SNAPSHOT === "true") {
                 snapshot = fs.readFileSync("./snapshot.json");
             }
         } catch (error) {
-            console.log("No snapshot found");
+            logger.info("No snapshot found");
         }
 
         if (snapshot) {
             const parsedSnapShot = JSON.parse(snapshot.toString());
             //recheck
-            // console.log("Snapshot loading is not fully implemented for new orderbook structure.");
+            // logger.info("Snapshot loading is not fully implemented for new orderbook structure.");
             // this.marketOrderbooks.set(EXAMPLE_EVENT, {
             //     yes: new Orderbook([], [], EXAMPLE_EVENT, 1, 0),
             //     no: new Orderbook([], [], EXAMPLE_EVENT, 1, 0),
@@ -65,7 +66,7 @@ export class Engine {
                 })
             })
             this.balances = new Map(parsedSnapShot.balances);
-            console.log("Snapshot loaded successfully.");
+            logger.info("Snapshot loaded successfully.");
         } else {
             //     //Need to comeback for verification...
             //     // this.marketOrderbooks.set(EXAMPLE_EVENT, {
@@ -78,6 +79,14 @@ export class Engine {
             // ->  no snapshot -> initialize orderbooks from existing events in the database
             this.initializeFromDatabase();
         }
+        logger.info(`Raw SYNTHETIC_MARKET_MAKER_USER_ID: ${process.env.SYNTHETIC_MARKET_MAKER_USER_ID}`);
+        logger.info(`Raw SYNTHETIC_ORDER_QUANTITY: ${process.env.SYNTHETIC_ORDER_QUANTITY}`);
+
+        logger.info(`Engine initialized. Synthetic Market Maker ID: , ${SYNTHETIC_MARKET_MAKER_USER_ID}`);
+        logger.info(`Synthetic Order Quantity: , ${SYNTHETIC_ORDER_QUANTITY}`);
+        logger.info(`Engine initialized. Synthetic Market Maker ID: , ${SYNTHETIC_MARKET_MAKER_USER_ID}`);
+        logger.info(`Synthetic Order Quantity: , ${SYNTHETIC_ORDER_QUANTITY}`);
+
         setInterval(() => {
             this.saveSnapshot();
         }, 1000 * 3);
@@ -88,7 +97,7 @@ export class Engine {
     }
 
     private async initializeFromDatabase() {
-        console.log("Initializing engine from database...");
+        logger.info("Initializing engine from database...");
         try {
             const events = await prisma.event.findMany();
             events.forEach(event => {
@@ -102,21 +111,21 @@ export class Engine {
             const marketMakerUser = await prisma.user.findUnique({
                 where: { id: SYNTHETIC_MARKET_MAKER_USER_ID }
             });
-            
+
             //marketMaker -> synthetic user
             if (marketMakerUser) {
                 this.balances.set(SYNTHETIC_MARKET_MAKER_USER_ID, {
                     available: marketMakerUser.balance,
                     locked: 0,
                 });
-                console.log(`Market maker balance initialized: ${marketMakerUser.balance}`);
+                logger.info(`Market maker balance initialized: ${marketMakerUser.balance}`);
             } else {
                 console.warn(`Market maker user with ID ${SYNTHETIC_MARKET_MAKER_USER_ID} not found in DB. Please ensure it exists and has sufficient balance.`);
             }
 
-            console.log(`Initialized ${events.length} event orderbooks from database.`);
+            logger.info(`Initialized ${events.length} event orderbooks from database.`);
         } catch (error) {
-            console.error("Error initializing engine from database:", error);
+            logger.error(`Error initializing engine from database:, ${error}`);
         }
     }
 
@@ -167,7 +176,7 @@ export class Engine {
         clientId: string;
         message: MessageFromApi;
     }) {
-        console.log("message", message, " clientId", clientId);
+        logger.info(`"message", ${message}, " clientId", ${clientId}`);
 
         switch (message.type) {
             case CREATE_ORDER:
@@ -175,8 +184,10 @@ export class Engine {
                     const { market, price, quantity, action, outcome, userId } = message.data
                     const orderType = action === "buy" ? "bid" : "ask";
 
+                    logger.info(`Attempting to create order: Market=${market}, Price=${price}, Quantity=${quantity}, Action=${action}, Outcome=${outcome}, UserId=${userId}`);
+
                     if (!this.marketOrderbooks.has(market)) {
-                        console.log(`Initializing new orderbooks for market: ${market}`);
+                        logger.info(`Market orderbook not found for ${market}. Initializing from DB.`);
                         const eventDetails = await prisma.event.findUnique({
                             where: {
                                 id: market
@@ -191,10 +202,13 @@ export class Engine {
                             yes: new Orderbook([], [], market, 0, eventDetails.initialYesPrice),
                             no: new Orderbook([], [], market, 0, eventDetails.initialNoPrice),
                         })
+                        logger.info(`Orderbooks initialized for market: ${market}`);
                     }
                     //transactions for atomicity...
                     const { executedQty, fills, orderId } = await prisma.$transaction(async (tx) => {
-                        return this.createOrders(
+                        logger.info("Starting Prisma transaction for order creation.");
+
+                        const result = this.createOrders(
                             market,
                             price,
                             quantity,
@@ -203,6 +217,10 @@ export class Engine {
                             userId,
                             tx
                         );
+
+                        logger.info(`Prisma transaction completed for order creation. Result: , ${result}`);
+
+                        return result;
                     })
 
                     RedisManager.getInstance().sendToApi(clientId, {
@@ -214,10 +232,11 @@ export class Engine {
                         }
                     })
 
-                    console.log("Pushed ORDER_PLACED into REDIS");
-                    console.log(`user ${userId} : balance`, await this.getUserBalance(userId));
+                    logger.info("Pushed ORDER_PLACED into REDIS");
+                    const balance = await this.getUserBalance(userId);
+                    logger.info(`user ${userId} : balance: ${balance}`);
                 } catch (error) {
-                    console.log(error);
+                    logger.error(`Error during CREATE_ORDER processing: ${error}`);
 
                     RedisManager.getInstance().sendToApi(clientId, {
                         type: "ORDER_CANCELLED",
@@ -259,14 +278,14 @@ export class Engine {
                     }
 
                     if (!orderToCancel || !targetOrderbook || !cancelledOrderOutcome) {
-                        console.log("No order found to cancel with ID: ", orderId);
+                        logger.info(`No order found to cancel with ID:  ${orderId}`);
                         throw new Error("No order found to cancel");
                     }
 
                     // const userBalance = this.balances.get(orderToCancel.userId);
                     const userBalance = await this.getUserBalance(orderToCancel.userId);
                     if (!userBalance) {
-                        console.log("User Balance not found to cancel order for user", orderToCancel.userId);
+                        logger.info(`User Balance not found to cancel order for user:  ${orderToCancel.userId}`);
                         throw new Error("User Balance not found to cancel order");
                     }
                     const userContract = await this.getUserContract(orderToCancel.userId, cancelMarket);
@@ -325,7 +344,7 @@ export class Engine {
                         }
                     })
                 } catch (error) {
-                    console.log("Error while cancelling order: ", error);
+                    logger.info(`Error while cancelling order:  ${error}`);
                 }
                 break;
             case GET_OPEN_ORDERS:
@@ -349,7 +368,7 @@ export class Engine {
                         },
                     })
                 } catch (error) {
-                    console.log(error);
+                    logger.info(error);
                 }
                 break;
             case ON_RAMP:
@@ -385,7 +404,7 @@ export class Engine {
                         }
                     })
                 } catch (error) {
-                    console.log(error);
+                    logger.info(error);
                     RedisManager.getInstance().sendToApi(clientId, {
                         type: "DEPTH",
                         payload: {
@@ -415,8 +434,11 @@ export class Engine {
         fills: Fill[];
         orderId: string;
     }> {
+        logger.info(`createOrders called for userId: ${userId}, market: ${market}, price: ${price}, quantity: ${quantity}, orderType: ${orderType}, outcome: ${outcome}`);
+
         const marketOrderbooks = this.marketOrderbooks.get(market);
         if (!marketOrderbooks) {
+            logger.error(`Error: marketOrderbooks not found for market ${market} in createOrders.`);
             throw new Error("No orderbooks found for this market");
         }
 
@@ -424,6 +446,9 @@ export class Engine {
 
         // this.checkAndLockFundsAndAssets(orderType, outcome, userId, price, quantity);
         await this.checkAndLockFundsAndAssets(orderType, outcome, userId, price, quantity, market, tx);
+
+        logger.info("Funds/assets checked and locked.");
+
         const order: Order = {
             price: Number(price),
             quantity: Number(quantity),
@@ -432,10 +457,19 @@ export class Engine {
             type: orderType,
             userId,
         };
+
+        logger.info(`Order object created: ${order}`);
+
         const { fills, executedQty } = targetOrderbook.addOrder(order);
 
+        logger.info(`Orderbook addOrder result: executedQty=${executedQty}, fills count=${fills.length}`);
+
         await this.updateBalance(orderType, outcome, userId, fills, market, tx);
+        logger.info("Balance updated.");
+
         await this.createDbTrades(fills, market, orderType, userId, tx); //do we actually need to pass outcome parameter...
+        logger.info("DB Trades created.");
+
         this.updateDbOrders(order, executedQty, fills, market, outcome);
         this.publishWsDepthUpdates(fills, price, orderType, market, outcome);
         this.publishWsTrades(fills, userId, market, outcome);
@@ -507,7 +541,7 @@ export class Engine {
         await this.saveUserBalance(userId, userBalance, tx);
         await this.saveUserContract(userContract, tx);
 
-        console.log(`User ${userId} balance after locking funds: `, userBalance);
+        logger.info(`User ${userId} balance after locking funds: `, userBalance);
     }
 
     // services/engine/src/trade/Engine.ts
@@ -522,7 +556,7 @@ export class Engine {
         tx: Prisma.TransactionClient
     ) {
         //what is optimistic locking or row-level DB locks....
-        console.log("----------------Balance updating------------");
+        logger.info("----------------Balance updating------------");
         // for (const fill of fills) {
         //     //user who placed the original order
         //     const takerBalance = await this.getUserBalance(userId, tx);
@@ -532,7 +566,7 @@ export class Engine {
         //     const makerContract = await this.getUserContract(fill.otherUserId, eventId, tx);
 
         //     if (!takerBalance || !makerBalance || !takerContract || !makerContract) {
-        //         console.error("Error: Taker or Maker balance not found during update.")
+        //         logger.error("Error: Taker or Maker balance not found during update.")
         //         return;
         //     }
 
@@ -618,7 +652,7 @@ export class Engine {
         const takerDbContract = userContractMap.get(userId);
 
         if (!takerDbUser || !takerDbContract) {
-            console.error("Error: Taker user or contract not found during batch update preparation.");
+            logger.error("Error: Taker user or contract not found during batch update preparation.");
             return;
         }
 
@@ -633,7 +667,7 @@ export class Engine {
             const makerDbContract = userContractMap.get(fill.otherUserId);
 
             if (!makerDbUser || !makerDbContract) {
-                console.error("Error: Maker user or contract not found during batch update preparation.");
+                logger.error("Error: Maker user or contract not found during batch update preparation.");
                 continue;
             }
 
@@ -705,22 +739,22 @@ export class Engine {
 
         //----------------------------v2-close----------------------------------------
 
-        console.log("----------------Balance updated------------");
+        logger.info("----------------Balance updated------------");
     }
 
     async createDbTrades(
         fills: Fill[],
         market: string,
         orderType: "bid" | "ask",
-        takerUserId: string, 
+        takerUserId: string,
         tx: Prisma.TransactionClient
     ) {
-        console.log("-------------Creating DB Trades------------");
+        logger.info("-------------Creating DB Trades------------");
         for (const fill of fills) {
             let buyerId: string;
             let sellerId: string;
 
-            
+
             if (orderType === "bid") {
                 buyerId = takerUserId;
                 sellerId = fill.otherUserId;
@@ -748,7 +782,7 @@ export class Engine {
                 data: {
                     market,
                     id: fill.tradeId.toString(),
-                    isBuyerMaker: (orderType === "ask"), 
+                    isBuyerMaker: (orderType === "ask"),
                     price: fill.price,
                     quantity: fill.qty,
                     timestamp: Date.now(),
@@ -764,7 +798,7 @@ export class Engine {
         market: string,
         outcome: "yes" | "no"
     ) {
-        console.log("-----------DB Orders Updating--------------");
+        logger.info("-----------DB Orders Updating--------------");
         RedisManager.getInstance().pushMessage({
             type: ORDER_UPDATE,
             data: {
@@ -796,7 +830,7 @@ export class Engine {
         market: string,
         outcome: "yes" | "no"
     ) {
-        console.log("------------Publishing WS Depth--------");
+        logger.info("------------Publishing WS Depth--------");
         const marketBooks = this.marketOrderbooks.get(market);
 
         if (!marketBooks) {
@@ -824,7 +858,7 @@ export class Engine {
         market: string,
         outcome: "yes" | "no"
     ) {
-        console.log("------------publishing WsTrades------------");
+        logger.info("------------publishing WsTrades------------");
 
         fills.forEach((fill) => {
             //send to API (using wsMessge contoller in Redis Manager)...
@@ -868,7 +902,7 @@ export class Engine {
         });
 
         if (!user) {
-            console.error(`User not found for on-ramp: ${userId}`)
+            logger.error(`User not found for on-ramp: ${userId}`)
             throw new Error(`User not found for on-ramp: ${userId}`);
         }
 
@@ -964,7 +998,7 @@ export class Engine {
                 }
             })
         } catch (error) {
-            console.error(`Failed to save balance for user ${userId} to DB:`, error)
+            logger.error(`Failed to save balance for user ${userId} to DB:`, error)
         }
     }
 
@@ -1007,18 +1041,23 @@ export class Engine {
                 },
             });
         } catch (error) {
-            console.error(`Failed to save user contract for user ${contract.userId} and event ${contract.eventId} to DB:`, error);
+            logger.error(`Failed to save user contract for user ${contract.userId} and event ${contract.eventId} to DB:`, error);
         }
     }
     //core -> synthetic market maker...
     private async runSyntheticMarketMaker() {
-        console.log("Running synthetic market maker...");
+        logger.info("Running synthetic market maker cycle...");
         for (const [marketId, orderbooks] of this.marketOrderbooks.entries()) {
+            logger.info(`Processing market ${marketId} for synthetic market maker.`);
+
             const { yes: yesOrderbook, no: noOrderbook } = orderbooks;
 
             // Get current market prices
             const P_yes = yesOrderbook.getMarketPrice();
+            //initially P_no was not used...clearly error!!
             const P_no = noOrderbook.getMarketPrice();
+
+            logger.info(`Current market prices for ${marketId}: P_yes=${P_yes}, P_no=${P_no}`);
 
             // Calculate implied fair price for the 'no' side based on 'yes' price
             const P_no_fair = 100 - P_yes;
@@ -1146,7 +1185,7 @@ export class Engine {
             });
 
             this.syntheticOrders.set(marketId, newSyntheticOrderIds);
-            console.log(`Synthetic orders placed for market ${marketId}. P_yes: ${P_yes}, P_no_fair: ${P_no_fair}`);
+            logger.info(`Synthetic orders placed for market ${marketId}. P_yes: ${P_yes}, P_no_fair: ${P_no_fair}`);
         }
     }
 }

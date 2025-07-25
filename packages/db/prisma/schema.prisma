@@ -39,7 +39,7 @@ model Event {
   expiresAt       DateTime
   initialYesPrice Float
   initialNoPrice  Float
-  quantity        Int
+  // quantity        Int
   sot             String
   traders         Int            @default(0)
   status          EventStatus    @default(ONGOING)

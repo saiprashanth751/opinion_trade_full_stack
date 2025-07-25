@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { TEvent, sides } from "@trade/types";
 import { OrderPlacementDialog } from "../Order/OrderPlacementDialog";
+import Link from "next/link";
 
 interface EventCardProps {
   event: TEvent;
@@ -51,7 +52,9 @@ export const EventCard = ({ event, liveYesPrice, liveNoPrice }: EventCardProps) 
           </div>
         </div>
 
-        <h3 className="font-semibold mb-4">{event?.title}</h3>
+        <Link href={`/events/${[event.id]}`}>
+          <h3 className="font-semibold mb-4">{event?.title}</h3>
+        </Link>
         <div className="flex justify-between">
           <button
             className="bg-blue-100 text-blue-600 px-6 py-2 rounded font-bold"

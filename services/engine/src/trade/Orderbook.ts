@@ -234,7 +234,7 @@ export class Orderbook {
             currentPrice: this.currentPrice
         }
     }
-    //for dunamic price change
+    //for dynamic price change
     getMarketPrice(): number {
         const bestBid = this.bids.length > 0 ? Math.max(...this.bids.map(order => order.price)) : null;
         const bestAsk = this.asks.length > 0 ? Math.min(...this.asks.map(order => order.price)) : null;

@@ -19,6 +19,7 @@
     "fs": "^0.0.1-security",
     "@trade/types": "*",
     "@trade/order-queue": "*",
-    "@repo/db": "*"
+    "@repo/db": "*",
+    "@trade/logger": "*"
   }
 }

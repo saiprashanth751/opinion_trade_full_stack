@@ -1,2 +1,1417 @@
-[ 2025-07-23 14:44:06 ] -  [32minfo[39m  - Order Queue Started
-[ 2025-07-23 14:47:29 ] -  [32minfo[39m  - Order Queue Started
+[ 2025-07-25 19:26:03 ] -  [32minfo[39m  - No snapshot found
+[ 2025-07-25 19:26:03 ] -  [32minfo[39m  - Initializing engine from database...
+[ 2025-07-25 19:26:03 ] -  [32minfo[39m  - Raw SYNTHETIC_MARKET_MAKER_USER_ID: synthetic_market_maker_user_id
+[ 2025-07-25 19:26:03 ] -  [32minfo[39m  - Raw SYNTHETIC_ORDER_QUANTITY: 10
+[ 2025-07-25 19:26:03 ] -  [32minfo[39m  - Engine initialized. Synthetic Market Maker ID: , synthetic_market_maker_user_id
+[ 2025-07-25 19:26:03 ] -  [32minfo[39m  - Synthetic Order Quantity: , 10
+[ 2025-07-25 19:26:03 ] -  [32minfo[39m  - Engine initialized. Synthetic Market Maker ID: , synthetic_market_maker_user_id
+[ 2025-07-25 19:26:03 ] -  [32minfo[39m  - Synthetic Order Quantity: , 10
+[ 2025-07-25 19:26:03 ] -  [32minfo[39m  - Market maker balance initialized: 10000000
+[ 2025-07-25 19:26:03 ] -  [32minfo[39m  - Initialized 1 event orderbooks from database.
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - Running synthetic market maker cycle...
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - Processing market cmdgc0i7m0000kc24v7ilvs8t for synthetic market maker.
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - Current market prices for cmdgc0i7m0000kc24v7ilvs8t: P_yes=60, P_no=40
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 59, quantity: 10, orderType: bid, outcome: yes
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 61, quantity: 10, orderType: ask, outcome: yes
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 39, quantity: 10, orderType: bid, outcome: no
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 41, quantity: 10, orderType: ask, outcome: no
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:08 ] -  [32minfo[39m  - Synthetic orders placed for market cmdgc0i7m0000kc24v7ilvs8t. P_yes: 60, P_no_fair: 40
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - Running synthetic market maker cycle...
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - Processing market cmdgc0i7m0000kc24v7ilvs8t for synthetic market maker.
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - Current market prices for cmdgc0i7m0000kc24v7ilvs8t: P_yes=60, P_no=40
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 59, quantity: 10, orderType: bid, outcome: yes
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 61, quantity: 10, orderType: ask, outcome: yes
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 39, quantity: 10, orderType: bid, outcome: no
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 41, quantity: 10, orderType: ask, outcome: no
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:13 ] -  [32minfo[39m  - Synthetic orders placed for market cmdgc0i7m0000kc24v7ilvs8t. P_yes: 60, P_no_fair: 40
+[ 2025-07-25 19:26:18 ] -  [32minfo[39m  - Running synthetic market maker cycle...
+[ 2025-07-25 19:26:18 ] -  [32minfo[39m  - Processing market cmdgc0i7m0000kc24v7ilvs8t for synthetic market maker.
+[ 2025-07-25 19:26:18 ] -  [32minfo[39m  - Current market prices for cmdgc0i7m0000kc24v7ilvs8t: P_yes=60, P_no=40
+[ 2025-07-25 19:26:18 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 59, quantity: 10, orderType: bid, outcome: yes
+[ 2025-07-25 19:26:18 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:18 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:18 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:18 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:18 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:18 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:18 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:18 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:18 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:18 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:18 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:18 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:18 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 61, quantity: 10, orderType: ask, outcome: yes
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 39, quantity: 10, orderType: bid, outcome: no
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 41, quantity: 10, orderType: ask, outcome: no
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:19 ] -  [32minfo[39m  - Synthetic orders placed for market cmdgc0i7m0000kc24v7ilvs8t. P_yes: 60, P_no_fair: 40
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - Running synthetic market maker cycle...
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - Processing market cmdgc0i7m0000kc24v7ilvs8t for synthetic market maker.
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - Current market prices for cmdgc0i7m0000kc24v7ilvs8t: P_yes=60, P_no=40
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 59, quantity: 10, orderType: bid, outcome: yes
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 61, quantity: 10, orderType: ask, outcome: yes
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 39, quantity: 10, orderType: bid, outcome: no
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 41, quantity: 10, orderType: ask, outcome: no
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:23 ] -  [32minfo[39m  - Synthetic orders placed for market cmdgc0i7m0000kc24v7ilvs8t. P_yes: 60, P_no_fair: 40
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - Running synthetic market maker cycle...
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - Processing market cmdgc0i7m0000kc24v7ilvs8t for synthetic market maker.
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - Current market prices for cmdgc0i7m0000kc24v7ilvs8t: P_yes=60, P_no=40
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 59, quantity: 10, orderType: bid, outcome: yes
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 61, quantity: 10, orderType: ask, outcome: yes
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 39, quantity: 10, orderType: bid, outcome: no
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 41, quantity: 10, orderType: ask, outcome: no
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:28 ] -  [32minfo[39m  - Synthetic orders placed for market cmdgc0i7m0000kc24v7ilvs8t. P_yes: 60, P_no_fair: 40
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - Running synthetic market maker cycle...
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - Processing market cmdgc0i7m0000kc24v7ilvs8t for synthetic market maker.
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - Current market prices for cmdgc0i7m0000kc24v7ilvs8t: P_yes=60, P_no=40
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 59, quantity: 10, orderType: bid, outcome: yes
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 61, quantity: 10, orderType: ask, outcome: yes
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 39, quantity: 10, orderType: bid, outcome: no
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 41, quantity: 10, orderType: ask, outcome: no
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:33 ] -  [32minfo[39m  - Synthetic orders placed for market cmdgc0i7m0000kc24v7ilvs8t. P_yes: 60, P_no_fair: 40
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - Running synthetic market maker cycle...
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - Processing market cmdgc0i7m0000kc24v7ilvs8t for synthetic market maker.
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - Current market prices for cmdgc0i7m0000kc24v7ilvs8t: P_yes=60, P_no=40
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 59, quantity: 10, orderType: bid, outcome: yes
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 61, quantity: 10, orderType: ask, outcome: yes
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 39, quantity: 10, orderType: bid, outcome: no
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 41, quantity: 10, orderType: ask, outcome: no
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:38 ] -  [32minfo[39m  - Synthetic orders placed for market cmdgc0i7m0000kc24v7ilvs8t. P_yes: 60, P_no_fair: 40
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - Running synthetic market maker cycle...
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - Processing market cmdgc0i7m0000kc24v7ilvs8t for synthetic market maker.
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - Current market prices for cmdgc0i7m0000kc24v7ilvs8t: P_yes=60, P_no=40
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 59, quantity: 10, orderType: bid, outcome: yes
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 61, quantity: 10, orderType: ask, outcome: yes
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 39, quantity: 10, orderType: bid, outcome: no
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 41, quantity: 10, orderType: ask, outcome: no
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:43 ] -  [32minfo[39m  - Synthetic orders placed for market cmdgc0i7m0000kc24v7ilvs8t. P_yes: 60, P_no_fair: 40
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - Running synthetic market maker cycle...
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - Processing market cmdgc0i7m0000kc24v7ilvs8t for synthetic market maker.
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - Current market prices for cmdgc0i7m0000kc24v7ilvs8t: P_yes=60, P_no=40
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 59, quantity: 10, orderType: bid, outcome: yes
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 61, quantity: 10, orderType: ask, outcome: yes
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 39, quantity: 10, orderType: bid, outcome: no
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 41, quantity: 10, orderType: ask, outcome: no
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:48 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:49 ] -  [32minfo[39m  - Synthetic orders placed for market cmdgc0i7m0000kc24v7ilvs8t. P_yes: 60, P_no_fair: 40
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - Running synthetic market maker cycle...
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - Processing market cmdgc0i7m0000kc24v7ilvs8t for synthetic market maker.
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - Current market prices for cmdgc0i7m0000kc24v7ilvs8t: P_yes=60, P_no=40
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 59, quantity: 10, orderType: bid, outcome: yes
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 61, quantity: 10, orderType: ask, outcome: yes
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 39, quantity: 10, orderType: bid, outcome: no
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 41, quantity: 10, orderType: ask, outcome: no
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:26:53 ] -  [32minfo[39m  - Synthetic orders placed for market cmdgc0i7m0000kc24v7ilvs8t. P_yes: 60, P_no_fair: 40
+[ 2025-07-25 19:43:48 ] -  [32minfo[39m  - Snapshot loaded successfully.
+[ 2025-07-25 19:43:48 ] -  [32minfo[39m  - Raw SYNTHETIC_MARKET_MAKER_USER_ID: synthetic_market_maker_user_id
+[ 2025-07-25 19:43:48 ] -  [32minfo[39m  - Raw SYNTHETIC_ORDER_QUANTITY: 10
+[ 2025-07-25 19:43:48 ] -  [32minfo[39m  - Engine initialized. Synthetic Market Maker ID: , synthetic_market_maker_user_id
+[ 2025-07-25 19:43:48 ] -  [32minfo[39m  - Synthetic Order Quantity: , 10
+[ 2025-07-25 19:43:48 ] -  [32minfo[39m  - Engine initialized. Synthetic Market Maker ID: , synthetic_market_maker_user_id
+[ 2025-07-25 19:43:48 ] -  [32minfo[39m  - Synthetic Order Quantity: , 10
+[ 2025-07-25 19:43:53 ] -  [32minfo[39m  - Running synthetic market maker cycle...
+[ 2025-07-25 19:43:53 ] -  [32minfo[39m  - Processing market cmdgc0i7m0000kc24v7ilvs8t for synthetic market maker.
+[ 2025-07-25 19:43:53 ] -  [32minfo[39m  - Current market prices for cmdgc0i7m0000kc24v7ilvs8t: P_yes=60, P_no=40
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 59, quantity: 10, orderType: bid, outcome: yes
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 61, quantity: 10, orderType: ask, outcome: yes
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 39, quantity: 10, orderType: bid, outcome: no
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 41, quantity: 10, orderType: ask, outcome: no
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:43:54 ] -  [32minfo[39m  - Synthetic orders placed for market cmdgc0i7m0000kc24v7ilvs8t. P_yes: 60, P_no_fair: 40
+[ 2025-07-25 19:43:58 ] -  [32minfo[39m  - Running synthetic market maker cycle...
+[ 2025-07-25 19:43:58 ] -  [32minfo[39m  - Processing market cmdgc0i7m0000kc24v7ilvs8t for synthetic market maker.
+[ 2025-07-25 19:43:58 ] -  [32minfo[39m  - Current market prices for cmdgc0i7m0000kc24v7ilvs8t: P_yes=60, P_no=40
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 59, quantity: 10, orderType: bid, outcome: yes
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 61, quantity: 10, orderType: ask, outcome: yes
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 39, quantity: 10, orderType: bid, outcome: no
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 41, quantity: 10, orderType: ask, outcome: no
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:43:59 ] -  [32minfo[39m  - Synthetic orders placed for market cmdgc0i7m0000kc24v7ilvs8t. P_yes: 60, P_no_fair: 40
+[ 2025-07-25 19:44:03 ] -  [32minfo[39m  - Running synthetic market maker cycle...
+[ 2025-07-25 19:44:03 ] -  [32minfo[39m  - Processing market cmdgc0i7m0000kc24v7ilvs8t for synthetic market maker.
+[ 2025-07-25 19:44:03 ] -  [32minfo[39m  - Current market prices for cmdgc0i7m0000kc24v7ilvs8t: P_yes=60, P_no=40
+[ 2025-07-25 19:44:03 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 59, quantity: 10, orderType: bid, outcome: yes
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 61, quantity: 10, orderType: ask, outcome: yes
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 39, quantity: 10, orderType: bid, outcome: no
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 41, quantity: 10, orderType: ask, outcome: no
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:04 ] -  [32minfo[39m  - Synthetic orders placed for market cmdgc0i7m0000kc24v7ilvs8t. P_yes: 60, P_no_fair: 40
+[ 2025-07-25 19:44:08 ] -  [32minfo[39m  - Running synthetic market maker cycle...
+[ 2025-07-25 19:44:08 ] -  [32minfo[39m  - Processing market cmdgc0i7m0000kc24v7ilvs8t for synthetic market maker.
+[ 2025-07-25 19:44:08 ] -  [32minfo[39m  - Current market prices for cmdgc0i7m0000kc24v7ilvs8t: P_yes=60, P_no=40
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 59, quantity: 10, orderType: bid, outcome: yes
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 61, quantity: 10, orderType: ask, outcome: yes
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 39, quantity: 10, orderType: bid, outcome: no
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 41, quantity: 10, orderType: ask, outcome: no
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:09 ] -  [32minfo[39m  - Synthetic orders placed for market cmdgc0i7m0000kc24v7ilvs8t. P_yes: 60, P_no_fair: 40
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - Running synthetic market maker cycle...
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - Processing market cmdgc0i7m0000kc24v7ilvs8t for synthetic market maker.
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - Current market prices for cmdgc0i7m0000kc24v7ilvs8t: P_yes=60, P_no=40
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 59, quantity: 10, orderType: bid, outcome: yes
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 61, quantity: 10, orderType: ask, outcome: yes
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 39, quantity: 10, orderType: bid, outcome: no
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 41, quantity: 10, orderType: ask, outcome: no
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:14 ] -  [32minfo[39m  - Synthetic orders placed for market cmdgc0i7m0000kc24v7ilvs8t. P_yes: 60, P_no_fair: 40
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - Running synthetic market maker cycle...
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - Processing market cmdgc0i7m0000kc24v7ilvs8t for synthetic market maker.
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - Current market prices for cmdgc0i7m0000kc24v7ilvs8t: P_yes=60, P_no=40
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 59, quantity: 10, orderType: bid, outcome: yes
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 61, quantity: 10, orderType: ask, outcome: yes
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 39, quantity: 10, orderType: bid, outcome: no
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 41, quantity: 10, orderType: ask, outcome: no
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:19 ] -  [32minfo[39m  - Synthetic orders placed for market cmdgc0i7m0000kc24v7ilvs8t. P_yes: 60, P_no_fair: 40
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - Running synthetic market maker cycle...
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - Processing market cmdgc0i7m0000kc24v7ilvs8t for synthetic market maker.
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - Current market prices for cmdgc0i7m0000kc24v7ilvs8t: P_yes=60, P_no=40
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 59, quantity: 10, orderType: bid, outcome: yes
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 61, quantity: 10, orderType: ask, outcome: yes
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 39, quantity: 10, orderType: bid, outcome: no
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 41, quantity: 10, orderType: ask, outcome: no
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:24 ] -  [32minfo[39m  - Synthetic orders placed for market cmdgc0i7m0000kc24v7ilvs8t. P_yes: 60, P_no_fair: 40
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - Running synthetic market maker cycle...
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - Processing market cmdgc0i7m0000kc24v7ilvs8t for synthetic market maker.
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - Current market prices for cmdgc0i7m0000kc24v7ilvs8t: P_yes=60, P_no=40
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 59, quantity: 10, orderType: bid, outcome: yes
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 61, quantity: 10, orderType: ask, outcome: yes
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 39, quantity: 10, orderType: bid, outcome: no
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 41, quantity: 10, orderType: ask, outcome: no
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:29 ] -  [32minfo[39m  - Synthetic orders placed for market cmdgc0i7m0000kc24v7ilvs8t. P_yes: 60, P_no_fair: 40
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - Running synthetic market maker cycle...
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - Processing market cmdgc0i7m0000kc24v7ilvs8t for synthetic market maker.
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - Current market prices for cmdgc0i7m0000kc24v7ilvs8t: P_yes=60, P_no=40
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 59, quantity: 10, orderType: bid, outcome: yes
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 61, quantity: 10, orderType: ask, outcome: yes
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 39, quantity: 10, orderType: bid, outcome: no
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 41, quantity: 10, orderType: ask, outcome: no
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:34 ] -  [32minfo[39m  - Synthetic orders placed for market cmdgc0i7m0000kc24v7ilvs8t. P_yes: 60, P_no_fair: 40
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - Running synthetic market maker cycle...
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - Processing market cmdgc0i7m0000kc24v7ilvs8t for synthetic market maker.
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - Current market prices for cmdgc0i7m0000kc24v7ilvs8t: P_yes=60, P_no=40
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 59, quantity: 10, orderType: bid, outcome: yes
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 61, quantity: 10, orderType: ask, outcome: yes
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 39, quantity: 10, orderType: bid, outcome: no
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 41, quantity: 10, orderType: ask, outcome: no
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:39 ] -  [32minfo[39m  - Synthetic orders placed for market cmdgc0i7m0000kc24v7ilvs8t. P_yes: 60, P_no_fair: 40
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - Running synthetic market maker cycle...
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - Processing market cmdgc0i7m0000kc24v7ilvs8t for synthetic market maker.
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - Current market prices for cmdgc0i7m0000kc24v7ilvs8t: P_yes=60, P_no=40
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 59, quantity: 10, orderType: bid, outcome: yes
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 61, quantity: 10, orderType: ask, outcome: yes
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 39, quantity: 10, orderType: bid, outcome: no
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 41, quantity: 10, orderType: ask, outcome: no
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:44 ] -  [32minfo[39m  - Synthetic orders placed for market cmdgc0i7m0000kc24v7ilvs8t. P_yes: 60, P_no_fair: 40
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - Running synthetic market maker cycle...
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - Processing market cmdgc0i7m0000kc24v7ilvs8t for synthetic market maker.
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - Current market prices for cmdgc0i7m0000kc24v7ilvs8t: P_yes=60, P_no=40
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 59, quantity: 10, orderType: bid, outcome: yes
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 61, quantity: 10, orderType: ask, outcome: yes
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 39, quantity: 10, orderType: bid, outcome: no
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 41, quantity: 10, orderType: ask, outcome: no
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:49 ] -  [32minfo[39m  - Synthetic orders placed for market cmdgc0i7m0000kc24v7ilvs8t. P_yes: 60, P_no_fair: 40
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - Running synthetic market maker cycle...
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - Processing market cmdgc0i7m0000kc24v7ilvs8t for synthetic market maker.
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - Current market prices for cmdgc0i7m0000kc24v7ilvs8t: P_yes=60, P_no=40
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 59, quantity: 10, orderType: bid, outcome: yes
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 61, quantity: 10, orderType: ask, outcome: yes
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 39, quantity: 10, orderType: bid, outcome: no
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 41, quantity: 10, orderType: ask, outcome: no
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:54 ] -  [32minfo[39m  - Synthetic orders placed for market cmdgc0i7m0000kc24v7ilvs8t. P_yes: 60, P_no_fair: 40
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - Running synthetic market maker cycle...
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - Processing market cmdgc0i7m0000kc24v7ilvs8t for synthetic market maker.
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - Current market prices for cmdgc0i7m0000kc24v7ilvs8t: P_yes=60, P_no=40
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 59, quantity: 10, orderType: bid, outcome: yes
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 61, quantity: 10, orderType: ask, outcome: yes
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 39, quantity: 10, orderType: bid, outcome: no
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 41, quantity: 10, orderType: ask, outcome: no
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:44:59 ] -  [32minfo[39m  - Synthetic orders placed for market cmdgc0i7m0000kc24v7ilvs8t. P_yes: 60, P_no_fair: 40
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - Running synthetic market maker cycle...
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - Processing market cmdgc0i7m0000kc24v7ilvs8t for synthetic market maker.
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - Current market prices for cmdgc0i7m0000kc24v7ilvs8t: P_yes=60, P_no=40
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 59, quantity: 10, orderType: bid, outcome: yes
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 61, quantity: 10, orderType: ask, outcome: yes
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 39, quantity: 10, orderType: bid, outcome: no
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - createOrders called for userId: synthetic_market_maker_user_id, market: cmdgc0i7m0000kc24v7ilvs8t, price: 41, quantity: 10, orderType: ask, outcome: no
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - User synthetic_market_maker_user_id balance after locking funds: 
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - Funds/assets checked and locked.
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - Order object created: [object Object]
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - Orderbook addOrder result: executedQty=0, fills count=0
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - ----------------Balance updating------------
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - ----------------Balance updated------------
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - Balance updated.
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - -------------Creating DB Trades------------
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - DB Trades created.
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - -----------DB Orders Updating--------------
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - ------------Publishing WS Depth--------
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - ------------publishing WsTrades------------
+[ 2025-07-25 19:45:04 ] -  [32minfo[39m  - Synthetic orders placed for market cmdgc0i7m0000kc24v7ilvs8t. P_yes: 60, P_no_fair: 40

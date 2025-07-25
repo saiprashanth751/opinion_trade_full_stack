@@ -19,7 +19,6 @@ export const createEventhandler = AsyncWrapper( async (req: Request<{}, {}, Omit
         initialYesPrice,   
         initialNoPrice,
         sot,
-        quantity
     } = req.body;
 
     let slug = slugify(title);
@@ -61,7 +60,6 @@ export const createEventhandler = AsyncWrapper( async (req: Request<{}, {}, Omit
             initialNoPrice,
             sot,
             expiresAt: end_date,
-            quantity
         }
     });
 

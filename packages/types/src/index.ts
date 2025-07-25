@@ -21,7 +21,7 @@ export type TEvent = {
     initialNoPrice: number;
     sot: string;
     traders: number;
-    quantity: number
+    // quantity: number
 }
 
 export const TRADE_ADDED = "TRADE_ADDED"

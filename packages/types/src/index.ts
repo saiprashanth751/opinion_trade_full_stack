@@ -188,7 +188,22 @@ export type TradeAddedMessage = {
     }
 }
 
+export type EventSummary = {
+    eventId: string;
+    yesPrice: number;
+    noPrice: number;
+}
+
+export type EventSummaryMessage = {
+    type: "EVENT_SUMMARY",
+    payload: {
+        events: EventSummary[];
+    }
+}
+
+
 export type WsMessage =
     | TickerUpdateMessage
     | DepthUpdateMessage
-    | TradeAddedMessage;
+    | TradeAddedMessage
+    | EventSummaryMessage

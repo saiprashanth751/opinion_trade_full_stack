@@ -176,6 +176,8 @@ export class Engine {
         clientId: string;
         message: MessageFromApi;
     }) {
+        logger.info(`ENGINE | Received order to process: ClientId=${clientId}, Message=${JSON.stringify(message)}`);
+
         logger.info(`"message", ${message}, " clientId", ${clientId}`);
 
         switch (message.type) {
@@ -233,8 +235,7 @@ export class Engine {
                     })
 
                     logger.info("Pushed ORDER_PLACED into REDIS");
-                    const balance = await this.getUserBalance(userId);
-                    logger.info(`user ${userId} : balance: ${balance}`);
+                     logger.info(`ENGINE | User ${userId} balance after order: ${JSON.stringify(await this.getUserBalance(userId))}`);
                 } catch (error) {
                     logger.error(`Error during CREATE_ORDER processing: ${error}`);
 
@@ -249,6 +250,7 @@ export class Engine {
                 }
                 break;
             case CANCEL_ORDER:
+                logger.info(`ENGINE | Received CANCEL_ORDER for orderId: ${message.data.orderId}, market: ${message.data.market}`);
                 try {
                     const orderId = message.data.orderId
                     const cancelMarket = message.data.market;
@@ -343,11 +345,13 @@ export class Engine {
                             remainingQty: orderToCancel.quantity - orderToCancel.filled,
                         }
                     })
+                     logger.info(`ENGINE | Order cancelled successfully: OrderId=${orderId}`);
                 } catch (error) {
                     logger.info(`Error while cancelling order:  ${error}`);
                 }
                 break;
             case GET_OPEN_ORDERS:
+                 logger.info(`ENGINE | Received GET_OPEN_ORDERS for userId: ${message.data.userId}, market: ${message.data.market}`);
                 try {
                     const market = message.data.market;
 
@@ -367,17 +371,21 @@ export class Engine {
                             openOrders
                         },
                     })
+                    logger.info(`ENGINE | Sent OPEN_ORDERS to client ${clientId}: ${openOrders.length} orders found.`);
                 } catch (error) {
                     logger.info(error);
                 }
                 break;
             case ON_RAMP:
+                logger.info(`ENGINE | Received ON_RAMP for userId: ${message.data.userId}, amount: ${message.data.amount}`);
                 const userId = message.data.userId;
                 const amount = message.data.amount;
                 // this.onRamp(userId, amount);
                 await this.onRamp(userId, amount);
+                 logger.info(`ENGINE | On-ramp processed for user ${message.data.userId}`);
                 break;
             case GET_DEPTH:
+                 logger.info(`ENGINE | Received GET_DEPTH for market: ${message.data.market}`);
                 try {
                     const market = message.data.market;
                     const marketBooks = this.marketOrderbooks.get(market);
@@ -403,8 +411,9 @@ export class Engine {
                             noAsks: noDepth.asks,
                         }
                     })
+                    logger.info(`ENGINE | Sent DEPTH to client ${clientId} for market ${message.data.market}`);
                 } catch (error) {
-                    logger.info(error);
+                    logger.error("ENGINE | Error getting depth:", error);
                     RedisManager.getInstance().sendToApi(clientId, {
                         type: "DEPTH",
                         payload: {
@@ -471,8 +480,13 @@ export class Engine {
         logger.info("DB Trades created.");
 
         this.updateDbOrders(order, executedQty, fills, market, outcome);
+          logger.info("ENGINE | DB Orders updated.");
+          
         this.publishWsDepthUpdates(fills, price, orderType, market, outcome);
+        logger.info("ENGINE | Published WS Depth updates.");
+
         this.publishWsTrades(fills, userId, market, outcome);
+        logger.info("ENGINE | Published WS Trades.");
 
         return { executedQty, fills, orderId: order.orderId }
     }
@@ -490,7 +504,8 @@ export class Engine {
         // if (!userBalance) {
         //     throw new Error(`User balance is not found for user: ${userId}`);
         // }
-
+        logger.info(`ENGINE | checkAndLockFundsAndAssets: userId=${userId}, orderType=${orderType}, outcome=${outcome}, price=${price}, quantity=${quantity}`);
+        
         const userBalance = await this.getUserBalance(userId, tx);
         if (!userBalance) {
             throw new Error(`User balance is not found for user: ${userId}`);
@@ -541,7 +556,8 @@ export class Engine {
         await this.saveUserBalance(userId, userBalance, tx);
         await this.saveUserContract(userContract, tx);
 
-        logger.info(`User ${userId} balance after locking funds: `, userBalance);
+        logger.info(`ENGINE | User ${userId} balance after locking funds: ${JSON.stringify(userBalance)}`);
+        logger.info(`ENGINE | User ${userId} contract after locking: ${JSON.stringify(userContract)}`);
     }
 
     // services/engine/src/trade/Engine.ts
@@ -788,7 +804,9 @@ export class Engine {
                     timestamp: Date.now(),
                 }
             });
+            logger.info(`ENGINE | Created DB trade record: ${JSON.stringify(fill)}`);
         }
+        logger.info("ENGINE | DB Trades creation completed.");
     }
 
     updateDbOrders(
@@ -821,6 +839,7 @@ export class Engine {
                 }
             })
         })
+         logger.info("ENGINE | DB Orders update completed.");
     }
 
     publishWsDepthUpdates(
@@ -850,6 +869,7 @@ export class Engine {
                 e: "depth",
             }
         })
+        logger.info("ENGINE | WS Depth updates publishing completed.");
     }
 
     publishWsTrades(
@@ -875,6 +895,7 @@ export class Engine {
                 }
             })
         })
+         logger.info("ENGINE | WS Trades publishing completed.");
     }
 
     //Never Used here.
@@ -955,9 +976,8 @@ export class Engine {
                 }
             });
             if (!user) {
+                logger.warn(`ENGINE | User ${userId} not found in DB. Initializing with default balance.`);
                 // Auth must be soo good that this should not happen
-                console.warn(`User ${userId} not found in DB. Initializing with default balance.`);
-
                 userBalance = {
                     available: 0,
                     locked: 0,
@@ -997,6 +1017,7 @@ export class Engine {
                     balance: balance.available
                 }
             })
+             logger.info(`ENGINE | Saved balance for user ${userId} to DB: ${balance.available}`);
         } catch (error) {
             logger.error(`Failed to save balance for user ${userId} to DB:`, error)
         }
@@ -1014,6 +1035,7 @@ export class Engine {
         });
 
         if (!userContract) {
+             logger.info(`ENGINE | Creating new user contract for user ${userId} and event ${eventId}.`);
             userContract = await client.userContract.create({
                 data: {
                     userId: userId,
@@ -1040,6 +1062,7 @@ export class Engine {
                     lockedNoContracts: contract.lockedNoContracts,
                 },
             });
+            logger.info(`ENGINE | Saved user contract for user ${contract.userId} and event ${contract.eventId} to DB.`);
         } catch (error) {
             logger.error(`Failed to save user contract for user ${contract.userId} and event ${contract.eventId} to DB:`, error);
         }

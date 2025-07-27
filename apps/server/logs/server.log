@@ -1,221 +1,60 @@
-[ 2025-07-22 19:34:21 ] -  [32minfo[39m  - WORKER | Starting order worker
-[ 2025-07-22 19:42:34 ] -  [32minfo[39m  - WORKER | Starting order worker
-[ 2025-07-22 19:42:34 ] -  [32minfo[39m  - SERVER | Listening on port 3001
-[ 2025-07-22 20:08:06 ] -  [32minfo[39m  - WORKER | Starting order worker
-[ 2025-07-22 20:08:06 ] -  [32minfo[39m  - SERVER | Listening on port 3001
-[ 2025-07-22 20:15:09 ] -  [32minfo[39m  - POST - /api/v1/events/create - 500 - 529.210 ms
-[ 2025-07-22 20:17:03 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 66.786 ms
-[ 2025-07-22 20:23:39 ] -  [32minfo[39m  - POST - /api/v1/events/create - 500 - 23.555 ms
-[ 2025-07-22 20:24:11 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 211.969 ms
-[ 2025-07-22 20:24:19 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 7.831 ms
-[ 2025-07-22 20:24:25 ] -  [32minfo[39m  - POST - /api/v1/events/create - 500 - 1.803 ms
-[ 2025-07-22 20:24:29 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 24.204 ms
-[ 2025-07-22 20:24:41 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 8.514 ms
-[ 2025-07-22 20:24:49 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 9.011 ms
-[ 2025-07-22 23:24:45 ] -  [32minfo[39m  - WORKER | Starting order worker
-[ 2025-07-22 23:24:45 ] -  [32minfo[39m  - SERVER | Listening on port 3001
-[ 2025-07-22 23:42:27 ] -  [32minfo[39m  - WORKER | Starting order worker
-[ 2025-07-22 23:42:27 ] -  [32minfo[39m  - SERVER | Listening on port 3001
-[ 2025-07-22 23:44:51 ] -  [32minfo[39m  - WORKER | Starting order worker
-[ 2025-07-22 23:44:51 ] -  [32minfo[39m  - SERVER | Listening on port 3001
-[ 2025-07-22 23:48:54 ] -  [32minfo[39m  - WORKER | Starting order worker
-[ 2025-07-22 23:48:54 ] -  [32minfo[39m  - SERVER | Listening on port 3001
-[ 2025-07-22 23:49:43 ] -  [32minfo[39m  - WORKER | Starting order worker
-[ 2025-07-22 23:49:43 ] -  [32minfo[39m  - SERVER | Listening on port 3001
-[ 2025-07-23 12:26:09 ] -  [32minfo[39m  - WORKER | Starting order worker
-[ 2025-07-23 12:26:09 ] -  [32minfo[39m  - SERVER | Listening on port 3001
-[ 2025-07-23 12:36:06 ] -  [32minfo[39m  - WORKER | Starting order worker
-[ 2025-07-23 12:36:06 ] -  [32minfo[39m  - SERVER | Listening on port 3001
-[ 2025-07-23 12:41:58 ] -  [32minfo[39m  - WORKER | Starting order worker
-[ 2025-07-23 12:41:58 ] -  [32minfo[39m  - SERVER | Listening on port 3001
-[ 2025-07-23 12:46:40 ] -  [32minfo[39m  - WORKER | Starting order worker
-[ 2025-07-23 12:46:40 ] -  [32minfo[39m  - SERVER | Listening on port 3001
-[ 2025-07-23 12:50:38 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 422 - 8.789 ms
-[ 2025-07-23 12:52:58 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 422 - 3.641 ms
-[ 2025-07-23 12:53:25 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 422 - 3.680 ms
-[ 2025-07-23 12:55:53 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 422 - 4.397 ms
-[ 2025-07-23 12:56:00 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 422 - 5.338 ms
-[ 2025-07-23 12:59:19 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 422 - 11.721 ms
-[ 2025-07-23 12:59:35 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 422 - 2.561 ms
-[ 2025-07-23 13:07:20 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 422 - 25.816 ms
-[ 2025-07-23 13:09:25 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 422 - 4.340 ms
-[ 2025-07-23 13:09:44 ] -  [32minfo[39m  - WORKER | Starting order worker
-[ 2025-07-23 13:09:44 ] -  [32minfo[39m  - SERVER | Listening on port 3001
-[ 2025-07-23 13:09:46 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"8781bfc6-2554-4a3d-9765-20adaed17c96","message":{"type":"CREATE_ORDER","data":{"orderType":"buy","marketSide":"no"}}}
-[ 2025-07-23 13:09:46 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 17.066 ms
-[ 2025-07-23 14:05:29 ] -  [32minfo[39m  - SERVER | Listening on port 3001
-[ 2025-07-23 14:44:07 ] -  [32minfo[39m  - Order Queue Started
-[ 2025-07-23 14:44:07 ] -  [32minfo[39m  - SERVER | Listening on port 3001
-[ 2025-07-23 14:47:29 ] -  [32minfo[39m  - Order Queue Started
-[ 2025-07-23 14:47:29 ] -  [32minfo[39m  - SERVER | Listening on port 3001
-[ 2025-07-23 14:47:58 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"4f2cb17b-8434-452d-bbdb-efb0e348d10a","message":{"type":"CREATE_ORDER","data":{"orderType":"buy","marketSide":"no"}}}
-[ 2025-07-23 14:47:58 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 7.594 ms
-[ 2025-07-23 14:49:29 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"295127c5-c986-4dd8-a9a9-5a8653aae5b5","message":{"type":"CREATE_ORDER","data":{"orderType":"sell","marketSide":"no"}}}
-[ 2025-07-23 14:49:29 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.375 ms
-[ 2025-07-23 16:28:39 ] -  [32minfo[39m  - SERVER | Listening on port 3001
-[ 2025-07-23 16:29:30 ] -  [32minfo[39m  - SERVER | Listening on port 3001
-[ 2025-07-24 00:20:26 ] -  [32minfo[39m  - SERVER | Listening on port 3001
-[ 2025-07-24 00:20:40 ] -  [32minfo[39m  - POST - /api/v1/events/create - 500 - 183.188 ms
-[ 2025-07-24 00:28:22 ] -  [32minfo[39m  - SERVER | Listening on port 3001
-[ 2025-07-24 00:28:36 ] -  [32minfo[39m  - POST - /api/v1/events/create - 500 - 192.253 ms
-[ 2025-07-24 00:33:29 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 00:33:38 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 119.045 ms
-[ 2025-07-24 00:35:17 ] -  [32minfo[39m  - POST - /api/v1/order/ini - 404 - 1.016 ms
-[ 2025-07-24 00:38:50 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"eee3e8fa-d3c5-4658-8e9f-06bd19352737","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":60,"quantity":1000,"orderType":"buy","marketSide":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-24 00:38:50 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 12.576 ms
-[ 2025-07-24 00:41:16 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 00:41:25 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"6365951f-0e94-48b0-833a-e55149e8cfc5","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":60,"quantity":1000,"orderType":"buy","marketSide":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-24 00:41:25 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 8.141 ms
-[ 2025-07-24 00:54:35 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 00:54:48 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"2db88053-1f9b-473f-91bf-1297f6535cb4","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":60,"quantity":1000,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-24 00:54:48 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 8.015 ms
-[ 2025-07-24 01:12:14 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 01:12:17 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"853f4c52-45d9-4a78-b1ff-d1ce11c95a59","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":60,"quantity":10,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-24 01:12:17 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 6.382 ms
-[ 2025-07-24 01:12:41 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"0babd85a-ee76-4e26-93eb-1cd29e719127","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":60,"quantity":10,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-24 01:12:41 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.753 ms
-[ 2025-07-24 01:12:42 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"77d2a69c-1bcb-45e1-9911-2a3313976764","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":60,"quantity":10,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-24 01:12:42 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.669 ms
-[ 2025-07-24 01:12:43 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"5226add7-d4e7-4173-87a8-0656dad82429","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":60,"quantity":10,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-24 01:12:43 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.454 ms
-[ 2025-07-24 01:16:08 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 01:16:18 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"674a2cfc-497a-4c39-a6cc-b3a6b4ff1aab","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":60,"quantity":10,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-24 01:16:18 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 7.385 ms
-[ 2025-07-24 01:17:21 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"07a2ba12-3960-4b11-89a7-1227bd82cb9b","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":60,"quantity":10,"action":"sell","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-24 01:17:21 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.441 ms
-[ 2025-07-24 01:17:50 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"66fd5509-56d9-4249-ada3-5805ebbf882d","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":60,"quantity":10,"action":"buy","outcome":"no","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-24 01:17:50 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.370 ms
-[ 2025-07-24 02:04:20 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 02:13:59 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 02:31:46 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 02:36:45 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 02:36:51 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"5d4c1c18-20de-4fb3-ab5a-bd046c91b20c","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":61,"quantity":5,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-24 02:36:51 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 6.648 ms
-[ 2025-07-24 14:07:34 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 14:07:48 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"e3a8c962-facf-4bff-8b38-ae59b46e3bba","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":61,"quantity":5,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-24 14:07:48 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 5.482 ms
-[ 2025-07-24 18:06:04 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 18:07:35 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 19:44:23 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 19:45:54 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 19:49:27 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 19:49:34 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 19:49:49 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 19:52:37 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 19:53:04 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 19:54:49 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 19:57:58 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 20:01:36 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 20:01:48 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 20:04:15 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 20:06:50 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 20:07:02 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 20:08:29 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 20:18:06 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 20:19:54 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 20:22:30 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 20:25:00 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 20:25:19 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 20:25:27 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 20:25:35 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 20:25:46 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 20:45:58 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 20:49:16 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"d3575fde-3be5-4d8e-b81e-b82aadee0fc6","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":10,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-24 20:49:16 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 30.647 ms
-[ 2025-07-24 20:49:57 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"18f0bb74-0bbc-4e5b-97dd-c2ce6cc2d9c4","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":1,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-24 20:49:57 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 4.375 ms
-[ 2025-07-24 20:49:59 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"9648feac-a8ef-4382-9249-b213e5c6376d","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":1,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-24 20:49:59 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 3.316 ms
-[ 2025-07-24 20:50:00 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"f80afe50-0834-48d3-8541-cf46385563b3","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":1,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-24 20:50:00 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.020 ms
-[ 2025-07-24 20:50:02 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"3b090a29-2dec-4970-bcb0-166ae39738fb","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":1,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-24 20:50:02 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 4.263 ms
-[ 2025-07-24 20:50:05 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"29e59927-8270-4744-9136-40099c29453a","message":{"type":"CREATE_ORDER","data":{"price":40,"quantity":1,"action":"buy","outcome":"no","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-24 20:50:05 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 4.127 ms
-[ 2025-07-24 20:50:06 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"dedc0897-77e3-4371-a69f-8138aeea1e25","message":{"type":"CREATE_ORDER","data":{"price":40,"quantity":1,"action":"buy","outcome":"no","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-24 20:50:06 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.619 ms
-[ 2025-07-24 20:50:08 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"21895975-3e18-4c74-9b60-5e4544126641","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":1,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-24 20:50:08 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 3.191 ms
-[ 2025-07-24 20:50:10 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"a00b1934-ed3b-46de-91eb-1fe9955d4d93","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":1,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-24 20:50:10 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.893 ms
-[ 2025-07-24 20:56:10 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"81d014dc-464b-4cbe-b709-f8d3fd454c1a","message":{"type":"CREATE_ORDER","data":{"price":40,"quantity":1,"action":"buy","outcome":"no","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-24 20:56:10 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 10.054 ms
-[ 2025-07-24 20:56:12 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"f0c3d0db-38fd-4a39-963d-5c5b6f3a53ec","message":{"type":"CREATE_ORDER","data":{"price":40,"quantity":1,"action":"buy","outcome":"no","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-24 20:56:12 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.519 ms
-[ 2025-07-24 20:56:14 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"01f07976-926a-425b-9840-73ffaff909a8","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":1,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-24 20:56:14 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 5.705 ms
-[ 2025-07-24 20:56:16 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"47d7b86a-f4ea-4302-9645-b2738ff52356","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":1,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-24 20:56:16 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 1.872 ms
-[ 2025-07-24 20:56:18 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"a259f5ef-409c-48ce-8689-438d0d54540d","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":1,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-24 20:56:18 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.609 ms
-[ 2025-07-24 20:56:55 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"a07b8d39-0e93-423b-a6d2-4b5d492b41eb","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":1000,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-24 20:56:55 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 3.515 ms
-[ 2025-07-24 20:57:02 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"fc1dcf6c-2afb-45bc-b82e-6c0039f50a67","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":1000000000000000000,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-24 20:57:02 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.562 ms
-[ 2025-07-24 20:57:19 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"3d0fd0e3-0df1-407a-828f-8449e07e0a18","message":{"type":"CREATE_ORDER","data":{"price":40,"quantity":10000000,"action":"buy","outcome":"no","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-24 20:57:19 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 3.698 ms
-[ 2025-07-24 21:14:02 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 21:17:50 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 21:23:14 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 22:57:08 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 23:08:13 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 23:10:41 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"64f667f9-6405-4c75-9b1e-ab63dd9e2f6f","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":10,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-24 23:10:41 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 17.901 ms
-[ 2025-07-24 23:15:16 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-24 23:15:38 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"0b875104-efa2-489b-ab64-444f0a1af399","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":10,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-24 23:15:38 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 7.824 ms
-[ 2025-07-25 01:08:06 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-25 01:09:50 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-25 01:18:21 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-25 01:20:38 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-25 01:22:22 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-25 12:34:55 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-25 12:59:28 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-25 13:01:10 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-25 13:16:29 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-25 14:32:24 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-25 14:47:19 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"69146ed9-02cc-470e-b6b7-b762b89a6e5c","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":1,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-25 14:47:19 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 37.650 ms
-[ 2025-07-25 14:47:30 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"258f47fb-de35-46df-81ad-6e2364b65550","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":100,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-25 14:47:30 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 5.995 ms
-[ 2025-07-25 16:31:52 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-25 16:33:15 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"388934a4-9a37-43cb-a0f9-9ae5ded312eb","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":10,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-25 16:33:15 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 6.667 ms
-[ 2025-07-25 16:33:25 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"8c06bce1-39ef-4510-a57f-d00eba1f7afa","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":100,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-25 16:33:25 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 3.041 ms
-[ 2025-07-25 16:33:38 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"0bf496e8-87d7-4876-9fd6-0631d991da8b","message":{"type":"CREATE_ORDER","data":{"price":40,"quantity":180,"action":"buy","outcome":"no","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-25 16:33:38 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 7.873 ms
-[ 2025-07-25 16:33:46 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"b116c7ca-48eb-4b80-b4b5-15ff9a878fe4","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":100,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-25 16:33:46 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 1.906 ms
-[ 2025-07-25 16:33:54 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"28c66eb6-5bc8-414d-89a3-ccab9d428688","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":1,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-25 16:33:54 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.800 ms
-[ 2025-07-25 16:33:57 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"eeb3b6d0-ebc6-4136-aeba-d31a00097ba0","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":1,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-25 16:33:57 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 3.184 ms
-[ 2025-07-25 16:33:59 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"a8c5758d-77cc-4559-a3d2-5445f20d768b","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":1,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-25 16:33:59 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.994 ms
-[ 2025-07-25 16:34:03 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"84871c89-2837-4ac8-8106-45958936d1aa","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":1,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-25 16:34:03 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 4.688 ms
-[ 2025-07-25 16:34:04 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"6df61761-6e1e-4339-b3cb-ac9cbad9d64a","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":1,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-25 16:34:04 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 3.765 ms
-[ 2025-07-25 16:34:25 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"5d9b783a-1282-4f9b-af45-f5934116f08f","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":1,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-25 16:34:25 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.604 ms
-[ 2025-07-25 16:34:30 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"34fc29cc-0dc7-43a0-8e57-58f09cce6451","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":1,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-25 16:34:30 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.256 ms
-[ 2025-07-25 16:34:39 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"f1fef13c-7050-4aa2-bd7b-1e46bcb0d54b","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":1000,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-25 16:34:39 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.938 ms
-[ 2025-07-25 18:15:31 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-25 18:15:56 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"feb2b207-1803-4aea-9705-21cf9ad2618c","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":60,"quantity":10,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-25 18:15:56 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 7.760 ms
-[ 2025-07-25 18:32:46 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-25 18:33:07 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"02c354de-9178-4efb-93b5-ad08fdf67f1a","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":60,"quantity":10,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-25 18:33:07 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 7.405 ms
-[ 2025-07-25 19:00:38 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-25 19:14:20 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-25 19:26:04 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-25 19:26:25 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"d4d52d63-9b33-4918-99e8-a6b8e163271c","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":60,"quantity":10,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-25 19:26:25 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 7.837 ms
-[ 2025-07-25 19:43:49 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-25 19:44:00 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"4cc91834-9cfd-46fd-ae02-e1e42842a57f","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":61,"quantity":5,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-25 19:44:00 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 6.321 ms
-[ 2025-07-25 19:44:42 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"f44c5323-1c24-4c76-8677-4b8b01375316","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":59,"quantity":5,"action":"sell","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-25 19:44:42 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 3.155 ms
+[ 2025-07-27 15:34:52 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
+[ 2025-07-27 15:34:52 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-27 15:34:52 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
+[ 2025-07-27 15:34:52 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-27 15:34:54 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"5d4052b9-0b05-4b21-90cd-e5084151f179","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":60,"quantity":10,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
+[ 2025-07-27 15:34:54 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 6.388 ms
+[ 2025-07-27 15:34:59 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"ccfc9f8e-12f0-4c45-8f86-6d1a97d1be4c","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":61,"quantity":5,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
+[ 2025-07-27 15:34:59 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.125 ms
+[ 2025-07-27 15:35:05 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"d13be44d-8e72-43b0-9c09-1a33f1671fb4","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":59,"quantity":5,"action":"sell","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
+[ 2025-07-27 15:35:05 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.740 ms
+[ 2025-07-27 16:19:26 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
+[ 2025-07-27 16:19:27 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-27 16:19:27 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
+[ 2025-07-27 16:19:27 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-27 16:19:30 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"5b3298f9-a6d1-4eab-b7a7-434ef537122e","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":60,"quantity":10,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
+[ 2025-07-27 16:19:30 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 6.339 ms
+[ 2025-07-27 16:19:36 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"a2f68e4d-e14c-4fd7-887d-356662bc4919","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":61,"quantity":5,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
+[ 2025-07-27 16:19:36 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.517 ms
+[ 2025-07-27 16:19:41 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"4c3bdfe1-f846-477e-8612-ff51ad9622a0","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":59,"quantity":5,"action":"sell","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
+[ 2025-07-27 16:19:41 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 3.109 ms
+[ 2025-07-27 17:27:25 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
+[ 2025-07-27 17:27:25 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-27 17:27:25 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
+[ 2025-07-27 17:27:25 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-27 17:28:35 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"85c6d18a-0e8d-4629-b7c5-350a1ef1b5fc","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":10,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
+[ 2025-07-27 17:28:35 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 6.395 ms
+[ 2025-07-27 17:28:47 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"3ad629a0-ef4a-4060-817b-6942f8716e55","message":{"type":"CREATE_ORDER","data":{"price":40,"quantity":20,"action":"buy","outcome":"no","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
+[ 2025-07-27 17:28:47 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 3.158 ms
+[ 2025-07-27 17:29:01 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"aa25db11-4cc6-423c-9ba9-4ff050fa678f","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":10,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
+[ 2025-07-27 17:29:01 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 3.689 ms
+[ 2025-07-27 17:31:42 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"823e61a6-ee30-4e73-b73e-63025555e72f","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":1,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
+[ 2025-07-27 17:31:42 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.030 ms
+[ 2025-07-27 17:33:42 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
+[ 2025-07-27 17:33:42 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-27 17:33:42 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
+[ 2025-07-27 17:33:42 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-27 17:44:01 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
+[ 2025-07-27 17:44:01 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-27 17:44:01 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
+[ 2025-07-27 17:44:01 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-27 17:44:05 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"a8cfd099-7b52-483e-ac46-0651b62ccf58","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":61,"quantity":5,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
+[ 2025-07-27 17:44:05 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 6.032 ms
+[ 2025-07-27 17:44:16 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"2299bc8b-c494-42ee-bf67-a7f8d07b249a","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":59,"quantity":5,"action":"sell","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
+[ 2025-07-27 17:44:16 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.365 ms
+[ 2025-07-27 17:44:24 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"7b442d29-fd95-4430-a430-8aaa3cf2209c","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":41,"quantity":5,"action":"buy","outcome":"no","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
+[ 2025-07-27 17:44:24 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.908 ms
+[ 2025-07-27 17:44:31 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"e666e64c-ed4e-422c-bebe-fbb94560783e","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":39,"quantity":5,"action":"sell","outcome":"no","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
+[ 2025-07-27 17:44:31 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.788 ms
+[ 2025-07-27 17:44:39 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"bef5b65f-6885-4006-ac79-e3ac5896950f","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":58,"quantity":10,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
+[ 2025-07-27 17:44:39 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.666 ms
+[ 2025-07-27 17:44:48 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"431838ed-0ca3-4097-a4d7-4d895d506c1b","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":62,"quantity":10,"action":"sell","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
+[ 2025-07-27 17:44:48 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 1.982 ms
+[ 2025-07-27 17:44:57 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"b4ed034a-77b7-46c4-ada1-b2fbb0caddfe","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":65,"quantity":20,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
+[ 2025-07-27 17:44:57 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.149 ms
+[ 2025-07-27 17:45:05 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"b8c820d4-2687-444c-8ba7-a5c68a0280a6","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":35,"quantity":20,"action":"sell","outcome":"no","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
+[ 2025-07-27 17:45:05 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 1.910 ms
+[ 2025-07-27 18:32:07 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
+[ 2025-07-27 18:32:07 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-27 18:32:07 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
+[ 2025-07-27 18:32:07 ] -  [32minfo[39m  - SERVER | Listening on port 3000

@@ -25,6 +25,8 @@ by adding reverseSubscriptions, we are making the subscribe and unsubscribe proc
 
 import { createClient, RedisClientType } from "redis"
 import { UserManager } from "./UserManager";
+import { logger } from "@trade/logger"
+import dotenv from "dotenv"
 
 export class SubscriptionManager {
     private static instance: SubscriptionManager;
@@ -33,19 +35,39 @@ export class SubscriptionManager {
     private redisClient: RedisClientType;
 
     private constructor() {
-        this.redisClient = createClient();
-        this.redisClient.connect();
+        dotenv.config();
+        const redisUrl = process.env.REDIS_URI || "redis://localhost:6379";
+        this.redisClient = createClient({ url: redisUrl });
+        this.redisClient.connect().catch(err => {
+            logger.error(`SubscriptionManager | Failed to connect to Redis: ${err}`);
+        });
+
+        this.redisClient.on("error", (err) => {
+            logger.error(`SubscriptionManager | Redis Client Error: ${err}`);
+        })
+
+        this.redisClient.on("connect", () => {
+            logger.info(`SubscriptionManager | Redis Client connected successfully to : ${redisUrl}`);
+        })
+
+        this.redisClient.on("end", () => {
+            logger.warn(`SubscriptionManager | Redis client connection ended.`);
+        })
+
+        this.redisClient.on("reconnecting", () => {
+            logger.info("SubscriptionManager | Redis client reconnecting...")
+        })
     }
 
     public static getInstance() {
-        if(!this.instance){
+        if (!this.instance) {
             this.instance = new SubscriptionManager();
         }
         return this.instance;
     }
 
     subscribe(userId: string, subscription: string) {
-        if(this.subscriptions.get(userId)?.includes(subscription)) {
+        if (this.subscriptions.get(userId)?.includes(subscription)) {
             return;
         }
         const newSubscription = (this.subscriptions.get(userId) || []).concat(subscription);
@@ -54,9 +76,11 @@ export class SubscriptionManager {
         const newReverseSubscription = (this.reverseSubscriptions.get(subscription) || []).concat(userId);
         this.reverseSubscriptions.set(subscription, newReverseSubscription);
 
-        if(this.reverseSubscriptions.get(subscription)?.length === 1) {
+        if (this.reverseSubscriptions.get(subscription)?.length === 1) {
             this.redisClient.subscribe(subscription, this.redisCallbackHandler)
+            logger.info(`SubscriptionManager | Subscribed to Redis channel: ${subscription}`);
         }
+        logger.info(`SubscriptionManager | User ${userId} subscribed to ${subscription}`);
     }
 
     private redisCallbackHandler = (message: string, channel: string) => {
@@ -71,28 +95,34 @@ export class SubscriptionManager {
 
     unsubscribe(userId: string, subscription: string) {
         const subscriptions = this.subscriptions.get(userId);
-        if(subscriptions) {
+        if (subscriptions) {
             this.subscriptions.set(userId, subscriptions.filter((s) => s !== subscription));
         }
 
         const reverseSubscriptions = this.reverseSubscriptions.get(subscription);
-        if(reverseSubscriptions) {
+        if (reverseSubscriptions) {
             this.reverseSubscriptions.set(subscription, reverseSubscriptions.filter((s) => s !== userId));
-            
-            if(this.reverseSubscriptions.get(subscription)?.length === 0) {
+
+            if (this.reverseSubscriptions.get(subscription)?.length === 0) {
                 this.reverseSubscriptions.delete(subscription);
                 this.redisClient.unsubscribe(subscription);
+                logger.info(`SubscriptionManager | Unsubscribed from Redis channel: ${subscription}`);
             }
         }
+        logger.info(`SubscriptionManager | User ${userId} unsubscribed from ${subscription}`)
     }
 
     public userLeft(userId: string) {
-        console.log("User Left: " + userId);
-        this.subscriptions.get(userId)?.forEach((s) => this.unsubscribe(userId, s));
+        logger.info("User Left: " + userId);
+        const userSubscriptions = this.subscriptions.get(userId);
+        if(userSubscriptions) {
+            userSubscriptions.forEach((s) => this.unsubscribe(userId, s));
+        }
+        this.subscriptions.delete(userId);
     }
 
     getSubscriptions(userId: string) {
         return this.subscriptions.get(userId) || [];
     }
-    
+
 }

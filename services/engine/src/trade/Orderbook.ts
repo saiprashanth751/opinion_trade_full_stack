@@ -1,6 +1,7 @@
 // This is one of the core parts of the project. The Orderbook.
 
 import { v4 as uuidv4 } from "uuid";
+import { logger } from "@trade/logger";
 
 export interface Order {
     price: number;
@@ -38,6 +39,7 @@ export class Orderbook {
 
     // Typescript class methods...
     addOrder(order: Order) {
+        logger.info(`ORDERBOOK | Adding order: ${JSON.stringify(order)} to market ${this.market}`);
         if (order.type === "bid") {
             console.log("Order in orderbook", order)
             //match Bid to Ask
@@ -45,6 +47,7 @@ export class Orderbook {
             //fill
             order.filled = executedQty;
             if (executedQty === order.quantity) {
+                logger.info(`ORDERBOOK | Bid order fully filled: ${order.orderId}, ExecutedQty=${executedQty}`);
                 return {
                     executedQty,
                     fills
@@ -52,6 +55,7 @@ export class Orderbook {
             }
 
             this.bids.push(order);
+            logger.info(`ORDERBOOK | Bid order partially filled or added to book: ${order.orderId}, ExecutedQty=${executedQty}`);
             return {
                 executedQty,
                 fills,
@@ -62,12 +66,14 @@ export class Orderbook {
             //fill
             order.filled = executedQty;
             if (executedQty === order.quantity) {
+                logger.info(`ORDERBOOK | Ask order fully filled: ${order.orderId}, ExecutedQty=${executedQty}`);
                 return {
                     executedQty,
                     fills,
                 };
             }
             this.asks.push(order);
+            logger.info(`ORDERBOOK | Ask order partially filled or added to book: ${order.orderId}, ExecutedQty=${executedQty}`);
             return {
                 executedQty,
                 fills,
@@ -79,26 +85,34 @@ export class Orderbook {
 
     matchBid(order: Order): { fills: Fill[]; executedQty: number } {
         //to get lowest ask first -> sort in ascending order...
+        logger.info(`ORDERBOOK | Matching bid order ${order.orderId} (price: ${order.price}, qty: ${order.quantity}) against asks.`);
         this.asks.sort((a, b) => a.price - b.price);
 
         const fills: Fill[] = [];
         let executedQty = 0;
         // TODO: Sort your array because it helps you to match the perfect orders.
         for (let i = 0; i < this.asks.length; i++) {
-            if (this.asks[i]?.price! <= order.price && executedQty < order.quantity) {
+            const currentAsk = this.asks[i];
+            //we are avoiding self trades to reduce balance update clumsy logic.
+            if (currentAsk?.userId === order.userId) {
+                continue;
+            }
+
+            if (currentAsk?.price! <= order.price && executedQty < order.quantity) {
                 //available qty is trading with another available qty (after correctly subtracing them)
-                const filledQty = Math.min(order.quantity - executedQty, this.asks[i]?.quantity! - this.asks[i]?.filled!); 
+                const filledQty = Math.min(order.quantity - executedQty, currentAsk?.quantity! - currentAsk?.filled!);
 
                 executedQty += filledQty;
                 //@ts-ignore
-                this.asks[i].filled += filledQty;
+                currentAsk.filled += filledQty;
                 fills.push({
-                    price: this.asks[i]?.price!,
+                    price: currentAsk?.price!,
                     qty: filledQty,
                     tradeId: uuidv4(),
-                    otherUserId: this.asks[i]?.userId!,
-                    marketOrderId: this.asks[i]?.orderId!
+                    otherUserId: currentAsk?.userId!,
+                    marketOrderId: currentAsk?.orderId!
                 })
+                logger.info(`ORDERBOOK | Matched bid ${order.orderId} with ask ${currentAsk?.orderId}: filled ${filledQty} at price ${currentAsk?.price}`);
             }
         }
 
@@ -111,6 +125,7 @@ export class Orderbook {
             }
         }
         console.log("executedQty", executedQty, " fills", fills)
+        logger.info(`ORDERBOOK | Match bid result for ${order.orderId}: executedQty=${executedQty}, fills count=${fills.length}`);
         return {
             fills,
             executedQty
@@ -118,27 +133,34 @@ export class Orderbook {
     }
 
     matchAsk(order: Order): { fills: Fill[]; executedQty: number } {
-         //to get highest bid first -> sort in descending order...
+        logger.info(`ORDERBOOK | Matching ask order ${order.orderId} (price: ${order.price}, qty: ${order.quantity}) against bids.`);
+        //to get highest bid first -> sort in descending order...
         this.bids.sort((a, b) => b.price - a.price);
 
         let fills: Fill[] = [];
         let executedQty = 0;
 
         for (let i = 0; i < this.bids.length; i++) {
-            if (this.bids[i]?.price! >= order.price && executedQty < order.quantity) {
-                const filledQty = Math.min(order.quantity - executedQty, this.bids[i]?.quantity! - this.bids[i]?.filled!);
+            const currentBid = this.bids[i];
+            //we are avoiding self trades to reduce balance update clumsy logic.
+            if(currentBid?.userId === order.userId) {
+                continue;
+            }
+            if (currentBid?.price! >= order.price && executedQty < order.quantity) {
+                const filledQty = Math.min(order.quantity - executedQty, currentBid?.quantity! - currentBid?.filled!);
 
                 executedQty += filledQty;
                 //@ts-ignore
-                this.bids[i].filled += filledQty;
+                currentBid.filled += filledQty;
 
                 fills.push({
-                    price: this.bids[i]?.price!,
+                    price: currentBid?.price!,
                     qty: filledQty,
                     tradeId: uuidv4(),
-                    otherUserId: this.bids[i]?.userId!,
-                    marketOrderId: this.bids[i]?.orderId!
+                    otherUserId: currentBid?.userId!,
+                    marketOrderId: currentBid?.orderId!
                 })
+                logger.info(`ORDERBOOK | Matched ask ${order.orderId} with bid ${currentBid?.orderId}: filled ${filledQty} at price ${currentBid?.price}`);
             }
         }
 
@@ -149,7 +171,7 @@ export class Orderbook {
                 i--;
             }
         }
-        console.log("executedQty", executedQty, " fills", fills)
+        logger.info(`ORDERBOOK | Match ask result for ${order.orderId}: executedQty=${executedQty}, fills count=${fills.length}`);
         return {
             fills,
             executedQty

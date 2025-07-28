@@ -1,78 +1,644 @@
-[ 2025-07-28 00:28:44 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Attempting to connect Redis client...
-[ 2025-07-28 00:28:44 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-28 00:28:46 ] -  [32minfo[39m  - SubscriptionManager | Redis Client connected successfully to : redis://localhost:6379
-[ 2025-07-28 00:28:54 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-yes
-[ 2025-07-28 00:28:54 ] -  [32minfo[39m  - SubscriptionManager | User kznffswm32tore5bz441 subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-yes
-[ 2025-07-28 00:28:54 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-no
-[ 2025-07-28 00:28:54 ] -  [32minfo[39m  - SubscriptionManager | User kznffswm32tore5bz441 subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-no
-[ 2025-07-28 00:28:54 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-yes
-[ 2025-07-28 00:28:54 ] -  [32minfo[39m  - SubscriptionManager | User kznffswm32tore5bz441 subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-yes
-[ 2025-07-28 00:28:54 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-no
-[ 2025-07-28 00:28:54 ] -  [32minfo[39m  - SubscriptionManager | User kznffswm32tore5bz441 subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-no
-[ 2025-07-28 01:17:25 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Attempting to connect Redis client...
-[ 2025-07-28 01:17:25 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-28 01:17:27 ] -  [32minfo[39m  - SubscriptionManager | Redis Client connected successfully to : redis://localhost:6379
-[ 2025-07-28 01:17:37 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-yes
-[ 2025-07-28 01:17:37 ] -  [32minfo[39m  - SubscriptionManager | User qu6hkqlpb1etfd6mtztwah subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-yes
-[ 2025-07-28 01:17:37 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-no
-[ 2025-07-28 01:17:37 ] -  [32minfo[39m  - SubscriptionManager | User qu6hkqlpb1etfd6mtztwah subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-no
-[ 2025-07-28 01:17:37 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-yes
-[ 2025-07-28 01:17:37 ] -  [32minfo[39m  - SubscriptionManager | User qu6hkqlpb1etfd6mtztwah subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-yes
-[ 2025-07-28 01:17:37 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-no
-[ 2025-07-28 01:17:37 ] -  [32minfo[39m  - SubscriptionManager | User qu6hkqlpb1etfd6mtztwah subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-no
-[ 2025-07-28 01:27:36 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Attempting to connect Redis client...
-[ 2025-07-28 01:27:36 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-28 01:27:38 ] -  [32minfo[39m  - SubscriptionManager | Redis Client connected successfully to : redis://localhost:6379
-[ 2025-07-28 01:28:49 ] -  [32minfo[39m  - User Left: wm7pcqkbcopsmzv13uk0n
-[ 2025-07-28 01:28:49 ] -  [32minfo[39m  - User Left: z9f2pohv11mhk3ovrocx
-[ 2025-07-28 01:28:50 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-yes
-[ 2025-07-28 01:28:50 ] -  [32minfo[39m  - SubscriptionManager | User bsr1pp2tfnpghvambzh5k9 subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-yes
-[ 2025-07-28 01:28:50 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-no
-[ 2025-07-28 01:28:50 ] -  [32minfo[39m  - SubscriptionManager | User bsr1pp2tfnpghvambzh5k9 subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-no
-[ 2025-07-28 01:28:50 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-yes
-[ 2025-07-28 01:28:50 ] -  [32minfo[39m  - SubscriptionManager | User bsr1pp2tfnpghvambzh5k9 subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-yes
-[ 2025-07-28 01:28:50 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-no
-[ 2025-07-28 01:28:50 ] -  [32minfo[39m  - SubscriptionManager | User bsr1pp2tfnpghvambzh5k9 subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-no
-[ 2025-07-28 01:28:57 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-yes
-[ 2025-07-28 01:28:57 ] -  [32minfo[39m  - SubscriptionManager | User bsr1pp2tfnpghvambzh5k9 unsubscribed from depth@cmdgc0i7m0000kc24v7ilvs8t-yes
-[ 2025-07-28 01:28:57 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-no
-[ 2025-07-28 01:28:57 ] -  [32minfo[39m  - SubscriptionManager | User bsr1pp2tfnpghvambzh5k9 unsubscribed from depth@cmdgc0i7m0000kc24v7ilvs8t-no
-[ 2025-07-28 01:28:57 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-yes
-[ 2025-07-28 01:28:57 ] -  [32minfo[39m  - SubscriptionManager | User bsr1pp2tfnpghvambzh5k9 unsubscribed from trade@cmdgc0i7m0000kc24v7ilvs8t-yes
-[ 2025-07-28 01:28:57 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-no
-[ 2025-07-28 01:28:57 ] -  [32minfo[39m  - SubscriptionManager | User bsr1pp2tfnpghvambzh5k9 unsubscribed from trade@cmdgc0i7m0000kc24v7ilvs8t-no
-[ 2025-07-28 01:28:57 ] -  [32minfo[39m  - User Left: bsr1pp2tfnpghvambzh5k9
-[ 2025-07-28 02:00:00 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Attempting to connect Redis client...
-[ 2025-07-28 02:00:00 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-28 02:00:02 ] -  [32minfo[39m  - SubscriptionManager | Redis Client connected successfully to : redis://localhost:6379
-[ 2025-07-28 02:06:40 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-28 02:06:40 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Attempting to connect Redis client...
-[ 2025-07-28 02:06:40 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-28 02:06:40 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-28 02:28:08 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Attempting to connect Redis client...
-[ 2025-07-28 02:28:08 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-28 02:28:10 ] -  [32minfo[39m  - SubscriptionManager | Redis Client connected successfully to : redis://localhost:6379
-[ 2025-07-28 02:28:37 ] -  [32minfo[39m  - User Left: gcem0n86emj9bpp5rf5i
-[ 2025-07-28 02:28:38 ] -  [32minfo[39m  - User Left: gmy8ycsjehrc7hq3fyw3e
-[ 2025-07-28 02:28:38 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: client_event_summaries
-[ 2025-07-28 02:28:38 ] -  [32minfo[39m  - SubscriptionManager | User slg65qhc1k9hijkr6v3js subscribed to client_event_summaries
-[ 2025-07-28 02:28:56 ] -  [32minfo[39m  - User Left: slg65qhc1k9hijkr6v3js
-[ 2025-07-28 02:28:56 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: client_event_summaries
-[ 2025-07-28 02:28:56 ] -  [32minfo[39m  - SubscriptionManager | User slg65qhc1k9hijkr6v3js unsubscribed from client_event_summaries
-[ 2025-07-28 02:28:57 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: client_event_summaries
-[ 2025-07-28 02:28:57 ] -  [32minfo[39m  - SubscriptionManager | User u52fcij7yfpv561p6nvwl subscribed to client_event_summaries
-[ 2025-07-28 02:29:07 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: client_event_summaries
-[ 2025-07-28 02:29:07 ] -  [32minfo[39m  - SubscriptionManager | User u52fcij7yfpv561p6nvwl unsubscribed from client_event_summaries
-[ 2025-07-28 02:29:07 ] -  [32minfo[39m  - User Left: u52fcij7yfpv561p6nvwl
-[ 2025-07-28 02:29:07 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-yes
-[ 2025-07-28 02:29:07 ] -  [32minfo[39m  - SubscriptionManager | User qpsv1ace1q927kqel9onn1 subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-yes
-[ 2025-07-28 02:29:07 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-no
-[ 2025-07-28 02:29:07 ] -  [32minfo[39m  - SubscriptionManager | User qpsv1ace1q927kqel9onn1 subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-no
-[ 2025-07-28 02:29:07 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-yes
-[ 2025-07-28 02:29:07 ] -  [32minfo[39m  - SubscriptionManager | User qpsv1ace1q927kqel9onn1 subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-yes
-[ 2025-07-28 02:29:08 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-no
-[ 2025-07-28 02:29:08 ] -  [32minfo[39m  - SubscriptionManager | User qpsv1ace1q927kqel9onn1 subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-no
-[ 2025-07-28 02:29:08 ] -  [32minfo[39m  - SubscriptionManager | User clz66b98o3ujoppx64513j subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-yes
-[ 2025-07-28 02:29:08 ] -  [32minfo[39m  - SubscriptionManager | User clz66b98o3ujoppx64513j subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-no
-[ 2025-07-28 02:29:08 ] -  [32minfo[39m  - SubscriptionManager | User clz66b98o3ujoppx64513j subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-yes
-[ 2025-07-28 02:29:08 ] -  [32minfo[39m  - SubscriptionManager | User clz66b98o3ujoppx64513j subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 19:38:26 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Attempting to connect Redis client...
+[ 2025-07-28 19:38:27 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-28 19:38:29 ] -  [32minfo[39m  - SubscriptionManager | Redis Client connected successfully to : redis://localhost:6379
+[ 2025-07-28 19:38:34 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: dexcsxnkf3nuro652ojuod
+[ 2025-07-28 19:38:34 ] -  [32minfo[39m  - SubscriptionManager | User dexcsxnkf3nuro652ojuod subscribed to dexcsxnkf3nuro652ojuod
+[ 2025-07-28 19:38:34 ] -  [32minfo[39m  - SubscriptionManager | Attempted to send cached data to user dexcsxnkf3nuro652ojuod for subscription dexcsxnkf3nuro652ojuod.
+[ 2025-07-28 19:38:34 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: xuwulzjuuab1fck2zsxvpt
+[ 2025-07-28 19:38:34 ] -  [32minfo[39m  - SubscriptionManager | User xuwulzjuuab1fck2zsxvpt subscribed to xuwulzjuuab1fck2zsxvpt
+[ 2025-07-28 19:38:34 ] -  [32minfo[39m  - SubscriptionManager | Attempted to send cached data to user xuwulzjuuab1fck2zsxvpt for subscription xuwulzjuuab1fck2zsxvpt.
+[ 2025-07-28 19:38:39 ] -  [32minfo[39m  - User Left: dexcsxnkf3nuro652ojuod
+[ 2025-07-28 19:38:39 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: dexcsxnkf3nuro652ojuod
+[ 2025-07-28 19:38:39 ] -  [32minfo[39m  - SubscriptionManager | User dexcsxnkf3nuro652ojuod unsubscribed from dexcsxnkf3nuro652ojuod
+[ 2025-07-28 19:38:39 ] -  [32minfo[39m  - User Left: xuwulzjuuab1fck2zsxvpt
+[ 2025-07-28 19:38:39 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: xuwulzjuuab1fck2zsxvpt
+[ 2025-07-28 19:38:39 ] -  [32minfo[39m  - SubscriptionManager | User xuwulzjuuab1fck2zsxvpt unsubscribed from xuwulzjuuab1fck2zsxvpt
+[ 2025-07-28 19:38:40 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: 33k3gayln3tbcqb42qx35q
+[ 2025-07-28 19:38:40 ] -  [32minfo[39m  - SubscriptionManager | User 33k3gayln3tbcqb42qx35q subscribed to 33k3gayln3tbcqb42qx35q
+[ 2025-07-28 19:38:40 ] -  [32minfo[39m  - SubscriptionManager | Attempted to send cached data to user 33k3gayln3tbcqb42qx35q for subscription 33k3gayln3tbcqb42qx35q.
+[ 2025-07-28 20:21:45 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Attempting to connect Redis client...
+[ 2025-07-28 20:21:45 ] -  [32minfo[39m  - WebSocket server running on ws://localhost:8080
+[ 2025-07-28 20:21:45 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-28 20:21:45 ] -  [32minfo[39m  - Redis Pub/Sub connected
+[ 2025-07-28 20:21:58 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: w36hesmgqlfa4ylrbjyl8l
+[ 2025-07-28 20:21:58 ] -  [32minfo[39m  - SubscriptionManager | User w36hesmgqlfa4ylrbjyl8l subscribed to w36hesmgqlfa4ylrbjyl8l
+[ 2025-07-28 20:21:58 ] -  [32minfo[39m  - SubscriptionManager | Attempted to send cached data to user w36hesmgqlfa4ylrbjyl8l for subscription w36hesmgqlfa4ylrbjyl8l.
+[ 2025-07-28 20:21:58 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: client_event_summaries
+[ 2025-07-28 20:21:58 ] -  [32minfo[39m  - SubscriptionManager | User w36hesmgqlfa4ylrbjyl8l subscribed to client_event_summaries
+[ 2025-07-28 20:22:06 ] -  [32minfo[39m  - User Left: w36hesmgqlfa4ylrbjyl8l
+[ 2025-07-28 20:22:06 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: w36hesmgqlfa4ylrbjyl8l
+[ 2025-07-28 20:22:06 ] -  [32minfo[39m  - SubscriptionManager | User w36hesmgqlfa4ylrbjyl8l unsubscribed from w36hesmgqlfa4ylrbjyl8l
+[ 2025-07-28 20:22:06 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: client_event_summaries
+[ 2025-07-28 20:22:06 ] -  [32minfo[39m  - SubscriptionManager | User w36hesmgqlfa4ylrbjyl8l unsubscribed from client_event_summaries
+[ 2025-07-28 20:22:06 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: z8pq87mdhj79u6402rx3z5
+[ 2025-07-28 20:22:06 ] -  [32minfo[39m  - SubscriptionManager | User z8pq87mdhj79u6402rx3z5 subscribed to z8pq87mdhj79u6402rx3z5
+[ 2025-07-28 20:22:06 ] -  [32minfo[39m  - SubscriptionManager | Attempted to send cached data to user z8pq87mdhj79u6402rx3z5 for subscription z8pq87mdhj79u6402rx3z5.
+[ 2025-07-28 20:22:06 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 20:22:06 ] -  [32minfo[39m  - SubscriptionManager | User z8pq87mdhj79u6402rx3z5 subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 20:22:06 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 20:22:06 ] -  [32minfo[39m  - SubscriptionManager | User z8pq87mdhj79u6402rx3z5 subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 20:22:06 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 20:22:06 ] -  [32minfo[39m  - SubscriptionManager | User z8pq87mdhj79u6402rx3z5 subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 20:22:06 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 20:22:06 ] -  [32minfo[39m  - SubscriptionManager | User z8pq87mdhj79u6402rx3z5 subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 20:22:11 ] -  [31merror[39m  - SubscriptionManager | Error parsing or processing Redis message from channel {"stream":"depth@cmdgc0i7m0000kc24v7ilvs8t-yes","data":{"b":[["60","15"],["65","10"],["64.999755859375","90"],["64.99951171875","10"],["63.499755859375","10"],["60.9990234375","10"]],"a":[["66.99951171875","10"],["66.999755859375","80"]],"e":"depth"}}: SyntaxError: Unexpected token 'd', "depth@cmdg"... is not valid JSON
+[ 2025-07-28 20:22:11 ] -  [31merror[39m  - SubscriptionManager | Error parsing or processing Redis message from channel {"stream":"depth@cmdgc0i7m0000kc24v7ilvs8t-yes","data":{"b":[["60","15"],["65","10"],["64.999755859375","90"],["64.99951171875","10"],["63.499755859375","10"],["60.9990234375","10"]],"a":[["66.99951171875","10"],["66.999755859375","90"]],"e":"depth"}}: SyntaxError: Unexpected token 'd', "depth@cmdg"... is not valid JSON
+[ 2025-07-28 20:22:11 ] -  [31merror[39m  - SubscriptionManager | Error parsing or processing Redis message from channel {"stream":"depth@cmdgc0i7m0000kc24v7ilvs8t-no","data":{"b":[["33.00048828125","10"],["33.000244140625","90"]],"a":[["35.000244140625","80"],["35.00048828125","10"]],"e":"depth"}}: SyntaxError: Unexpected token 'd', "depth@cmdg"... is not valid JSON
+[ 2025-07-28 20:22:11 ] -  [31merror[39m  - SubscriptionManager | Error parsing or processing Redis message from channel {"stream":"depth@cmdgc0i7m0000kc24v7ilvs8t-no","data":{"b":[["33.00048828125","10"],["33.000244140625","90"]],"a":[["35.000244140625","90"],["35.00048828125","10"]],"e":"depth"}}: SyntaxError: Unexpected token 'd', "depth@cmdg"... is not valid JSON
+[ 2025-07-28 20:22:15 ] -  [32minfo[39m  - User Left: z8pq87mdhj79u6402rx3z5
+[ 2025-07-28 20:22:15 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: z8pq87mdhj79u6402rx3z5
+[ 2025-07-28 20:22:15 ] -  [32minfo[39m  - SubscriptionManager | User z8pq87mdhj79u6402rx3z5 unsubscribed from z8pq87mdhj79u6402rx3z5
+[ 2025-07-28 20:22:15 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 20:22:15 ] -  [32minfo[39m  - SubscriptionManager | User z8pq87mdhj79u6402rx3z5 unsubscribed from depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 20:22:15 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 20:22:15 ] -  [32minfo[39m  - SubscriptionManager | User z8pq87mdhj79u6402rx3z5 unsubscribed from depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 20:22:15 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 20:22:15 ] -  [32minfo[39m  - SubscriptionManager | User z8pq87mdhj79u6402rx3z5 unsubscribed from trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 20:22:15 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 20:22:15 ] -  [32minfo[39m  - SubscriptionManager | User z8pq87mdhj79u6402rx3z5 unsubscribed from trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 20:22:15 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: 1qjecrugxb9ioczdab4m7
+[ 2025-07-28 20:22:15 ] -  [32minfo[39m  - SubscriptionManager | User 1qjecrugxb9ioczdab4m7 subscribed to 1qjecrugxb9ioczdab4m7
+[ 2025-07-28 20:22:15 ] -  [32minfo[39m  - SubscriptionManager | Attempted to send cached data to user 1qjecrugxb9ioczdab4m7 for subscription 1qjecrugxb9ioczdab4m7.
+[ 2025-07-28 20:22:15 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 20:22:15 ] -  [32minfo[39m  - SubscriptionManager | User 1qjecrugxb9ioczdab4m7 subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 20:22:15 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 20:22:15 ] -  [32minfo[39m  - SubscriptionManager | User 1qjecrugxb9ioczdab4m7 subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 20:22:15 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 20:22:15 ] -  [32minfo[39m  - SubscriptionManager | User 1qjecrugxb9ioczdab4m7 subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 20:22:15 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 20:22:15 ] -  [32minfo[39m  - SubscriptionManager | User 1qjecrugxb9ioczdab4m7 subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 20:22:16 ] -  [31merror[39m  - SubscriptionManager | Error parsing or processing Redis message from channel {"stream":"depth@cmdgc0i7m0000kc24v7ilvs8t-yes","data":{"b":[["60","15"],["65","10"],["64.999755859375","90"],["64.99951171875","10"],["63.499755859375","10"],["60.9990234375","10"]],"a":[["66.99951171875","10"],["66.999755859375","80"]],"e":"depth"}}: SyntaxError: Unexpected token 'd', "depth@cmdg"... is not valid JSON
+[ 2025-07-28 20:22:16 ] -  [31merror[39m  - SubscriptionManager | Error parsing or processing Redis message from channel {"stream":"depth@cmdgc0i7m0000kc24v7ilvs8t-yes","data":{"b":[["60","15"],["65","10"],["64.999755859375","90"],["64.99951171875","10"],["63.499755859375","10"],["60.9990234375","10"]],"a":[["66.99951171875","10"],["66.999755859375","90"]],"e":"depth"}}: SyntaxError: Unexpected token 'd', "depth@cmdg"... is not valid JSON
+[ 2025-07-28 20:22:16 ] -  [31merror[39m  - SubscriptionManager | Error parsing or processing Redis message from channel {"stream":"depth@cmdgc0i7m0000kc24v7ilvs8t-no","data":{"b":[["33.00048828125","10"],["33.000244140625","90"]],"a":[["35.000244140625","80"],["35.00048828125","10"]],"e":"depth"}}: SyntaxError: Unexpected token 'd', "depth@cmdg"... is not valid JSON
+[ 2025-07-28 20:22:16 ] -  [31merror[39m  - SubscriptionManager | Error parsing or processing Redis message from channel {"stream":"depth@cmdgc0i7m0000kc24v7ilvs8t-no","data":{"b":[["33.00048828125","10"],["33.000244140625","90"]],"a":[["35.000244140625","90"],["35.00048828125","10"]],"e":"depth"}}: SyntaxError: Unexpected token 'd', "depth@cmdg"... is not valid JSON
+[ 2025-07-28 20:22:21 ] -  [31merror[39m  - SubscriptionManager | Error parsing or processing Redis message from channel {"stream":"depth@cmdgc0i7m0000kc24v7ilvs8t-yes","data":{"b":[["60","15"],["65","10"],["64.999755859375","90"],["64.99951171875","10"],["63.499755859375","10"],["60.9990234375","10"]],"a":[["66.99951171875","10"],["66.999755859375","80"]],"e":"depth"}}: SyntaxError: Unexpected token 'd', "depth@cmdg"... is not valid JSON
+[ 2025-07-28 20:22:21 ] -  [31merror[39m  - SubscriptionManager | Error parsing or processing Redis message from channel {"stream":"depth@cmdgc0i7m0000kc24v7ilvs8t-yes","data":{"b":[["60","15"],["65","10"],["64.999755859375","90"],["64.99951171875","10"],["63.499755859375","10"],["60.9990234375","10"]],"a":[["66.99951171875","10"],["66.999755859375","90"]],"e":"depth"}}: SyntaxError: Unexpected token 'd', "depth@cmdg"... is not valid JSON
+[ 2025-07-28 20:22:21 ] -  [31merror[39m  - SubscriptionManager | Error parsing or processing Redis message from channel {"stream":"depth@cmdgc0i7m0000kc24v7ilvs8t-no","data":{"b":[["33.00048828125","10"],["33.000244140625","90"]],"a":[["35.000244140625","80"],["35.00048828125","10"]],"e":"depth"}}: SyntaxError: Unexpected token 'd', "depth@cmdg"... is not valid JSON
+[ 2025-07-28 20:22:21 ] -  [31merror[39m  - SubscriptionManager | Error parsing or processing Redis message from channel {"stream":"depth@cmdgc0i7m0000kc24v7ilvs8t-no","data":{"b":[["33.00048828125","10"],["33.000244140625","90"]],"a":[["35.000244140625","90"],["35.00048828125","10"]],"e":"depth"}}: SyntaxError: Unexpected token 'd', "depth@cmdg"... is not valid JSON
+[ 2025-07-28 20:22:22 ] -  [32minfo[39m  - User Left: 1qjecrugxb9ioczdab4m7
+[ 2025-07-28 20:22:22 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: 1qjecrugxb9ioczdab4m7
+[ 2025-07-28 20:22:22 ] -  [32minfo[39m  - SubscriptionManager | User 1qjecrugxb9ioczdab4m7 unsubscribed from 1qjecrugxb9ioczdab4m7
+[ 2025-07-28 20:22:22 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 20:22:22 ] -  [32minfo[39m  - SubscriptionManager | User 1qjecrugxb9ioczdab4m7 unsubscribed from depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 20:22:22 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 20:22:22 ] -  [32minfo[39m  - SubscriptionManager | User 1qjecrugxb9ioczdab4m7 unsubscribed from depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 20:22:22 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 20:22:22 ] -  [32minfo[39m  - SubscriptionManager | User 1qjecrugxb9ioczdab4m7 unsubscribed from trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 20:22:22 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 20:22:22 ] -  [32minfo[39m  - SubscriptionManager | User 1qjecrugxb9ioczdab4m7 unsubscribed from trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 20:22:22 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: 1pgdxn3ez6rw8w571psjb
+[ 2025-07-28 20:22:22 ] -  [32minfo[39m  - SubscriptionManager | User 1pgdxn3ez6rw8w571psjb subscribed to 1pgdxn3ez6rw8w571psjb
+[ 2025-07-28 20:22:22 ] -  [32minfo[39m  - SubscriptionManager | Attempted to send cached data to user 1pgdxn3ez6rw8w571psjb for subscription 1pgdxn3ez6rw8w571psjb.
+[ 2025-07-28 20:22:22 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 20:22:22 ] -  [32minfo[39m  - SubscriptionManager | User 1pgdxn3ez6rw8w571psjb subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 20:22:22 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 20:22:22 ] -  [32minfo[39m  - SubscriptionManager | User 1pgdxn3ez6rw8w571psjb subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 20:22:22 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 20:22:22 ] -  [32minfo[39m  - SubscriptionManager | User 1pgdxn3ez6rw8w571psjb subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 20:22:22 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 20:22:22 ] -  [32minfo[39m  - SubscriptionManager | User 1pgdxn3ez6rw8w571psjb subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 20:22:26 ] -  [31merror[39m  - SubscriptionManager | Error parsing or processing Redis message from channel {"stream":"depth@cmdgc0i7m0000kc24v7ilvs8t-yes","data":{"b":[["60","15"],["65","10"],["64.999755859375","90"],["64.99951171875","10"],["63.499755859375","10"],["60.9990234375","10"]],"a":[["66.99951171875","10"],["66.999755859375","80"]],"e":"depth"}}: SyntaxError: Unexpected token 'd', "depth@cmdg"... is not valid JSON
+[ 2025-07-28 20:22:26 ] -  [31merror[39m  - SubscriptionManager | Error parsing or processing Redis message from channel {"stream":"depth@cmdgc0i7m0000kc24v7ilvs8t-yes","data":{"b":[["60","15"],["65","10"],["64.999755859375","90"],["64.99951171875","10"],["63.499755859375","10"],["60.9990234375","10"]],"a":[["66.99951171875","10"],["66.999755859375","90"]],"e":"depth"}}: SyntaxError: Unexpected token 'd', "depth@cmdg"... is not valid JSON
+[ 2025-07-28 20:22:26 ] -  [31merror[39m  - SubscriptionManager | Error parsing or processing Redis message from channel {"stream":"depth@cmdgc0i7m0000kc24v7ilvs8t-no","data":{"b":[["33.00048828125","10"],["33.000244140625","90"]],"a":[["35.000244140625","80"],["35.00048828125","10"]],"e":"depth"}}: SyntaxError: Unexpected token 'd', "depth@cmdg"... is not valid JSON
+[ 2025-07-28 20:22:26 ] -  [31merror[39m  - SubscriptionManager | Error parsing or processing Redis message from channel {"stream":"depth@cmdgc0i7m0000kc24v7ilvs8t-no","data":{"b":[["33.00048828125","10"],["33.000244140625","90"]],"a":[["35.000244140625","90"],["35.00048828125","10"]],"e":"depth"}}: SyntaxError: Unexpected token 'd', "depth@cmdg"... is not valid JSON
+[ 2025-07-28 20:22:31 ] -  [31merror[39m  - SubscriptionManager | Error parsing or processing Redis message from channel {"stream":"depth@cmdgc0i7m0000kc24v7ilvs8t-yes","data":{"b":[["60","15"],["65","10"],["64.999755859375","90"],["64.99951171875","10"],["63.499755859375","10"],["60.9990234375","10"]],"a":[["66.99951171875","10"],["66.999755859375","80"]],"e":"depth"}}: SyntaxError: Unexpected token 'd', "depth@cmdg"... is not valid JSON
+[ 2025-07-28 20:22:31 ] -  [31merror[39m  - SubscriptionManager | Error parsing or processing Redis message from channel {"stream":"depth@cmdgc0i7m0000kc24v7ilvs8t-yes","data":{"b":[["60","15"],["65","10"],["64.999755859375","90"],["64.99951171875","10"],["63.499755859375","10"],["60.9990234375","10"]],"a":[["66.99951171875","10"],["66.999755859375","90"]],"e":"depth"}}: SyntaxError: Unexpected token 'd', "depth@cmdg"... is not valid JSON
+[ 2025-07-28 20:22:31 ] -  [31merror[39m  - SubscriptionManager | Error parsing or processing Redis message from channel {"stream":"depth@cmdgc0i7m0000kc24v7ilvs8t-no","data":{"b":[["33.00048828125","10"],["33.000244140625","90"]],"a":[["35.000244140625","80"],["35.00048828125","10"]],"e":"depth"}}: SyntaxError: Unexpected token 'd', "depth@cmdg"... is not valid JSON
+[ 2025-07-28 20:22:31 ] -  [31merror[39m  - SubscriptionManager | Error parsing or processing Redis message from channel {"stream":"depth@cmdgc0i7m0000kc24v7ilvs8t-no","data":{"b":[["33.00048828125","10"],["33.000244140625","90"]],"a":[["35.000244140625","90"],["35.00048828125","10"]],"e":"depth"}}: SyntaxError: Unexpected token 'd', "depth@cmdg"... is not valid JSON
+[ 2025-07-28 20:22:36 ] -  [31merror[39m  - SubscriptionManager | Error parsing or processing Redis message from channel {"stream":"depth@cmdgc0i7m0000kc24v7ilvs8t-yes","data":{"b":[["60","15"],["65","10"],["64.999755859375","90"],["64.99951171875","10"],["63.499755859375","10"],["60.9990234375","10"]],"a":[["66.99951171875","10"],["66.999755859375","80"]],"e":"depth"}}: SyntaxError: Unexpected token 'd', "depth@cmdg"... is not valid JSON
+[ 2025-07-28 20:22:37 ] -  [31merror[39m  - SubscriptionManager | Error parsing or processing Redis message from channel {"stream":"depth@cmdgc0i7m0000kc24v7ilvs8t-yes","data":{"b":[["60","15"],["65","10"],["64.999755859375","90"],["64.99951171875","10"],["63.499755859375","10"],["60.9990234375","10"]],"a":[["66.99951171875","10"],["66.999755859375","90"]],"e":"depth"}}: SyntaxError: Unexpected token 'd', "depth@cmdg"... is not valid JSON
+[ 2025-07-28 20:22:37 ] -  [31merror[39m  - SubscriptionManager | Error parsing or processing Redis message from channel {"stream":"depth@cmdgc0i7m0000kc24v7ilvs8t-no","data":{"b":[["33.00048828125","10"],["33.000244140625","90"]],"a":[["35.000244140625","80"],["35.00048828125","10"]],"e":"depth"}}: SyntaxError: Unexpected token 'd', "depth@cmdg"... is not valid JSON
+[ 2025-07-28 20:22:37 ] -  [31merror[39m  - SubscriptionManager | Error parsing or processing Redis message from channel {"stream":"depth@cmdgc0i7m0000kc24v7ilvs8t-no","data":{"b":[["33.00048828125","10"],["33.000244140625","90"]],"a":[["35.000244140625","90"],["35.00048828125","10"]],"e":"depth"}}: SyntaxError: Unexpected token 'd', "depth@cmdg"... is not valid JSON
+[ 2025-07-28 20:22:39 ] -  [32minfo[39m  - User Left: 1pgdxn3ez6rw8w571psjb
+[ 2025-07-28 20:22:39 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: 1pgdxn3ez6rw8w571psjb
+[ 2025-07-28 20:22:39 ] -  [32minfo[39m  - SubscriptionManager | User 1pgdxn3ez6rw8w571psjb unsubscribed from 1pgdxn3ez6rw8w571psjb
+[ 2025-07-28 20:22:39 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 20:22:39 ] -  [32minfo[39m  - SubscriptionManager | User 1pgdxn3ez6rw8w571psjb unsubscribed from depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 20:22:39 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 20:22:39 ] -  [32minfo[39m  - SubscriptionManager | User 1pgdxn3ez6rw8w571psjb unsubscribed from depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 20:22:39 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 20:22:39 ] -  [32minfo[39m  - SubscriptionManager | User 1pgdxn3ez6rw8w571psjb unsubscribed from trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 20:22:39 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 20:22:39 ] -  [32minfo[39m  - SubscriptionManager | User 1pgdxn3ez6rw8w571psjb unsubscribed from trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 20:23:12 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Attempting to connect Redis client...
+[ 2025-07-28 20:23:12 ] -  [32minfo[39m  - WebSocket server running on ws://localhost:8080
+[ 2025-07-28 20:23:12 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-28 20:23:12 ] -  [32minfo[39m  - Redis Pub/Sub connected
+[ 2025-07-28 20:23:19 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: sdfdig7o7794xl983ot5z7
+[ 2025-07-28 20:23:19 ] -  [32minfo[39m  - SubscriptionManager | User sdfdig7o7794xl983ot5z7 subscribed to sdfdig7o7794xl983ot5z7
+[ 2025-07-28 20:23:19 ] -  [32minfo[39m  - SubscriptionManager | Attempted to send cached data to user sdfdig7o7794xl983ot5z7 for subscription sdfdig7o7794xl983ot5z7.
+[ 2025-07-28 20:23:19 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: yzrihgxoa7d0b6zfuqaqzy
+[ 2025-07-28 20:23:19 ] -  [32minfo[39m  - SubscriptionManager | User yzrihgxoa7d0b6zfuqaqzy subscribed to yzrihgxoa7d0b6zfuqaqzy
+[ 2025-07-28 20:23:19 ] -  [32minfo[39m  - SubscriptionManager | Attempted to send cached data to user yzrihgxoa7d0b6zfuqaqzy for subscription yzrihgxoa7d0b6zfuqaqzy.
+[ 2025-07-28 20:23:29 ] -  [32minfo[39m  - User Left: sdfdig7o7794xl983ot5z7
+[ 2025-07-28 20:23:29 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: sdfdig7o7794xl983ot5z7
+[ 2025-07-28 20:23:29 ] -  [32minfo[39m  - SubscriptionManager | User sdfdig7o7794xl983ot5z7 unsubscribed from sdfdig7o7794xl983ot5z7
+[ 2025-07-28 20:23:29 ] -  [32minfo[39m  - User Left: yzrihgxoa7d0b6zfuqaqzy
+[ 2025-07-28 20:23:29 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: yzrihgxoa7d0b6zfuqaqzy
+[ 2025-07-28 20:23:29 ] -  [32minfo[39m  - SubscriptionManager | User yzrihgxoa7d0b6zfuqaqzy unsubscribed from yzrihgxoa7d0b6zfuqaqzy
+[ 2025-07-28 20:23:29 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: h9y50pizp8mkxl7brqwgdb
+[ 2025-07-28 20:23:29 ] -  [32minfo[39m  - SubscriptionManager | User h9y50pizp8mkxl7brqwgdb subscribed to h9y50pizp8mkxl7brqwgdb
+[ 2025-07-28 20:23:29 ] -  [32minfo[39m  - SubscriptionManager | Attempted to send cached data to user h9y50pizp8mkxl7brqwgdb for subscription h9y50pizp8mkxl7brqwgdb.
+[ 2025-07-28 20:23:40 ] -  [32minfo[39m  - User Left: h9y50pizp8mkxl7brqwgdb
+[ 2025-07-28 20:23:40 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: h9y50pizp8mkxl7brqwgdb
+[ 2025-07-28 20:23:40 ] -  [32minfo[39m  - SubscriptionManager | User h9y50pizp8mkxl7brqwgdb unsubscribed from h9y50pizp8mkxl7brqwgdb
+[ 2025-07-28 21:17:04 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Attempting to connect Redis client...
+[ 2025-07-28 21:17:04 ] -  [32minfo[39m  - WebSocket server running on ws://localhost:8080
+[ 2025-07-28 21:17:04 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-28 21:17:04 ] -  [32minfo[39m  - WSS | Centralized Redis Pub/Sub client connected successfully.
+[ 2025-07-28 21:17:04 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:17:04 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to global 'event_summaries' channel.
+[ 2025-07-28 21:17:07 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:17:09 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:17:11 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:17:13 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:17:14 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:17:14 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: 4o1mdg0b2ifqojuinltky
+[ 2025-07-28 21:17:14 ] -  [32minfo[39m  - SubscriptionManager | User 4o1mdg0b2ifqojuinltky subscribed to 4o1mdg0b2ifqojuinltky
+[ 2025-07-28 21:17:14 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:17:14 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: client_event_summaries
+[ 2025-07-28 21:17:14 ] -  [32minfo[39m  - SubscriptionManager | User 4o1mdg0b2ifqojuinltky subscribed to client_event_summaries
+[ 2025-07-28 21:17:15 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:17:16 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:17:19 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:17:21 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:17:21 ] -  [32minfo[39m  - User Left: 4o1mdg0b2ifqojuinltky
+[ 2025-07-28 21:17:21 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: 4o1mdg0b2ifqojuinltky
+[ 2025-07-28 21:17:21 ] -  [32minfo[39m  - SubscriptionManager | User 4o1mdg0b2ifqojuinltky unsubscribed from 4o1mdg0b2ifqojuinltky
+[ 2025-07-28 21:17:21 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: client_event_summaries
+[ 2025-07-28 21:17:21 ] -  [32minfo[39m  - SubscriptionManager | User 4o1mdg0b2ifqojuinltky unsubscribed from client_event_summaries
+[ 2025-07-28 21:17:21 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:17:21 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: ytchxq5cvycmk2z86qskx8
+[ 2025-07-28 21:17:21 ] -  [32minfo[39m  - SubscriptionManager | User ytchxq5cvycmk2z86qskx8 subscribed to ytchxq5cvycmk2z86qskx8
+[ 2025-07-28 21:17:21 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:17:21 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:17:21 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:17:21 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:17:21 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:17:21 ] -  [32minfo[39m  - SubscriptionManager | User ytchxq5cvycmk2z86qskx8 subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:17:21 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:17:21 ] -  [32minfo[39m  - SubscriptionManager | User ytchxq5cvycmk2z86qskx8 subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:17:21 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:17:21 ] -  [32minfo[39m  - SubscriptionManager | User ytchxq5cvycmk2z86qskx8 subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:17:21 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:17:21 ] -  [32minfo[39m  - SubscriptionManager | User ytchxq5cvycmk2z86qskx8 subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:17:23 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:17:25 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:17:27 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:17:29 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:17:31 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:17:33 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:17:35 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:17:37 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:17:37 ] -  [32minfo[39m  - SubscriptionManager | User ytchxq5cvycmk2z86qskx8 unsubscribed from depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:17:37 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:17:37 ] -  [32minfo[39m  - SubscriptionManager | User ytchxq5cvycmk2z86qskx8 unsubscribed from depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:17:37 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:17:37 ] -  [32minfo[39m  - SubscriptionManager | User ytchxq5cvycmk2z86qskx8 unsubscribed from trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:17:37 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:17:37 ] -  [32minfo[39m  - SubscriptionManager | User ytchxq5cvycmk2z86qskx8 unsubscribed from trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:17:37 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:17:37 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: 7izes4pdazbdrniurqvvt
+[ 2025-07-28 21:17:37 ] -  [32minfo[39m  - SubscriptionManager | User 7izes4pdazbdrniurqvvt subscribed to 7izes4pdazbdrniurqvvt
+[ 2025-07-28 21:17:37 ] -  [32minfo[39m  - User Left: ytchxq5cvycmk2z86qskx8
+[ 2025-07-28 21:17:37 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: ytchxq5cvycmk2z86qskx8
+[ 2025-07-28 21:17:37 ] -  [32minfo[39m  - SubscriptionManager | User ytchxq5cvycmk2z86qskx8 unsubscribed from ytchxq5cvycmk2z86qskx8
+[ 2025-07-28 21:17:37 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:17:37 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: a627x1szz3v1jw84a4tduu
+[ 2025-07-28 21:17:37 ] -  [32minfo[39m  - SubscriptionManager | User a627x1szz3v1jw84a4tduu subscribed to a627x1szz3v1jw84a4tduu
+[ 2025-07-28 21:17:37 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:17:40 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:17:41 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:17:41 ] -  [32minfo[39m  - User Left: a627x1szz3v1jw84a4tduu
+[ 2025-07-28 21:17:41 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: a627x1szz3v1jw84a4tduu
+[ 2025-07-28 21:17:41 ] -  [32minfo[39m  - SubscriptionManager | User a627x1szz3v1jw84a4tduu unsubscribed from a627x1szz3v1jw84a4tduu
+[ 2025-07-28 21:17:41 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:17:41 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: 2hv60uuabbet735yzea2qm
+[ 2025-07-28 21:17:41 ] -  [32minfo[39m  - SubscriptionManager | User 2hv60uuabbet735yzea2qm subscribed to 2hv60uuabbet735yzea2qm
+[ 2025-07-28 21:17:41 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:17:41 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:17:41 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:17:41 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:17:41 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:17:41 ] -  [32minfo[39m  - SubscriptionManager | User 2hv60uuabbet735yzea2qm subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:17:41 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:17:41 ] -  [32minfo[39m  - SubscriptionManager | User 2hv60uuabbet735yzea2qm subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:17:41 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:17:41 ] -  [32minfo[39m  - SubscriptionManager | User 2hv60uuabbet735yzea2qm subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:17:41 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:17:41 ] -  [32minfo[39m  - SubscriptionManager | User 2hv60uuabbet735yzea2qm subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:17:41 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:17:41 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: sfbffexsc37jlb51nel5
+[ 2025-07-28 21:17:41 ] -  [32minfo[39m  - SubscriptionManager | User sfbffexsc37jlb51nel5 subscribed to sfbffexsc37jlb51nel5
+[ 2025-07-28 21:17:41 ] -  [32minfo[39m  - SubscriptionManager | User sfbffexsc37jlb51nel5 subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:17:41 ] -  [32minfo[39m  - SubscriptionManager | User sfbffexsc37jlb51nel5 subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:17:41 ] -  [32minfo[39m  - SubscriptionManager | User sfbffexsc37jlb51nel5 subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:17:41 ] -  [32minfo[39m  - SubscriptionManager | User sfbffexsc37jlb51nel5 subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:17:43 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:17:45 ] -  [32minfo[39m  - SubscriptionManager | User sfbffexsc37jlb51nel5 unsubscribed from depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:17:45 ] -  [32minfo[39m  - SubscriptionManager | User sfbffexsc37jlb51nel5 unsubscribed from depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:17:45 ] -  [32minfo[39m  - SubscriptionManager | User sfbffexsc37jlb51nel5 unsubscribed from trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:17:45 ] -  [32minfo[39m  - SubscriptionManager | User sfbffexsc37jlb51nel5 unsubscribed from trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:17:45 ] -  [32minfo[39m  - User Left: sfbffexsc37jlb51nel5
+[ 2025-07-28 21:17:45 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: sfbffexsc37jlb51nel5
+[ 2025-07-28 21:17:45 ] -  [32minfo[39m  - SubscriptionManager | User sfbffexsc37jlb51nel5 unsubscribed from sfbffexsc37jlb51nel5
+[ 2025-07-28 21:17:45 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:17:45 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: gsetf3txa686qfxn9tgel
+[ 2025-07-28 21:17:45 ] -  [32minfo[39m  - SubscriptionManager | User gsetf3txa686qfxn9tgel subscribed to gsetf3txa686qfxn9tgel
+[ 2025-07-28 21:17:45 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:17:45 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: lq8ak5nhrnvd90xvjjr5s
+[ 2025-07-28 21:17:45 ] -  [32minfo[39m  - SubscriptionManager | User lq8ak5nhrnvd90xvjjr5s subscribed to lq8ak5nhrnvd90xvjjr5s
+[ 2025-07-28 21:17:45 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:17:47 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:17:49 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:17:52 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:17:53 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:17:55 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:17:57 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:17:59 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:18:02 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:18:03 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:18:05 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:18:05 ] -  [32minfo[39m  - User Left: lq8ak5nhrnvd90xvjjr5s
+[ 2025-07-28 21:18:05 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: lq8ak5nhrnvd90xvjjr5s
+[ 2025-07-28 21:18:05 ] -  [32minfo[39m  - SubscriptionManager | User lq8ak5nhrnvd90xvjjr5s unsubscribed from lq8ak5nhrnvd90xvjjr5s
+[ 2025-07-28 21:18:05 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:18:05 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: fv59i3191yeb81c619yr1
+[ 2025-07-28 21:18:05 ] -  [32minfo[39m  - SubscriptionManager | User fv59i3191yeb81c619yr1 subscribed to fv59i3191yeb81c619yr1
+[ 2025-07-28 21:18:05 ] -  [32minfo[39m  - SubscriptionManager | User fv59i3191yeb81c619yr1 subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:18:05 ] -  [32minfo[39m  - SubscriptionManager | User fv59i3191yeb81c619yr1 subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:18:05 ] -  [32minfo[39m  - SubscriptionManager | User fv59i3191yeb81c619yr1 subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:18:05 ] -  [32minfo[39m  - SubscriptionManager | User fv59i3191yeb81c619yr1 subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:18:05 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:18:05 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: q3ozhdds9nf0vml0nuj3ldd
+[ 2025-07-28 21:18:05 ] -  [32minfo[39m  - SubscriptionManager | User q3ozhdds9nf0vml0nuj3ldd subscribed to q3ozhdds9nf0vml0nuj3ldd
+[ 2025-07-28 21:18:05 ] -  [32minfo[39m  - SubscriptionManager | User q3ozhdds9nf0vml0nuj3ldd subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:18:05 ] -  [32minfo[39m  - SubscriptionManager | User q3ozhdds9nf0vml0nuj3ldd subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:18:05 ] -  [32minfo[39m  - SubscriptionManager | User q3ozhdds9nf0vml0nuj3ldd subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:18:05 ] -  [32minfo[39m  - SubscriptionManager | User q3ozhdds9nf0vml0nuj3ldd subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:18:07 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - User Left: 7izes4pdazbdrniurqvvt
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: 7izes4pdazbdrniurqvvt
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - SubscriptionManager | User 7izes4pdazbdrniurqvvt unsubscribed from 7izes4pdazbdrniurqvvt
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - User Left: q3ozhdds9nf0vml0nuj3ldd
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: q3ozhdds9nf0vml0nuj3ldd
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - SubscriptionManager | User q3ozhdds9nf0vml0nuj3ldd unsubscribed from q3ozhdds9nf0vml0nuj3ldd
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - SubscriptionManager | User q3ozhdds9nf0vml0nuj3ldd unsubscribed from depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - SubscriptionManager | User q3ozhdds9nf0vml0nuj3ldd unsubscribed from depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - SubscriptionManager | User q3ozhdds9nf0vml0nuj3ldd unsubscribed from trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - SubscriptionManager | User q3ozhdds9nf0vml0nuj3ldd unsubscribed from trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - User Left: fv59i3191yeb81c619yr1
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: fv59i3191yeb81c619yr1
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - SubscriptionManager | User fv59i3191yeb81c619yr1 unsubscribed from fv59i3191yeb81c619yr1
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - SubscriptionManager | User fv59i3191yeb81c619yr1 unsubscribed from depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - SubscriptionManager | User fv59i3191yeb81c619yr1 unsubscribed from depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - SubscriptionManager | User fv59i3191yeb81c619yr1 unsubscribed from trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - SubscriptionManager | User fv59i3191yeb81c619yr1 unsubscribed from trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - User Left: gsetf3txa686qfxn9tgel
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: gsetf3txa686qfxn9tgel
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - SubscriptionManager | User gsetf3txa686qfxn9tgel unsubscribed from gsetf3txa686qfxn9tgel
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - User Left: 2hv60uuabbet735yzea2qm
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: 2hv60uuabbet735yzea2qm
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - SubscriptionManager | User 2hv60uuabbet735yzea2qm unsubscribed from 2hv60uuabbet735yzea2qm
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - SubscriptionManager | User 2hv60uuabbet735yzea2qm unsubscribed from depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - SubscriptionManager | User 2hv60uuabbet735yzea2qm unsubscribed from depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - SubscriptionManager | User 2hv60uuabbet735yzea2qm unsubscribed from trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - SubscriptionManager | User 2hv60uuabbet735yzea2qm unsubscribed from trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: 18zdp1r4puoecj8wy775uq
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - SubscriptionManager | User 18zdp1r4puoecj8wy775uq subscribed to 18zdp1r4puoecj8wy775uq
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: client_event_summaries
+[ 2025-07-28 21:18:08 ] -  [32minfo[39m  - SubscriptionManager | User 18zdp1r4puoecj8wy775uq subscribed to client_event_summaries
+[ 2025-07-28 21:18:09 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:18:11 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:18:14 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:18:15 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:18:17 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:18:19 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:18:19 ] -  [32minfo[39m  - User Left: 18zdp1r4puoecj8wy775uq
+[ 2025-07-28 21:18:19 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: 18zdp1r4puoecj8wy775uq
+[ 2025-07-28 21:18:19 ] -  [32minfo[39m  - SubscriptionManager | User 18zdp1r4puoecj8wy775uq unsubscribed from 18zdp1r4puoecj8wy775uq
+[ 2025-07-28 21:18:19 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: client_event_summaries
+[ 2025-07-28 21:18:19 ] -  [32minfo[39m  - SubscriptionManager | User 18zdp1r4puoecj8wy775uq unsubscribed from client_event_summaries
+[ 2025-07-28 21:18:20 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:18:20 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: wlfbqixvgngyzqw3owo09e
+[ 2025-07-28 21:18:20 ] -  [32minfo[39m  - SubscriptionManager | User wlfbqixvgngyzqw3owo09e subscribed to wlfbqixvgngyzqw3owo09e
+[ 2025-07-28 21:18:20 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:18:20 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: client_event_summaries
+[ 2025-07-28 21:18:20 ] -  [32minfo[39m  - SubscriptionManager | User wlfbqixvgngyzqw3owo09e subscribed to client_event_summaries
+[ 2025-07-28 21:18:21 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:18:23 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:18:25 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:18:28 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:18:29 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:18:31 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:18:33 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:18:34 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: client_event_summaries
+[ 2025-07-28 21:18:34 ] -  [32minfo[39m  - SubscriptionManager | User wlfbqixvgngyzqw3owo09e unsubscribed from client_event_summaries
+[ 2025-07-28 21:18:34 ] -  [32minfo[39m  - User Left: wlfbqixvgngyzqw3owo09e
+[ 2025-07-28 21:18:34 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: wlfbqixvgngyzqw3owo09e
+[ 2025-07-28 21:18:34 ] -  [32minfo[39m  - SubscriptionManager | User wlfbqixvgngyzqw3owo09e unsubscribed from wlfbqixvgngyzqw3owo09e
+[ 2025-07-28 21:18:34 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:18:34 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: 705y17gg4jo5e53ctnul
+[ 2025-07-28 21:18:34 ] -  [32minfo[39m  - SubscriptionManager | User 705y17gg4jo5e53ctnul subscribed to 705y17gg4jo5e53ctnul
+[ 2025-07-28 21:18:34 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:18:34 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:18:34 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:18:34 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:18:34 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:18:34 ] -  [32minfo[39m  - SubscriptionManager | User 705y17gg4jo5e53ctnul subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:18:34 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:18:34 ] -  [32minfo[39m  - SubscriptionManager | User 705y17gg4jo5e53ctnul subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:18:34 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:18:34 ] -  [32minfo[39m  - SubscriptionManager | User 705y17gg4jo5e53ctnul subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:18:34 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:18:34 ] -  [32minfo[39m  - SubscriptionManager | User 705y17gg4jo5e53ctnul subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:18:34 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:18:34 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: ruthirldelauamw5ql93lf
+[ 2025-07-28 21:18:34 ] -  [32minfo[39m  - SubscriptionManager | User ruthirldelauamw5ql93lf subscribed to ruthirldelauamw5ql93lf
+[ 2025-07-28 21:18:34 ] -  [32minfo[39m  - SubscriptionManager | User ruthirldelauamw5ql93lf subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:18:34 ] -  [32minfo[39m  - SubscriptionManager | User ruthirldelauamw5ql93lf subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:18:34 ] -  [32minfo[39m  - SubscriptionManager | User ruthirldelauamw5ql93lf subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:18:34 ] -  [32minfo[39m  - SubscriptionManager | User ruthirldelauamw5ql93lf subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:18:35 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:18:38 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:18:38 ] -  [32minfo[39m  - User Left: 705y17gg4jo5e53ctnul
+[ 2025-07-28 21:18:38 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: 705y17gg4jo5e53ctnul
+[ 2025-07-28 21:18:38 ] -  [32minfo[39m  - SubscriptionManager | User 705y17gg4jo5e53ctnul unsubscribed from 705y17gg4jo5e53ctnul
+[ 2025-07-28 21:18:38 ] -  [32minfo[39m  - SubscriptionManager | User 705y17gg4jo5e53ctnul unsubscribed from depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:18:38 ] -  [32minfo[39m  - SubscriptionManager | User 705y17gg4jo5e53ctnul unsubscribed from depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:18:38 ] -  [32minfo[39m  - SubscriptionManager | User 705y17gg4jo5e53ctnul unsubscribed from trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:18:38 ] -  [32minfo[39m  - SubscriptionManager | User 705y17gg4jo5e53ctnul unsubscribed from trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:18:38 ] -  [32minfo[39m  - User Left: ruthirldelauamw5ql93lf
+[ 2025-07-28 21:18:38 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: ruthirldelauamw5ql93lf
+[ 2025-07-28 21:18:38 ] -  [32minfo[39m  - SubscriptionManager | User ruthirldelauamw5ql93lf unsubscribed from ruthirldelauamw5ql93lf
+[ 2025-07-28 21:18:38 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:18:38 ] -  [32minfo[39m  - SubscriptionManager | User ruthirldelauamw5ql93lf unsubscribed from depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:18:38 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:18:38 ] -  [32minfo[39m  - SubscriptionManager | User ruthirldelauamw5ql93lf unsubscribed from depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:18:38 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:18:38 ] -  [32minfo[39m  - SubscriptionManager | User ruthirldelauamw5ql93lf unsubscribed from trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:18:38 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:18:38 ] -  [32minfo[39m  - SubscriptionManager | User ruthirldelauamw5ql93lf unsubscribed from trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:18:39 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:18:39 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: xfoz9r6raehetahd9ox0p
+[ 2025-07-28 21:18:39 ] -  [32minfo[39m  - SubscriptionManager | User xfoz9r6raehetahd9ox0p subscribed to xfoz9r6raehetahd9ox0p
+[ 2025-07-28 21:18:39 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:18:39 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:18:39 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:18:39 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:18:39 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:18:39 ] -  [32minfo[39m  - SubscriptionManager | User xfoz9r6raehetahd9ox0p subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:18:39 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:18:39 ] -  [32minfo[39m  - SubscriptionManager | User xfoz9r6raehetahd9ox0p subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:18:39 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:18:39 ] -  [32minfo[39m  - SubscriptionManager | User xfoz9r6raehetahd9ox0p subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:18:39 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:18:39 ] -  [32minfo[39m  - SubscriptionManager | User xfoz9r6raehetahd9ox0p subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:18:40 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:18:41 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:18:43 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:18:45 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:18:47 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:18:50 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:18:51 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:18:53 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:18:55 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:18:57 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:18:59 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:18:59 ] -  [32minfo[39m  - SubscriptionManager | User xfoz9r6raehetahd9ox0p unsubscribed from depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:18:59 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:18:59 ] -  [32minfo[39m  - SubscriptionManager | User xfoz9r6raehetahd9ox0p unsubscribed from depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:18:59 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:18:59 ] -  [32minfo[39m  - SubscriptionManager | User xfoz9r6raehetahd9ox0p unsubscribed from trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:18:59 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:18:59 ] -  [32minfo[39m  - SubscriptionManager | User xfoz9r6raehetahd9ox0p unsubscribed from trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:18:59 ] -  [32minfo[39m  - User Left: xfoz9r6raehetahd9ox0p
+[ 2025-07-28 21:18:59 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: xfoz9r6raehetahd9ox0p
+[ 2025-07-28 21:18:59 ] -  [32minfo[39m  - SubscriptionManager | User xfoz9r6raehetahd9ox0p unsubscribed from xfoz9r6raehetahd9ox0p
+[ 2025-07-28 21:18:59 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:18:59 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: reg56p015wjy0ccihw133
+[ 2025-07-28 21:18:59 ] -  [32minfo[39m  - SubscriptionManager | User reg56p015wjy0ccihw133 subscribed to reg56p015wjy0ccihw133
+[ 2025-07-28 21:18:59 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:18:59 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: h2pbscy4xg8aunjdtxq8rb
+[ 2025-07-28 21:18:59 ] -  [32minfo[39m  - SubscriptionManager | User h2pbscy4xg8aunjdtxq8rb subscribed to h2pbscy4xg8aunjdtxq8rb
+[ 2025-07-28 21:18:59 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:19:02 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:19:03 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:19:05 ] -  [32minfo[39m  - User Left: reg56p015wjy0ccihw133
+[ 2025-07-28 21:19:05 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: reg56p015wjy0ccihw133
+[ 2025-07-28 21:19:05 ] -  [32minfo[39m  - SubscriptionManager | User reg56p015wjy0ccihw133 unsubscribed from reg56p015wjy0ccihw133
+[ 2025-07-28 21:19:05 ] -  [32minfo[39m  - User Left: h2pbscy4xg8aunjdtxq8rb
+[ 2025-07-28 21:19:05 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: h2pbscy4xg8aunjdtxq8rb
+[ 2025-07-28 21:19:05 ] -  [32minfo[39m  - SubscriptionManager | User h2pbscy4xg8aunjdtxq8rb unsubscribed from h2pbscy4xg8aunjdtxq8rb
+[ 2025-07-28 21:19:05 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:19:05 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:19:05 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: k3fkt33xrkfu0e531kjcg
+[ 2025-07-28 21:19:05 ] -  [32minfo[39m  - SubscriptionManager | User k3fkt33xrkfu0e531kjcg subscribed to k3fkt33xrkfu0e531kjcg
+[ 2025-07-28 21:19:07 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:19:09 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:19:12 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:19:14 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:19:15 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:19:17 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:19:19 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:19:22 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:19:24 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:19:26 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:19:27 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:19:29 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:19:31 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:19:34 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:19:36 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:19:38 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:19:39 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:19:41 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:19:43 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:19:46 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:19:46 ] -  [32minfo[39m  - User Left: k3fkt33xrkfu0e531kjcg
+[ 2025-07-28 21:19:46 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: k3fkt33xrkfu0e531kjcg
+[ 2025-07-28 21:19:46 ] -  [32minfo[39m  - SubscriptionManager | User k3fkt33xrkfu0e531kjcg unsubscribed from k3fkt33xrkfu0e531kjcg
+[ 2025-07-28 21:19:48 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:19:49 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:19:51 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:19:53 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:19:55 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:19:55 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: fhhdsuj9jdipt6qjuifffj
+[ 2025-07-28 21:19:55 ] -  [32minfo[39m  - SubscriptionManager | User fhhdsuj9jdipt6qjuifffj subscribed to fhhdsuj9jdipt6qjuifffj
+[ 2025-07-28 21:19:55 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:19:55 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: client_event_summaries
+[ 2025-07-28 21:19:55 ] -  [32minfo[39m  - SubscriptionManager | User fhhdsuj9jdipt6qjuifffj subscribed to client_event_summaries
+[ 2025-07-28 21:19:56 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:19:58 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:20:00 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:20:01 ] -  [32minfo[39m  - User Left: fhhdsuj9jdipt6qjuifffj
+[ 2025-07-28 21:20:01 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: fhhdsuj9jdipt6qjuifffj
+[ 2025-07-28 21:20:01 ] -  [32minfo[39m  - SubscriptionManager | User fhhdsuj9jdipt6qjuifffj unsubscribed from fhhdsuj9jdipt6qjuifffj
+[ 2025-07-28 21:20:01 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: client_event_summaries
+[ 2025-07-28 21:20:01 ] -  [32minfo[39m  - SubscriptionManager | User fhhdsuj9jdipt6qjuifffj unsubscribed from client_event_summaries
+[ 2025-07-28 21:20:01 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:20:01 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:20:01 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: p4wwtlzrhd0j1g8jellaj
+[ 2025-07-28 21:20:01 ] -  [32minfo[39m  - SubscriptionManager | User p4wwtlzrhd0j1g8jellaj subscribed to p4wwtlzrhd0j1g8jellaj
+[ 2025-07-28 21:20:01 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:20:01 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: client_event_summaries
+[ 2025-07-28 21:20:01 ] -  [32minfo[39m  - SubscriptionManager | User p4wwtlzrhd0j1g8jellaj subscribed to client_event_summaries
+[ 2025-07-28 21:20:03 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:20:05 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:20:08 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:20:10 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:20:12 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: client_event_summaries
+[ 2025-07-28 21:20:12 ] -  [32minfo[39m  - SubscriptionManager | User p4wwtlzrhd0j1g8jellaj unsubscribed from client_event_summaries
+[ 2025-07-28 21:20:12 ] -  [32minfo[39m  - User Left: p4wwtlzrhd0j1g8jellaj
+[ 2025-07-28 21:20:12 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: p4wwtlzrhd0j1g8jellaj
+[ 2025-07-28 21:20:12 ] -  [32minfo[39m  - SubscriptionManager | User p4wwtlzrhd0j1g8jellaj unsubscribed from p4wwtlzrhd0j1g8jellaj
+[ 2025-07-28 21:20:12 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:20:12 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: rqadben0rw98t21ufdbgkh
+[ 2025-07-28 21:20:12 ] -  [32minfo[39m  - SubscriptionManager | User rqadben0rw98t21ufdbgkh subscribed to rqadben0rw98t21ufdbgkh
+[ 2025-07-28 21:20:12 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:20:12 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:20:12 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:20:12 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:20:12 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:20:12 ] -  [32minfo[39m  - SubscriptionManager | User rqadben0rw98t21ufdbgkh subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:20:12 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:20:12 ] -  [32minfo[39m  - SubscriptionManager | User rqadben0rw98t21ufdbgkh subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:20:12 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:20:12 ] -  [32minfo[39m  - SubscriptionManager | User rqadben0rw98t21ufdbgkh subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:20:12 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:20:12 ] -  [32minfo[39m  - SubscriptionManager | User rqadben0rw98t21ufdbgkh subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:20:12 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:20:12 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: fbuydxe1ffaopewofojcn
+[ 2025-07-28 21:20:12 ] -  [32minfo[39m  - SubscriptionManager | User fbuydxe1ffaopewofojcn subscribed to fbuydxe1ffaopewofojcn
+[ 2025-07-28 21:20:12 ] -  [32minfo[39m  - SubscriptionManager | User fbuydxe1ffaopewofojcn subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:20:12 ] -  [32minfo[39m  - SubscriptionManager | User fbuydxe1ffaopewofojcn subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:20:12 ] -  [32minfo[39m  - SubscriptionManager | User fbuydxe1ffaopewofojcn subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:20:12 ] -  [32minfo[39m  - SubscriptionManager | User fbuydxe1ffaopewofojcn subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:20:12 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:20:13 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:20:15 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:20:17 ] -  [32minfo[39m  - User Left: rqadben0rw98t21ufdbgkh
+[ 2025-07-28 21:20:17 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: rqadben0rw98t21ufdbgkh
+[ 2025-07-28 21:20:17 ] -  [32minfo[39m  - SubscriptionManager | User rqadben0rw98t21ufdbgkh unsubscribed from rqadben0rw98t21ufdbgkh
+[ 2025-07-28 21:20:17 ] -  [32minfo[39m  - SubscriptionManager | User rqadben0rw98t21ufdbgkh unsubscribed from depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:20:17 ] -  [32minfo[39m  - SubscriptionManager | User rqadben0rw98t21ufdbgkh unsubscribed from depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:20:17 ] -  [32minfo[39m  - SubscriptionManager | User rqadben0rw98t21ufdbgkh unsubscribed from trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:20:17 ] -  [32minfo[39m  - SubscriptionManager | User rqadben0rw98t21ufdbgkh unsubscribed from trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:20:17 ] -  [32minfo[39m  - User Left: fbuydxe1ffaopewofojcn
+[ 2025-07-28 21:20:17 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: fbuydxe1ffaopewofojcn
+[ 2025-07-28 21:20:17 ] -  [32minfo[39m  - SubscriptionManager | User fbuydxe1ffaopewofojcn unsubscribed from fbuydxe1ffaopewofojcn
+[ 2025-07-28 21:20:17 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:20:17 ] -  [32minfo[39m  - SubscriptionManager | User fbuydxe1ffaopewofojcn unsubscribed from depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:20:17 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:20:17 ] -  [32minfo[39m  - SubscriptionManager | User fbuydxe1ffaopewofojcn unsubscribed from depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:20:17 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:20:17 ] -  [32minfo[39m  - SubscriptionManager | User fbuydxe1ffaopewofojcn unsubscribed from trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:20:17 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:20:17 ] -  [32minfo[39m  - SubscriptionManager | User fbuydxe1ffaopewofojcn unsubscribed from trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:20:18 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:20:18 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:20:18 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: 97vrf9r3vxpkx8sc18nxd
+[ 2025-07-28 21:20:18 ] -  [32minfo[39m  - SubscriptionManager | User 97vrf9r3vxpkx8sc18nxd subscribed to 97vrf9r3vxpkx8sc18nxd
+[ 2025-07-28 21:20:18 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:20:18 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:20:18 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:20:18 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:20:18 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:20:18 ] -  [32minfo[39m  - SubscriptionManager | User 97vrf9r3vxpkx8sc18nxd subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:20:18 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:20:18 ] -  [32minfo[39m  - SubscriptionManager | User 97vrf9r3vxpkx8sc18nxd subscribed to depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:20:18 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:20:18 ] -  [32minfo[39m  - SubscriptionManager | User 97vrf9r3vxpkx8sc18nxd subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:20:18 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:20:18 ] -  [32minfo[39m  - SubscriptionManager | User 97vrf9r3vxpkx8sc18nxd subscribed to trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:20:20 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:20:22 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:20:24 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:20:25 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:20:27 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:20:28 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:20:28 ] -  [32minfo[39m  - SubscriptionManager | User 97vrf9r3vxpkx8sc18nxd unsubscribed from depth@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:20:28 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:20:28 ] -  [32minfo[39m  - SubscriptionManager | User 97vrf9r3vxpkx8sc18nxd unsubscribed from depth@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:20:28 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:20:28 ] -  [32minfo[39m  - SubscriptionManager | User 97vrf9r3vxpkx8sc18nxd unsubscribed from trade@cmdgc0i7m0000kc24v7ilvs8t-yes
+[ 2025-07-28 21:20:28 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:20:28 ] -  [32minfo[39m  - SubscriptionManager | User 97vrf9r3vxpkx8sc18nxd unsubscribed from trade@cmdgc0i7m0000kc24v7ilvs8t-no
+[ 2025-07-28 21:20:28 ] -  [32minfo[39m  - User Left: 97vrf9r3vxpkx8sc18nxd
+[ 2025-07-28 21:20:28 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: 97vrf9r3vxpkx8sc18nxd
+[ 2025-07-28 21:20:28 ] -  [32minfo[39m  - SubscriptionManager | User 97vrf9r3vxpkx8sc18nxd unsubscribed from 97vrf9r3vxpkx8sc18nxd
+[ 2025-07-28 21:20:28 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:20:28 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: l88krf2jpak71sq0rdkkou
+[ 2025-07-28 21:20:28 ] -  [32minfo[39m  - SubscriptionManager | User l88krf2jpak71sq0rdkkou subscribed to l88krf2jpak71sq0rdkkou
+[ 2025-07-28 21:20:28 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:20:28 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: xkvrbcnmwxatpukoixrfr
+[ 2025-07-28 21:20:28 ] -  [32minfo[39m  - SubscriptionManager | User xkvrbcnmwxatpukoixrfr subscribed to xkvrbcnmwxatpukoixrfr
+[ 2025-07-28 21:20:30 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:20:32 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:20:34 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:20:34 ] -  [32minfo[39m  - User Left: l88krf2jpak71sq0rdkkou
+[ 2025-07-28 21:20:34 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: l88krf2jpak71sq0rdkkou
+[ 2025-07-28 21:20:34 ] -  [32minfo[39m  - SubscriptionManager | User l88krf2jpak71sq0rdkkou unsubscribed from l88krf2jpak71sq0rdkkou
+[ 2025-07-28 21:20:34 ] -  [32minfo[39m  - User Left: xkvrbcnmwxatpukoixrfr
+[ 2025-07-28 21:20:34 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: xkvrbcnmwxatpukoixrfr
+[ 2025-07-28 21:20:34 ] -  [32minfo[39m  - SubscriptionManager | User xkvrbcnmwxatpukoixrfr unsubscribed from xkvrbcnmwxatpukoixrfr
+[ 2025-07-28 21:20:35 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:20:35 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: bdwurqpmk3aogxyu7on6a
+[ 2025-07-28 21:20:35 ] -  [32minfo[39m  - SubscriptionManager | User bdwurqpmk3aogxyu7on6a subscribed to bdwurqpmk3aogxyu7on6a
+[ 2025-07-28 21:20:36 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:20:37 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:20:39 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:20:42 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:20:43 ] -  [32minfo[39m  - User Left: bdwurqpmk3aogxyu7on6a
+[ 2025-07-28 21:20:43 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: bdwurqpmk3aogxyu7on6a
+[ 2025-07-28 21:20:43 ] -  [32minfo[39m  - SubscriptionManager | User bdwurqpmk3aogxyu7on6a unsubscribed from bdwurqpmk3aogxyu7on6a
+[ 2025-07-28 21:20:44 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:49:00 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Attempting to connect Redis client...
+[ 2025-07-28 21:49:00 ] -  [32minfo[39m  - WebSocket server running on ws://localhost:8080
+[ 2025-07-28 21:49:00 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-28 21:49:00 ] -  [32minfo[39m  - WSS | Centralized Redis Pub/Sub client connected successfully.
+[ 2025-07-28 21:49:00 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:49:00 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to global 'event_summaries' channel.
+[ 2025-07-28 21:49:03 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:49:05 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:49:06 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:49:08 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:49:11 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:49:13 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:49:15 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:49:16 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:49:18 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:49:21 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:49:23 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:49:25 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:49:27 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:49:28 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:49:38 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Attempting to connect Redis client...
+[ 2025-07-28 21:49:38 ] -  [32minfo[39m  - WebSocket server running on ws://localhost:8080
+[ 2025-07-28 21:49:38 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-28 21:49:38 ] -  [32minfo[39m  - WSS | Centralized Redis Pub/Sub client connected successfully.
+[ 2025-07-28 21:49:38 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:49:38 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to global 'event_summaries' channel.
+[ 2025-07-28 21:49:40 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:49:42 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:49:44 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:49:44 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: xbbip342726dvxrjbkcxq
+[ 2025-07-28 21:49:44 ] -  [32minfo[39m  - SubscriptionManager | User xbbip342726dvxrjbkcxq subscribed to xbbip342726dvxrjbkcxq
+[ 2025-07-28 21:49:44 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:49:44 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: bbnqlmg1pdh6bsrudt0r6n
+[ 2025-07-28 21:49:44 ] -  [32minfo[39m  - SubscriptionManager | User bbnqlmg1pdh6bsrudt0r6n subscribed to bbnqlmg1pdh6bsrudt0r6n
+[ 2025-07-28 21:49:44 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
+[ 2025-07-28 21:49:44 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-28 21:49:44 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:49:44 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"bbnqlmg1pdh6bsrudt0r6n","message":{"type":"GET_OPEN_ORDERS","data":{"userId":"cmdfuql3a0000kcbsg7zsa3uw","market":"cmdgc0i7m0000kc24v7ilvs8t"}}}
+[ 2025-07-28 21:49:44 ] -  [32minfo[39m  - SubscriptionManager | Sent direct message to user bbnqlmg1pdh6bsrudt0r6n
+[ 2025-07-28 21:49:44 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 21:49:44 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"bbnqlmg1pdh6bsrudt0r6n","message":{"type":"GET_OPEN_ORDERS","data":{"userId":"cmdfuql3a0000kcbsg7zsa3uw","market":"cmdgc0i7m0000kc24v7ilvs8t"}}}
+[ 2025-07-28 21:49:44 ] -  [32minfo[39m  - SubscriptionManager | Sent direct message to user bbnqlmg1pdh6bsrudt0r6n
+[ 2025-07-28 21:49:46 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.
+[ 2025-07-28 21:49:48 ] -  [32minfo[39m  - SubscriptionManager | Broadcasted event summaries.

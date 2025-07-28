@@ -30,3 +30,47 @@
 [ 2025-07-28 02:28:08 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
 [ 2025-07-28 02:28:08 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
 [ 2025-07-28 02:28:08 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-28 09:50:44 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
+[ 2025-07-28 09:50:44 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-28 09:50:44 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
+[ 2025-07-28 09:50:44 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-28 09:51:27 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 09:51:27 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"62b14747-e449-48dd-9cd6-dd7fb8897d7c","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":60,"quantity":10,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
+[ 2025-07-28 09:51:27 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 7.930 ms
+[ 2025-07-28 19:13:05 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
+[ 2025-07-28 19:13:05 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-28 19:13:05 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
+[ 2025-07-28 19:13:05 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-28 19:31:27 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
+[ 2025-07-28 19:31:27 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-28 19:31:27 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
+[ 2025-07-28 19:31:27 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-28 19:37:29 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
+[ 2025-07-28 19:37:29 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-28 19:37:29 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
+[ 2025-07-28 19:37:29 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-28 19:38:27 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
+[ 2025-07-28 19:38:27 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-28 19:38:27 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
+[ 2025-07-28 19:38:27 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-28 20:21:46 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
+[ 2025-07-28 20:21:46 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-28 20:21:46 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
+[ 2025-07-28 20:21:46 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-28 20:23:12 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
+[ 2025-07-28 20:23:12 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-28 20:23:12 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
+[ 2025-07-28 20:23:12 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-28 21:17:04 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
+[ 2025-07-28 21:17:05 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-28 21:17:05 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
+[ 2025-07-28 21:17:05 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-28 21:19:46 ] -  [32minfo[39m  - GET - /events - 404 - 2.084 ms
+[ 2025-07-28 21:49:01 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
+[ 2025-07-28 21:49:01 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-28 21:49:01 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
+[ 2025-07-28 21:49:01 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-28 21:49:38 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
+[ 2025-07-28 21:49:38 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-28 21:49:38 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
+[ 2025-07-28 21:49:38 ] -  [32minfo[39m  - SERVER | Listening on port 3000

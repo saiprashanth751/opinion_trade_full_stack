@@ -1,4 +1,4 @@
-import { MessageToApi } from "@trade/types"
+import { MessageToApi, MessageFromApi } from "@trade/types"
 
 export const subscribeOrderbook = "subscribe_orderbook";
 export const unsubscribeOrderbook = "unsubscribe_orderbook";
@@ -13,7 +13,7 @@ export type UnsubscribeMessage = {
     events: string[],
 }
 
-export type IncomingMessage = SubscribeMessage | UnsubscribeMessage;
+export type IncomingMessage = SubscribeMessage | UnsubscribeMessage | MessageFromApi;
 
 // export type DepthUpdateMessage = {
 //     type: "Depth",
@@ -24,6 +24,11 @@ export type IncomingMessage = SubscribeMessage | UnsubscribeMessage;
 //         e: "depth"
 //     }
 // }
+
+export type FrontendIncomingMessage = {
+    clientId: string;
+    message: IncomingMessage;
+};
 
 export type ClientIdMessage = {
     type: "CLIENT_ID";

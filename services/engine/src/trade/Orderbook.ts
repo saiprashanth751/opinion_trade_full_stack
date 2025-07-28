@@ -222,8 +222,8 @@ export class Orderbook {
     }
 
     getOpenOrders(userId: string): Order[] {
-        const bids = this.bids.filter(bid => bid.userId === userId);
-        const asks = this.asks.filter(ask => ask.userId === userId);
+        const bids = this.bids.filter(bid => bid.userId === userId && bid.filled < bid.quantity);
+        const asks = this.asks.filter(ask => ask.userId === userId && ask.filled < ask.quantity);
 
         //using the spread to return everything...
         //first pushes all bids into the array and then the asks, making a single resultant order array...

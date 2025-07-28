@@ -23,11 +23,12 @@ reverseSubscriptions = {
 by adding reverseSubscriptions, we are making the subscribe and unsubscribe process faster
 */
 
-import { createClient, RedisClientType } from "redis"
+// import { createClient, RedisClientType } from "redis"
 import { UserManager } from "./UserManager";
 import { logger } from "@trade/logger"
 import dotenv from "dotenv"
-import { DepthUpdateMessage, TradeAddedMessage, ORDERBOOK_SNAPSHOT, MessageToApi } from "@trade/types";
+import { DepthUpdateMessage, TradeAddedMessage, ORDERBOOK_SNAPSHOT, MessageToApi, EventSummaryMessage } from "@trade/types";
+import { SubscribeManager } from "@trade/order-queue";
 
 interface EventCache {
     yesBids: [string, string][];
@@ -43,32 +44,40 @@ export class SubscriptionManager {
     private static instance: SubscriptionManager;
     private subscriptions: Map<string, string[]> = new Map();
     private reverseSubscriptions: Map<string, string[]> = new Map();
-    private redisClient: RedisClientType;
+    // private redisClient: RedisClientType;
+    private centralizedSubscribeManager: SubscribeManager;
     private eventDataCache: Map<string, EventCache> = new Map();
 
     private constructor() {
         dotenv.config();
-        const redisUrl = process.env.REDIS_URI || "redis://localhost:6379";
-        this.redisClient = createClient({ url: redisUrl });
-        this.redisClient.connect().catch(err => {
-            logger.error(`SubscriptionManager | Failed to connect to Redis: ${err}`);
-        });
 
-        this.redisClient.on("error", (err) => {
-            logger.error(`SubscriptionManager | Redis Client Error: ${err}`);
-        })
+        //trying to centralize pub/sub...
+        this.centralizedSubscribeManager = SubscribeManager.getInstance();
 
-        this.redisClient.on("connect", () => {
-            logger.info(`SubscriptionManager | Redis Client connected successfully to : ${redisUrl}`);
-        })
+        // const redisUrl = process.env.REDIS_URI || "redis://localhost:6379";
+        // this.redisClient = createClient({ url: redisUrl });
+        // this.redisClient.connect().catch(err => {
+        //     logger.error(`SubscriptionManager | Failed to connect to Redis: ${err}`);
+        // });
 
-        this.redisClient.on("end", () => {
-            logger.warn(`SubscriptionManager | Redis client connection ended.`);
-        })
+        // this.redisClient.on("error", (err) => {
+        //     logger.error(`SubscriptionManager | Redis Client Error: ${err}`);
+        // })
 
-        this.redisClient.on("reconnecting", () => {
-            logger.info("SubscriptionManager | Redis client reconnecting...")
-        })
+        // this.redisClient.on("connect", () => {
+        //     logger.info(`SubscriptionManager | Redis Client connected successfully to : ${redisUrl}`);
+        // })
+
+        // this.redisClient.on("end", () => {
+        //     logger.warn(`SubscriptionManager | Redis client connection ended.`);
+        // })
+
+        // this.redisClient.on("reconnecting", () => {
+        //     logger.info("SubscriptionManager | Redis client reconnecting...")
+        // })
+        this.centralizedSubscribeManager.subscribeToChannel("event_summaries", this.redisCallbackHandler.bind(this))
+            .then(() => logger.info("SubscriptionManager | Subscribed to global 'event_summaries' channel."))
+            .catch(error => logger.error(`SubscriptionManager | Failed to subscribe to 'event_summaries': ${error}`));
     }
 
     public static getInstance() {
@@ -87,9 +96,11 @@ export class SubscriptionManager {
         });
     }
 
-    subscribe(userId: string, subscription: string) {
+    public async subscribe(userId: string, subscription: string) {
         if (this.subscriptions.get(userId)?.includes(subscription)) {
-            this.sendCachedDataToUser(userId, subscription);
+            if (userId === subscription) {
+                this.sendCachedDataToUser(userId, subscription);
+            }
             return;
         }
         const newSubscription = (this.subscriptions.get(userId) || []).concat(subscription);
@@ -99,17 +110,37 @@ export class SubscriptionManager {
         this.reverseSubscriptions.set(subscription, newReverseSubscription);
 
         if (this.reverseSubscriptions.get(subscription)?.length === 1) {
-            this.redisClient.subscribe(subscription, this.redisCallbackHandler)
+            await this.centralizedSubscribeManager.subscribeToChannel(subscription, this.redisCallbackHandler.bind(this))
             logger.info(`SubscriptionManager | Subscribed to Redis channel: ${subscription}`);
         }
         logger.info(`SubscriptionManager | User ${userId} subscribed to ${subscription}`);
 
-        this.sendCachedDataToUser(userId, subscription);
+        if (userId === subscription) {
+            this.sendCachedDataToUser(userId, subscription);
+        }
     }
 
     private redisCallbackHandler = (message: string, channel: string) => {
         try {
             const parsedMessage = JSON.parse(message);
+
+            const user = UserManager.getInstance().getUser(channel);
+             if (user) {
+                user.emitMessage(parsedMessage);
+                logger.info(`SubscriptionManager | Sent direct message to user ${channel}`);
+                return; 
+            }
+
+            if (channel === "event_summaries") {
+                // Ensure it's an EventSummaryMessage type
+                if (parsedMessage.type === "EVENT_SUMMARY") {
+                    // Broadcast to all users who might be interested in global summaries
+                    // (e.g., the /events page)
+                    UserManager.getInstance().broadcastMessage(parsedMessage as EventSummaryMessage);
+                    logger.info(`SubscriptionManager | Broadcasted event summaries.`);
+                }
+                return; // Message handled
+            }
 
             // Update cache based on message type
             if (channel.startsWith("depth@")) {
@@ -197,36 +228,65 @@ export class SubscriptionManager {
         }
     }
 
-    private sendCachedDataToUser(userId: string, subscription: string) {
+    // private sendCachedDataToUser(userId: string, subscription: string) {
+    //     const user = UserManager.getInstance().getUser(userId);
+    //     if (!user) return;
+
+    //     const eventId = subscription.split('@')[1]?.split('-')[0];
+    //     if (!eventId) return;
+
+    //     const cachedEvent = this.eventDataCache.get(eventId);
+
+    //     if (cachedEvent) {
+    //         const snapshotMessage: MessageToApi = {
+    //             type: "ORDERBOOK_SNAPSHOT",
+    //             payload: {
+    //                 eventId: eventId,
+    //                 yesBids: cachedEvent.yesBids,
+    //                 yesAsks: cachedEvent.yesAsks,
+    //                 noBids: cachedEvent.noBids,
+    //                 noAsks: cachedEvent.noAsks,
+    //                 trades: cachedEvent.trades,
+    //                 yesPrice: cachedEvent.yesPrice,
+    //                 noPrice: cachedEvent.noPrice,
+    //             }
+    //         };
+    //         //chagned the types but do not know whether it is efficient or not..recheck
+    //         user.emitMessage(snapshotMessage);
+    //         logger.info(`SubscriptionManager | Sent cached snapshot to user ${userId} for event ${eventId}`);
+    //     }
+    // }
+
+     private sendCachedDataToUser(userId: string, subscription: string) {
         const user = UserManager.getInstance().getUser(userId);
         if (!user) return;
 
-        const eventId = subscription.split('@')[1]?.split('-')[0];
-        if (!eventId) return;
-
-        const cachedEvent = this.eventDataCache.get(eventId);
-
-        if (cachedEvent) {
-            const snapshotMessage: MessageToApi = {
-                type: "ORDERBOOK_SNAPSHOT",
-                payload: {
-                    eventId: eventId,
-                    yesBids: cachedEvent.yesBids,
-                    yesAsks: cachedEvent.yesAsks,
-                    noBids: cachedEvent.noBids,
-                    noAsks: cachedEvent.noAsks,
-                    trades: cachedEvent.trades,
-                    yesPrice: cachedEvent.yesPrice,
-                    noPrice: cachedEvent.noPrice,
-                }
-            };
-            //chagned the types but do not know whether it is efficient or not..recheck
-            user.emitMessage(snapshotMessage);
-            logger.info(`SubscriptionManager | Sent cached snapshot to user ${userId} for event ${eventId}`);
+        const eventId = subscription.split('@')[1]?.split('-')[0]; // Extract eventId if it's a stream channel
+        if (eventId) { // This means it's a depth or trade channel
+            const cachedEvent = this.eventDataCache.get(eventId);
+            if (cachedEvent) {
+                const snapshotMessage: MessageToApi = {
+                    type: "ORDERBOOK_SNAPSHOT",
+                    payload: {
+                        eventId: eventId,
+                        yesBids: cachedEvent.yesBids,
+                        yesAsks: cachedEvent.yesAsks,
+                        noBids: cachedEvent.noBids,
+                        noAsks: cachedEvent.noAsks,
+                        trades: cachedEvent.trades,
+                        yesPrice: cachedEvent.yesPrice,
+                        noPrice: cachedEvent.noPrice,
+                    }
+                };
+                user.emitMessage(snapshotMessage);
+                logger.info(`SubscriptionManager | Sent cached snapshot to user ${userId} for event ${eventId}`);
+            }
         }
+        // For clientId channels, there's no "cached data" to send from here.
+        // The engine sends the direct response.
     }
 
-    unsubscribe(userId: string, subscription: string) {
+    public unsubscribe(userId: string, subscription: string) {
         const subscriptions = this.subscriptions.get(userId);
         if (subscriptions) {
             this.subscriptions.set(userId, subscriptions.filter((s) => s !== subscription));
@@ -238,7 +298,7 @@ export class SubscriptionManager {
 
             if (this.reverseSubscriptions.get(subscription)?.length === 0) {
                 this.reverseSubscriptions.delete(subscription);
-                this.redisClient.unsubscribe(subscription);
+                this.centralizedSubscribeManager.unsubscribeFromChannel(subscription);
                 logger.info(`SubscriptionManager | Unsubscribed from Redis channel: ${subscription}`);
             }
         }

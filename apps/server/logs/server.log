@@ -1,60 +1,32 @@
-[ 2025-07-27 15:34:52 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-27 15:34:52 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-27 15:34:52 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-27 15:34:52 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-27 15:34:54 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"5d4052b9-0b05-4b21-90cd-e5084151f179","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":60,"quantity":10,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-27 15:34:54 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 6.388 ms
-[ 2025-07-27 15:34:59 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"ccfc9f8e-12f0-4c45-8f86-6d1a97d1be4c","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":61,"quantity":5,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-27 15:34:59 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.125 ms
-[ 2025-07-27 15:35:05 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"d13be44d-8e72-43b0-9c09-1a33f1671fb4","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":59,"quantity":5,"action":"sell","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-27 15:35:05 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.740 ms
-[ 2025-07-27 16:19:26 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-27 16:19:27 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-27 16:19:27 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-27 16:19:27 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-27 16:19:30 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"5b3298f9-a6d1-4eab-b7a7-434ef537122e","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":60,"quantity":10,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-27 16:19:30 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 6.339 ms
-[ 2025-07-27 16:19:36 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"a2f68e4d-e14c-4fd7-887d-356662bc4919","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":61,"quantity":5,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-27 16:19:36 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.517 ms
-[ 2025-07-27 16:19:41 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"4c3bdfe1-f846-477e-8612-ff51ad9622a0","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":59,"quantity":5,"action":"sell","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-27 16:19:41 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 3.109 ms
-[ 2025-07-27 17:27:25 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-27 17:27:25 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-27 17:27:25 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-27 17:27:25 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-27 17:28:35 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"85c6d18a-0e8d-4629-b7c5-350a1ef1b5fc","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":10,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-27 17:28:35 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 6.395 ms
-[ 2025-07-27 17:28:47 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"3ad629a0-ef4a-4060-817b-6942f8716e55","message":{"type":"CREATE_ORDER","data":{"price":40,"quantity":20,"action":"buy","outcome":"no","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-27 17:28:47 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 3.158 ms
-[ 2025-07-27 17:29:01 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"aa25db11-4cc6-423c-9ba9-4ff050fa678f","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":10,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-27 17:29:01 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 3.689 ms
-[ 2025-07-27 17:31:42 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"823e61a6-ee30-4e73-b73e-63025555e72f","message":{"type":"CREATE_ORDER","data":{"price":60,"quantity":1,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-27 17:31:42 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.030 ms
-[ 2025-07-27 17:33:42 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-27 17:33:42 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-27 17:33:42 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-27 17:33:42 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-27 17:44:01 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-27 17:44:01 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-27 17:44:01 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-27 17:44:01 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-27 17:44:05 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"a8cfd099-7b52-483e-ac46-0651b62ccf58","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":61,"quantity":5,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-27 17:44:05 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 6.032 ms
-[ 2025-07-27 17:44:16 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"2299bc8b-c494-42ee-bf67-a7f8d07b249a","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":59,"quantity":5,"action":"sell","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-27 17:44:16 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.365 ms
-[ 2025-07-27 17:44:24 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"7b442d29-fd95-4430-a430-8aaa3cf2209c","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":41,"quantity":5,"action":"buy","outcome":"no","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-27 17:44:24 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.908 ms
-[ 2025-07-27 17:44:31 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"e666e64c-ed4e-422c-bebe-fbb94560783e","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":39,"quantity":5,"action":"sell","outcome":"no","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-27 17:44:31 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.788 ms
-[ 2025-07-27 17:44:39 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"bef5b65f-6885-4006-ac79-e3ac5896950f","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":58,"quantity":10,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-27 17:44:39 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.666 ms
-[ 2025-07-27 17:44:48 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"431838ed-0ca3-4097-a4d7-4d895d506c1b","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":62,"quantity":10,"action":"sell","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-27 17:44:48 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 1.982 ms
-[ 2025-07-27 17:44:57 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"b4ed034a-77b7-46c4-ada1-b2fbb0caddfe","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":65,"quantity":20,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-27 17:44:57 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.149 ms
-[ 2025-07-27 17:45:05 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"b8c820d4-2687-444c-8ba7-a5c68a0280a6","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":35,"quantity":20,"action":"sell","outcome":"no","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-27 17:45:05 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 1.910 ms
-[ 2025-07-27 18:32:07 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-27 18:32:07 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-27 18:32:07 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-27 18:32:07 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-28 01:17:25 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
+[ 2025-07-28 01:17:25 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-28 01:17:25 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
+[ 2025-07-28 01:17:25 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-28 01:17:47 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"32a9b486-f8c4-4e6c-be97-004343f7fccf","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":60,"quantity":5,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
+[ 2025-07-28 01:17:47 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 6.238 ms
+[ 2025-07-28 01:17:55 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"48c084ff-e839-4180-a8c2-76cec67bde9b","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":60.75,"quantity":5,"action":"sell","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
+[ 2025-07-28 01:17:55 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.694 ms
+[ 2025-07-28 01:18:19 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"01fb022f-97f5-4885-91f8-ce1d7d1c78f2","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":39,"quantity":5,"action":"sell","outcome":"no","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
+[ 2025-07-28 01:18:19 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.948 ms
+[ 2025-07-28 01:18:32 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"e1acaae6-bc3e-42e9-9c0e-88643e2cc8e7","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":60.9990234375,"quantity":10,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
+[ 2025-07-28 01:18:32 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.182 ms
+[ 2025-07-28 01:18:49 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"afe21dc1-6de1-4753-9967-5617973882f6","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":62,"quantity":10,"action":"sell","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
+[ 2025-07-28 01:18:49 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.128 ms
+[ 2025-07-28 01:19:04 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"74bc5c42-5979-4344-9716-871c69118f7d","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":65,"quantity":20,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
+[ 2025-07-28 01:19:04 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.115 ms
+[ 2025-07-28 01:19:16 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"b1f0b330-e6fa-46fc-b1c7-94d3b5976134","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":34.25,"quantity":20,"action":"sell","outcome":"no","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
+[ 2025-07-28 01:19:16 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 3.408 ms
+[ 2025-07-28 01:27:36 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
+[ 2025-07-28 01:27:36 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-28 01:27:36 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
+[ 2025-07-28 01:27:36 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-28 01:28:54 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"d3531c64-3e4f-4f22-9c77-031fbf5d9234","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":63.499755859375,"quantity":10,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
+[ 2025-07-28 01:28:54 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 6.758 ms
+[ 2025-07-28 02:00:00 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
+[ 2025-07-28 02:00:00 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-28 02:00:00 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
+[ 2025-07-28 02:00:00 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-28 02:28:08 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
+[ 2025-07-28 02:28:08 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-28 02:28:08 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
+[ 2025-07-28 02:28:08 ] -  [32minfo[39m  - SERVER | Listening on port 3000

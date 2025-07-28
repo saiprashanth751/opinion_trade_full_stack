@@ -1,3 +1,4 @@
+import { MessageToApi } from "@trade/types"
 
 export const subscribeOrderbook = "subscribe_orderbook";
 export const unsubscribeOrderbook = "unsubscribe_orderbook";
@@ -14,15 +15,15 @@ export type UnsubscribeMessage = {
 
 export type IncomingMessage = SubscribeMessage | UnsubscribeMessage;
 
-export type DepthUpdateMessage = {
-    type: "Depth",
-    data: {
-        b?: [string, string][],
-        a?: [string, string][],
-        id: number,
-        e: "depth"
-    }
-}
+// export type DepthUpdateMessage = {
+//     type: "Depth",
+//     data: {
+//         b?: [string, string][],
+//         a?: [string, string][],
+//         id: number,
+//         e: "depth"
+//     }
+// }
 
 export type ClientIdMessage = {
     type: "CLIENT_ID";
@@ -44,4 +45,6 @@ export type EventSummaryMessage = {
     }
 }
 
-export type OutgoingMessage = DepthUpdateMessage | ClientIdMessage | EventSummaryMessage;
+
+
+export type OutgoingMessage = ClientIdMessage | EventSummaryMessage | MessageToApi;

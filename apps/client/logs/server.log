@@ -1,3 +1,12 @@
 [ 2025-07-27 17:34:23 ] -  [31merror[39m  - Error adding to the order queue: The client is closed
 [ 2025-07-27 17:34:28 ] -  [31merror[39m  - Error adding to the order queue: The client is closed
 [ 2025-07-27 17:34:35 ] -  [31merror[39m  - Error adding to the order queue: The client is closed
+[ 2025-07-28 01:29:46 ] -  [31merror[39m  - Error adding to the order queue: The client is closed
+[ 2025-07-28 01:29:51 ] -  [31merror[39m  - Error adding to the order queue: The client is closed
+[ 2025-07-28 02:00:15 ] -  [31merror[39m  - Error adding to the order queue: The client is closed
+[ 2025-07-28 02:00:35 ] -  [31merror[39m  - Error adding to the order queue: The client is closed
+[ 2025-07-28 02:28:20 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
+[ 2025-07-28 02:28:20 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-28 02:28:20 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"7a7573d4-9e41-40b8-b459-208b600b4df4","message":{"type":"ON_RAMP","data":{"amount":100,"userId":"cmdfuql3a0000kcbsg7zsa3uw","txnId":"b92339f9-51dc-4770-9b30-14974e9f59a1"}}}
+[ 2025-07-28 02:28:25 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-28 02:28:25 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"ae5fb34f-5a96-4c3b-a054-8dc90425cf8d","message":{"type":"ON_RAMP","data":{"amount":100,"userId":"cmdfuql3a0000kcbsg7zsa3uw","txnId":"7fc177c6-d575-4d8c-9cea-15fa53fcb7b2"}}}

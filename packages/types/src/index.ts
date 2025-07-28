@@ -24,6 +24,7 @@ export type TEvent = {
     // quantity: number
 }
 
+
 export const TRADE_ADDED = "TRADE_ADDED"
 export const ORDER_UPDATE = "ORDER_UPDATE"
 export const CREATE_ORDER = "CREATE_ORDER"
@@ -31,16 +32,16 @@ export const CANCEL_ORDER = "CANCEL_ORDER"
 export const ON_RAMP = "ON_RAMP"
 export const GET_DEPTH = "GET_DEPTH"
 export const GET_OPEN_ORDERS = "GET_OPEN_ORDERS"
+export const GET_ORDERBOOK_SNAPSHOT = "GET_ORDERBOOK_SNAPSHOT" 
+export const ORDERBOOK_SNAPSHOT = "ORDERBOOK_SNAPSHOT" 
 
-
-// DB Operation Types
 
 export type DbMessage =
     | {
         type: typeof TRADE_ADDED;
         data: {
             id: string;
-            isBuyerMaker: boolean; 
+            isBuyerMaker: boolean;
             price: number;
             quantity: number;
             timestamp: number;
@@ -59,7 +60,6 @@ export type DbMessage =
         };
     };
 
-// Sever Types: Responding to Server
 
 export interface Order {
     price: number;
@@ -110,10 +110,16 @@ export type MessageFromApi =
             market: string;
         };
     }
+    | { 
+        type: typeof GET_ORDERBOOK_SNAPSHOT;
+        data: {
+            eventId: string;
+        };
+    }
 
 export type MessageToApi =
     | {
-        type: "DEPTH";
+        type: "DEPTH"; 
         payload: {
             bids: [string, string][];
             asks: [string, string][];
@@ -124,7 +130,7 @@ export type MessageToApi =
         }
     }
     | {
-        type: "ORDER_PLACED";
+        type: "ORDER_PLACED"; 
         payload: {
             orderId: string;
             executedQty: number;
@@ -136,7 +142,7 @@ export type MessageToApi =
         };
     }
     | {
-        type: "ORDER_CANCELLED";
+        type: "ORDER_CANCELLED"; 
         payload: {
             orderId: string;
             executedQty: number;
@@ -144,15 +150,27 @@ export type MessageToApi =
         };
     }
     | {
-        type: "OPEN_ORDERS";
+        type: "OPEN_ORDERS"; 
         payload: {
             openOrders: Order[]
         };
-    };
+    }
+    | { 
+        type: typeof ORDERBOOK_SNAPSHOT; 
+        payload: {
+            eventId: string;
+            yesBids: [string, string][];
+            yesAsks: [string, string][];
+            noBids: [string, string][];
+            noAsks: [string, string][];
+            trades: TradeAddedMessage['data'][];
+            yesPrice: number;
+            noPrice: number;
+        };
+    }
 
 
 // Web Socket Types...
-// Need to dig deep into these..
 export type TickerUpdateMessage = {
     stream: string;
     data: {
@@ -195,7 +213,7 @@ export type EventSummary = {
 }
 
 export type EventSummaryMessage = {
-    type: "EVENT_SUMMARY",
+    type: "EVENT_SUMMARY";
     payload: {
         events: EventSummary[];
     }
@@ -207,3 +225,4 @@ export type WsMessage =
     | DepthUpdateMessage
     | TradeAddedMessage
     | EventSummaryMessage
+    | MessageToApi;

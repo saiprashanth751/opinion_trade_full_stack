@@ -60,7 +60,7 @@ export default function DashboardPage() {
       }
       setLoadingContracts(false);
 
-      // Fetch open orders
+      // Fetch open orders -> need recheck, may not be working...
       const eventsResult = await getEvents();
       if (eventsResult && eventsResult.length > 0) {
         const eventIds = eventsResult.map(event => event.id);

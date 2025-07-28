@@ -11,7 +11,7 @@ import { v4 as uuidv4 } from "uuid";
 import { SuccessResponse } from "../../utils/wrappers/success.res";
 
 type TPlaceOrderReq = {
-    event_id: string; //might be string. Need to check
+    eventId: string; //might be string. Need to check
     l1_expected_price: number;
     l1_order_quantity: number;
     action: orderType; // type: buy or sell
@@ -20,12 +20,12 @@ type TPlaceOrderReq = {
 }
 
 export const placeHandler = AsyncWrapper(async (req: Request<{}, {}, TPlaceOrderReq>, res) => {
-    const {event_id, l1_expected_price, l1_order_quantity, action, outcome, userId} = req.body;
+    const {eventId, l1_expected_price, l1_order_quantity, action, outcome, userId} = req.body;
 
     const messageForEngine = {
         type: "CREATE_ORDER",
         data: {
-            market: event_id,
+            market: eventId,
             price: l1_expected_price,
             quantity: l1_order_quantity,
             action,

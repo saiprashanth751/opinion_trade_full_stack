@@ -1,5 +1,6 @@
+// apps/client/hooks/useOrderbookSocket.ts
 import { useEffect, useState, useRef } from 'react';
-import { WsMessage, DepthUpdateMessage, TradeAddedMessage } from '@trade/types';
+import { WsMessage, DepthUpdateMessage, TradeAddedMessage, ORDERBOOK_SNAPSHOT } from '@trade/types';
 
 interface PricePoint {
   timestamp: number;
@@ -15,7 +16,7 @@ interface OrderbookData {
   trades: TradeAddedMessage['data'][];
   yesPrice: number;
   noPrice: number;
-  priceHistory: PricePoint[]; // New: Array to store historical prices
+  priceHistory: PricePoint[];
 }
 
 export const useOrderbookSocket = (eventId: string) => {
@@ -58,7 +59,41 @@ export const useOrderbookSocket = (eventId: string) => {
       try {
         const message: WsMessage = JSON.parse(event.data);
 
-        if ('stream' in message) {
+        // Correct type narrowing: Check for 'type' property first
+        if ('type' in message) {
+          //are you sure.
+          console.log("Type is present in WS Message");
+          // Now TypeScript knows 'message' has a 'type' property
+          if (message.type === ORDERBOOK_SNAPSHOT) {
+            const snapshot = message.payload; // Now 'payload' is safely accessible
+            tradesRef.current = snapshot.trades; // Initialize trades from snapshot
+            priceHistoryRef.current = []; // Clear existing history, start fresh with snapshot prices
+            if (snapshot.yesPrice > 0 || snapshot.noPrice > 0) {
+                priceHistoryRef.current.push({
+                    timestamp: Date.now(),
+                    yesPrice: snapshot.yesPrice,
+                    noPrice: snapshot.noPrice,
+                });
+            }
+
+            setData(prevData => ({
+                ...prevData,
+                yesBids: snapshot.yesBids,
+                yesAsks: snapshot.yesAsks,
+                noBids: snapshot.noBids,
+                noAsks: snapshot.noAsks,
+                trades: snapshot.trades,
+                yesPrice: snapshot.yesPrice,
+                noPrice: snapshot.noPrice,
+                priceHistory: priceHistoryRef.current,
+            }));
+            console.log("Received initial orderbook snapshot:", snapshot);
+          }
+          // You might have other 'type' based messages here if needed, e.g., 'OPEN_ORDERS'
+          // else if (message.type === "SOME_OTHER_MESSAGE_TYPE") { ... }
+
+        } else if ('stream' in message) {
+          // Now TypeScript knows 'message' has a 'stream' property
           if (message.stream.startsWith('depth@')) {
             const depthData = (message as DepthUpdateMessage).data;
             const outcome = message.stream.includes('-yes') ? 'yes' : 'no';
@@ -92,17 +127,16 @@ export const useOrderbookSocket = (eventId: string) => {
                 newData.noPrice = currentNoPrice;
               }
 
-              
               const lastPricePoint = priceHistoryRef.current[priceHistoryRef.current.length - 1];
               const now = Date.now();
-              const PRICE_UPDATE_THRESHOLD = 0.1; 
-              const TIME_UPDATE_INTERVAL = 5000; 
+              const PRICE_UPDATE_THRESHOLD = 0.1;
+              const TIME_UPDATE_INTERVAL = 5000;
               if (!lastPricePoint ||
                   Math.abs(currentYesPrice - lastPricePoint.yesPrice) >= PRICE_UPDATE_THRESHOLD ||
                   Math.abs(currentNoPrice - lastPricePoint.noPrice) >= PRICE_UPDATE_THRESHOLD ||
                   (now - lastPricePoint.timestamp) >= TIME_UPDATE_INTERVAL) {
                 priceHistoryRef.current = [...priceHistoryRef.current, { timestamp: now, yesPrice: currentYesPrice, noPrice: currentNoPrice }];
-                
+
                 if (priceHistoryRef.current.length > 100) {
                   priceHistoryRef.current = priceHistoryRef.current.slice(priceHistoryRef.current.length - 100);
                 }

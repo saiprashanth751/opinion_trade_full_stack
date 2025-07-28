@@ -36,6 +36,11 @@ export async function rechargeBalance(amount: number) {
       },
     };
 
+    console.log("ON_RAMP message structure:", JSON.stringify({
+      clientId: uuidv4(),
+      message: messageForEngine
+    }));
+
     await addToOrderQueue({
       clientId: uuidv4(), // A new client ID for this specific request
       message: messageForEngine,

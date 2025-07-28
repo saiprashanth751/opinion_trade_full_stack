@@ -1,9 +1,10 @@
 import { WebSocketServer } from "ws";
 import { UserManager } from "./classes/UserManager";
 import dotenv from "dotenv"
-import { EventSummary, EventSummaryMessage } from "./types";
+import { EventSummary, EventSummaryMessage } from "./types"; // Assuming EventSummaryMessage is defined here or imported from @trade/types
 import { SubscribeManager } from "@trade/order-queue";
 import { logger } from "@trade/logger";
+import { SubscriptionManager } from "./classes/SubscriptionManager"; // Import SubscriptionManager
 
 dotenv.config();
 
@@ -20,16 +21,13 @@ wss.on("connection", (ws) => {
     UserManager.getInstance().addUser(ws);
 })
 
-//todo: SubscribeManager's client connects in its constructor, but explicit ensureConnected is good practice
 const subscribeManager = SubscribeManager.getInstance();
-// await subscribeManager.ensureConnected();
-// logger.info("ENGINE_SERVICE | Connected to Redis");
-
 subscribeManager.subscribeToChannel("event_summaries", (channel, message) => {
     try {
         const parsedMessage: EventSummaryMessage = JSON.parse(message);
         if(parsedMessage.type === "EVENT_SUMMARY") {
-            UserManager.getInstance().broadcastMessage(parsedMessage);
+            // Publish to a specific channel for client-side event summaries
+            SubscriptionManager.getInstance().publishToChannel("client_event_summaries", parsedMessage);
         }
     } catch(error) {
         logger.error(`WSS | Error parsing event summary message from Redis: ${error}`);

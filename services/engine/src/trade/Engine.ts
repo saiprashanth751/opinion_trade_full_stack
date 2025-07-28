@@ -861,8 +861,8 @@ export class Engine {
         const depth = targetOrderbook.getMarketDepth();
 
         //send to API (using wsMessge contoller in Redis Manager)...
-        RedisManager.getInstance().publishMessage(`depth@${market} - ${outcome}`, {
-            stream: `depthj@${market}-${outcome}`,
+        RedisManager.getInstance().publishMessage(`depth@${market}-${outcome}`, {
+            stream: `depth@${market}-${outcome}`,
             data: {
                 b: depth.bids,
                 a: depth.asks,
@@ -882,7 +882,7 @@ export class Engine {
 
         fills.forEach((fill) => {
             //send to API (using wsMessge contoller in Redis Manager)...
-            RedisManager.getInstance().publishMessage(`trade@${market} - ${outcome}`, {
+            RedisManager.getInstance().publishMessage(`trade@${market}-${outcome}`, {
                 stream: `trade@${market} - ${outcome}`,
                 //Recheck required
                 data: {

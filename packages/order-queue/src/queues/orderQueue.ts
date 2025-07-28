@@ -1,12 +1,15 @@
 import { RedisManager } from "../classes/RedisManager";
 import { logger } from "@trade/logger"
 
-let redisClient = RedisManager.getInstance().getClient();
+let redisManager = RedisManager.getInstance();
 
 const QUEUE_NAME = "ORDER_QUEUE";
 
 export const addToOrderQueue  = async (order: object) => {
     try {
+        await redisManager.ensureConnected();
+        const redisClient = redisManager.getClient();
+
         await redisClient.lPush(QUEUE_NAME, JSON.stringify(order));
         logger.info(`Order successfully added to queue:  ${JSON.stringify(order)}`);
     }catch(err){

@@ -65,7 +65,28 @@ export class RedisManager {
         this.client.publish(channel, JSON.stringify(message))
     }
 
-    public sendToApi(clientId: string, message: MessageToApi) {
-        this.client.publish(clientId, JSON.stringify(message))
+    // Add this enhanced sendToApi method to your RedisManager class
+
+public sendToApi(clientId: string, message: MessageToApi) {
+    try {
+        console.log(`REDIS_MANAGER | Publishing to client channel: ${clientId}`);
+        console.log(`REDIS_MANAGER | Message type: ${message.type}`);
+        console.log(`REDIS_MANAGER | Message payload:`, JSON.stringify(message.payload));
+        
+        const messageString = JSON.stringify(message);
+        console.log(`REDIS_MANAGER | Full message string:`, messageString);
+        
+        this.client.publish(clientId, messageString).then((result) => {
+            console.log(`REDIS_MANAGER | Publish result for ${clientId}: ${result} subscribers received the message`);
+            if (result === 0) {
+                console.warn(`REDIS_MANAGER | WARNING: No subscribers listening to channel ${clientId}`);
+            }
+        }).catch((error) => {
+            console.error(`REDIS_MANAGER | Error publishing to ${clientId}:`, error);
+        });
+        
+    } catch (error) {
+        console.error(`REDIS_MANAGER | Error in sendToApi for client ${clientId}:`, error);
     }
+}
 }

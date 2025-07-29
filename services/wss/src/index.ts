@@ -1,76 +1,43 @@
+// services/wss/src/index.ts
 import { WebSocketServer } from "ws";
 import { UserManager } from "./classes/UserManager";
 import dotenv from "dotenv";
-// import { EventSummaryMessage } from "./types";
 import { SubscribeManager } from "@trade/order-queue";
 import { logger } from "@trade/logger";
 import { SubscriptionManager } from "./classes/SubscriptionManager";
 
-// Initialize environment variables first
 dotenv.config();
 
 const port = process.env.PORT as unknown as number || 8080;
 
-// WebSocket Server Setup
 const wss = new WebSocketServer({ port: port });
 
-// Connection Handling
 wss.on("listening", () => {
-    logger.info(`WebSocket server running on ws://localhost:${port}`);
+    console.log(`WebSocket server running on ws://localhost:${port}`);
 });
 
 wss.on("connection", (ws) => {
+    console.log("New WebSocket connection established");
     UserManager.getInstance().addUser(ws);
 });
 
-// Redis Pub/Sub Initialization
+// Initialize Redis connections and managers
 (async () => {
-    // Ensure the centralized Redis Pub/Sub client is connected
-    const centralizedSubscribeManager = SubscribeManager.getInstance();
     try {
+        console.log("WSS | Initializing Redis connections...");
+        
+        // Ensure the centralized Redis Pub/Sub client is connected
+        const centralizedSubscribeManager = SubscribeManager.getInstance();
         await centralizedSubscribeManager.ensureConnected();
-        logger.info("WSS | Centralized Redis Pub/Sub client connected successfully.");
+        console.log("WSS | Centralized Redis Pub/Sub client connected successfully.");
+
+        // Initialize the SubscriptionManager (this will handle event_summaries subscription)
+        SubscriptionManager.getInstance();
+        console.log("WSS | SubscriptionManager initialized successfully.");
+
+        console.log("WSS | All systems initialized and ready!");
     } catch (error) {
-        logger.error("WSS | Failed to connect Centralized Redis Pub/Sub client at startup:", error);
-        process.exit(1); // Exit the process if the critical Redis connection fails
+        console.error("WSS | Failed to initialize:", error);
+        process.exit(1);
     }
-
-    // Initialize the WSS's SubscriptionManager. Its constructor will handle
-    // subscribing to global channels like "event_summaries" and setting up its own
-    // redisCallbackHandler for all messages.
-    SubscriptionManager.getInstance(); // Simply call getInstance to ensure it's initialized
-
-    // The rest of the application logic (WebSocket server, user management) continues as before.
 })();
-
-
-
-
-
-
-
-
-
-
-
-//we need to braodcast event summaries(dynamic price changing)
-
-// setInterval(() => {
-//     const allEventSummaries = engine.getAllEventOrderbooks();
-//     const eventSummaries: EventSummary[] = [];
-
-//     for(const[eventId, orderbooks] of allEventSummaries.entries()) {
-//         const yesPrice = orderbooks.yes.getMarketPrice();
-//         const noPrice = orderbooks.no.getMarketPrice();
-//         eventSummaries.push({eventId, yesPrice, noPrice})
-//     }
-
-//     const message: EventSummaryMessage = {
-//         type: "EVENT_SUMMARY",
-//         payload: {
-//             events: eventSummaries,
-//         }
-//     }
-//     //broadcast to all connected users...
-//     UserManager.getInstance().broadcastMessage(message);
-// }, 2000);

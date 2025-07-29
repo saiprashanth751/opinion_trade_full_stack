@@ -1,3 +1,4 @@
+// packages/order-queue/src/classes/SubscribeManager.ts
 import { createClient, RedisClientType } from "redis";
 import { logger } from "@trade/logger";
 import dotenv from "dotenv";
@@ -11,7 +12,7 @@ export class SubscribeManager {
         dotenv.config();
         const redisUrl = process.env.REDIS_URL || 'redis://localhost:6379';
 
-        this.client = createClient({ url: redisUrl });
+        this.client = createClient({url : redisUrl});
 
         this.client.on('error', (err) => {
             logger.error('SUBSCRIBE_MANAGER | Redis Client Error:', err);
@@ -28,14 +29,13 @@ export class SubscribeManager {
         this.client.on('reconnecting', () => logger.info('SUBSCRIBE_MANAGER | Redis client reconnecting...'));
     }
 
-    public static getInstance() {
-        if (!this.instance) {
+    public static getInstance(){
+        if(!this.instance){
             this.instance = new SubscribeManager();
         }
         return this.instance;
     }
 
-    //  The redis library defines the order and names of the arguments it passes to its callback: the first argument is the message content, and the second is the channel name.
     public async ensureConnected() {
         if (this.client.isReady) {
             logger.info('SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.');
@@ -58,12 +58,15 @@ export class SubscribeManager {
         listener: (message: string, channel: string) => void
     ) {
         await this.ensureConnected();
-        this.client.subscribe(channel, listener);
+        // Explicitly define the callback for the Redis client's subscribe method
+        // to ensure the arguments are passed to the listener in the correct order.
+        // The node-redis client's subscribe callback is (message, channel).
+        this.client.subscribe(channel, (redisMessage: string, redisChannelName: string) => {
+            listener(redisMessage, redisChannelName); // Pass them as (message, channel)
+        });
     }
 
-    public unsubscribeFromChannel(channel: string) {
+    public unsubscribeFromChannel(channel: string){
         this.client.unsubscribe(channel);
     }
-
 }
-

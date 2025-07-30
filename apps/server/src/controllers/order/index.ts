@@ -3,7 +3,7 @@
 
 
 //Are you sure that you have implemented all the routes??
-import { orderType, sides } from "@trade/types";
+import { MessageFromApi, orderType, sides } from "@trade/types";
 import { AsyncWrapper } from "../../utils/asynCatch";
 import { addToOrderQueue } from "@trade/order-queue";
 import { Request } from "express";
@@ -22,7 +22,7 @@ type TPlaceOrderReq = {
 export const placeHandler = AsyncWrapper(async (req: Request<{}, {}, TPlaceOrderReq>, res) => {
     const {eventId, l1_expected_price, l1_order_quantity, action, outcome, userId} = req.body;
 
-    const messageForEngine = {
+    const messageForEngine: MessageFromApi = {
         type: "CREATE_ORDER",
         data: {
             market: eventId,

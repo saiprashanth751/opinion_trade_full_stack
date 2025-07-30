@@ -1,10 +1,10 @@
 // apps/client/app/layout.tsx
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
+import "./globals.css"
 import { QueryProvider } from "@/components/providers/QueryProvider";
 import { NextAuthProvider } from "@/components/providers/NextAuthProvider";
-import Link from "next/link"; // Import Link from next/link
+import Link from "next/link";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",

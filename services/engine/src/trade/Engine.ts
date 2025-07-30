@@ -32,100 +32,151 @@ const SYNTHETIC_MARKET_MAKER_USER_ID = process.env.SYNTHETIC_MARKET_MAKER_USER_I
 const SYNTHETIC_ORDER_QUANTITY = Number(process.env.SYNTHETIC_ORDER_QUANTITY) || 10;
 const PRICE_ADJUSTMENT_INTERVAL_MS = Number(process.env.PRICE_ADJUSTMENT_INTERVAL_MS) || 5000;
 const MARKET_MAKER_SPREAD = Number(process.env.MARKET_MAKER_SPREAD) || 1;
+const EVENT_SYNC_INTERVAL_MS = Number(process.env.EVENT_SYNC_INTERVAL_MS) || 10000;
 
 export class Engine {
     //balances -> funds and asset balances
     private balances: Map<string, UserBalance> = new Map();
     private marketOrderbooks: Map<string, { yes: Orderbook; no: Orderbook }> = new Map();
     private syntheticOrders: Map<string, { yesBidId?: string, yesAskId?: string, noBidId?: string, noAskId?: string }> = new Map();
+    private lastEventSyncTime: Date = new Date(0);
 
     constructor() {
-        let snapshot = null;
-        try {
-            if (process.env.WITH_SNAPSHOT === "true") {
-                snapshot = fs.readFileSync("./snapshot.json");
-            }
-        } catch (error) {
-            logger.info("No snapshot found");
-        }
+        this.initializeEngine().then(() => logger.info("Engine initialization complete"))
+        .catch(err => logger.error(`Engine initialization failed: ${err}`));
+    }   
 
-        if (snapshot) {
-            const parsedSnapShot = JSON.parse(snapshot.toString());
-            //recheck
-            // logger.info("Snapshot loading is not fully implemented for new orderbook structure.");
-            // this.marketOrderbooks.set(EXAMPLE_EVENT, {
-            //     yes: new Orderbook([], [], EXAMPLE_EVENT, 1, 0),
-            //     no: new Orderbook([], [], EXAMPLE_EVENT, 1, 0),
-            // });
-            //Load orderbooks
-            parsedSnapShot.orderbooks.forEach((obData: any) => {
+    private async initializeEngine() {
+        try {
+            //try loading snapshot
+            await this.tryLoadSnapshot();
+            //include events that are not included
+            await this.initializeFromDatabase();
+            //set up intervals
+            this.setupIntervals();
+
+            logger.info(`Engine initialized. Market Maker ID: ${SYNTHETIC_MARKET_MAKER_USER_ID}`);
+        } catch(error) {
+            logger.error(`Critical engine initialization error: ${error}`);
+            throw error;
+        }
+    }
+
+    private async tryLoadSnapshot() {
+        if(process.env.WITH_SNAPSHOT !== "true") return;
+        
+        try {
+            const snapshot = fs.readFileSync("./snapshot.json");
+            const parsedSnapshot = JSON.parse(snapshot.toString());
+
+            parsedSnapshot.orderbooks.forEach((obData: any) => {
                 this.marketOrderbooks.set(obData.market, {
-                    //lastTradeId is not properly updated -> need to check
-                    yes: new Orderbook(obData.yes.bids, obData.yes.asks, obData.market, obData.yes.lastTradeId, obData.yes.currentPrice),
-                    no: new Orderbook(obData.no.bids, obData.no.asks, obData.market, obData.no.lastTradeId, obData.no.currentPrice)
+                    yes: new Orderbook(
+                        obData.yes.bids,
+                        obData.yes.asks,
+                        obData.market,
+                        obData.yes.lastTradeId,
+                        obData.yes.currentPrice
+                    ),
+                    no: new Orderbook(
+                        obData.no.bids,
+                        obData.no.asks,
+                        obData.market,
+                        obData.no.lastTradeId,
+                        obData.no.currentPrice
+                    )
                 })
             })
-            this.balances = new Map(parsedSnapShot.balances);
-            logger.info("Snapshot loaded successfully.");
-        } else {
-            //     //Need to comeback for verification...
-            //     // this.marketOrderbooks.set(EXAMPLE_EVENT, {
-            //     //     yes: new Orderbook([], [], EXAMPLE_EVENT, 1, 0),
-            //     //     no: new Orderbook([], [], EXAMPLE_EVENT, 1, 0),
-            //     // });
-            //     //is there any conflict, what is the optimal solution
-            //     this.setBaseBalances();
-            // -> constructors cannot be async. 
-            // ->  no snapshot -> initialize orderbooks from existing events in the database
-            this.initializeFromDatabase();
+
+            this.balances = new Map(parsedSnapshot.balances);
+            logger.info("Snapshot loaded successfully");
+        } catch(error) {
+            logger.info("No snapshot found or error loading snapshot");
         }
-        logger.info(`Raw SYNTHETIC_MARKET_MAKER_USER_ID: ${process.env.SYNTHETIC_MARKET_MAKER_USER_ID}`);
-        logger.info(`Raw SYNTHETIC_ORDER_QUANTITY: ${process.env.SYNTHETIC_ORDER_QUANTITY}`);
-
-        logger.info(`Engine initialized. Synthetic Market Maker ID: , ${SYNTHETIC_MARKET_MAKER_USER_ID}`);
-        logger.info(`Synthetic Order Quantity: , ${SYNTHETIC_ORDER_QUANTITY}`);
-        logger.info(`Engine initialized. Synthetic Market Maker ID: , ${SYNTHETIC_MARKET_MAKER_USER_ID}`);
-        logger.info(`Synthetic Order Quantity: , ${SYNTHETIC_ORDER_QUANTITY}`);
-
-        setInterval(() => {
-            this.saveSnapshot();
-        }, 1000 * 3);
-
-        setInterval(() => {
-            this.runSyntheticMarketMaker();
-        }, PRICE_ADJUSTMENT_INTERVAL_MS)
     }
 
     private async initializeFromDatabase() {
         logger.info("Initializing engine from database...");
         try {
-            const events = await prisma.event.findMany();
-            events.forEach(event => {
-                this.marketOrderbooks.set(event.id, {
-                    yes: new Orderbook([], [], event.id, 0, event.initialYesPrice),
-                    no: new Orderbook([], [], event.id, 0, event.initialNoPrice),
-                });
+            const events = await prisma.event.findMany({
+                orderBy: {
+                    createdAt: 'asc'
+                }
             });
 
-            //imp -> ensure market maker user balance is loaded/initialized
-            const marketMakerUser = await prisma.user.findUnique({
-                where: { id: SYNTHETIC_MARKET_MAKER_USER_ID }
-            });
-
-            //marketMaker -> synthetic user
-            if (marketMakerUser) {
-                this.balances.set(SYNTHETIC_MARKET_MAKER_USER_ID, {
-                    available: marketMakerUser.balance,
-                    locked: 0,
-                });
-                logger.info(`Market maker balance initialized: ${marketMakerUser.balance}`);
-            } else {
-                console.warn(`Market maker user with ID ${SYNTHETIC_MARKET_MAKER_USER_ID} not found in DB. Please ensure it exists and has sufficient balance.`);
+            if(events.length > 0) {
+                this.lastEventSyncTime = events[events.length - 1]?.createdAt!;
             }
+
+            events.forEach(event => {
+                this.initializeEventOrderbook(event);
+            });
+
+            await this.initializeMarketMakerBalance();
 
             logger.info(`Initialized ${events.length} event orderbooks from database.`);
         } catch (error) {
-            logger.error(`Error initializing engine from database:, ${error}`);
+            logger.error(`Database initialization failed: ${error}`);
+            throw error;
+        }
+    }
+
+    private initializeEventOrderbook(event: {id: string; initialYesPrice: number; initialNoPrice: number}) {
+        if(!this.marketOrderbooks.has(event.id)) {
+            this.marketOrderbooks.set(event.id, {
+                yes: new Orderbook([], [], event.id, 0, event.initialYesPrice),
+                no: new Orderbook([], [], event.id, 0, event.initialNoPrice)
+            })
+        }
+    }
+
+    private async initializeMarketMakerBalance() {
+        const marketMakerUser = await prisma.user.findUnique({
+            where: { id: SYNTHETIC_MARKET_MAKER_USER_ID }
+        });
+
+        if (marketMakerUser) {
+            this.balances.set(SYNTHETIC_MARKET_MAKER_USER_ID, {
+                available: marketMakerUser.balance,
+                locked: 0,
+            });
+            logger.info(`Market maker balance initialized: ${marketMakerUser.balance}`);
+        } else {
+            logger.warn(`Market maker user not found in DB. ID: ${SYNTHETIC_MARKET_MAKER_USER_ID}`);
+        }
+    }
+
+    private setupIntervals() {
+        // Snapshot saving
+        setInterval(() => this.saveSnapshot(), 1000 * 3);
+        
+        // Market maker operations
+        setInterval(() => this.runSyntheticMarketMaker(), PRICE_ADJUSTMENT_INTERVAL_MS);
+        
+        // Event synchronization
+        setInterval(() => {
+            this.syncNewEvents()
+                .catch(err => logger.error(`Event sync failed: ${err}`));
+        }, EVENT_SYNC_INTERVAL_MS);
+    }
+
+    private async syncNewEvents() {
+        try {
+            const newEvents = await prisma.event.findMany({
+                where: {
+                    createdAt: { gt: this.lastEventSyncTime }
+                },
+                orderBy: { createdAt: 'asc' }
+            });
+
+            if (newEvents.length > 0) {
+                newEvents.forEach(event => this.initializeEventOrderbook(event));
+                this.lastEventSyncTime = newEvents[newEvents.length - 1]?.createdAt!;
+                logger.info(`Synced ${newEvents.length} new event(s)`);
+            }
+        } catch (error) {
+            logger.error(`Event synchronization error: ${error}`);
+            throw error;
         }
     }
 
@@ -142,28 +193,12 @@ export class Engine {
             balances: Array.from(this.balances.entries()),
         };
 
-        fs.writeFileSync("./snapshot.json", JSON.stringify(toSaveSnapshot))
+        try {
+            fs.writeFileSync("./snapshot.json", JSON.stringify(toSaveSnapshot));
+        } catch (error) {
+            logger.error(`Snapshot save failed: ${error}`);
+        }
     }
-
-    // setBaseBalances() {
-    //     this.balances.set("1", {
-    //         available: 1000,
-    //         locked: 0,
-    //         yesContracts: 0,
-    //         noContracts: 0,
-    //         lockedYesContracts: 0,
-    //         lockedNoContracts: 0
-    //     });
-
-    //     this.balances.set("2", {
-    //         available: 1000,
-    //         locked: 0,
-    //         yesContracts: 0,
-    //         noContracts: 0,
-    //         lockedYesContracts: 0,
-    //         lockedNoContracts: 0
-    //     })
-    // }
 
     public getAllEventOrderbooks() {
         return this.marketOrderbooks;
@@ -1067,17 +1102,164 @@ export class Engine {
             logger.error(`Failed to save user contract for user ${contract.userId} and event ${contract.eventId} to DB:`, error);
         }
     }
-    //core -> synthetic market maker...
-    private async runSyntheticMarketMaker() {
-        logger.info("Running synthetic market maker cycle...");
-        for (const [marketId, orderbooks] of this.marketOrderbooks.entries()) {
-            logger.info(`Processing market ${marketId} for synthetic market maker.`);
+    //core -> synthetic market maker... -->my implementation is not optimal, it is taking so much time and resulting in crashing the app, optimized using claude
 
+    // private async runSyntheticMarketMaker() {
+    //     logger.info("Running synthetic market maker cycle...");
+    //     for (const [marketId, orderbooks] of this.marketOrderbooks.entries()) {
+    //         logger.info(`Processing market ${marketId} for synthetic market maker.`);
+
+    //         const { yes: yesOrderbook, no: noOrderbook } = orderbooks;
+
+    //         // Get current market prices
+    //         const P_yes = yesOrderbook.getMarketPrice();
+    //         //initially P_no was not used...clearly error!!
+    //         const P_no = noOrderbook.getMarketPrice();
+
+    //         logger.info(`Current market prices for ${marketId}: P_yes=${P_yes}, P_no=${P_no}`);
+
+    //         // Calculate implied fair price for the 'no' side based on 'yes' price
+    //         const P_no_fair = 100 - P_yes;
+
+    //         // Cancel previous synthetic orders for this market
+    //         const existingSyntheticOrders = this.syntheticOrders.get(marketId);
+    //         if (existingSyntheticOrders) {
+    //             await prisma.$transaction(async (tx) => {
+    //                 if (existingSyntheticOrders.yesBidId) {
+    //                     const order = yesOrderbook.bids.find(o => o.orderId === existingSyntheticOrders.yesBidId);
+    //                     if (order) {
+    //                         yesOrderbook.cancelBid(order);
+    //                         // Also need to release locked funds for the market maker if the order was not filled
+    //                         const userBalance = await this.getUserBalance(SYNTHETIC_MARKET_MAKER_USER_ID, tx);
+    //                         if (userBalance) {
+    //                             userBalance.available += (order.quantity - order.filled) * order.price;
+    //                             userBalance.locked -= (order.quantity - order.filled) * order.price;
+    //                             await this.saveUserBalance(SYNTHETIC_MARKET_MAKER_USER_ID, userBalance, tx);
+    //                         }
+    //                     }
+    //                 }
+    //                 if (existingSyntheticOrders.yesAskId) {
+    //                     const order = yesOrderbook.asks.find(o => o.orderId === existingSyntheticOrders.yesAskId);
+    //                     if (order) {
+    //                         yesOrderbook.cancelAsk(order);
+    //                         // Release locked contracts for the market maker
+    //                         const userContract = await this.getUserContract(SYNTHETIC_MARKET_MAKER_USER_ID, marketId, tx);
+    //                         if (userContract) {
+    //                             userContract.yesContracts += (order.quantity - order.filled);
+    //                             userContract.lockedYesContracts -= (order.quantity - order.filled);
+    //                             await this.saveUserContract(userContract, tx);
+    //                         }
+    //                     }
+    //                 }
+    //                 if (existingSyntheticOrders.noBidId) {
+    //                     const order = noOrderbook.bids.find(o => o.orderId === existingSyntheticOrders.noBidId);
+    //                     if (order) {
+    //                         noOrderbook.cancelBid(order);
+    //                         // Release locked funds for the market maker
+    //                         const userBalance = await this.getUserBalance(SYNTHETIC_MARKET_MAKER_USER_ID, tx);
+    //                         if (userBalance) {
+    //                             userBalance.available += (order.quantity - order.filled) * order.price;
+    //                             userBalance.locked -= (order.quantity - order.filled) * order.price;
+    //                             await this.saveUserBalance(SYNTHETIC_MARKET_MAKER_USER_ID, userBalance, tx);
+    //                         }
+    //                     }
+    //                 }
+    //                 if (existingSyntheticOrders.noAskId) {
+    //                     const order = noOrderbook.asks.find(o => o.orderId === existingSyntheticOrders.noAskId);
+    //                     if (order) {
+    //                         noOrderbook.cancelAsk(order);
+    //                         // Release locked contracts for the market maker
+    //                         const userContract = await this.getUserContract(SYNTHETIC_MARKET_MAKER_USER_ID, marketId, tx);
+    //                         if (userContract) {
+    //                             userContract.noContracts += (order.quantity - order.filled);
+    //                             userContract.lockedNoContracts -= (order.quantity - order.filled);
+    //                             await this.saveUserContract(userContract, tx);
+    //                         }
+    //                     }
+    //                 }
+    //             });
+    //             this.syntheticOrders.delete(marketId); // Clear old IDs
+    //         }
+
+    //         // Place new synthetic orders
+    //         const newSyntheticOrderIds: { yesBidId?: string, yesAskId?: string, noBidId?: string, noAskId?: string } = {};
+
+    //         await prisma.$transaction(async (tx) => {
+    //             // Ensure market maker has enough balance/contracts for initial orders
+    //             // For simplicity, we'll assume the market maker has infinite funds/contracts for now,
+    //             // or you can pre-fund the SYNTHETIC_MARKET_MAKER_USER_ID in your database.
+    //             // A more robust solution would involve a dedicated market maker balance management.
+
+    //             // Place synthetic orders for "yes" outcome
+    //             const yesBidPrice = Math.max(0, P_yes - MARKET_MAKER_SPREAD);
+    //             const yesAskPrice = Math.min(100, P_yes + MARKET_MAKER_SPREAD);
+
+    //             const yesBuyOrder = await this.createOrders(
+    //                 marketId,
+    //                 yesBidPrice,
+    //                 SYNTHETIC_ORDER_QUANTITY,
+    //                 "bid",
+    //                 sides.YES,
+    //                 SYNTHETIC_MARKET_MAKER_USER_ID,
+    //                 tx
+    //             );
+    //             newSyntheticOrderIds.yesBidId = yesBuyOrder.orderId;
+
+    //             const yesSellOrder = await this.createOrders(
+    //                 marketId,
+    //                 yesAskPrice,
+    //                 SYNTHETIC_ORDER_QUANTITY,
+    //                 "ask",
+    //                 sides.YES,
+    //                 SYNTHETIC_MARKET_MAKER_USER_ID,
+    //                 tx
+    //             );
+    //             newSyntheticOrderIds.yesAskId = yesSellOrder.orderId;
+
+    //             // Place synthetic orders for "no" outcome
+    //             const noBidPrice = Math.max(0, P_no_fair - MARKET_MAKER_SPREAD);
+    //             const noAskPrice = Math.min(100, P_no_fair + MARKET_MAKER_SPREAD);
+
+    //             const noBuyOrder = await this.createOrders(
+    //                 marketId,
+    //                 noBidPrice,
+    //                 SYNTHETIC_ORDER_QUANTITY,
+    //                 "bid",
+    //                 sides.NO,
+    //                 SYNTHETIC_MARKET_MAKER_USER_ID,
+    //                 tx
+    //             );
+    //             newSyntheticOrderIds.noBidId = noBuyOrder.orderId;
+
+    //             const noSellOrder = await this.createOrders(
+    //                 marketId,
+    //                 noAskPrice,
+    //                 SYNTHETIC_ORDER_QUANTITY,
+    //                 "ask",
+    //                 sides.NO,
+    //                 SYNTHETIC_MARKET_MAKER_USER_ID,
+    //                 tx
+    //             );
+    //             newSyntheticOrderIds.noAskId = noSellOrder.orderId;
+    //         });
+
+    //         this.syntheticOrders.set(marketId, newSyntheticOrderIds);
+    //         logger.info(`Synthetic orders placed for market ${marketId}. P_yes: ${P_yes}, P_no_fair: ${P_no_fair}`);
+    //     }
+    // }
+
+    
+    // optimized using claude to reduce latency and make successful transaction ops...
+    private async runSyntheticMarketMaker() {
+    logger.info("Running synthetic market maker cycle...");
+    for (const [marketId, orderbooks] of this.marketOrderbooks.entries()) {
+        logger.info(`Processing market ${marketId} for synthetic market maker.`);
+
+        try {
             const { yes: yesOrderbook, no: noOrderbook } = orderbooks;
 
             // Get current market prices
             const P_yes = yesOrderbook.getMarketPrice();
-            //initially P_no was not used...clearly error!!
             const P_no = noOrderbook.getMarketPrice();
 
             logger.info(`Current market prices for ${marketId}: P_yes=${P_yes}, P_no=${P_no}`);
@@ -1085,130 +1267,156 @@ export class Engine {
             // Calculate implied fair price for the 'no' side based on 'yes' price
             const P_no_fair = 100 - P_yes;
 
-            // Cancel previous synthetic orders for this market
+            // Cancel previous synthetic orders for this market - Do this OUTSIDE transaction
             const existingSyntheticOrders = this.syntheticOrders.get(marketId);
             if (existingSyntheticOrders) {
-                await prisma.$transaction(async (tx) => {
-                    if (existingSyntheticOrders.yesBidId) {
-                        const order = yesOrderbook.bids.find(o => o.orderId === existingSyntheticOrders.yesBidId);
-                        if (order) {
-                            yesOrderbook.cancelBid(order);
-                            // Also need to release locked funds for the market maker if the order was not filled
-                            const userBalance = await this.getUserBalance(SYNTHETIC_MARKET_MAKER_USER_ID, tx);
-                            if (userBalance) {
-                                userBalance.available += (order.quantity - order.filled) * order.price;
-                                userBalance.locked -= (order.quantity - order.filled) * order.price;
-                                await this.saveUserBalance(SYNTHETIC_MARKET_MAKER_USER_ID, userBalance, tx);
-                            }
-                        }
-                    }
-                    if (existingSyntheticOrders.yesAskId) {
-                        const order = yesOrderbook.asks.find(o => o.orderId === existingSyntheticOrders.yesAskId);
-                        if (order) {
-                            yesOrderbook.cancelAsk(order);
-                            // Release locked contracts for the market maker
-                            const userContract = await this.getUserContract(SYNTHETIC_MARKET_MAKER_USER_ID, marketId, tx);
-                            if (userContract) {
-                                userContract.yesContracts += (order.quantity - order.filled);
-                                userContract.lockedYesContracts -= (order.quantity - order.filled);
-                                await this.saveUserContract(userContract, tx);
-                            }
-                        }
-                    }
-                    if (existingSyntheticOrders.noBidId) {
-                        const order = noOrderbook.bids.find(o => o.orderId === existingSyntheticOrders.noBidId);
-                        if (order) {
-                            noOrderbook.cancelBid(order);
-                            // Release locked funds for the market maker
-                            const userBalance = await this.getUserBalance(SYNTHETIC_MARKET_MAKER_USER_ID, tx);
-                            if (userBalance) {
-                                userBalance.available += (order.quantity - order.filled) * order.price;
-                                userBalance.locked -= (order.quantity - order.filled) * order.price;
-                                await this.saveUserBalance(SYNTHETIC_MARKET_MAKER_USER_ID, userBalance, tx);
-                            }
-                        }
-                    }
-                    if (existingSyntheticOrders.noAskId) {
-                        const order = noOrderbook.asks.find(o => o.orderId === existingSyntheticOrders.noAskId);
-                        if (order) {
-                            noOrderbook.cancelAsk(order);
-                            // Release locked contracts for the market maker
-                            const userContract = await this.getUserContract(SYNTHETIC_MARKET_MAKER_USER_ID, marketId, tx);
-                            if (userContract) {
-                                userContract.noContracts += (order.quantity - order.filled);
-                                userContract.lockedNoContracts -= (order.quantity - order.filled);
-                                await this.saveUserContract(userContract, tx);
-                            }
-                        }
-                    }
-                });
+                // Cancel orders one by one with separate, smaller transactions
+                if (existingSyntheticOrders.yesBidId) {
+                    await this.cancelSyntheticOrder(marketId, existingSyntheticOrders.yesBidId, 'yes', 'bid');
+                }
+                if (existingSyntheticOrders.yesAskId) {
+                    await this.cancelSyntheticOrder(marketId, existingSyntheticOrders.yesAskId, 'yes', 'ask');
+                }
+                if (existingSyntheticOrders.noBidId) {
+                    await this.cancelSyntheticOrder(marketId, existingSyntheticOrders.noBidId, 'no', 'bid');
+                }
+                if (existingSyntheticOrders.noAskId) {
+                    await this.cancelSyntheticOrder(marketId, existingSyntheticOrders.noAskId, 'no', 'ask');
+                }
+                
                 this.syntheticOrders.delete(marketId); // Clear old IDs
             }
 
-            // Place new synthetic orders
+            // Place new synthetic orders - Each order creation in its own transaction
             const newSyntheticOrderIds: { yesBidId?: string, yesAskId?: string, noBidId?: string, noAskId?: string } = {};
 
-            await prisma.$transaction(async (tx) => {
-                // Ensure market maker has enough balance/contracts for initial orders
-                // For simplicity, we'll assume the market maker has infinite funds/contracts for now,
-                // or you can pre-fund the SYNTHETIC_MARKET_MAKER_USER_ID in your database.
-                // A more robust solution would involve a dedicated market maker balance management.
+            // Place synthetic orders for "yes" outcome
+            const yesBidPrice = Math.max(1, P_yes - MARKET_MAKER_SPREAD); // Avoid 0 price
+            const yesAskPrice = Math.min(99, P_yes + MARKET_MAKER_SPREAD); // Avoid 100 price
 
-                // Place synthetic orders for "yes" outcome
-                const yesBidPrice = Math.max(0, P_yes - MARKET_MAKER_SPREAD);
-                const yesAskPrice = Math.min(100, P_yes + MARKET_MAKER_SPREAD);
-
-                const yesBuyOrder = await this.createOrders(
-                    marketId,
-                    yesBidPrice,
-                    SYNTHETIC_ORDER_QUANTITY,
-                    "bid",
-                    sides.YES,
-                    SYNTHETIC_MARKET_MAKER_USER_ID,
-                    tx
-                );
+            try {
+                const yesBuyOrder = await prisma.$transaction(async (tx) => {
+                    return await this.createOrders(
+                        marketId,
+                        yesBidPrice,
+                        SYNTHETIC_ORDER_QUANTITY,
+                        "bid",
+                        sides.YES,
+                        SYNTHETIC_MARKET_MAKER_USER_ID,
+                        tx
+                    );
+                }, { timeout: 3000 }); // Shorter timeout per transaction
                 newSyntheticOrderIds.yesBidId = yesBuyOrder.orderId;
+            } catch (error) {
+                logger.error(`Failed to create yes bid order for market ${marketId}:`, error);
+            }
 
-                const yesSellOrder = await this.createOrders(
-                    marketId,
-                    yesAskPrice,
-                    SYNTHETIC_ORDER_QUANTITY,
-                    "ask",
-                    sides.YES,
-                    SYNTHETIC_MARKET_MAKER_USER_ID,
-                    tx
-                );
+            try {
+                const yesSellOrder = await prisma.$transaction(async (tx) => {
+                    return await this.createOrders(
+                        marketId,
+                        yesAskPrice,
+                        SYNTHETIC_ORDER_QUANTITY,
+                        "ask",
+                        sides.YES,
+                        SYNTHETIC_MARKET_MAKER_USER_ID,
+                        tx
+                    );
+                }, { timeout: 3000 });
                 newSyntheticOrderIds.yesAskId = yesSellOrder.orderId;
+            } catch (error) {
+                logger.error(`Failed to create yes ask order for market ${marketId}:`, error);
+            }
 
-                // Place synthetic orders for "no" outcome
-                const noBidPrice = Math.max(0, P_no_fair - MARKET_MAKER_SPREAD);
-                const noAskPrice = Math.min(100, P_no_fair + MARKET_MAKER_SPREAD);
+            // Place synthetic orders for "no" outcome
+            const noBidPrice = Math.max(1, P_no_fair - MARKET_MAKER_SPREAD);
+            const noAskPrice = Math.min(99, P_no_fair + MARKET_MAKER_SPREAD);
 
-                const noBuyOrder = await this.createOrders(
-                    marketId,
-                    noBidPrice,
-                    SYNTHETIC_ORDER_QUANTITY,
-                    "bid",
-                    sides.NO,
-                    SYNTHETIC_MARKET_MAKER_USER_ID,
-                    tx
-                );
+            try {
+                const noBuyOrder = await prisma.$transaction(async (tx) => {
+                    return await this.createOrders(
+                        marketId,
+                        noBidPrice,
+                        SYNTHETIC_ORDER_QUANTITY,
+                        "bid",
+                        sides.NO,
+                        SYNTHETIC_MARKET_MAKER_USER_ID,
+                        tx
+                    );
+                }, { timeout: 3000 });
                 newSyntheticOrderIds.noBidId = noBuyOrder.orderId;
+            } catch (error) {
+                logger.error(`Failed to create no bid order for market ${marketId}:`, error);
+            }
 
-                const noSellOrder = await this.createOrders(
-                    marketId,
-                    noAskPrice,
-                    SYNTHETIC_ORDER_QUANTITY,
-                    "ask",
-                    sides.NO,
-                    SYNTHETIC_MARKET_MAKER_USER_ID,
-                    tx
-                );
+            try {
+                const noSellOrder = await prisma.$transaction(async (tx) => {
+                    return await this.createOrders(
+                        marketId,
+                        noAskPrice,
+                        SYNTHETIC_ORDER_QUANTITY,
+                        "ask",
+                        sides.NO,
+                        SYNTHETIC_MARKET_MAKER_USER_ID,
+                        tx
+                    );
+                }, { timeout: 3000 });
                 newSyntheticOrderIds.noAskId = noSellOrder.orderId;
-            });
+            } catch (error) {
+                logger.error(`Failed to create no ask order for market ${marketId}:`, error);
+            }
 
             this.syntheticOrders.set(marketId, newSyntheticOrderIds);
             logger.info(`Synthetic orders placed for market ${marketId}. P_yes: ${P_yes}, P_no_fair: ${P_no_fair}`);
+            
+        } catch (error) {
+            logger.error(`Error in synthetic market maker for market ${marketId}:`, error);
+            // Continue with next market instead of failing completely
         }
     }
+}
+
+// Helper method to cancel synthetic orders
+private async cancelSyntheticOrder(marketId: string, orderId: string, outcome: 'yes' | 'no', orderType: 'bid' | 'ask') {
+    try {
+        await prisma.$transaction(async (tx) => {
+            const marketBooks = this.marketOrderbooks.get(marketId);
+            if (!marketBooks) return;
+
+            const targetOrderbook = outcome === 'yes' ? marketBooks.yes : marketBooks.no;
+            const order = orderType === 'bid' 
+                ? targetOrderbook.bids.find(o => o.orderId === orderId)
+                : targetOrderbook.asks.find(o => o.orderId === orderId);
+
+            if (!order) return;
+
+            if (orderType === 'bid') {
+                targetOrderbook.cancelBid(order);
+                // Release locked funds
+                const userBalance = await this.getUserBalance(SYNTHETIC_MARKET_MAKER_USER_ID, tx);
+                if (userBalance) {
+                    userBalance.available += (order.quantity - order.filled) * order.price;
+                    userBalance.locked -= (order.quantity - order.filled) * order.price;
+                    await this.saveUserBalance(SYNTHETIC_MARKET_MAKER_USER_ID, userBalance, tx);
+                }
+            } else {
+                targetOrderbook.cancelAsk(order);
+                // Release locked contracts
+                const userContract = await this.getUserContract(SYNTHETIC_MARKET_MAKER_USER_ID, marketId, tx);
+                if (userContract) {
+                    if (outcome === 'yes') {
+                        userContract.yesContracts += (order.quantity - order.filled);
+                        userContract.lockedYesContracts -= (order.quantity - order.filled);
+                    } else {
+                        userContract.noContracts += (order.quantity - order.filled);
+                        userContract.lockedNoContracts -= (order.quantity - order.filled);
+                    }
+                    await this.saveUserContract(userContract, tx);
+                }
+            }
+        }, { timeout: 2000 }); // Short timeout for cancellations
+    } catch (error) {
+        logger.error(`Failed to cancel synthetic order ${orderId} for market ${marketId}:`, error);
+    }
+}
 }

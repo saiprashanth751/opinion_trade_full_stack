@@ -165,23 +165,6 @@ export const authOptions: NextAuthOptions = {
     ],
 
     callbacks: {
-        // async signIn({ user, credentials }) {
-        //     if (!user.isVerified) {
-        //         return false;
-        //     }
-
-        //     const isUserExists = await prisma.user.findUnique({
-        //         where: {
-        //             phoneNumber: credentials?.phoneNumber as string,
-        //         },
-        //     })
-
-        //     if (isUserExists) {
-        //         return true;
-        //     }
-
-        //     return false;
-        // },
 
         async jwt({ token, user }) {
             if (user) {

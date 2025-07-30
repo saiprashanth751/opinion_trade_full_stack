@@ -53,7 +53,7 @@ export default function EventDetailsPage() {
       <div className="relative z-10 container mx-auto p-6">
         {/* Header Section */}
         <div className="mb-8">
-          <h1 className="text-4xl font-bold  mb-3 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
+          <h1 className="text-4xl font-bold mb-3 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
             {event.title}
           </h1>
           <p className="text-slate-400 text-lg leading-relaxed max-w-4xl">
@@ -71,11 +71,13 @@ export default function EventDetailsPage() {
                 <span className="text-sm font-medium text-emerald-300">YES</span>
               </div>
               <div className="text-3xl font-bold text-white mb-1">₹{yesPrice.toFixed(6)}</div>
-              {priceChange !== 0 && (
-                <div className={`text-sm font-medium ${priceChange > 0 ? 'text-emerald-400' : 'text-red-400'}`}>
-                  {priceChange > 0 ? '+' : ''}{priceChange.toFixed(6)}
-                </div>
-              )}
+              <div className="h-5 flex items-center justify-center">
+                {priceChange !== 0 && (
+                  <div className={`text-sm font-medium ${priceChange > 0 ? 'text-emerald-400' : 'text-red-400'}`}>
+                    {priceChange > 0 ? '+' : ''}{priceChange.toFixed(6)}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
           
@@ -87,11 +89,13 @@ export default function EventDetailsPage() {
                 <span className="text-sm font-medium text-red-300">NO</span>
               </div>
               <div className="text-3xl font-bold text-white mb-1">₹{noPrice.toFixed(6)}</div>
-              {priceChange !== 0 && (
-                <div className={`text-sm font-medium ${-priceChange > 0 ? 'text-emerald-400' : 'text-red-400'}`}>
-                  {-priceChange > 0 ? '+' : ''}{(-priceChange).toFixed(6)}
-                </div>
-              )}
+              <div className="h-5 flex items-center justify-center">
+                {priceChange !== 0 && (
+                  <div className={`text-sm font-medium ${-priceChange > 0 ? 'text-emerald-400' : 'text-red-400'}`}>
+                    {-priceChange > 0 ? '+' : ''}{(-priceChange).toFixed(6)}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>

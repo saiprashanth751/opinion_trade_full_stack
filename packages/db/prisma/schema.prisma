@@ -13,19 +13,66 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
 model User {
-  id          String         @id @default(cuid())
-  firebaseUid String?        @unique
-  phoneNumber String         @unique
-  balance     Int            @default(0)
-  role        UserRole
-  createdAt   DateTime       @default(now())
-  updatedAt   DateTime       @default(now())
-  events      Event[]        @relation("EventParticipants")
-  contracts   UserContract[]
-  boughtTrades Trade[]       @relation("BuyerTrades") // Added inverse relation for buyer
-  soldTrades  Trade[]        @relation("SellerTrades") // Added inverse relation for seller
-  // expiresAt   DateTime
+  id            String         @id @default(cuid())
+  email         String         @unique
+  password      String
+  emailVerified DateTime?
+  name          String?
+  balance       Int            @default(0)
+  role          UserRole       @default(USER)
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+  accounts      Account[]
+  sessions      Session[]
+  events        Event[]        @relation("EventParticipants")
+  contracts     UserContract[]
+  boughtTrades  Trade[]        @relation("BuyerTrades")
+  soldTrades    Trade[]        @relation("SellerTrades")
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model EmailVerificationToken {
+  id      String   @id @default(cuid())
+  email   String
+  token   String   @unique
+  expires DateTime
+  
+  @@unique([email, token])
 }
 
 model Event {
@@ -39,7 +86,6 @@ model Event {
   expiresAt       DateTime
   initialYesPrice Float
   initialNoPrice  Float
-  // quantity        Int
   sot             String
   traders         Int            @default(0)
   status          EventStatus    @default(ONGOING)
@@ -47,7 +93,7 @@ model Event {
   updatedAt       DateTime       @updatedAt
   participants    User[]         @relation("EventParticipants")
   userContracts   UserContract[]
-  trades          Trade[]        // Added inverse relation for trades
+  trades          Trade[]
 }
 
 model UserContract {
@@ -68,7 +114,7 @@ model UserContract {
 
 model Trade {
   id        String   @id @default(cuid())
-  tradeId   String   @unique // Unique ID for the trade from the engine
+  tradeId   String   @unique
   eventId   String
   event     Event    @relation(fields: [eventId], references: [id])
   buyerId   String
@@ -93,15 +139,3 @@ enum UserRole {
   ADMIN
   USER
 }
-
-// Removed this table because we are using FireBase for OTP Authentication...
-// model OTP {
-//   id         String   @id @default(cuid())
-//   userId     String?
-//   otp        String
-//   createdAt  DateTime @default(now())
-//   expiresAt  DateTime
-//   otpID      String   @unique
-//   isVerified Boolean  @default(false)
-//   user       User?    @relation(fields: [userId], references: [id])
-// }

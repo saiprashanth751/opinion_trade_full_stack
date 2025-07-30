@@ -6756,3 +6756,785 @@
 [ 2025-07-30 14:24:12 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
 [ 2025-07-30 14:24:15 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
 [ 2025-07-30 14:24:17 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 17:09:57 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Attempting to connect Redis client...
+[ 2025-07-30 17:09:57 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-30 17:09:57 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 17:09:57 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 17:09:57 ] -  [32minfo[39m  - SubscriptionManager | Initialized successfully and subscribed to event_summaries
+[ 2025-07-30 17:53:39 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 17:53:39 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 17:53:39 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: u2s51ra3jb3m63t509lj
+[ 2025-07-30 17:53:39 ] -  [32minfo[39m  - SubscriptionManager | User u2s51ra3jb3m63t509lj subscribed to u2s51ra3jb3m63t509lj
+[ 2025-07-30 17:53:39 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 17:53:39 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 17:53:39 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: pvcjvijujyluiwjzqsrjo
+[ 2025-07-30 17:53:39 ] -  [32minfo[39m  - SubscriptionManager | User pvcjvijujyluiwjzqsrjo subscribed to pvcjvijujyluiwjzqsrjo
+[ 2025-07-30 18:38:33 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Attempting to connect Redis client...
+[ 2025-07-30 18:38:33 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-30 18:38:34 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 18:38:34 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 18:38:34 ] -  [32minfo[39m  - SubscriptionManager | Initialized successfully and subscribed to event_summaries
+[ 2025-07-30 18:39:38 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 18:39:38 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 18:39:38 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: jgzbkhteauyt6oa7xqbk
+[ 2025-07-30 18:39:38 ] -  [32minfo[39m  - SubscriptionManager | User jgzbkhteauyt6oa7xqbk subscribed to jgzbkhteauyt6oa7xqbk
+[ 2025-07-30 18:39:38 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 18:39:38 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 18:39:38 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: ada4od632h4wyma6hy25eh
+[ 2025-07-30 18:39:38 ] -  [32minfo[39m  - SubscriptionManager | User ada4od632h4wyma6hy25eh subscribed to ada4od632h4wyma6hy25eh
+[ 2025-07-30 18:39:51 ] -  [32minfo[39m  - User Left: ada4od632h4wyma6hy25eh
+[ 2025-07-30 18:39:51 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: ada4od632h4wyma6hy25eh
+[ 2025-07-30 18:39:51 ] -  [32minfo[39m  - SubscriptionManager | User ada4od632h4wyma6hy25eh unsubscribed from ada4od632h4wyma6hy25eh
+[ 2025-07-30 18:39:51 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 18:39:51 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 18:39:51 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: o869oz9g1xjnrp6scfifxc
+[ 2025-07-30 18:39:51 ] -  [32minfo[39m  - SubscriptionManager | User o869oz9g1xjnrp6scfifxc subscribed to o869oz9g1xjnrp6scfifxc
+[ 2025-07-30 18:39:51 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 18:39:51 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 18:39:51 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: event_summaries
+[ 2025-07-30 18:39:51 ] -  [32minfo[39m  - SubscriptionManager | User o869oz9g1xjnrp6scfifxc subscribed to event_summaries
+[ 2025-07-30 18:39:51 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 18:39:51 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 18:39:51 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: gwp7up8yseka76i1drhj1k
+[ 2025-07-30 18:39:51 ] -  [32minfo[39m  - SubscriptionManager | User gwp7up8yseka76i1drhj1k subscribed to gwp7up8yseka76i1drhj1k
+[ 2025-07-30 18:39:51 ] -  [32minfo[39m  - SubscriptionManager | User gwp7up8yseka76i1drhj1k subscribed to event_summaries
+[ 2025-07-30 18:39:52 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 18:39:54 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 18:39:57 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 18:39:58 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 18:40:00 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 18:40:02 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 18:40:05 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 18:40:06 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 18:40:08 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 18:40:10 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 18:40:13 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 18:40:15 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 18:40:17 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 18:40:18 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 18:40:20 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 18:40:22 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 18:40:25 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 18:40:27 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 18:40:29 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 18:40:30 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 18:40:32 ] -  [32minfo[39m  - SubscriptionManager | User gwp7up8yseka76i1drhj1k unsubscribed from event_summaries
+[ 2025-07-30 18:40:32 ] -  [32minfo[39m  - User Left: gwp7up8yseka76i1drhj1k
+[ 2025-07-30 18:40:32 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: gwp7up8yseka76i1drhj1k
+[ 2025-07-30 18:40:32 ] -  [32minfo[39m  - SubscriptionManager | User gwp7up8yseka76i1drhj1k unsubscribed from gwp7up8yseka76i1drhj1k
+[ 2025-07-30 18:40:32 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 18:40:32 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 18:40:32 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: gdp5fl3yt1j1xa0i5p7lu4
+[ 2025-07-30 18:40:32 ] -  [32minfo[39m  - SubscriptionManager | User gdp5fl3yt1j1xa0i5p7lu4 subscribed to gdp5fl3yt1j1xa0i5p7lu4
+[ 2025-07-30 18:40:32 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 18:40:32 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 18:40:32 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: em8w1xk9vj4h1ivtkkyy1k
+[ 2025-07-30 18:40:32 ] -  [32minfo[39m  - SubscriptionManager | User em8w1xk9vj4h1ivtkkyy1k subscribed to em8w1xk9vj4h1ivtkkyy1k
+[ 2025-07-30 18:40:32 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 18:40:33 ] -  [32minfo[39m  - User Left: em8w1xk9vj4h1ivtkkyy1k
+[ 2025-07-30 18:40:33 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: em8w1xk9vj4h1ivtkkyy1k
+[ 2025-07-30 18:40:33 ] -  [32minfo[39m  - SubscriptionManager | User em8w1xk9vj4h1ivtkkyy1k unsubscribed from em8w1xk9vj4h1ivtkkyy1k
+[ 2025-07-30 18:40:35 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 18:40:37 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 18:40:38 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 18:40:40 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 18:40:42 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 18:40:43 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 18:40:43 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 18:40:43 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: tvjvx9c70yn7xw4j5jecg
+[ 2025-07-30 18:40:43 ] -  [32minfo[39m  - SubscriptionManager | User tvjvx9c70yn7xw4j5jecg subscribed to tvjvx9c70yn7xw4j5jecg
+[ 2025-07-30 18:40:43 ] -  [32minfo[39m  - SubscriptionManager | User tvjvx9c70yn7xw4j5jecg subscribed to event_summaries
+[ 2025-07-30 18:40:43 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 18:40:43 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 18:40:43 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: twxfpg6mmpxsqc8dmo9yh
+[ 2025-07-30 18:40:43 ] -  [32minfo[39m  - SubscriptionManager | User twxfpg6mmpxsqc8dmo9yh subscribed to twxfpg6mmpxsqc8dmo9yh
+[ 2025-07-30 18:40:43 ] -  [32minfo[39m  - SubscriptionManager | User twxfpg6mmpxsqc8dmo9yh subscribed to event_summaries
+[ 2025-07-30 18:40:45 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 18:40:46 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 18:40:48 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 18:40:51 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 19:00:51 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Attempting to connect Redis client...
+[ 2025-07-30 19:00:51 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-30 19:00:51 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 19:00:51 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 19:00:51 ] -  [32minfo[39m  - SubscriptionManager | Initialized successfully and subscribed to event_summaries
+[ 2025-07-30 19:24:42 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Attempting to connect Redis client...
+[ 2025-07-30 19:24:42 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-30 19:24:42 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 19:24:42 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 19:24:42 ] -  [32minfo[39m  - SubscriptionManager | Initialized successfully and subscribed to event_summaries
+[ 2025-07-30 20:46:04 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Attempting to connect Redis client...
+[ 2025-07-30 20:46:04 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-30 20:46:04 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 20:46:04 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 20:46:04 ] -  [32minfo[39m  - SubscriptionManager | Initialized successfully and subscribed to event_summaries
+[ 2025-07-30 20:47:20 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 20:47:20 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 20:47:20 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: 194n68tqfy7i0bd7ifyytdbj
+[ 2025-07-30 20:47:20 ] -  [32minfo[39m  - SubscriptionManager | User 194n68tqfy7i0bd7ifyytdbj subscribed to 194n68tqfy7i0bd7ifyytdbj
+[ 2025-07-30 20:47:20 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 20:47:20 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 20:47:20 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: event_summaries
+[ 2025-07-30 20:47:20 ] -  [32minfo[39m  - SubscriptionManager | User 194n68tqfy7i0bd7ifyytdbj subscribed to event_summaries
+[ 2025-07-30 20:47:20 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 20:47:20 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 20:47:20 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: kor3cglg99eqohe77p793e
+[ 2025-07-30 20:47:20 ] -  [32minfo[39m  - SubscriptionManager | User kor3cglg99eqohe77p793e subscribed to kor3cglg99eqohe77p793e
+[ 2025-07-30 20:47:20 ] -  [32minfo[39m  - SubscriptionManager | User kor3cglg99eqohe77p793e subscribed to event_summaries
+[ 2025-07-30 20:47:21 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:47:23 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:47:25 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:47:27 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:47:29 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:47:31 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:47:31 ] -  [32minfo[39m  - SubscriptionManager | User kor3cglg99eqohe77p793e unsubscribed from event_summaries
+[ 2025-07-30 20:47:31 ] -  [32minfo[39m  - User Left: kor3cglg99eqohe77p793e
+[ 2025-07-30 20:47:31 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: kor3cglg99eqohe77p793e
+[ 2025-07-30 20:47:31 ] -  [32minfo[39m  - SubscriptionManager | User kor3cglg99eqohe77p793e unsubscribed from kor3cglg99eqohe77p793e
+[ 2025-07-30 20:47:31 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 20:47:31 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 20:47:31 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: vstjdjujcj3bex7hee14s
+[ 2025-07-30 20:47:31 ] -  [32minfo[39m  - SubscriptionManager | User vstjdjujcj3bex7hee14s subscribed to vstjdjujcj3bex7hee14s
+[ 2025-07-30 20:47:31 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 20:47:31 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 20:47:31 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: vrqcfvrnxfjtq97ga114c
+[ 2025-07-30 20:47:31 ] -  [32minfo[39m  - SubscriptionManager | User vrqcfvrnxfjtq97ga114c subscribed to vrqcfvrnxfjtq97ga114c
+[ 2025-07-30 20:47:33 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:47:35 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:47:37 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:47:39 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:47:42 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:47:43 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:47:45 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:47:47 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:47:49 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:47:51 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:47:53 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:47:53 ] -  [32minfo[39m  - User Left: vrqcfvrnxfjtq97ga114c
+[ 2025-07-30 20:47:53 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: vrqcfvrnxfjtq97ga114c
+[ 2025-07-30 20:47:53 ] -  [32minfo[39m  - SubscriptionManager | User vrqcfvrnxfjtq97ga114c unsubscribed from vrqcfvrnxfjtq97ga114c
+[ 2025-07-30 20:47:53 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 20:47:53 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 20:47:53 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: cdoe5534bainyf89veaql
+[ 2025-07-30 20:47:53 ] -  [32minfo[39m  - SubscriptionManager | User cdoe5534bainyf89veaql subscribed to cdoe5534bainyf89veaql
+[ 2025-07-30 20:47:53 ] -  [32minfo[39m  - SubscriptionManager | User cdoe5534bainyf89veaql subscribed to event_summaries
+[ 2025-07-30 20:47:53 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 20:47:53 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 20:47:53 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: 3f18lhg07ymhxfi0sgcy1j
+[ 2025-07-30 20:47:53 ] -  [32minfo[39m  - SubscriptionManager | User 3f18lhg07ymhxfi0sgcy1j subscribed to 3f18lhg07ymhxfi0sgcy1j
+[ 2025-07-30 20:47:53 ] -  [32minfo[39m  - SubscriptionManager | User 3f18lhg07ymhxfi0sgcy1j subscribed to event_summaries
+[ 2025-07-30 20:47:55 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:47:57 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:47:59 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:48:01 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:48:03 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:48:05 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:48:08 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:48:09 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:48:11 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:48:13 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:48:15 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:48:18 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:48:20 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:48:21 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:48:23 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:48:25 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:48:27 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:48:29 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:48:32 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:48:34 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:48:36 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:48:38 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:48:40 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:48:41 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:48:44 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:48:46 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:48:48 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:48:50 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:48:51 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:48:54 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:48:56 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:48:58 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:49:00 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:49:01 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:49:04 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:49:06 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:49:08 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:49:10 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:49:12 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:49:14 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:49:16 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:49:18 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:49:21 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:49:22 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:49:24 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:49:26 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:49:28 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:49:30 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:49:33 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:49:34 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:49:36 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:49:38 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:49:40 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:49:42 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:49:45 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:49:47 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:49:48 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:49:50 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:49:52 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:49:55 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:49:57 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:49:58 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:50:00 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:50:02 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:50:05 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:50:07 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:50:08 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:50:10 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:50:12 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:50:15 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:50:17 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:50:18 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:50:21 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:50:23 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:50:24 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:50:27 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:50:29 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:50:31 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:50:32 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:50:35 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:50:37 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:50:39 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:50:41 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:50:42 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:50:45 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:50:47 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:50:49 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:50:51 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:50:53 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:50:54 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:50:57 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:50:59 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:51:01 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:51:03 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:51:05 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:51:07 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:51:09 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:51:11 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:51:13 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:51:16 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:51:17 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:51:19 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:51:21 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:51:23 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:51:26 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:51:27 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:51:29 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:51:31 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:51:33 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:51:35 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:51:37 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:51:39 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:51:41 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:51:43 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:51:45 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:51:47 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:51:49 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:51:51 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:51:53 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:51:55 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:51:57 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:51:59 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:52:02 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:52:04 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:52:06 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:52:08 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:52:09 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:52:11 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:52:13 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:52:15 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:52:17 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:52:19 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:52:21 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:52:23 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:52:25 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:52:28 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:52:29 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:52:31 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:52:33 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:52:35 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:52:38 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:52:40 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:52:42 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:52:43 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:52:46 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:52:48 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:52:50 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:52:52 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:52:54 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:52:56 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:52:58 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:53:00 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:53:02 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:53:04 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:53:06 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:53:07 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:53:09 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:53:11 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:53:13 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:53:15 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:53:18 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:53:20 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:53:22 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:53:24 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:53:26 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:53:28 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:53:30 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:53:32 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:53:34 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:53:36 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:53:38 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:53:40 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:53:42 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:53:43 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:53:45 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:53:47 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:53:49 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:53:51 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:53:54 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:53:56 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:53:58 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:54:00 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:54:02 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:54:04 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:54:06 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:54:08 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:54:10 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:54:12 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:54:14 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:54:16 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:54:17 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:54:19 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:54:21 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:54:24 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:54:26 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:54:28 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:54:30 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:54:32 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:54:34 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:54:36 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:54:38 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:54:40 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:54:42 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:54:44 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:54:46 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:54:48 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:54:50 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:54:52 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:54:53 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:54:55 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:54:58 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:55:00 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:55:02 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:55:04 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:55:06 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:55:08 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:55:10 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:55:12 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:55:14 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:55:16 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:55:18 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:55:20 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:55:22 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:55:24 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:55:26 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:55:29 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:55:31 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:55:32 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:55:34 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:55:36 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:55:38 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:55:40 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:55:42 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:55:44 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:55:46 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:55:48 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:55:50 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:55:53 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:55:55 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:55:57 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:55:58 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:56:00 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:56:02 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:56:04 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:56:06 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:56:08 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:56:10 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:56:12 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:56:14 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:56:16 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:56:18 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:56:20 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:56:22 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:56:24 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:56:26 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:56:29 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:56:31 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:56:33 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:56:35 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:56:37 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:56:39 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:56:41 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:56:43 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:56:44 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:56:46 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:56:48 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:56:50 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:56:52 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:56:54 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:56:56 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:56:58 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:57:00 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:57:02 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:57:04 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:57:06 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:57:09 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:57:11 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:57:13 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:57:15 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:57:17 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:57:19 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:57:21 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:57:23 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:57:24 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:57:26 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:57:28 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:57:30 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:57:32 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:57:34 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:57:36 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:57:38 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:57:40 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:57:42 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:57:44 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:57:47 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:57:49 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:57:51 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:57:53 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:57:55 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:57:57 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:57:59 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:58:01 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:58:03 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:58:05 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:58:07 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:58:08 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:58:10 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:58:12 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:58:14 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:58:16 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:58:18 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:58:20 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:58:23 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:58:25 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:58:27 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:58:29 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:58:31 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:58:33 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 20:58:35 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 21:38:33 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Attempting to connect Redis client...
+[ 2025-07-30 21:38:33 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-30 21:38:33 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 21:38:33 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 21:38:33 ] -  [32minfo[39m  - SubscriptionManager | Initialized successfully and subscribed to event_summaries
+[ 2025-07-30 22:05:20 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Attempting to connect Redis client...
+[ 2025-07-30 22:05:20 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-30 22:05:20 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:05:20 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:05:20 ] -  [32minfo[39m  - SubscriptionManager | Initialized successfully and subscribed to event_summaries
+[ 2025-07-30 22:05:52 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:05:52 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:05:52 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: s8r8fzjqkfs4hb90n6j4bc
+[ 2025-07-30 22:05:52 ] -  [32minfo[39m  - SubscriptionManager | User s8r8fzjqkfs4hb90n6j4bc subscribed to s8r8fzjqkfs4hb90n6j4bc
+[ 2025-07-30 22:05:52 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:05:52 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:05:52 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: event_summaries
+[ 2025-07-30 22:05:52 ] -  [32minfo[39m  - SubscriptionManager | User s8r8fzjqkfs4hb90n6j4bc subscribed to event_summaries
+[ 2025-07-30 22:05:52 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:05:52 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:05:52 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: 56k233yvhynyw4hv65eflq
+[ 2025-07-30 22:05:52 ] -  [32minfo[39m  - SubscriptionManager | User 56k233yvhynyw4hv65eflq subscribed to 56k233yvhynyw4hv65eflq
+[ 2025-07-30 22:05:52 ] -  [32minfo[39m  - SubscriptionManager | User 56k233yvhynyw4hv65eflq subscribed to event_summaries
+[ 2025-07-30 22:05:53 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:05:55 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:05:57 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:05:59 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:06:01 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:06:03 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:06:05 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:06:07 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:06:09 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:06:11 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:06:13 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:06:14 ] -  [32minfo[39m  - User Left: s8r8fzjqkfs4hb90n6j4bc
+[ 2025-07-30 22:06:14 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: s8r8fzjqkfs4hb90n6j4bc
+[ 2025-07-30 22:06:14 ] -  [32minfo[39m  - SubscriptionManager | User s8r8fzjqkfs4hb90n6j4bc unsubscribed from s8r8fzjqkfs4hb90n6j4bc
+[ 2025-07-30 22:06:14 ] -  [32minfo[39m  - SubscriptionManager | User s8r8fzjqkfs4hb90n6j4bc unsubscribed from event_summaries
+[ 2025-07-30 22:06:14 ] -  [32minfo[39m  - User Left: 56k233yvhynyw4hv65eflq
+[ 2025-07-30 22:06:14 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: 56k233yvhynyw4hv65eflq
+[ 2025-07-30 22:06:14 ] -  [32minfo[39m  - SubscriptionManager | User 56k233yvhynyw4hv65eflq unsubscribed from 56k233yvhynyw4hv65eflq
+[ 2025-07-30 22:06:14 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: event_summaries
+[ 2025-07-30 22:06:14 ] -  [32minfo[39m  - SubscriptionManager | User 56k233yvhynyw4hv65eflq unsubscribed from event_summaries
+[ 2025-07-30 22:06:17 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:06:17 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:06:17 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: 29o9qu8bk4o187r7fgcr7kh
+[ 2025-07-30 22:06:17 ] -  [32minfo[39m  - SubscriptionManager | User 29o9qu8bk4o187r7fgcr7kh subscribed to 29o9qu8bk4o187r7fgcr7kh
+[ 2025-07-30 22:06:17 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:06:17 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:06:17 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: event_summaries
+[ 2025-07-30 22:06:17 ] -  [32minfo[39m  - SubscriptionManager | User 29o9qu8bk4o187r7fgcr7kh subscribed to event_summaries
+[ 2025-07-30 22:06:17 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:06:19 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:06:21 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:06:22 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:06:24 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: event_summaries
+[ 2025-07-30 22:06:24 ] -  [32minfo[39m  - SubscriptionManager | User 29o9qu8bk4o187r7fgcr7kh unsubscribed from event_summaries
+[ 2025-07-30 22:06:24 ] -  [32minfo[39m  - User Left: 29o9qu8bk4o187r7fgcr7kh
+[ 2025-07-30 22:06:24 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: 29o9qu8bk4o187r7fgcr7kh
+[ 2025-07-30 22:06:24 ] -  [32minfo[39m  - SubscriptionManager | User 29o9qu8bk4o187r7fgcr7kh unsubscribed from 29o9qu8bk4o187r7fgcr7kh
+[ 2025-07-30 22:06:24 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:06:24 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:06:24 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: zozm31f17hky46u33r99
+[ 2025-07-30 22:06:24 ] -  [32minfo[39m  - SubscriptionManager | User zozm31f17hky46u33r99 subscribed to zozm31f17hky46u33r99
+[ 2025-07-30 22:06:24 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:06:24 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:06:24 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: xl31bun5te9t3z6f8azn4s
+[ 2025-07-30 22:06:24 ] -  [32minfo[39m  - SubscriptionManager | User xl31bun5te9t3z6f8azn4s subscribed to xl31bun5te9t3z6f8azn4s
+[ 2025-07-30 22:06:26 ] -  [32minfo[39m  - User Left: xl31bun5te9t3z6f8azn4s
+[ 2025-07-30 22:06:26 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: xl31bun5te9t3z6f8azn4s
+[ 2025-07-30 22:06:26 ] -  [32minfo[39m  - SubscriptionManager | User xl31bun5te9t3z6f8azn4s unsubscribed from xl31bun5te9t3z6f8azn4s
+[ 2025-07-30 22:06:26 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:06:26 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:06:26 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: 6zu44nppt13xeh53wpn74h
+[ 2025-07-30 22:06:26 ] -  [32minfo[39m  - SubscriptionManager | User 6zu44nppt13xeh53wpn74h subscribed to 6zu44nppt13xeh53wpn74h
+[ 2025-07-30 22:06:26 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:06:26 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:06:26 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: vq8y3secb5hf3xr9h9v3g
+[ 2025-07-30 22:06:26 ] -  [32minfo[39m  - SubscriptionManager | User vq8y3secb5hf3xr9h9v3g subscribed to vq8y3secb5hf3xr9h9v3g
+[ 2025-07-30 22:06:26 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:06:26 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:06:26 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: event_summaries
+[ 2025-07-30 22:06:26 ] -  [32minfo[39m  - SubscriptionManager | User 6zu44nppt13xeh53wpn74h subscribed to event_summaries
+[ 2025-07-30 22:06:26 ] -  [32minfo[39m  - SubscriptionManager | User vq8y3secb5hf3xr9h9v3g subscribed to event_summaries
+[ 2025-07-30 22:06:27 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:06:28 ] -  [32minfo[39m  - SubscriptionManager | User vq8y3secb5hf3xr9h9v3g unsubscribed from event_summaries
+[ 2025-07-30 22:06:28 ] -  [32minfo[39m  - User Left: vq8y3secb5hf3xr9h9v3g
+[ 2025-07-30 22:06:28 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: vq8y3secb5hf3xr9h9v3g
+[ 2025-07-30 22:06:28 ] -  [32minfo[39m  - SubscriptionManager | User vq8y3secb5hf3xr9h9v3g unsubscribed from vq8y3secb5hf3xr9h9v3g
+[ 2025-07-30 22:06:28 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:06:28 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:06:28 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: 5bnc3581k1tqjhl8pl45om
+[ 2025-07-30 22:06:28 ] -  [32minfo[39m  - SubscriptionManager | User 5bnc3581k1tqjhl8pl45om subscribed to 5bnc3581k1tqjhl8pl45om
+[ 2025-07-30 22:06:28 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:06:28 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:06:28 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: cjwepectsie38u265e5rco
+[ 2025-07-30 22:06:28 ] -  [32minfo[39m  - SubscriptionManager | User cjwepectsie38u265e5rco subscribed to cjwepectsie38u265e5rco
+[ 2025-07-30 22:06:29 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:06:31 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:06:33 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:06:33 ] -  [32minfo[39m  - User Left: cjwepectsie38u265e5rco
+[ 2025-07-30 22:06:33 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: cjwepectsie38u265e5rco
+[ 2025-07-30 22:06:33 ] -  [32minfo[39m  - SubscriptionManager | User cjwepectsie38u265e5rco unsubscribed from cjwepectsie38u265e5rco
+[ 2025-07-30 22:06:33 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:06:33 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:06:33 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: fuzuw1j18nb72uwsu0p2m8
+[ 2025-07-30 22:06:33 ] -  [32minfo[39m  - SubscriptionManager | User fuzuw1j18nb72uwsu0p2m8 subscribed to fuzuw1j18nb72uwsu0p2m8
+[ 2025-07-30 22:06:33 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:06:33 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:06:33 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: c8mkakef3cqa17ma20vt
+[ 2025-07-30 22:06:33 ] -  [32minfo[39m  - SubscriptionManager | User c8mkakef3cqa17ma20vt subscribed to c8mkakef3cqa17ma20vt
+[ 2025-07-30 22:06:33 ] -  [32minfo[39m  - SubscriptionManager | User fuzuw1j18nb72uwsu0p2m8 subscribed to event_summaries
+[ 2025-07-30 22:06:33 ] -  [32minfo[39m  - SubscriptionManager | User c8mkakef3cqa17ma20vt subscribed to event_summaries
+[ 2025-07-30 22:06:35 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:06:37 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:06:39 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:06:41 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:06:43 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:06:43 ] -  [32minfo[39m  - SubscriptionManager | User c8mkakef3cqa17ma20vt unsubscribed from event_summaries
+[ 2025-07-30 22:06:43 ] -  [32minfo[39m  - User Left: c8mkakef3cqa17ma20vt
+[ 2025-07-30 22:06:43 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: c8mkakef3cqa17ma20vt
+[ 2025-07-30 22:06:43 ] -  [32minfo[39m  - SubscriptionManager | User c8mkakef3cqa17ma20vt unsubscribed from c8mkakef3cqa17ma20vt
+[ 2025-07-30 22:06:43 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:06:43 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:06:43 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: i2k50yhv44jxjdzn9efqi
+[ 2025-07-30 22:06:43 ] -  [32minfo[39m  - SubscriptionManager | User i2k50yhv44jxjdzn9efqi subscribed to i2k50yhv44jxjdzn9efqi
+[ 2025-07-30 22:06:43 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:06:43 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:06:43 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: emrc23a0vba47k6c126kbj
+[ 2025-07-30 22:06:43 ] -  [32minfo[39m  - SubscriptionManager | User emrc23a0vba47k6c126kbj subscribed to emrc23a0vba47k6c126kbj
+[ 2025-07-30 22:06:45 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:06:45 ] -  [32minfo[39m  - User Left: zozm31f17hky46u33r99
+[ 2025-07-30 22:06:45 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: zozm31f17hky46u33r99
+[ 2025-07-30 22:06:45 ] -  [32minfo[39m  - SubscriptionManager | User zozm31f17hky46u33r99 unsubscribed from zozm31f17hky46u33r99
+[ 2025-07-30 22:06:45 ] -  [32minfo[39m  - User Left: emrc23a0vba47k6c126kbj
+[ 2025-07-30 22:06:45 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: emrc23a0vba47k6c126kbj
+[ 2025-07-30 22:06:45 ] -  [32minfo[39m  - SubscriptionManager | User emrc23a0vba47k6c126kbj unsubscribed from emrc23a0vba47k6c126kbj
+[ 2025-07-30 22:06:45 ] -  [32minfo[39m  - User Left: i2k50yhv44jxjdzn9efqi
+[ 2025-07-30 22:06:45 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: i2k50yhv44jxjdzn9efqi
+[ 2025-07-30 22:06:45 ] -  [32minfo[39m  - SubscriptionManager | User i2k50yhv44jxjdzn9efqi unsubscribed from i2k50yhv44jxjdzn9efqi
+[ 2025-07-30 22:06:45 ] -  [32minfo[39m  - User Left: fuzuw1j18nb72uwsu0p2m8
+[ 2025-07-30 22:06:45 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: fuzuw1j18nb72uwsu0p2m8
+[ 2025-07-30 22:06:45 ] -  [32minfo[39m  - SubscriptionManager | User fuzuw1j18nb72uwsu0p2m8 unsubscribed from fuzuw1j18nb72uwsu0p2m8
+[ 2025-07-30 22:06:45 ] -  [32minfo[39m  - SubscriptionManager | User fuzuw1j18nb72uwsu0p2m8 unsubscribed from event_summaries
+[ 2025-07-30 22:06:45 ] -  [32minfo[39m  - User Left: 5bnc3581k1tqjhl8pl45om
+[ 2025-07-30 22:06:45 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: 5bnc3581k1tqjhl8pl45om
+[ 2025-07-30 22:06:45 ] -  [32minfo[39m  - SubscriptionManager | User 5bnc3581k1tqjhl8pl45om unsubscribed from 5bnc3581k1tqjhl8pl45om
+[ 2025-07-30 22:06:45 ] -  [32minfo[39m  - User Left: 6zu44nppt13xeh53wpn74h
+[ 2025-07-30 22:06:45 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: 6zu44nppt13xeh53wpn74h
+[ 2025-07-30 22:06:45 ] -  [32minfo[39m  - SubscriptionManager | User 6zu44nppt13xeh53wpn74h unsubscribed from 6zu44nppt13xeh53wpn74h
+[ 2025-07-30 22:06:45 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: event_summaries
+[ 2025-07-30 22:06:45 ] -  [32minfo[39m  - SubscriptionManager | User 6zu44nppt13xeh53wpn74h unsubscribed from event_summaries
+[ 2025-07-30 22:06:47 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:06:47 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:06:47 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: 4n8vc2ec69d6naje9rggjg
+[ 2025-07-30 22:06:47 ] -  [32minfo[39m  - SubscriptionManager | User 4n8vc2ec69d6naje9rggjg subscribed to 4n8vc2ec69d6naje9rggjg
+[ 2025-07-30 22:07:09 ] -  [32minfo[39m  - User Left: 4n8vc2ec69d6naje9rggjg
+[ 2025-07-30 22:07:09 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: 4n8vc2ec69d6naje9rggjg
+[ 2025-07-30 22:07:09 ] -  [32minfo[39m  - SubscriptionManager | User 4n8vc2ec69d6naje9rggjg unsubscribed from 4n8vc2ec69d6naje9rggjg
+[ 2025-07-30 22:07:09 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:07:09 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:07:09 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: 3lj2ct0t2juldsc5mmxmy
+[ 2025-07-30 22:07:09 ] -  [32minfo[39m  - SubscriptionManager | User 3lj2ct0t2juldsc5mmxmy subscribed to 3lj2ct0t2juldsc5mmxmy
+[ 2025-07-30 22:07:09 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:07:09 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:07:09 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: event_summaries
+[ 2025-07-30 22:07:09 ] -  [32minfo[39m  - SubscriptionManager | User 3lj2ct0t2juldsc5mmxmy subscribed to event_summaries
+[ 2025-07-30 22:07:09 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:07:09 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:07:09 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: szq23pjkw7m48y0f4cbcsa
+[ 2025-07-30 22:07:09 ] -  [32minfo[39m  - SubscriptionManager | User szq23pjkw7m48y0f4cbcsa subscribed to szq23pjkw7m48y0f4cbcsa
+[ 2025-07-30 22:07:09 ] -  [32minfo[39m  - SubscriptionManager | User szq23pjkw7m48y0f4cbcsa subscribed to event_summaries
+[ 2025-07-30 22:07:11 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:07:13 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:07:15 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:07:17 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:07:19 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:07:22 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:07:23 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:07:25 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:07:27 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:07:29 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:07:31 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:07:33 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:07:35 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:07:37 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:07:39 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:07:41 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:07:43 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:07:45 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:07:47 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:07:49 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:07:51 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:07:53 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:07:55 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:07:57 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:07:59 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:08:01 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:08:03 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:08:05 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:08:07 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:08:09 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:08:11 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:08:12 ] -  [32minfo[39m  - SubscriptionManager | User szq23pjkw7m48y0f4cbcsa unsubscribed from event_summaries
+[ 2025-07-30 22:08:12 ] -  [32minfo[39m  - User Left: szq23pjkw7m48y0f4cbcsa
+[ 2025-07-30 22:08:12 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: szq23pjkw7m48y0f4cbcsa
+[ 2025-07-30 22:08:12 ] -  [32minfo[39m  - SubscriptionManager | User szq23pjkw7m48y0f4cbcsa unsubscribed from szq23pjkw7m48y0f4cbcsa
+[ 2025-07-30 22:08:12 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:08:12 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:08:12 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: 6rmpp3nxyumpof2d8zoh8g
+[ 2025-07-30 22:08:12 ] -  [32minfo[39m  - SubscriptionManager | User 6rmpp3nxyumpof2d8zoh8g subscribed to 6rmpp3nxyumpof2d8zoh8g
+[ 2025-07-30 22:08:12 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:08:12 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:08:12 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: lmp5vco4zkhj7kiui42ww
+[ 2025-07-30 22:08:12 ] -  [32minfo[39m  - SubscriptionManager | User lmp5vco4zkhj7kiui42ww subscribed to lmp5vco4zkhj7kiui42ww
+[ 2025-07-30 22:08:14 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:08:16 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:08:17 ] -  [32minfo[39m  - User Left: lmp5vco4zkhj7kiui42ww
+[ 2025-07-30 22:08:17 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: lmp5vco4zkhj7kiui42ww
+[ 2025-07-30 22:08:17 ] -  [32minfo[39m  - SubscriptionManager | User lmp5vco4zkhj7kiui42ww unsubscribed from lmp5vco4zkhj7kiui42ww
+[ 2025-07-30 22:08:17 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:08:17 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:08:17 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: n7dqcn3mrq53ymatb53mg
+[ 2025-07-30 22:08:17 ] -  [32minfo[39m  - SubscriptionManager | User n7dqcn3mrq53ymatb53mg subscribed to n7dqcn3mrq53ymatb53mg
+[ 2025-07-30 22:08:17 ] -  [32minfo[39m  - SubscriptionManager | User n7dqcn3mrq53ymatb53mg subscribed to event_summaries
+[ 2025-07-30 22:08:17 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:08:17 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 22:08:17 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: ele2k4aznxra3z4mxv66jf
+[ 2025-07-30 22:08:17 ] -  [32minfo[39m  - SubscriptionManager | User ele2k4aznxra3z4mxv66jf subscribed to ele2k4aznxra3z4mxv66jf
+[ 2025-07-30 22:08:17 ] -  [32minfo[39m  - SubscriptionManager | User ele2k4aznxra3z4mxv66jf subscribed to event_summaries
+[ 2025-07-30 22:08:18 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:08:20 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:08:22 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:08:24 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 22:08:25 ] -  [32minfo[39m  - User Left: 3lj2ct0t2juldsc5mmxmy
+[ 2025-07-30 22:08:25 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: 3lj2ct0t2juldsc5mmxmy
+[ 2025-07-30 22:08:25 ] -  [32minfo[39m  - SubscriptionManager | User 3lj2ct0t2juldsc5mmxmy unsubscribed from 3lj2ct0t2juldsc5mmxmy
+[ 2025-07-30 22:08:25 ] -  [32minfo[39m  - SubscriptionManager | User 3lj2ct0t2juldsc5mmxmy unsubscribed from event_summaries
+[ 2025-07-30 22:08:25 ] -  [32minfo[39m  - User Left: ele2k4aznxra3z4mxv66jf
+[ 2025-07-30 22:08:25 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: ele2k4aznxra3z4mxv66jf
+[ 2025-07-30 22:08:25 ] -  [32minfo[39m  - SubscriptionManager | User ele2k4aznxra3z4mxv66jf unsubscribed from ele2k4aznxra3z4mxv66jf
+[ 2025-07-30 22:08:25 ] -  [32minfo[39m  - SubscriptionManager | User ele2k4aznxra3z4mxv66jf unsubscribed from event_summaries
+[ 2025-07-30 22:08:25 ] -  [32minfo[39m  - User Left: n7dqcn3mrq53ymatb53mg
+[ 2025-07-30 22:08:25 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: n7dqcn3mrq53ymatb53mg
+[ 2025-07-30 22:08:25 ] -  [32minfo[39m  - SubscriptionManager | User n7dqcn3mrq53ymatb53mg unsubscribed from n7dqcn3mrq53ymatb53mg
+[ 2025-07-30 22:08:25 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: event_summaries
+[ 2025-07-30 22:08:25 ] -  [32minfo[39m  - SubscriptionManager | User n7dqcn3mrq53ymatb53mg unsubscribed from event_summaries
+[ 2025-07-30 22:08:25 ] -  [32minfo[39m  - User Left: 6rmpp3nxyumpof2d8zoh8g
+[ 2025-07-30 22:08:25 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: 6rmpp3nxyumpof2d8zoh8g
+[ 2025-07-30 22:08:25 ] -  [32minfo[39m  - SubscriptionManager | User 6rmpp3nxyumpof2d8zoh8g unsubscribed from 6rmpp3nxyumpof2d8zoh8g
+[ 2025-07-30 23:15:19 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Attempting to connect Redis client...
+[ 2025-07-30 23:15:19 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-30 23:15:19 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 23:15:19 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 23:15:19 ] -  [32minfo[39m  - SubscriptionManager | Initialized successfully and subscribed to event_summaries
+[ 2025-07-30 23:22:23 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 23:22:23 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 23:22:23 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: mv9eg8i8tm237fnkp6vyc
+[ 2025-07-30 23:22:23 ] -  [32minfo[39m  - SubscriptionManager | User mv9eg8i8tm237fnkp6vyc subscribed to mv9eg8i8tm237fnkp6vyc
+[ 2025-07-30 23:22:23 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 23:22:23 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 23:22:23 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: event_summaries
+[ 2025-07-30 23:22:23 ] -  [32minfo[39m  - SubscriptionManager | User mv9eg8i8tm237fnkp6vyc subscribed to event_summaries
+[ 2025-07-30 23:22:23 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 23:22:23 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 23:22:23 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: 832bknnqdrvatmif7vtx8
+[ 2025-07-30 23:22:23 ] -  [32minfo[39m  - SubscriptionManager | User 832bknnqdrvatmif7vtx8 subscribed to 832bknnqdrvatmif7vtx8
+[ 2025-07-30 23:22:23 ] -  [32minfo[39m  - SubscriptionManager | User 832bknnqdrvatmif7vtx8 subscribed to event_summaries
+[ 2025-07-30 23:22:25 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 23:22:26 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 23:22:28 ] -  [32minfo[39m  - User Left: 832bknnqdrvatmif7vtx8
+[ 2025-07-30 23:22:28 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: 832bknnqdrvatmif7vtx8
+[ 2025-07-30 23:22:28 ] -  [32minfo[39m  - SubscriptionManager | User 832bknnqdrvatmif7vtx8 unsubscribed from 832bknnqdrvatmif7vtx8
+[ 2025-07-30 23:22:28 ] -  [32minfo[39m  - SubscriptionManager | User 832bknnqdrvatmif7vtx8 unsubscribed from event_summaries
+[ 2025-07-30 23:22:28 ] -  [32minfo[39m  - User Left: mv9eg8i8tm237fnkp6vyc
+[ 2025-07-30 23:22:28 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: mv9eg8i8tm237fnkp6vyc
+[ 2025-07-30 23:22:28 ] -  [32minfo[39m  - SubscriptionManager | User mv9eg8i8tm237fnkp6vyc unsubscribed from mv9eg8i8tm237fnkp6vyc
+[ 2025-07-30 23:22:28 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: event_summaries
+[ 2025-07-30 23:22:28 ] -  [32minfo[39m  - SubscriptionManager | User mv9eg8i8tm237fnkp6vyc unsubscribed from event_summaries
+[ 2025-07-30 23:22:39 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 23:22:39 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 23:22:39 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: tj0qkq5dkosbqaqg2nt4q4
+[ 2025-07-30 23:22:39 ] -  [32minfo[39m  - SubscriptionManager | User tj0qkq5dkosbqaqg2nt4q4 subscribed to tj0qkq5dkosbqaqg2nt4q4
+[ 2025-07-30 23:22:39 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 23:22:39 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 23:22:39 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: event_summaries
+[ 2025-07-30 23:22:39 ] -  [32minfo[39m  - SubscriptionManager | User tj0qkq5dkosbqaqg2nt4q4 subscribed to event_summaries
+[ 2025-07-30 23:22:40 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 23:22:43 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 23:22:45 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 23:22:47 ] -  [32minfo[39m  - SubscriptionManager | Processing API response on channel event_summaries, type: EVENT_SUMMARY
+[ 2025-07-30 23:22:47 ] -  [32minfo[39m  - User Left: tj0qkq5dkosbqaqg2nt4q4
+[ 2025-07-30 23:22:47 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: tj0qkq5dkosbqaqg2nt4q4
+[ 2025-07-30 23:22:47 ] -  [32minfo[39m  - SubscriptionManager | User tj0qkq5dkosbqaqg2nt4q4 unsubscribed from tj0qkq5dkosbqaqg2nt4q4
+[ 2025-07-30 23:22:47 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: event_summaries
+[ 2025-07-30 23:22:47 ] -  [32minfo[39m  - SubscriptionManager | User tj0qkq5dkosbqaqg2nt4q4 unsubscribed from event_summaries

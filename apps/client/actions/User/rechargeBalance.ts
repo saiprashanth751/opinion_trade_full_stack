@@ -3,7 +3,7 @@
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 import { addToOrderQueue } from "@trade/order-queue";
-import { ON_RAMP } from "@trade/types";
+import { MessageFromApi, ON_RAMP } from "@trade/types";
 import { v4 as uuidv4 } from "uuid";
 
 export async function rechargeBalance(amount: number) {
@@ -27,7 +27,7 @@ export async function rechargeBalance(amount: number) {
     const userId = session.user.id;
     const txnId = uuidv4(); // Generate a unique transaction ID
 
-    const messageForEngine = {
+    const messageForEngine: MessageFromApi = {
       type: ON_RAMP,
       data: {
         amount: amount,

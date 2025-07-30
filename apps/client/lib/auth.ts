@@ -1,199 +1,125 @@
 import CredentialsProvider from "next-auth/providers/credentials";
-import { PrismaAdapter } from "@auth/prisma-adapter";
-import prisma from "@repo/db/client"
+import prisma from "@repo/db/client";
 import { DefaultSession, NextAuthOptions } from "next-auth";
-import { getAdminAuth } from "@/lib/firebase-admin";
+import bcrypt from "bcryptjs";
+import { z } from "zod";
 
 declare module "next-auth" {
-    interface User {
-        id?: string,
-        phoneNumber?: string,
-        isVerified?: boolean,
-        balance?: number,
-        firebaseUid?: string
-    }
+  interface User {
+    id: string;
+    email: string;
+    name?: string | null;
+    emailVerified?: Date | null;
+    balance: number;
+    role: string;
+  }
 
-    interface Session {
-        user: DefaultSession["user"] & {
-            id?: string,
-            phoneNumber?: string,
-            isVerified?: boolean,
-            balance?: number,
-            firebaseUid?: string
-        };
-    }
+  interface Session {
+    user: DefaultSession["user"] & {
+      id: string;
+      email: string;
+      emailVerified?: Date | null;
+      balance: number;
+      role: string;
+    };
+  }
 }
 
 declare module "next-auth/jwt" {
-    interface JWT {
-        id?: string,
-        phoneNumber?: string,
-        isVerified?: boolean,
-        balance?: number,
-        firebaseUid?: string
-    }
+  interface JWT {
+    id: string;
+    email: string;
+    emailVerified?: Date | null;
+    balance: number;
+    role: string;
+  }
 }
 
+const loginSchema = z.object({
+  email: z.string().email(),
+  password: z.string().min(6),
+});
+
 export const authOptions: NextAuthOptions = {
-    adapter: PrismaAdapter(prisma),
-    providers: [
-        CredentialsProvider({
-            name: "Credentials",
-            credentials: {
-                phoneNumber: {
-                    label: "Phone",
-                    type: "text",
-                    placeholder: "Enter you 10 digit Mobile Number"
-                },
-                idToken: {
-                    label: "Firebase ID Token",
-                    type: "text"
-                }
-            },
+  providers: [
+    CredentialsProvider({
+      id: "login",
+      name: "Login",
+      credentials: {
+        email: { label: "Email", type: "email" },
+        password: { label: "Password", type: "password" },
+      },
+      async authorize(credentials) {
+        if (!credentials?.email || !credentials?.password) {
+          return null;
+        }
 
-            async authorize(credentials, req) {
-                if (!credentials?.idToken) {
-                    console.error("No Firebase ID token provided.");
-                    return null;
-                }
+        try {
+          const { email, password } = loginSchema.parse(credentials);
 
-                try {
-                    const adminAuth = await getAdminAuth();
-                    const decodedToken = await adminAuth.verifyIdToken(credentials.idToken)
-                    const firebaseUid = decodedToken.uid;
-                    const phoneNumber = decodedToken.phone_number;
+          const user = await prisma.user.findUnique({
+            where: { email },
+          });
 
-                    if (!phoneNumber) {
-                        console.error("Firebase ID token does not contain Phone Number.");
-                        return null;
-                    }
+          if (!user) {
+            return null;
+          }
 
-                    const isUserExists = await prisma.user.findUnique({
-                        where: {
-                            firebaseUid
-                        }
-                    })
+          if (!user.emailVerified) {
+            throw new Error("Please verify your email before signing in");
+          }
 
-                    if (isUserExists) {
-                        return {
-                            id: isUserExists.id,
-                            phoneNumber: isUserExists.phoneNumber,
-                            balance: isUserExists.balance,
-                            role: isUserExists.role,
-                            isVerified: true,
-                            firebaseUid: isUserExists.firebaseUid,
-                        };
-                    }
+          const isPasswordValid = await bcrypt.compare(password, user.password);
+          if (!isPasswordValid) {
+            return null;
+          }
 
-                    const user = await prisma.user.create({
-                        data: {
-                            phoneNumber,
-                            firebaseUid,
-                            role: "USER",
-                            balance: 0
-                        }
-                    })
-
-
-                    return {
-                        id: user.id,
-                        firebaseUid: user.firebaseUid,
-                        phoneNumber: user.phoneNumber,
-                        balance: user.balance,
-                        role: user.role,
-                        isVerified: true,
-                    };
-
-                } catch (error) {
-                    console.error("Error verifying Firebase ID token or managing user:", error)
-                    return null;
-                }
-
-                // const isUserExists = await prisma.user.findFirst({
-                //     where: {
-                //         phoneNumber: credentials?.phoneNumber,
-                //     },
-                //     include: {
-                //         OTP: {
-                //             select: {
-                //                 isVerified: true,
-                //             }
-                //         }
-                //     }
-                // });
-
-                // const isUserVerified = isUserExists?.OTP && isUserExists.OTP.length > 0 ? isUserExists.OTP[0].isVerified : false;
-
-                // if (isUserExists) {
-                //     return {
-                //         id: isUserExists?.id,
-                //         phoneNumber: isUserExists?.phoneNumber,
-                //         balance: isUserExists?.balance,
-                //         role: isUserExists?.role,
-                //         isVerified: isUserVerified
-                //     };
-                // }
-
-                // const user = await prisma.user.create({
-                //     data: {
-                //         phoneNumber: credentials?.phoneNumber as string,
-                //         role: "USER",
-                //         balance: 0,
-                //     }
-                // })
-
-                // await prisma.oTP.update({
-                //     where: {
-                //         otpID: credentials?.phoneNumber
-                //     },
-                //     data: {
-                //         userId: user.id,
-                //     },
-                // });
-
-                // Need to know more about this (... => usecases)
-                // if (user) {
-                //     return {
-                //         ...user,  //Interesting concept !!
-                //         isVerified: true
-                //     };
-                // } else {
-                //     return null;
-                // }
-            }
-        })
-    ],
-
-    callbacks: {
-
-        async jwt({ token, user }) {
-            if (user) {
-                token.phoneNumber = user.phoneNumber;
-                token.isVerified = user.isVerified;
-                token.id = user.id;
-                token.balance = user.balance;
-                token.firebaseUid = user.firebaseUid;
-            }
-            return token;
-        },
-
-        async session({ session, token }) {
-            if (token) {
-                session.user.phoneNumber = token.phoneNumber;
-                session.user.isVerified = token.isVerified;
-                session.user.id = token.id;
-                session.user.balance = token.balance;
-                session.user.firebaseUid = token.firebaseUid;
-            }
-            return session;
-        },
+          return {
+            id: user.id,
+            email: user.email,
+            name: user.name,
+            emailVerified: user.emailVerified,
+            balance: user.balance,
+            role: user.role,
+          };
+        } catch (error) {
+          console.error("Login error:", error);
+          if (error instanceof Error && error.message.includes("verify your email")) {
+            throw error; // Re-throw the specific error message
+          }
+          return null;
+        }
+      },
+    }),
+  ],
+  callbacks: {
+    async jwt({ token, user }) {
+      if (user) {
+        token.id = user.id;
+        token.email = user.email;
+        token.emailVerified = user.emailVerified;
+        token.balance = user.balance;
+        token.role = user.role;
+      }
+      return token;
     },
-
-    pages: {
-        signIn: "/auth/signin",
+    async session({ session, token }) {
+      if (token) {
+        session.user.id = token.id;
+        session.user.email = token.email;
+        session.user.emailVerified = token.emailVerified;
+        session.user.balance = token.balance;
+        session.user.role = token.role;
+      }
+      return session;
     },
-    session: {
-        strategy: "jwt",
-    },
-    secret: process.env.NEXTAUTH_SECRET || "secret",
-} satisfies NextAuthOptions
+  },
+  pages: {
+    signIn: "/auth/signin",
+    error: "/auth/error",
+  },
+  session: {
+    strategy: "jwt",
+  },
+  secret: process.env.NEXTAUTH_SECRET,
+};

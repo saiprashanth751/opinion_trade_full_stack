@@ -1,16 +1,15 @@
+// apps/client/app/(lobby)/auth/signin/page.tsx
 "use client"
-import React, { useState } from "react";
-import { Login } from "@/components/landing/Auth/Signin";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import React from "react";
+import AuthForms from "@/components/landing/Auth/AuthForms";
+import { AuthGuard } from "@/components/landing/Auth/AuthGuard";
 
 const Page = () => {
-    const [queryClient] = useState(() => new QueryClient());
-
-    return (
-        <QueryClientProvider client={queryClient}>
-            <Login />
-        </QueryClientProvider>
-    );
+  return (
+    <AuthGuard requireAuth={false}>
+      <AuthForms />
+    </AuthGuard>
+  );
 };
 
 export default Page;

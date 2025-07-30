@@ -10,3 +10,10 @@
 [ 2025-07-28 02:28:20 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"7a7573d4-9e41-40b8-b459-208b600b4df4","message":{"type":"ON_RAMP","data":{"amount":100,"userId":"cmdfuql3a0000kcbsg7zsa3uw","txnId":"b92339f9-51dc-4770-9b30-14974e9f59a1"}}}
 [ 2025-07-28 02:28:25 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
 [ 2025-07-28 02:28:25 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"ae5fb34f-5a96-4c3b-a054-8dc90425cf8d","message":{"type":"ON_RAMP","data":{"amount":100,"userId":"cmdfuql3a0000kcbsg7zsa3uw","txnId":"7fc177c6-d575-4d8c-9cea-15fa53fcb7b2"}}}
+[ 2025-07-30 17:53:51 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: 4b50c1d0-9daf-4146-9657-67c0ebe31987, MessageType: ON_RAMP
+[ 2025-07-30 17:53:51 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
+[ 2025-07-30 17:53:51 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-30 17:53:51 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added ON_RAMP message to ORDER_QUEUE
+[ 2025-07-30 17:54:24 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: eb972588-2593-4289-9ee6-6aee80539530, MessageType: ON_RAMP
+[ 2025-07-30 17:54:24 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-30 17:54:24 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added ON_RAMP message to ORDER_QUEUE

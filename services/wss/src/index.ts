@@ -13,31 +13,31 @@ const port = process.env.PORT as unknown as number || 8080;
 const wss = new WebSocketServer({ port: port });
 
 wss.on("listening", () => {
-    console.log(`WebSocket server running on ws://localhost:${port}`);
+    logger.info(`WebSocket server running on ws://localhost:${port}`);
 });
 
 wss.on("connection", (ws) => {
-    console.log("New WebSocket connection established");
+    logger.info("New WebSocket connection established");
     UserManager.getInstance().addUser(ws);
 });
 
 // Initialize Redis connections and managers
 (async () => {
     try {
-        console.log("WSS | Initializing Redis connections...");
+        logger.info("WSS | Initializing Redis connections...");
         
         // Ensure the centralized Redis Pub/Sub client is connected
         const centralizedSubscribeManager = SubscribeManager.getInstance();
         await centralizedSubscribeManager.ensureConnected();
-        console.log("WSS | Centralized Redis Pub/Sub client connected successfully.");
+        logger.info("WSS | Centralized Redis Pub/Sub client connected successfully.");
 
         // Initialize the SubscriptionManager (this will handle event_summaries subscription)
         SubscriptionManager.getInstance();
-        console.log("WSS | SubscriptionManager initialized successfully.");
+        logger.info("WSS | SubscriptionManager initialized successfully.");
 
-        console.log("WSS | All systems initialized and ready!");
+        logger.info("WSS | All systems initialized and ready!");
     } catch (error) {
-        console.error("WSS | Failed to initialize:", error);
+        logger.error("WSS | Failed to initialize:", error);
         process.exit(1);
     }
 })();

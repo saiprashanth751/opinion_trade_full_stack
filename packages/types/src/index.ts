@@ -32,8 +32,8 @@ export const CANCEL_ORDER = "CANCEL_ORDER"
 export const ON_RAMP = "ON_RAMP"
 export const GET_DEPTH = "GET_DEPTH"
 export const GET_OPEN_ORDERS = "GET_OPEN_ORDERS"
-export const GET_ORDERBOOK_SNAPSHOT = "GET_ORDERBOOK_SNAPSHOT" 
-export const ORDERBOOK_SNAPSHOT = "ORDERBOOK_SNAPSHOT" 
+export const GET_ORDERBOOK_SNAPSHOT = "GET_ORDERBOOK_SNAPSHOT"
+export const ORDERBOOK_SNAPSHOT = "ORDERBOOK_SNAPSHOT"
 
 
 export type DbMessage =
@@ -110,7 +110,7 @@ export type MessageFromApi =
             market: string;
         };
     }
-    | { 
+    | {
         type: typeof GET_ORDERBOOK_SNAPSHOT;
         data: {
             eventId: string;
@@ -119,7 +119,7 @@ export type MessageFromApi =
 
 export type MessageToApi =
     | {
-        type: "DEPTH"; 
+        type: "DEPTH";
         payload: {
             bids: [string, string][];
             asks: [string, string][];
@@ -130,7 +130,7 @@ export type MessageToApi =
         }
     }
     | {
-        type: "ORDER_PLACED"; 
+        type: "ORDER_PLACED";
         payload: {
             orderId: string;
             executedQty: number;
@@ -142,7 +142,7 @@ export type MessageToApi =
         };
     }
     | {
-        type: "ORDER_CANCELLED"; 
+        type: "ORDER_CANCELLED";
         payload: {
             orderId: string;
             executedQty: number;
@@ -150,13 +150,13 @@ export type MessageToApi =
         };
     }
     | {
-        type: "OPEN_ORDERS"; 
+        type: "OPEN_ORDERS";
         payload: {
             openOrders: Order[]
         };
     }
-    | { 
-        type: typeof ORDERBOOK_SNAPSHOT; 
+    | {
+        type: typeof ORDERBOOK_SNAPSHOT;
         payload: {
             eventId: string;
             yesBids: [string, string][];
@@ -166,6 +166,11 @@ export type MessageToApi =
             trades: TradeAddedMessage['data'][];
             yesPrice: number;
             noPrice: number;
+            priceHistory: {
+                timestamp: number;
+                yesPrice: number;
+                noPrice: number;
+            }[];
         };
     }
 
@@ -221,10 +226,24 @@ export type EventSummaryMessage = {
     }
 }
 
+export type PriceUpdateMessage = {
+    type: "PRICE_UPDATE";
+    payload: {
+        eventId: string;
+        pricePoint: {
+            timestamp: number;
+            yesPrice: number;
+            noPrice: number;
+        }
+    }
+};
+
+
 
 export type WsMessage =
     | TickerUpdateMessage
     | DepthUpdateMessage
     | TradeAddedMessage
     | EventSummaryMessage
-    | MessageToApi;
+    | MessageToApi
+    | PriceUpdateMessage;

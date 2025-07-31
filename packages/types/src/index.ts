@@ -203,6 +203,8 @@ export type TradeAddedMessage = {
         p: number;
         q: string;
         s: string
+        action: "buy" | "sell";
+        timestamp: Date;
     }
 }
 

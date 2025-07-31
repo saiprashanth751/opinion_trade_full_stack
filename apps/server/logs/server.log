@@ -1,278 +1,211 @@
-[ 2025-07-28 01:17:25 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-28 01:17:25 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-28 01:17:25 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-28 01:17:25 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-28 01:17:47 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"32a9b486-f8c4-4e6c-be97-004343f7fccf","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":60,"quantity":5,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-28 01:17:47 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 6.238 ms
-[ 2025-07-28 01:17:55 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"48c084ff-e839-4180-a8c2-76cec67bde9b","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":60.75,"quantity":5,"action":"sell","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-28 01:17:55 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.694 ms
-[ 2025-07-28 01:18:19 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"01fb022f-97f5-4885-91f8-ce1d7d1c78f2","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":39,"quantity":5,"action":"sell","outcome":"no","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-28 01:18:19 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.948 ms
-[ 2025-07-28 01:18:32 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"e1acaae6-bc3e-42e9-9c0e-88643e2cc8e7","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":60.9990234375,"quantity":10,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-28 01:18:32 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.182 ms
-[ 2025-07-28 01:18:49 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"afe21dc1-6de1-4753-9967-5617973882f6","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":62,"quantity":10,"action":"sell","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-28 01:18:49 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.128 ms
-[ 2025-07-28 01:19:04 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"74bc5c42-5979-4344-9716-871c69118f7d","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":65,"quantity":20,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-28 01:19:04 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.115 ms
-[ 2025-07-28 01:19:16 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"b1f0b330-e6fa-46fc-b1c7-94d3b5976134","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":34.25,"quantity":20,"action":"sell","outcome":"no","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-28 01:19:16 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 3.408 ms
-[ 2025-07-28 01:27:36 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-28 01:27:36 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-28 01:27:36 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-28 01:27:36 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-28 01:28:54 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"d3531c64-3e4f-4f22-9c77-031fbf5d9234","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":63.499755859375,"quantity":10,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-28 01:28:54 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 6.758 ms
-[ 2025-07-28 02:00:00 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-28 02:00:00 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-28 02:00:00 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-28 02:00:00 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-28 02:28:08 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-28 02:28:08 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-28 02:28:08 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-28 02:28:08 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-28 09:50:44 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-28 09:50:44 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-28 09:50:44 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-28 09:50:44 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-28 09:51:27 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
-[ 2025-07-28 09:51:27 ] -  [32minfo[39m  - Order successfully added to queue:  {"clientId":"62b14747-e449-48dd-9cd6-dd7fb8897d7c","message":{"type":"CREATE_ORDER","data":{"market":"cmdgc0i7m0000kc24v7ilvs8t","price":60,"quantity":10,"action":"buy","outcome":"yes","userId":"cmdfuql3a0000kcbsg7zsa3uw"}}}
-[ 2025-07-28 09:51:27 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 7.930 ms
-[ 2025-07-28 19:13:05 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-28 19:13:05 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-28 19:13:05 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-28 19:13:05 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-28 19:31:27 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-28 19:31:27 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-28 19:31:27 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-28 19:31:27 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-28 19:37:29 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-28 19:37:29 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-28 19:37:29 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-28 19:37:29 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-28 19:38:27 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-28 19:38:27 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-28 19:38:27 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-28 19:38:27 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-28 20:21:46 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-28 20:21:46 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-28 20:21:46 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-28 20:21:46 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-28 20:23:12 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-28 20:23:12 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-28 20:23:12 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-28 20:23:12 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-28 21:17:04 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-28 21:17:05 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-28 21:17:05 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-28 21:17:05 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-28 21:19:46 ] -  [32minfo[39m  - GET - /events - 404 - 2.084 ms
-[ 2025-07-28 21:49:01 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-28 21:49:01 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-28 21:49:01 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-28 21:49:01 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-28 21:49:38 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-28 21:49:38 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-28 21:49:38 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-28 21:49:38 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-29 00:18:38 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-29 00:18:38 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-29 00:18:38 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-29 00:18:38 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-29 00:35:32 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-29 00:35:32 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-29 00:35:32 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-29 00:35:32 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-29 00:43:03 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-29 00:43:03 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-29 00:43:03 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-29 00:43:03 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-29 01:03:20 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-29 01:03:20 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-29 01:03:20 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-29 01:03:20 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-29 02:03:28 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-29 02:03:28 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-29 02:03:28 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-29 02:03:28 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-29 02:11:03 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-29 02:11:03 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-29 02:11:03 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-29 02:11:03 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-29 02:12:00 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-29 02:12:00 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-29 02:12:00 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-29 02:12:00 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-29 02:43:50 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-29 02:43:50 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-29 02:43:50 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-29 02:43:50 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-29 02:58:58 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-29 02:58:58 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-29 02:58:58 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-29 02:58:58 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-29 03:21:27 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-29 03:21:27 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-29 03:21:27 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-29 03:21:27 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-29 03:29:28 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-29 03:29:28 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-29 03:29:28 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-29 03:29:28 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-29 03:48:06 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-29 03:48:06 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-29 03:48:06 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-29 03:48:06 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-29 03:52:04 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-29 03:52:04 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-29 03:52:04 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-29 03:52:04 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-29 03:54:09 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-29 03:54:09 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-29 03:54:09 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-29 03:54:09 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-29 04:06:38 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-29 04:06:38 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-29 04:06:38 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-29 04:06:38 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-29 12:15:17 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-29 12:15:17 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-29 12:15:17 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-29 12:15:17 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-29 12:58:05 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-29 12:58:05 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-29 12:58:05 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-29 12:58:05 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-29 12:59:47 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: 00559130-6722-4fe3-84e1-8580e0709086, MessageType: CREATE_ORDER
-[ 2025-07-29 12:59:47 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
-[ 2025-07-29 12:59:47 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
-[ 2025-07-29 12:59:47 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 8.665 ms
-[ 2025-07-30 00:29:24 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-30 00:29:25 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-30 00:29:25 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-30 00:29:25 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-30 00:43:57 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-30 00:43:57 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-30 00:43:57 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-30 00:43:57 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-30 00:49:56 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-30 00:49:56 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-30 00:49:56 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-30 00:49:56 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-30 00:52:01 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-30 00:52:01 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-30 00:52:01 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-30 00:52:01 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-30 00:54:30 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-30 00:54:30 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-30 00:54:30 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-30 00:54:30 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-30 00:58:50 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-30 00:58:50 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-30 00:58:50 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-30 00:58:50 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-30 01:12:16 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-30 01:12:16 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-30 01:12:16 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-30 01:12:16 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-30 01:24:29 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-30 01:24:29 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-30 01:24:29 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-30 01:24:29 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-30 01:28:48 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-30 01:28:48 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-30 01:28:48 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-30 01:28:48 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-30 01:32:09 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-30 01:32:09 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-30 01:32:09 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-30 01:32:09 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-30 02:05:37 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-30 02:05:37 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-30 02:05:37 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-30 02:05:37 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-30 03:16:23 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-30 03:16:23 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-30 03:16:23 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-30 03:16:23 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-30 03:16:42 ] -  [32minfo[39m  - POST - /api/v1/events/create - 500 - 4.359 ms
-[ 2025-07-30 03:18:03 ] -  [32minfo[39m  - POST - //api/v1/events - 404 - 0.934 ms
-[ 2025-07-30 03:23:02 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-30 03:23:02 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-30 03:23:02 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-30 03:23:02 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-30 03:23:28 ] -  [32minfo[39m  - POST - //api/v1/events - 404 - 1.153 ms
-[ 2025-07-30 03:23:44 ] -  [32minfo[39m  - POST - /api/v1/events - 404 - 0.431 ms
-[ 2025-07-30 03:23:58 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 49.697 ms
-[ 2025-07-30 03:24:05 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 16.537 ms
-[ 2025-07-30 03:24:12 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 13.174 ms
-[ 2025-07-30 03:24:19 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 13.354 ms
-[ 2025-07-30 03:24:25 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 12.934 ms
-[ 2025-07-30 03:24:32 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 13.949 ms
-[ 2025-07-30 03:24:38 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 20.551 ms
-[ 2025-07-30 03:24:51 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 23.365 ms
-[ 2025-07-30 03:25:18 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 14.054 ms
-[ 2025-07-30 03:25:26 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 12.128 ms
-[ 2025-07-30 03:25:32 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 11.757 ms
-[ 2025-07-30 03:25:38 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 21.437 ms
-[ 2025-07-30 03:25:44 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 20.706 ms
-[ 2025-07-30 03:25:50 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 21.323 ms
-[ 2025-07-30 03:30:08 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-30 03:30:08 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-30 03:30:08 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-30 03:30:08 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-30 09:04:36 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-30 09:04:37 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-30 09:04:37 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-30 09:04:37 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-30 10:23:08 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-30 10:23:08 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-30 10:23:08 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-30 10:23:08 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-30 13:13:20 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-30 13:13:20 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-30 13:13:20 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-30 13:13:20 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-30 14:02:44 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-30 14:02:44 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-30 14:02:44 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-30 14:02:44 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-30 14:08:02 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-30 14:08:02 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-30 14:08:02 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-30 14:08:02 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-30 14:23:31 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-30 14:23:31 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-30 14:23:31 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-30 14:23:31 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-30 17:10:01 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-30 17:10:01 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-30 17:10:01 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-30 17:10:01 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-30 18:38:34 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-30 18:38:34 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-30 18:38:34 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-30 18:38:34 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-30 19:00:51 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-30 19:00:51 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-30 19:00:51 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-30 19:00:51 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-30 19:24:42 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-30 19:24:42 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-30 19:24:42 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-30 19:24:42 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-30 20:46:04 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-30 20:46:04 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-30 20:46:04 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-30 20:46:04 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-30 21:38:33 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-30 21:38:33 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-30 21:38:33 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-30 21:38:33 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-30 22:05:20 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-30 22:05:20 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-30 22:05:20 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-30 22:05:20 ] -  [32minfo[39m  - SERVER | Listening on port 3000
-[ 2025-07-30 23:15:19 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
-[ 2025-07-30 23:15:19 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
-[ 2025-07-30 23:15:19 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
-[ 2025-07-30 23:15:19 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-31 00:11:27 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
+[ 2025-07-31 00:11:27 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-31 00:11:27 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
+[ 2025-07-31 00:11:27 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-31 00:11:31 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 37.812 ms
+[ 2025-07-31 00:11:40 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 16.328 ms
+[ 2025-07-31 00:11:46 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 23.854 ms
+[ 2025-07-31 00:11:53 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 13.148 ms
+[ 2025-07-31 00:11:59 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 13.723 ms
+[ 2025-07-31 00:12:05 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 14.688 ms
+[ 2025-07-31 00:12:11 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 21.441 ms
+[ 2025-07-31 00:12:16 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 12.345 ms
+[ 2025-07-31 00:12:24 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 22.366 ms
+[ 2025-07-31 00:12:29 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 13.976 ms
+[ 2025-07-31 00:12:35 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 11.299 ms
+[ 2025-07-31 00:12:41 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 21.517 ms
+[ 2025-07-31 00:12:46 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 12.104 ms
+[ 2025-07-31 00:12:52 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 13.242 ms
+[ 2025-07-31 00:12:59 ] -  [32minfo[39m  - POST - /api/v1/events/create - 200 - 20.273 ms
+[ 2025-07-31 00:29:17 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
+[ 2025-07-31 00:29:17 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-31 00:29:17 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
+[ 2025-07-31 00:29:17 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-31 00:30:40 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: a0f7fb25-8fe1-4f40-a6e7-1cbaba3815c4, MessageType: CREATE_ORDER
+[ 2025-07-31 00:30:40 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 00:30:40 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 00:30:40 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 36.483 ms
+[ 2025-07-31 00:31:27 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: f80655b3-af23-4d0e-bd30-fcf7dd1c2704, MessageType: CREATE_ORDER
+[ 2025-07-31 00:31:27 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 00:31:27 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 00:31:27 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 26.216 ms
+[ 2025-07-31 01:24:16 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
+[ 2025-07-31 01:24:16 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-31 01:24:16 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
+[ 2025-07-31 01:24:16 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-31 01:27:55 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: a792ed26-6f3d-464a-b587-8af1944976e3, MessageType: CREATE_ORDER
+[ 2025-07-31 01:27:55 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 01:27:55 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 01:27:55 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 7.353 ms
+[ 2025-07-31 01:28:39 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: 4dd90771-5522-4d38-8219-11f47875e809, MessageType: CREATE_ORDER
+[ 2025-07-31 01:28:39 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 01:28:39 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 01:28:39 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 4.318 ms
+[ 2025-07-31 02:55:55 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
+[ 2025-07-31 02:55:55 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-31 02:55:55 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
+[ 2025-07-31 02:55:55 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-31 02:56:38 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: d92a590d-de4b-4f16-87b4-6ff890088c61, MessageType: CREATE_ORDER
+[ 2025-07-31 02:56:38 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 02:56:38 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 02:56:38 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 8.583 ms
+[ 2025-07-31 02:56:58 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: 03fee969-48ba-41a1-a385-61c9bac83f05, MessageType: CREATE_ORDER
+[ 2025-07-31 02:56:58 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 02:56:58 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 02:56:58 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 3.961 ms
+[ 2025-07-31 02:57:38 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: 11f5c228-510f-4d7d-80e3-3546841cd83c, MessageType: CREATE_ORDER
+[ 2025-07-31 02:57:38 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 02:57:38 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 02:57:38 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 3.681 ms
+[ 2025-07-31 03:00:26 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: 694c9b56-48d6-4b8e-8880-3b4115cd673f, MessageType: CREATE_ORDER
+[ 2025-07-31 03:00:26 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 03:00:26 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 03:00:26 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 3.454 ms
+[ 2025-07-31 11:16:17 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
+[ 2025-07-31 11:16:17 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-31 11:16:17 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
+[ 2025-07-31 11:16:17 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-31 11:19:03 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: 6c5a0925-a52c-43d3-b094-fe4d53fe6bd0, MessageType: CREATE_ORDER
+[ 2025-07-31 11:19:03 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 11:19:03 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 11:19:03 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 17.124 ms
+[ 2025-07-31 11:19:18 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: bdde49e3-95a6-4bc9-b317-58dee052f8ce, MessageType: CREATE_ORDER
+[ 2025-07-31 11:19:18 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 11:19:18 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 11:19:18 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 10.898 ms
+[ 2025-07-31 11:20:21 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: a57cb55e-bcfb-4613-b8ec-778677616692, MessageType: CREATE_ORDER
+[ 2025-07-31 11:20:21 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 11:20:22 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 11:20:22 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 11.408 ms
+[ 2025-07-31 11:21:05 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: 2a90950a-f06b-43cf-a6c0-148de2fd58ee, MessageType: CREATE_ORDER
+[ 2025-07-31 11:21:05 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 11:21:05 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 11:21:05 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 6.953 ms
+[ 2025-07-31 11:21:39 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: 34600358-0091-4028-bb88-9985b960d4a0, MessageType: CREATE_ORDER
+[ 2025-07-31 11:21:39 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 11:21:39 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 11:21:39 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 6.917 ms
+[ 2025-07-31 11:22:18 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: 02542139-ebe0-4b6c-9c9a-f80fdf733c08, MessageType: CREATE_ORDER
+[ 2025-07-31 11:22:18 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 11:22:18 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 11:22:18 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 5.570 ms
+[ 2025-07-31 11:23:53 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: a8188524-816d-47fe-9740-55e3e7502bda, MessageType: CREATE_ORDER
+[ 2025-07-31 11:23:53 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 11:23:53 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 11:23:53 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 7.645 ms
+[ 2025-07-31 11:24:20 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: 37e4bfae-f60c-44f4-8713-ea0d04a403e8, MessageType: CREATE_ORDER
+[ 2025-07-31 11:24:20 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 11:24:20 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 11:24:20 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 6.511 ms
+[ 2025-07-31 11:24:48 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: ba3d4f40-d46c-4ca4-8991-56bcb87ad860, MessageType: CREATE_ORDER
+[ 2025-07-31 11:24:48 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 11:24:48 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 11:24:48 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 7.591 ms
+[ 2025-07-31 13:40:19 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
+[ 2025-07-31 13:40:19 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-31 13:40:19 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
+[ 2025-07-31 13:40:19 ] -  [32minfo[39m  - SERVER | Listening on port 3000
+[ 2025-07-31 13:41:50 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: 0c41faf9-cf82-4f14-9a80-0f59e9cc438d, MessageType: CREATE_ORDER
+[ 2025-07-31 13:41:50 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 13:41:50 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 13:41:50 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 8.270 ms
+[ 2025-07-31 13:42:02 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: fd3d481b-bde1-433a-a466-fa4bed23e8d8, MessageType: CREATE_ORDER
+[ 2025-07-31 13:42:02 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 13:42:02 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 13:42:02 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 5.018 ms
+[ 2025-07-31 13:42:22 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: 30494cbd-aa4a-48cd-894d-d14945d99a1f, MessageType: CREATE_ORDER
+[ 2025-07-31 13:42:22 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 13:42:22 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 13:42:22 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 3.141 ms
+[ 2025-07-31 13:43:06 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: 3b29f752-0fca-4279-8799-41391b1c2dc0, MessageType: CREATE_ORDER
+[ 2025-07-31 13:43:06 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 13:43:06 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 13:43:06 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 4.569 ms
+[ 2025-07-31 13:43:55 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: 0068e12a-aab3-4318-9cbe-b5ff101c6750, MessageType: CREATE_ORDER
+[ 2025-07-31 13:43:55 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 13:43:55 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 13:43:55 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 4.291 ms
+[ 2025-07-31 13:46:22 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: c8432649-45df-4647-8b4f-44d53696b5eb, MessageType: CREATE_ORDER
+[ 2025-07-31 13:46:22 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 13:46:22 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 13:46:22 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.751 ms
+[ 2025-07-31 13:48:41 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: 1470d8ca-9a61-4da0-afc2-874b1fb6fd5a, MessageType: CREATE_ORDER
+[ 2025-07-31 13:48:41 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 13:48:41 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 13:48:41 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 5.470 ms
+[ 2025-07-31 14:05:31 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: b9c8d55a-ce93-449b-98e3-cca80e4dd01d, MessageType: CREATE_ORDER
+[ 2025-07-31 14:05:31 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 14:05:31 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 14:05:31 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 3.737 ms
+[ 2025-07-31 14:14:16 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: 7857f9a6-b3fc-4f0e-9517-a14e3e00dffd, MessageType: CREATE_ORDER
+[ 2025-07-31 14:14:16 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 14:14:16 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 14:14:16 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 3.721 ms
+[ 2025-07-31 14:14:20 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: 6caefd9f-ff9f-46f9-b00c-261f6d89c242, MessageType: CREATE_ORDER
+[ 2025-07-31 14:14:20 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 14:14:20 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 14:14:20 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 3.362 ms
+[ 2025-07-31 14:14:21 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: c4b26d44-324f-4410-b8c2-34c085aa10ff, MessageType: CREATE_ORDER
+[ 2025-07-31 14:14:21 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 14:14:21 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 14:14:21 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 2.812 ms
+[ 2025-07-31 14:14:24 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: b6f2ceb3-aed6-4e76-a82e-aba76026a7e3, MessageType: CREATE_ORDER
+[ 2025-07-31 14:14:24 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 14:14:24 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 14:14:24 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 4.672 ms
+[ 2025-07-31 14:14:25 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: a8932fb4-7a71-457d-833a-ad34605e555a, MessageType: CREATE_ORDER
+[ 2025-07-31 14:14:25 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 14:14:25 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 14:14:25 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 3.664 ms
+[ 2025-07-31 14:14:25 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: 74f15a06-cf89-4372-9838-7f1d9af5f798, MessageType: CREATE_ORDER
+[ 2025-07-31 14:14:25 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 14:14:25 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 14:14:25 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 3.421 ms
+[ 2025-07-31 14:14:25 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: af016f33-0b57-4182-9b22-46d2f438483a, MessageType: CREATE_ORDER
+[ 2025-07-31 14:14:25 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 14:14:25 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 14:14:25 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 3.718 ms
+[ 2025-07-31 14:14:25 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: c19cd725-c6ce-4e6b-8733-15b1333a4c21, MessageType: CREATE_ORDER
+[ 2025-07-31 14:14:25 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 14:14:25 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 14:14:25 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 6.925 ms
+[ 2025-07-31 14:14:26 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: 279ec3a2-a7fd-4546-a324-21735be264a1, MessageType: CREATE_ORDER
+[ 2025-07-31 14:14:26 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 14:14:26 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 14:14:26 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 5.183 ms
+[ 2025-07-31 14:14:26 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: 6a1ff86e-7dc6-4e24-9636-f5ff6dc20d59, MessageType: CREATE_ORDER
+[ 2025-07-31 14:14:26 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 14:14:26 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 14:14:26 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 4.139 ms
+[ 2025-07-31 14:14:26 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: 1f515ba1-9981-43a8-8178-ea2c435f4ed1, MessageType: CREATE_ORDER
+[ 2025-07-31 14:14:26 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 14:14:26 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 14:14:26 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 3.722 ms
+[ 2025-07-31 14:14:27 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: 24b27d7d-c6b5-4faa-b657-7a339cf1c57f, MessageType: CREATE_ORDER
+[ 2025-07-31 14:14:27 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 14:14:27 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 14:14:27 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 3.334 ms
+[ 2025-07-31 14:14:27 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: a50bc3c0-738d-4215-a9ad-40a55476d1d8, MessageType: CREATE_ORDER
+[ 2025-07-31 14:14:27 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 14:14:27 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 14:14:27 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 4.075 ms
+[ 2025-07-31 14:14:27 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: b8526615-e1db-48f3-b4da-125e4021c28e, MessageType: CREATE_ORDER
+[ 2025-07-31 14:14:27 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 14:14:27 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 14:14:27 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 3.850 ms
+[ 2025-07-31 14:14:27 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: 3e8cb654-c8d0-4157-b607-ea60410907d9, MessageType: CREATE_ORDER
+[ 2025-07-31 14:14:27 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 14:14:27 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 14:14:27 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 6.417 ms
+[ 2025-07-31 14:14:28 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: a0afb941-fd3f-433c-8a8a-69f6cff82b44, MessageType: CREATE_ORDER
+[ 2025-07-31 14:14:28 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 14:14:28 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 14:14:28 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 7.714 ms
+[ 2025-07-31 14:14:28 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: 5520a0f7-f775-4816-922f-cd8298883f45, MessageType: CREATE_ORDER
+[ 2025-07-31 14:14:28 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-07-31 14:14:28 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added CREATE_ORDER message to ORDER_QUEUE
+[ 2025-07-31 14:14:28 ] -  [32minfo[39m  - POST - /api/v1/order/initiate - 201 - 3.687 ms
+[ 2025-07-31 14:26:54 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
+[ 2025-07-31 14:26:54 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-07-31 14:26:54 ] -  [32minfo[39m  - SERVER | Redis client connected for server service.
+[ 2025-07-31 14:26:54 ] -  [32minfo[39m  - SERVER | Listening on port 3000

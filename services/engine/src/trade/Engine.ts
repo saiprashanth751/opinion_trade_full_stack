@@ -520,7 +520,7 @@ export class Engine {
         this.publishWsDepthUpdates(fills, price, orderType, market, outcome);
         logger.info("ENGINE | Published WS Depth updates.");
 
-        this.publishWsTrades(fills, userId, market, outcome);
+        this.publishWsTrades(fills, userId, market, outcome, orderType);
         logger.info("ENGINE | Published WS Trades.");
 
         return { executedQty, fills, orderId: order.orderId }
@@ -911,7 +911,8 @@ export class Engine {
         fills: Fill[],
         userId: string,
         market: string,
-        outcome: "yes" | "no"
+        outcome: "yes" | "no",
+        orderType: "bid" | "ask"
     ) {
         logger.info("------------publishing WsTrades------------");
 
@@ -926,29 +927,14 @@ export class Engine {
                     m: fill.otherUserId === userId,
                     p: fill.price,
                     q: fill.qty.toString(),
-                    s: market
+                    s: market,
+                    action: orderType === "bid" ? "buy" : "sell",
+                    timestamp: new Date()
                 }
             })
         })
          logger.info("ENGINE | WS Trades publishing completed.");
     }
-
-    //Never Used here.
-    // onRamp(userId: string, amount: number) {
-    //     const userBalance = this.balances.get(userId);
-    //     if (!userBalance) {
-    //         this.balances.set(userId, {
-    //             available: amount,
-    //             locked: 0,
-    //             yesContracts: 0,
-    //             noContracts: 0,
-    //             lockedYesContracts: 0,
-    //             lockedNoContracts: 0,
-    //         });
-    //     } else {
-    //         userBalance.available += amount;
-    //     }
-    // }
 
     async onRamp(userId: string, amount: number) {
         const user = await prisma.user.findUnique({
@@ -1102,6 +1088,7 @@ export class Engine {
             logger.error(`Failed to save user contract for user ${contract.userId} and event ${contract.eventId} to DB:`, error);
         }
     }
+    
     //core -> synthetic market maker... -->my implementation is not optimal, it is taking so much time and resulting in crashing the app, optimized using claude
 
     // private async runSyntheticMarketMaker() {

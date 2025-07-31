@@ -53,14 +53,9 @@ export const IntegratedOrderForm: React.FC<IntegratedOrderFormProps> = ({
     resolver: zodResolver(formSchema),
     defaultValues: {
       quantity: 1,
-      price: selectedOutcome === sides.YES ? currentYesPrice : currentNoPrice,
+      price: 0.5, // Set a neutral default price instead of current market price
     },
   });
-
-  // Update default price when outcome changes
-  React.useEffect(() => {
-    form.setValue("price", selectedOutcome === sides.YES ? currentYesPrice : currentNoPrice);
-  }, [selectedOutcome, currentYesPrice, currentNoPrice, form]);
 
   const { mutate, isPending } = useMutation({
     mutationFn: placeOrder,
@@ -69,7 +64,7 @@ export const IntegratedOrderForm: React.FC<IntegratedOrderFormProps> = ({
         toast.success(data.message);
         form.reset({
           quantity: 1,
-          price: selectedOutcome === sides.YES ? currentYesPrice : currentNoPrice,
+          price: 0.5, // Reset to neutral default, not current market price
         });
       } else {
         toast.error(data.message);
@@ -109,6 +104,28 @@ export const IntegratedOrderForm: React.FC<IntegratedOrderFormProps> = ({
     const action = selectedAction === orderType.BUY ? "Buy" : "Sell";
     const outcome = selectedOutcome.toUpperCase();
     return `${action} ${outcome}`;
+  };
+
+  // Helper function to suggest current market price
+  const getCurrentMarketPrice = () => {
+    return selectedOutcome === sides.YES ? currentYesPrice : currentNoPrice;
+  };
+
+  // Function to set current market price when user clicks the suggestion
+  const setMarketPrice = () => {
+    form.setValue("price", getCurrentMarketPrice());
+  };
+
+  // Calculate total cost - ensure it's always a valid number
+  const calculateTotalCost = () => {
+    const quantity = form.watch("quantity");
+    const price = form.watch("price");
+    
+    // Only calculate if both values are valid numbers and greater than 0
+    if (quantity && price && quantity > 0 && price > 0) {
+      return (quantity * price).toFixed(2);
+    }
+    return "0.00";
   };
 
   return (
@@ -197,7 +214,7 @@ export const IntegratedOrderForm: React.FC<IntegratedOrderFormProps> = ({
                       const value = e.target.value;
                       field.onChange(value === "" ? "" : Number(value));
                     }}
-                    className="bg-slate-800/50 border-slate-600/50 text-white placeholder:text-slate-400 focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 rounded-lg py-3"
+                    className="bg-slate-800/50 border-slate-600/50 text-white placeholder:text-slate-400 focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 rounded-lg py-3 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none [&[type=number]]:appearance-none"
                   />
                 </FormControl>
                 <FormMessage className="text-red-400" />
@@ -205,24 +222,33 @@ export const IntegratedOrderForm: React.FC<IntegratedOrderFormProps> = ({
             )}
           />
 
-          {/* Price Input - Enhanced styling */}
+          {/* Price Input - Enhanced styling with market price suggestion */}
           <FormField
             control={form.control}
             name="price"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-slate-300 font-medium">Price (₹)</FormLabel>
+                <div className="flex items-center justify-between">
+                  <FormLabel className="text-slate-300 font-medium">Price (₹)</FormLabel>
+                  <button
+                    type="button"
+                    onClick={setMarketPrice}
+                    className="text-xs text-cyan-400 hover:text-cyan-300 transition-colors duration-200 bg-slate-700/50 px-2 py-1 rounded border border-slate-600/50 hover:border-cyan-500/50"
+                  >
+                    Use market: ₹{getCurrentMarketPrice().toFixed(6)}
+                  </button>
+                </div>
                 <FormControl>
                   <Input
                     type="number"
                     step="0.01"
-                    placeholder="Enter price"
+                    placeholder="Enter your price"
                     {...field}
                     onChange={(e) => {
                       const value = e.target.value;
                       field.onChange(value === "" ? "" : Number(value));
                     }}
-                    className="bg-slate-800/50 border-slate-600/50 text-white placeholder:text-slate-400 focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 rounded-lg py-3"
+                    className="bg-slate-800/50 border-slate-600/50 text-white placeholder:text-slate-400 focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 rounded-lg py-3 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none [&[type=number]]:appearance-none"
                   />
                 </FormControl>
                 <FormMessage className="text-red-400" />
@@ -230,17 +256,15 @@ export const IntegratedOrderForm: React.FC<IntegratedOrderFormProps> = ({
             )}
           />
 
-          {/* Total cost calculation - Enhanced with glow effect */}
-          {form.watch("quantity") && form.watch("price") && (
-            <div className="p-4 bg-gradient-to-r from-slate-800/50 to-slate-700/50 rounded-xl border border-slate-600/30 backdrop-blur-sm">
-              <div className="flex justify-between items-center">
-                <span className="text-slate-300 font-medium">Total Cost:</span>
-                <span className="font-bold text-xl text-white">
-                  ₹{(form.watch("quantity") * form.watch("price")).toFixed(2)}
-                </span>
-              </div>
+          {/* Total cost calculation - Fixed height to prevent jumping */}
+          <div className="p-4 bg-gradient-to-r from-slate-800/50 to-slate-700/50 rounded-xl border border-slate-600/30 backdrop-blur-sm min-h-[72px] flex items-center">
+            <div className="flex justify-between items-center w-full">
+              <span className="text-slate-300 font-medium">Total Cost:</span>
+              <span className="font-bold text-xl text-white">
+                ₹{calculateTotalCost()}
+              </span>
             </div>
-          )}
+          </div>
 
           {/* Main Action Button - Enhanced with better gradients */}
           <Button 

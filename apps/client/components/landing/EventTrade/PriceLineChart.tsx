@@ -53,7 +53,7 @@ export const PriceLineChart: React.FC<PriceLineChartProps> = ({ priceHistory }) 
   };
 
   return (
-    <div className="w-full h-96 p-6">
+    <div className="w-full h-[28rem] p-6">
       {/* Header with icon */}
       <div className="flex items-center gap-3 mb-6">
         <div className="p-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg border border-cyan-500/30">
@@ -72,7 +72,8 @@ export const PriceLineChart: React.FC<PriceLineChartProps> = ({ priceHistory }) 
         </div>
       </div>
 
-      <div className="w-full h-80 bg-slate-900/30 rounded-xl border border-slate-700/30 p-4">
+      {/* Increased chart container height from h-80 to h-96 */}
+      <div className="w-full h-96 bg-slate-900/30 rounded-xl border border-slate-700/30 p-4">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart
             data={priceHistory}

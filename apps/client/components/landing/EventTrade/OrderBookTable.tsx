@@ -47,14 +47,15 @@ const formatNumber = (value: string): string => {
 
 const OrderSection = ({ title, bids, asks, isYes }: { title: string, bids: [string, string][], asks: [string, string][], isYes: boolean }) => (
   <div className="grid grid-cols-2 gap-6">
-    {/* Bids Section */}
+    {/* Bids Section - Now scrollable */}
     <div className="space-y-3">
       <div className="flex items-center gap-2 mb-4">
         <TrendingUp className="w-4 h-4 text-green-400" />
         <h4 className="text-sm font-bold text-green-400 tracking-wide">BIDS (BUY)</h4>
       </div>
-      <ScrollArea className="h-72">
-        <div className="space-y-2">
+      {/* Made ScrollArea height consistent and scrollable for all orders */}
+      <ScrollArea className="h-80">
+        <div className="space-y-2 pr-2">
           {bids.length > 0 ? (
             bids.map(([price, quantity], index) => (
               <motion.div
@@ -74,7 +75,7 @@ const OrderSection = ({ title, bids, asks, isYes }: { title: string, bids: [stri
                     ₹{formatNumber(price)}
                   </span>
                   <span className="text-sm text-slate-300 font-medium">
-                    {formatNumber(quantity)}
+                    {quantity}
                   </span>
                 </div>
               </motion.div>
@@ -94,14 +95,15 @@ const OrderSection = ({ title, bids, asks, isYes }: { title: string, bids: [stri
       </ScrollArea>
     </div>
 
-    {/* Asks Section */}
+    {/* Asks Section - Now scrollable */}
     <div className="space-y-3">
       <div className="flex items-center gap-2 mb-4">
         <TrendingDown className="w-4 h-4 text-red-400" />
         <h4 className="text-sm font-bold text-red-400 tracking-wide">ASKS (SELL)</h4>
       </div>
-      <ScrollArea className="h-72">
-        <div className="space-y-2">
+      {/* Made ScrollArea height consistent and scrollable for all orders */}
+      <ScrollArea className="h-80">
+        <div className="space-y-2 pr-2">
           {asks.length > 0 ? (
             asks.map(([price, quantity], index) => (
               <motion.div
@@ -121,7 +123,7 @@ const OrderSection = ({ title, bids, asks, isYes }: { title: string, bids: [stri
                     ₹{formatNumber(price)}
                   </span>
                   <span className="text-sm text-slate-300 font-medium">
-                    {formatNumber(quantity)}
+                    {quantity}
                   </span>
                 </div>
               </motion.div>

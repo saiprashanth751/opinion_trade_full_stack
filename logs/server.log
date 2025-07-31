@@ -1,0 +1,18 @@
+[ 2025-07-31 23:57:47 ] -  [32minfo[39m  - PHASE 3 MONITOR | Generating background operations report...
+[ 2025-07-31 23:57:47 ] -  [31merror[39m  - PHASE 3 MONITOR | Failed to generate report: 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Raw query failed. Code: `42703`. Message: `column "event_id" does not exist`
+[ 2025-07-31 23:58:31 ] -  [32minfo[39m  - PHASE 3 MONITOR | Generating background operations report...
+[ 2025-07-31 23:58:31 ] -  [31merror[39m  - PHASE 3 MONITOR | Failed to generate report: 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Raw query failed. Code: `42703`. Message: `column "event_id" does not exist`
+[ 2025-07-31 23:58:36 ] -  [32minfo[39m  - PHASE 3 MONITOR | Generating background operations report...
+[ 2025-07-31 23:58:36 ] -  [31merror[39m  - PHASE 3 MONITOR | Failed to generate report: 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Raw query failed. Code: `42703`. Message: `column "event_id" does not exist`

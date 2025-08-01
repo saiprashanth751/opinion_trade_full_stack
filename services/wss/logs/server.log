@@ -3277,3 +3277,755 @@
 [ 2025-08-01 01:07:37 ] -  [32minfo[39m  - PHASE 3 | User ocnhvthfss53hegommjq disconnected (Code: 1001, Reason: ). Active users: 0
 [ 2025-08-01 01:07:37 ] -  [32minfo[39m  - PHASE 3 | Connection closed. Active connections: 0
 [ 2025-08-01 01:07:40 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 4, Total: 20
+[ 2025-08-01 10:54:50 ] -  [32minfo[39m  - PHASE 3 | Initializing system components...
+[ 2025-08-01 10:54:50 ] -  [32minfo[39m  - PHASE 3 | Attempting Redis connection (attempt 1/5)...
+[ 2025-08-01 10:54:50 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Attempting to connect Redis client...
+[ 2025-08-01 10:54:50 ] -  [32minfo[39m  - PHASE 3 | WebSocket server running on ws://localhost:8080
+[ 2025-08-01 10:54:50 ] -  [32minfo[39m  - PHASE 3 | Server started at 2025-08-01T05:24:50.822Z
+[ 2025-08-01 10:54:50 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-08-01 10:54:51 ] -  [32minfo[39m  - PHASE 3 | ✅ Redis Pub/Sub client connected successfully
+[ 2025-08-01 10:54:51 ] -  [32minfo[39m  - PHASE 3 | Initializing SubscriptionManager...
+[ 2025-08-01 10:54:51 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 10:54:51 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 10:54:51 ] -  [32minfo[39m  - SubscriptionManager | Initialized successfully and subscribed to event_summaries
+[ 2025-08-01 10:54:52 ] -  [32minfo[39m  - PHASE 3 | ✅ SubscriptionManager initialized successfully
+[ 2025-08-01 10:54:52 ] -  [32minfo[39m  - PHASE 3 | ✅ Graceful shutdown handlers configured
+[ 2025-08-01 10:54:52 ] -  [32minfo[39m  - PHASE 3 | ✅ Health monitoring configured
+[ 2025-08-01 10:54:52 ] -  [32minfo[39m  - PHASE 3 | UserManager enhanced features initialized
+[ 2025-08-01 10:54:52 ] -  [32minfo[39m  - PHASE 3 | UserManager initialized and ready
+[ 2025-08-01 10:54:52 ] -  [32minfo[39m  - PHASE 3 | ✅ All systems initialized and ready!
+[ 2025-08-01 10:56:33 ] -  [32minfo[39m  - PHASE 3 | New WebSocket connection from ::1 (Active: 1)
+[ 2025-08-01 10:56:33 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 10:56:33 ] -  [32minfo[39m  - PHASE 3 | User erg42howsvxgzbm4zprb constructed from ::1
+[ 2025-08-01 10:56:33 ] -  [32minfo[39m  - PHASE 3 | User erg42howsvxgzbm4zprb connected from ::1. Active users: 1
+[ 2025-08-01 10:56:33 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 10:56:33 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: erg42howsvxgzbm4zprb
+[ 2025-08-01 10:56:33 ] -  [32minfo[39m  - SubscriptionManager | User erg42howsvxgzbm4zprb subscribed to erg42howsvxgzbm4zprb
+[ 2025-08-01 10:56:33 ] -  [32minfo[39m  - PHASE 3 | User erg42howsvxgzbm4zprb received message:
+[ 2025-08-01 10:56:33 ] -  [32minfo[39m  - PHASE 3 | User erg42howsvxgzbm4zprb subscribing to:
+[ 2025-08-01 10:56:33 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 10:56:33 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 10:56:33 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: event_summaries
+[ 2025-08-01 10:56:33 ] -  [32minfo[39m  - SubscriptionManager | User erg42howsvxgzbm4zprb subscribed to event_summaries
+[ 2025-08-01 10:56:33 ] -  [32minfo[39m  - PHASE 3 | New WebSocket connection from ::1 (Active: 2)
+[ 2025-08-01 10:56:33 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 10:56:33 ] -  [32minfo[39m  - PHASE 3 | User 6c2hb4nbdttem6wa0coymb constructed from ::1
+[ 2025-08-01 10:56:33 ] -  [32minfo[39m  - PHASE 3 | User 6c2hb4nbdttem6wa0coymb connected from ::1. Active users: 2
+[ 2025-08-01 10:56:33 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 10:56:33 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: 6c2hb4nbdttem6wa0coymb
+[ 2025-08-01 10:56:33 ] -  [32minfo[39m  - SubscriptionManager | User 6c2hb4nbdttem6wa0coymb subscribed to 6c2hb4nbdttem6wa0coymb
+[ 2025-08-01 10:56:33 ] -  [32minfo[39m  - PHASE 3 | User 6c2hb4nbdttem6wa0coymb received message:
+[ 2025-08-01 10:56:33 ] -  [32minfo[39m  - PHASE 3 | User 6c2hb4nbdttem6wa0coymb subscribing to:
+[ 2025-08-01 10:56:33 ] -  [32minfo[39m  - SubscriptionManager | User 6c2hb4nbdttem6wa0coymb subscribed to event_summaries
+[ 2025-08-01 10:56:33 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 10:56:35 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 10:56:38 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 10:56:40 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 10:56:42 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 10:56:44 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 10:56:45 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - PHASE 3 | User 6c2hb4nbdttem6wa0coymb received message:
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - PHASE 3 | User 6c2hb4nbdttem6wa0coymb unsubscribing from:
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SubscriptionManager | User 6c2hb4nbdttem6wa0coymb unsubscribed from event_summaries
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - PHASE 3 | User 6c2hb4nbdttem6wa0coymb connection closed (Code: 1005, Reason: )
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - PHASE 3 | User 6c2hb4nbdttem6wa0coymb cleanup completed
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - User Left: 6c2hb4nbdttem6wa0coymb
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: 6c2hb4nbdttem6wa0coymb
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SubscriptionManager | User 6c2hb4nbdttem6wa0coymb unsubscribed from 6c2hb4nbdttem6wa0coymb
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - PHASE 3 | User 6c2hb4nbdttem6wa0coymb disconnected (Code: 1005, Reason: ). Active users: 1
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - PHASE 3 | Connection closed. Active connections: 1
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - PHASE 3 | New WebSocket connection from ::1 (Active: 2)
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - PHASE 3 | User cozum7gspdbgjhyii09277 constructed from ::1
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - PHASE 3 | User cozum7gspdbgjhyii09277 connected from ::1. Active users: 2
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: cozum7gspdbgjhyii09277
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SubscriptionManager | User cozum7gspdbgjhyii09277 subscribed to cozum7gspdbgjhyii09277
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - PHASE 3 | User cozum7gspdbgjhyii09277 received message:
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - PHASE 3 | User cozum7gspdbgjhyii09277 subscribing to:
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: depth@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SubscriptionManager | User cozum7gspdbgjhyii09277 subscribed to depth@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: depth@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SubscriptionManager | User cozum7gspdbgjhyii09277 subscribed to depth@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: trade@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SubscriptionManager | User cozum7gspdbgjhyii09277 subscribed to trade@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: trade@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SubscriptionManager | User cozum7gspdbgjhyii09277 subscribed to trade@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - PHASE 3 | New WebSocket connection from ::1 (Active: 3)
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - PHASE 3 | User hztxm6nonfnv2ioc6ihg5r constructed from ::1
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - PHASE 3 | User hztxm6nonfnv2ioc6ihg5r connected from ::1. Active users: 3
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: hztxm6nonfnv2ioc6ihg5r
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SubscriptionManager | User hztxm6nonfnv2ioc6ihg5r subscribed to hztxm6nonfnv2ioc6ihg5r
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - PHASE 3 | User hztxm6nonfnv2ioc6ihg5r received message:
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - PHASE 3 | User hztxm6nonfnv2ioc6ihg5r subscribing to:
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SubscriptionManager | User hztxm6nonfnv2ioc6ihg5r subscribed to depth@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SubscriptionManager | User hztxm6nonfnv2ioc6ihg5r subscribed to depth@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SubscriptionManager | User hztxm6nonfnv2ioc6ihg5r subscribed to trade@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SubscriptionManager | User hztxm6nonfnv2ioc6ihg5r subscribed to trade@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user hztxm6nonfnv2ioc6ihg5r for event cmdqbb0wx0000kcd0262heesn with 230 price points
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user cozum7gspdbgjhyii09277 for event cmdqbb0wx0000kcd0262heesn with 230 price points
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user cozum7gspdbgjhyii09277 for event cmdqbb0wx0000kcd0262heesn with 230 price points
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user hztxm6nonfnv2ioc6ihg5r for event cmdqbb0wx0000kcd0262heesn with 230 price points
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user hztxm6nonfnv2ioc6ihg5r for event cmdqbb0wx0000kcd0262heesn with 230 price points
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user cozum7gspdbgjhyii09277 for event cmdqbb0wx0000kcd0262heesn with 230 price points
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user cozum7gspdbgjhyii09277 for event cmdqbb0wx0000kcd0262heesn with 230 price points
+[ 2025-08-01 10:56:47 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user hztxm6nonfnv2ioc6ihg5r for event cmdqbb0wx0000kcd0262heesn with 230 price points
+[ 2025-08-01 10:56:47 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 10:56:50 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 10:56:52 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 3, Peak: 3, Total: 4
+[ 2025-08-01 10:56:52 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 10:56:54 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 10:56:56 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 10:56:58 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 10:57:00 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 10:57:01 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 10:57:03 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 10:57:05 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 10:57:07 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 10:57:09 ] -  [32minfo[39m  - PHASE 3 | User hztxm6nonfnv2ioc6ihg5r received message:
+[ 2025-08-01 10:57:09 ] -  [32minfo[39m  - PHASE 3 | User hztxm6nonfnv2ioc6ihg5r unsubscribing from:
+[ 2025-08-01 10:57:09 ] -  [32minfo[39m  - SubscriptionManager | User hztxm6nonfnv2ioc6ihg5r unsubscribed from depth@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 10:57:09 ] -  [32minfo[39m  - SubscriptionManager | User hztxm6nonfnv2ioc6ihg5r unsubscribed from depth@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 10:57:09 ] -  [32minfo[39m  - SubscriptionManager | User hztxm6nonfnv2ioc6ihg5r unsubscribed from trade@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 10:57:09 ] -  [32minfo[39m  - SubscriptionManager | User hztxm6nonfnv2ioc6ihg5r unsubscribed from trade@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 10:57:09 ] -  [32minfo[39m  - PHASE 3 | User hztxm6nonfnv2ioc6ihg5r connection closed (Code: 1005, Reason: )
+[ 2025-08-01 10:57:09 ] -  [32minfo[39m  - PHASE 3 | User hztxm6nonfnv2ioc6ihg5r cleanup completed
+[ 2025-08-01 10:57:09 ] -  [32minfo[39m  - User Left: hztxm6nonfnv2ioc6ihg5r
+[ 2025-08-01 10:57:09 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: hztxm6nonfnv2ioc6ihg5r
+[ 2025-08-01 10:57:09 ] -  [32minfo[39m  - SubscriptionManager | User hztxm6nonfnv2ioc6ihg5r unsubscribed from hztxm6nonfnv2ioc6ihg5r
+[ 2025-08-01 10:57:09 ] -  [32minfo[39m  - PHASE 3 | User hztxm6nonfnv2ioc6ihg5r disconnected (Code: 1005, Reason: ). Active users: 2
+[ 2025-08-01 10:57:09 ] -  [32minfo[39m  - PHASE 3 | Connection closed. Active connections: 2
+[ 2025-08-01 10:57:09 ] -  [32minfo[39m  - PHASE 3 | New WebSocket connection from ::1 (Active: 3)
+[ 2025-08-01 10:57:09 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 10:57:09 ] -  [32minfo[39m  - PHASE 3 | User 56kaet7z1vyutmtmrooo constructed from ::1
+[ 2025-08-01 10:57:09 ] -  [32minfo[39m  - PHASE 3 | User 56kaet7z1vyutmtmrooo connected from ::1. Active users: 3
+[ 2025-08-01 10:57:09 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 10:57:09 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: 56kaet7z1vyutmtmrooo
+[ 2025-08-01 10:57:09 ] -  [32minfo[39m  - SubscriptionManager | User 56kaet7z1vyutmtmrooo subscribed to 56kaet7z1vyutmtmrooo
+[ 2025-08-01 10:57:09 ] -  [32minfo[39m  - PHASE 3 | New WebSocket connection from ::1 (Active: 4)
+[ 2025-08-01 10:57:09 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 10:57:09 ] -  [32minfo[39m  - PHASE 3 | User mwcvvjpa6ow6sl6ixrkqs constructed from ::1
+[ 2025-08-01 10:57:09 ] -  [32minfo[39m  - PHASE 3 | User mwcvvjpa6ow6sl6ixrkqs connected from ::1. Active users: 4
+[ 2025-08-01 10:57:09 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 10:57:09 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: mwcvvjpa6ow6sl6ixrkqs
+[ 2025-08-01 10:57:09 ] -  [32minfo[39m  - SubscriptionManager | User mwcvvjpa6ow6sl6ixrkqs subscribed to mwcvvjpa6ow6sl6ixrkqs
+[ 2025-08-01 10:57:09 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 10:57:10 ] -  [32minfo[39m  - PHASE 3 | User mwcvvjpa6ow6sl6ixrkqs received message:
+[ 2025-08-01 10:57:10 ] -  [32minfo[39m  - PHASE 3 | User mwcvvjpa6ow6sl6ixrkqs sending API message:
+[ 2025-08-01 10:57:10 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: mwcvvjpa6ow6sl6ixrkqs, MessageType: GET_OPEN_ORDERS
+[ 2025-08-01 10:57:10 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
+[ 2025-08-01 10:57:10 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-08-01 10:57:10 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added GET_OPEN_ORDERS message to ORDER_QUEUE
+[ 2025-08-01 10:57:10 ] -  [32minfo[39m  - PHASE 3 | User mwcvvjpa6ow6sl6ixrkqs successfully queued GET_OPEN_ORDERS message
+[ 2025-08-01 10:57:10 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel mwcvvjpa6ow6sl6ixrkqs:, parsedMessage
+[ 2025-08-01 10:57:10 ] -  [32minfo[39m  - PHASE 3 | User mwcvvjpa6ow6sl6ixrkqs received message:
+[ 2025-08-01 10:57:10 ] -  [32minfo[39m  - PHASE 3 | User mwcvvjpa6ow6sl6ixrkqs sending API message:
+[ 2025-08-01 10:57:10 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: mwcvvjpa6ow6sl6ixrkqs, MessageType: GET_OPEN_ORDERS
+[ 2025-08-01 10:57:10 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 10:57:10 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added GET_OPEN_ORDERS message to ORDER_QUEUE
+[ 2025-08-01 10:57:10 ] -  [32minfo[39m  - PHASE 3 | User mwcvvjpa6ow6sl6ixrkqs successfully queued GET_OPEN_ORDERS message
+[ 2025-08-01 10:57:10 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel mwcvvjpa6ow6sl6ixrkqs:, parsedMessage
+[ 2025-08-01 10:57:12 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 10:57:14 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 10:57:16 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 10:57:18 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - PHASE 3 | User erg42howsvxgzbm4zprb connection closed (Code: 1001, Reason: )
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - PHASE 3 | User erg42howsvxgzbm4zprb cleanup completed
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - User Left: erg42howsvxgzbm4zprb
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: erg42howsvxgzbm4zprb
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - SubscriptionManager | User erg42howsvxgzbm4zprb unsubscribed from erg42howsvxgzbm4zprb
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: event_summaries
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - SubscriptionManager | User erg42howsvxgzbm4zprb unsubscribed from event_summaries
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - PHASE 3 | User erg42howsvxgzbm4zprb disconnected (Code: 1001, Reason: ). Active users: 3
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - PHASE 3 | Connection closed. Active connections: 3
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - PHASE 3 | User mwcvvjpa6ow6sl6ixrkqs connection closed (Code: 1001, Reason: )
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - PHASE 3 | User mwcvvjpa6ow6sl6ixrkqs cleanup completed
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - User Left: mwcvvjpa6ow6sl6ixrkqs
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: mwcvvjpa6ow6sl6ixrkqs
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - SubscriptionManager | User mwcvvjpa6ow6sl6ixrkqs unsubscribed from mwcvvjpa6ow6sl6ixrkqs
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - PHASE 3 | User mwcvvjpa6ow6sl6ixrkqs disconnected (Code: 1001, Reason: ). Active users: 2
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - PHASE 3 | Connection closed. Active connections: 2
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - PHASE 3 | User 56kaet7z1vyutmtmrooo connection closed (Code: 1001, Reason: )
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - PHASE 3 | User 56kaet7z1vyutmtmrooo cleanup completed
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - User Left: 56kaet7z1vyutmtmrooo
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: 56kaet7z1vyutmtmrooo
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - SubscriptionManager | User 56kaet7z1vyutmtmrooo unsubscribed from 56kaet7z1vyutmtmrooo
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - PHASE 3 | User 56kaet7z1vyutmtmrooo disconnected (Code: 1001, Reason: ). Active users: 1
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - PHASE 3 | Connection closed. Active connections: 1
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - PHASE 3 | User cozum7gspdbgjhyii09277 connection closed (Code: 1001, Reason: )
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - PHASE 3 | User cozum7gspdbgjhyii09277 cleanup completed
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - User Left: cozum7gspdbgjhyii09277
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: cozum7gspdbgjhyii09277
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - SubscriptionManager | User cozum7gspdbgjhyii09277 unsubscribed from cozum7gspdbgjhyii09277
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: depth@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - SubscriptionManager | User cozum7gspdbgjhyii09277 unsubscribed from depth@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: depth@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - SubscriptionManager | User cozum7gspdbgjhyii09277 unsubscribed from depth@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: trade@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - SubscriptionManager | User cozum7gspdbgjhyii09277 unsubscribed from trade@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: trade@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - SubscriptionManager | User cozum7gspdbgjhyii09277 unsubscribed from trade@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - PHASE 3 | User cozum7gspdbgjhyii09277 disconnected (Code: 1001, Reason: ). Active users: 0
+[ 2025-08-01 10:57:19 ] -  [32minfo[39m  - PHASE 3 | Connection closed. Active connections: 0
+[ 2025-08-01 15:32:54 ] -  [32minfo[39m  - PHASE 3 | Initializing system components...
+[ 2025-08-01 15:32:54 ] -  [32minfo[39m  - PHASE 3 | Attempting Redis connection (attempt 1/5)...
+[ 2025-08-01 15:32:54 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Attempting to connect Redis client...
+[ 2025-08-01 15:32:54 ] -  [32minfo[39m  - PHASE 3 | WebSocket server running on ws://localhost:8080
+[ 2025-08-01 15:32:54 ] -  [32minfo[39m  - PHASE 3 | Server started at 2025-08-01T10:02:54.188Z
+[ 2025-08-01 15:32:54 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-08-01 15:32:54 ] -  [32minfo[39m  - PHASE 3 | ✅ Redis Pub/Sub client connected successfully
+[ 2025-08-01 15:32:54 ] -  [32minfo[39m  - PHASE 3 | Initializing SubscriptionManager...
+[ 2025-08-01 15:32:54 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:32:54 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:32:54 ] -  [32minfo[39m  - SubscriptionManager | Initialized successfully and subscribed to event_summaries
+[ 2025-08-01 15:32:55 ] -  [32minfo[39m  - PHASE 3 | ✅ SubscriptionManager initialized successfully
+[ 2025-08-01 15:32:55 ] -  [32minfo[39m  - PHASE 3 | ✅ Graceful shutdown handlers configured
+[ 2025-08-01 15:32:55 ] -  [32minfo[39m  - PHASE 3 | ✅ Health monitoring configured
+[ 2025-08-01 15:32:55 ] -  [32minfo[39m  - PHASE 3 | UserManager enhanced features initialized
+[ 2025-08-01 15:32:55 ] -  [32minfo[39m  - PHASE 3 | UserManager initialized and ready
+[ 2025-08-01 15:32:55 ] -  [32minfo[39m  - PHASE 3 | ✅ All systems initialized and ready!
+[ 2025-08-01 15:34:09 ] -  [32minfo[39m  - PHASE 3 | New WebSocket connection from ::1 (Active: 1)
+[ 2025-08-01 15:34:09 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:34:09 ] -  [32minfo[39m  - PHASE 3 | User ahao7g483swv1fy6t8ir constructed from ::1
+[ 2025-08-01 15:34:09 ] -  [32minfo[39m  - PHASE 3 | User ahao7g483swv1fy6t8ir connected from ::1. Active users: 1
+[ 2025-08-01 15:34:09 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:34:09 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: ahao7g483swv1fy6t8ir
+[ 2025-08-01 15:34:09 ] -  [32minfo[39m  - SubscriptionManager | User ahao7g483swv1fy6t8ir subscribed to ahao7g483swv1fy6t8ir
+[ 2025-08-01 15:34:09 ] -  [32minfo[39m  - PHASE 3 | User ahao7g483swv1fy6t8ir received message:
+[ 2025-08-01 15:34:09 ] -  [32minfo[39m  - PHASE 3 | User ahao7g483swv1fy6t8ir subscribing to:
+[ 2025-08-01 15:34:09 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:34:09 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:34:09 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: event_summaries
+[ 2025-08-01 15:34:09 ] -  [32minfo[39m  - SubscriptionManager | User ahao7g483swv1fy6t8ir subscribed to event_summaries
+[ 2025-08-01 15:34:09 ] -  [32minfo[39m  - PHASE 3 | New WebSocket connection from ::1 (Active: 2)
+[ 2025-08-01 15:34:09 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:34:09 ] -  [32minfo[39m  - PHASE 3 | User cl1zn0l1pdmpbluiwwr24 constructed from ::1
+[ 2025-08-01 15:34:09 ] -  [32minfo[39m  - PHASE 3 | User cl1zn0l1pdmpbluiwwr24 connected from ::1. Active users: 2
+[ 2025-08-01 15:34:09 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:34:09 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: cl1zn0l1pdmpbluiwwr24
+[ 2025-08-01 15:34:09 ] -  [32minfo[39m  - SubscriptionManager | User cl1zn0l1pdmpbluiwwr24 subscribed to cl1zn0l1pdmpbluiwwr24
+[ 2025-08-01 15:34:09 ] -  [32minfo[39m  - PHASE 3 | User cl1zn0l1pdmpbluiwwr24 received message:
+[ 2025-08-01 15:34:09 ] -  [32minfo[39m  - PHASE 3 | User cl1zn0l1pdmpbluiwwr24 subscribing to:
+[ 2025-08-01 15:34:09 ] -  [32minfo[39m  - SubscriptionManager | User cl1zn0l1pdmpbluiwwr24 subscribed to event_summaries
+[ 2025-08-01 15:34:10 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:34:12 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:34:14 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:34:17 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:34:19 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:34:21 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:34:22 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:34:24 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:34:26 ] -  [32minfo[39m  - PHASE 3 | User ahao7g483swv1fy6t8ir connection closed (Code: 1001, Reason: )
+[ 2025-08-01 15:34:26 ] -  [32minfo[39m  - PHASE 3 | User ahao7g483swv1fy6t8ir cleanup completed
+[ 2025-08-01 15:34:26 ] -  [32minfo[39m  - User Left: ahao7g483swv1fy6t8ir
+[ 2025-08-01 15:34:26 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: ahao7g483swv1fy6t8ir
+[ 2025-08-01 15:34:26 ] -  [32minfo[39m  - SubscriptionManager | User ahao7g483swv1fy6t8ir unsubscribed from ahao7g483swv1fy6t8ir
+[ 2025-08-01 15:34:26 ] -  [32minfo[39m  - SubscriptionManager | User ahao7g483swv1fy6t8ir unsubscribed from event_summaries
+[ 2025-08-01 15:34:26 ] -  [32minfo[39m  - PHASE 3 | User ahao7g483swv1fy6t8ir disconnected (Code: 1001, Reason: ). Active users: 1
+[ 2025-08-01 15:34:26 ] -  [32minfo[39m  - PHASE 3 | Connection closed. Active connections: 1
+[ 2025-08-01 15:34:26 ] -  [32minfo[39m  - PHASE 3 | User cl1zn0l1pdmpbluiwwr24 connection closed (Code: 1001, Reason: )
+[ 2025-08-01 15:34:26 ] -  [32minfo[39m  - PHASE 3 | User cl1zn0l1pdmpbluiwwr24 cleanup completed
+[ 2025-08-01 15:34:26 ] -  [32minfo[39m  - User Left: cl1zn0l1pdmpbluiwwr24
+[ 2025-08-01 15:34:26 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: cl1zn0l1pdmpbluiwwr24
+[ 2025-08-01 15:34:26 ] -  [32minfo[39m  - SubscriptionManager | User cl1zn0l1pdmpbluiwwr24 unsubscribed from cl1zn0l1pdmpbluiwwr24
+[ 2025-08-01 15:34:26 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: event_summaries
+[ 2025-08-01 15:34:26 ] -  [32minfo[39m  - SubscriptionManager | User cl1zn0l1pdmpbluiwwr24 unsubscribed from event_summaries
+[ 2025-08-01 15:34:26 ] -  [32minfo[39m  - PHASE 3 | User cl1zn0l1pdmpbluiwwr24 disconnected (Code: 1001, Reason: ). Active users: 0
+[ 2025-08-01 15:34:26 ] -  [32minfo[39m  - PHASE 3 | Connection closed. Active connections: 0
+[ 2025-08-01 15:34:27 ] -  [32minfo[39m  - PHASE 3 | New WebSocket connection from ::1 (Active: 1)
+[ 2025-08-01 15:34:27 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:34:27 ] -  [32minfo[39m  - PHASE 3 | User 74u5lnw93m545k6jdh6ub9 constructed from ::1
+[ 2025-08-01 15:34:27 ] -  [32minfo[39m  - PHASE 3 | User 74u5lnw93m545k6jdh6ub9 connected from ::1. Active users: 1
+[ 2025-08-01 15:34:27 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:34:27 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: 74u5lnw93m545k6jdh6ub9
+[ 2025-08-01 15:34:27 ] -  [32minfo[39m  - SubscriptionManager | User 74u5lnw93m545k6jdh6ub9 subscribed to 74u5lnw93m545k6jdh6ub9
+[ 2025-08-01 15:34:27 ] -  [32minfo[39m  - PHASE 3 | User 74u5lnw93m545k6jdh6ub9 received message:
+[ 2025-08-01 15:34:27 ] -  [32minfo[39m  - PHASE 3 | User 74u5lnw93m545k6jdh6ub9 subscribing to:
+[ 2025-08-01 15:34:27 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:34:27 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:34:27 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: event_summaries
+[ 2025-08-01 15:34:27 ] -  [32minfo[39m  - SubscriptionManager | User 74u5lnw93m545k6jdh6ub9 subscribed to event_summaries
+[ 2025-08-01 15:34:29 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:34:31 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:34:33 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:34:35 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:34:36 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:34:38 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:34:41 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:34:43 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:34:45 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:34:46 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:34:48 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:34:50 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:34:53 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:34:55 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 1, Peak: 2, Total: 3
+[ 2025-08-01 15:34:55 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:34:57 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:34:58 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:35:00 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:35:03 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:35:04 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:35:07 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:35:09 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:35:11 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:35:13 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:35:14 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:35:17 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:35:19 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:35:21 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:35:23 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:35:24 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - PHASE 3 | User 74u5lnw93m545k6jdh6ub9 received message:
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - PHASE 3 | User 74u5lnw93m545k6jdh6ub9 unsubscribing from:
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: event_summaries
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - SubscriptionManager | User 74u5lnw93m545k6jdh6ub9 unsubscribed from event_summaries
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - PHASE 3 | User 74u5lnw93m545k6jdh6ub9 connection closed (Code: 1005, Reason: )
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - PHASE 3 | User 74u5lnw93m545k6jdh6ub9 cleanup completed
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - User Left: 74u5lnw93m545k6jdh6ub9
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: 74u5lnw93m545k6jdh6ub9
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - SubscriptionManager | User 74u5lnw93m545k6jdh6ub9 unsubscribed from 74u5lnw93m545k6jdh6ub9
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - PHASE 3 | User 74u5lnw93m545k6jdh6ub9 disconnected (Code: 1005, Reason: ). Active users: 0
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - PHASE 3 | Connection closed. Active connections: 0
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - PHASE 3 | New WebSocket connection from ::1 (Active: 1)
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - PHASE 3 | User kp730sqd52kpizs5uuxkl constructed from ::1
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - PHASE 3 | User kp730sqd52kpizs5uuxkl connected from ::1. Active users: 1
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: kp730sqd52kpizs5uuxkl
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - SubscriptionManager | User kp730sqd52kpizs5uuxkl subscribed to kp730sqd52kpizs5uuxkl
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - PHASE 3 | User kp730sqd52kpizs5uuxkl received message:
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - PHASE 3 | User kp730sqd52kpizs5uuxkl subscribing to:
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: depth@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - SubscriptionManager | User kp730sqd52kpizs5uuxkl subscribed to depth@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: depth@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - SubscriptionManager | User kp730sqd52kpizs5uuxkl subscribed to depth@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: trade@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - SubscriptionManager | User kp730sqd52kpizs5uuxkl subscribed to trade@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: trade@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - SubscriptionManager | User kp730sqd52kpizs5uuxkl subscribed to trade@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - PHASE 3 | New WebSocket connection from ::1 (Active: 2)
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - PHASE 3 | User pihy4xgirxahr6lzclt0wl constructed from ::1
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - PHASE 3 | User pihy4xgirxahr6lzclt0wl connected from ::1. Active users: 2
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: pihy4xgirxahr6lzclt0wl
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - SubscriptionManager | User pihy4xgirxahr6lzclt0wl subscribed to pihy4xgirxahr6lzclt0wl
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - PHASE 3 | User pihy4xgirxahr6lzclt0wl received message:
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - PHASE 3 | User pihy4xgirxahr6lzclt0wl subscribing to:
+[ 2025-08-01 15:35:24 ] -  [32minfo[39m  - SubscriptionManager | User pihy4xgirxahr6lzclt0wl subscribed to depth@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:35:25 ] -  [32minfo[39m  - SubscriptionManager | User pihy4xgirxahr6lzclt0wl subscribed to depth@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:35:25 ] -  [32minfo[39m  - SubscriptionManager | User pihy4xgirxahr6lzclt0wl subscribed to trade@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:35:25 ] -  [32minfo[39m  - SubscriptionManager | User pihy4xgirxahr6lzclt0wl subscribed to trade@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:35:25 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user pihy4xgirxahr6lzclt0wl for event cmdqbb0wx0000kcd0262heesn with 239 price points
+[ 2025-08-01 15:35:25 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user kp730sqd52kpizs5uuxkl for event cmdqbb0wx0000kcd0262heesn with 239 price points
+[ 2025-08-01 15:35:25 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user pihy4xgirxahr6lzclt0wl for event cmdqbb0wx0000kcd0262heesn with 239 price points
+[ 2025-08-01 15:35:25 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user pihy4xgirxahr6lzclt0wl for event cmdqbb0wx0000kcd0262heesn with 239 price points
+[ 2025-08-01 15:35:25 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user kp730sqd52kpizs5uuxkl for event cmdqbb0wx0000kcd0262heesn with 239 price points
+[ 2025-08-01 15:35:25 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user pihy4xgirxahr6lzclt0wl for event cmdqbb0wx0000kcd0262heesn with 239 price points
+[ 2025-08-01 15:35:25 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user kp730sqd52kpizs5uuxkl for event cmdqbb0wx0000kcd0262heesn with 239 price points
+[ 2025-08-01 15:35:25 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user kp730sqd52kpizs5uuxkl for event cmdqbb0wx0000kcd0262heesn with 239 price points
+[ 2025-08-01 15:36:55 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 2, Peak: 2, Total: 5
+[ 2025-08-01 15:36:59 ] -  [32minfo[39m  - PHASE 3 | User kp730sqd52kpizs5uuxkl connection closed (Code: 1001, Reason: )
+[ 2025-08-01 15:36:59 ] -  [32minfo[39m  - PHASE 3 | User kp730sqd52kpizs5uuxkl cleanup completed
+[ 2025-08-01 15:36:59 ] -  [32minfo[39m  - User Left: kp730sqd52kpizs5uuxkl
+[ 2025-08-01 15:36:59 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: kp730sqd52kpizs5uuxkl
+[ 2025-08-01 15:36:59 ] -  [32minfo[39m  - SubscriptionManager | User kp730sqd52kpizs5uuxkl unsubscribed from kp730sqd52kpizs5uuxkl
+[ 2025-08-01 15:36:59 ] -  [32minfo[39m  - SubscriptionManager | User kp730sqd52kpizs5uuxkl unsubscribed from depth@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:36:59 ] -  [32minfo[39m  - SubscriptionManager | User kp730sqd52kpizs5uuxkl unsubscribed from depth@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:36:59 ] -  [32minfo[39m  - SubscriptionManager | User kp730sqd52kpizs5uuxkl unsubscribed from trade@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:36:59 ] -  [32minfo[39m  - SubscriptionManager | User kp730sqd52kpizs5uuxkl unsubscribed from trade@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:36:59 ] -  [32minfo[39m  - PHASE 3 | User kp730sqd52kpizs5uuxkl disconnected (Code: 1001, Reason: ). Active users: 1
+[ 2025-08-01 15:36:59 ] -  [32minfo[39m  - PHASE 3 | Connection closed. Active connections: 1
+[ 2025-08-01 15:36:59 ] -  [32minfo[39m  - PHASE 3 | User pihy4xgirxahr6lzclt0wl connection closed (Code: 1001, Reason: )
+[ 2025-08-01 15:36:59 ] -  [32minfo[39m  - PHASE 3 | User pihy4xgirxahr6lzclt0wl cleanup completed
+[ 2025-08-01 15:36:59 ] -  [32minfo[39m  - User Left: pihy4xgirxahr6lzclt0wl
+[ 2025-08-01 15:36:59 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: pihy4xgirxahr6lzclt0wl
+[ 2025-08-01 15:36:59 ] -  [32minfo[39m  - SubscriptionManager | User pihy4xgirxahr6lzclt0wl unsubscribed from pihy4xgirxahr6lzclt0wl
+[ 2025-08-01 15:36:59 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: depth@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:36:59 ] -  [32minfo[39m  - SubscriptionManager | User pihy4xgirxahr6lzclt0wl unsubscribed from depth@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:36:59 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: depth@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:36:59 ] -  [32minfo[39m  - SubscriptionManager | User pihy4xgirxahr6lzclt0wl unsubscribed from depth@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:36:59 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: trade@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:36:59 ] -  [32minfo[39m  - SubscriptionManager | User pihy4xgirxahr6lzclt0wl unsubscribed from trade@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:36:59 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: trade@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:36:59 ] -  [32minfo[39m  - SubscriptionManager | User pihy4xgirxahr6lzclt0wl unsubscribed from trade@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:36:59 ] -  [32minfo[39m  - PHASE 3 | User pihy4xgirxahr6lzclt0wl disconnected (Code: 1001, Reason: ). Active users: 0
+[ 2025-08-01 15:36:59 ] -  [32minfo[39m  - PHASE 3 | Connection closed. Active connections: 0
+[ 2025-08-01 15:37:01 ] -  [32minfo[39m  - PHASE 3 | New WebSocket connection from ::1 (Active: 1)
+[ 2025-08-01 15:37:01 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:37:01 ] -  [32minfo[39m  - PHASE 3 | User 8gca99jii8gclxj59mnm2 constructed from ::1
+[ 2025-08-01 15:37:01 ] -  [32minfo[39m  - PHASE 3 | User 8gca99jii8gclxj59mnm2 connected from ::1. Active users: 1
+[ 2025-08-01 15:37:01 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:37:01 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: 8gca99jii8gclxj59mnm2
+[ 2025-08-01 15:37:01 ] -  [32minfo[39m  - SubscriptionManager | User 8gca99jii8gclxj59mnm2 subscribed to 8gca99jii8gclxj59mnm2
+[ 2025-08-01 15:37:01 ] -  [32minfo[39m  - PHASE 3 | User 8gca99jii8gclxj59mnm2 received message:
+[ 2025-08-01 15:37:01 ] -  [32minfo[39m  - PHASE 3 | User 8gca99jii8gclxj59mnm2 subscribing to:
+[ 2025-08-01 15:37:01 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:37:01 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:37:01 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:37:01 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:37:01 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:37:01 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: depth@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:37:01 ] -  [32minfo[39m  - SubscriptionManager | User 8gca99jii8gclxj59mnm2 subscribed to depth@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:37:01 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:37:01 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: depth@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:37:01 ] -  [32minfo[39m  - SubscriptionManager | User 8gca99jii8gclxj59mnm2 subscribed to depth@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:37:01 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:37:01 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: trade@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:37:01 ] -  [32minfo[39m  - SubscriptionManager | User 8gca99jii8gclxj59mnm2 subscribed to trade@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:37:01 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:37:01 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: trade@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:37:01 ] -  [32minfo[39m  - SubscriptionManager | User 8gca99jii8gclxj59mnm2 subscribed to trade@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:37:01 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user 8gca99jii8gclxj59mnm2 for event cmdqbb0wx0000kcd0262heesn with 244 price points
+[ 2025-08-01 15:37:01 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user 8gca99jii8gclxj59mnm2 for event cmdqbb0wx0000kcd0262heesn with 244 price points
+[ 2025-08-01 15:37:01 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user 8gca99jii8gclxj59mnm2 for event cmdqbb0wx0000kcd0262heesn with 244 price points
+[ 2025-08-01 15:37:01 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user 8gca99jii8gclxj59mnm2 for event cmdqbb0wx0000kcd0262heesn with 244 price points
+[ 2025-08-01 15:37:23 ] -  [32minfo[39m  - PHASE 3 | User 8gca99jii8gclxj59mnm2 received message:
+[ 2025-08-01 15:37:23 ] -  [32minfo[39m  - PHASE 3 | User 8gca99jii8gclxj59mnm2 unsubscribing from:
+[ 2025-08-01 15:37:23 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: depth@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:37:23 ] -  [32minfo[39m  - SubscriptionManager | User 8gca99jii8gclxj59mnm2 unsubscribed from depth@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:37:23 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: depth@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:37:23 ] -  [32minfo[39m  - SubscriptionManager | User 8gca99jii8gclxj59mnm2 unsubscribed from depth@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:37:23 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: trade@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:37:23 ] -  [32minfo[39m  - SubscriptionManager | User 8gca99jii8gclxj59mnm2 unsubscribed from trade@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:37:23 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: trade@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:37:23 ] -  [32minfo[39m  - SubscriptionManager | User 8gca99jii8gclxj59mnm2 unsubscribed from trade@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:37:23 ] -  [32minfo[39m  - PHASE 3 | User 8gca99jii8gclxj59mnm2 connection closed (Code: 1005, Reason: )
+[ 2025-08-01 15:37:23 ] -  [32minfo[39m  - PHASE 3 | User 8gca99jii8gclxj59mnm2 cleanup completed
+[ 2025-08-01 15:37:23 ] -  [32minfo[39m  - User Left: 8gca99jii8gclxj59mnm2
+[ 2025-08-01 15:37:23 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: 8gca99jii8gclxj59mnm2
+[ 2025-08-01 15:37:23 ] -  [32minfo[39m  - SubscriptionManager | User 8gca99jii8gclxj59mnm2 unsubscribed from 8gca99jii8gclxj59mnm2
+[ 2025-08-01 15:37:23 ] -  [32minfo[39m  - PHASE 3 | User 8gca99jii8gclxj59mnm2 disconnected (Code: 1005, Reason: ). Active users: 0
+[ 2025-08-01 15:37:23 ] -  [32minfo[39m  - PHASE 3 | Connection closed. Active connections: 0
+[ 2025-08-01 15:37:23 ] -  [32minfo[39m  - PHASE 3 | New WebSocket connection from ::1 (Active: 1)
+[ 2025-08-01 15:37:23 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:37:23 ] -  [32minfo[39m  - PHASE 3 | User blhtb2nyynrdx8ocyro4m8 constructed from ::1
+[ 2025-08-01 15:37:23 ] -  [32minfo[39m  - PHASE 3 | User blhtb2nyynrdx8ocyro4m8 connected from ::1. Active users: 1
+[ 2025-08-01 15:37:23 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:37:23 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: blhtb2nyynrdx8ocyro4m8
+[ 2025-08-01 15:37:23 ] -  [32minfo[39m  - SubscriptionManager | User blhtb2nyynrdx8ocyro4m8 subscribed to blhtb2nyynrdx8ocyro4m8
+[ 2025-08-01 15:37:23 ] -  [32minfo[39m  - PHASE 3 | New WebSocket connection from ::1 (Active: 2)
+[ 2025-08-01 15:37:23 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:37:23 ] -  [32minfo[39m  - PHASE 3 | User zqy5qc6qbw9kx2llew8s5 constructed from ::1
+[ 2025-08-01 15:37:23 ] -  [32minfo[39m  - PHASE 3 | User zqy5qc6qbw9kx2llew8s5 connected from ::1. Active users: 2
+[ 2025-08-01 15:37:23 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:37:23 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: zqy5qc6qbw9kx2llew8s5
+[ 2025-08-01 15:37:23 ] -  [32minfo[39m  - SubscriptionManager | User zqy5qc6qbw9kx2llew8s5 subscribed to zqy5qc6qbw9kx2llew8s5
+[ 2025-08-01 15:37:24 ] -  [32minfo[39m  - PHASE 3 | User zqy5qc6qbw9kx2llew8s5 received message:
+[ 2025-08-01 15:37:24 ] -  [32minfo[39m  - PHASE 3 | User zqy5qc6qbw9kx2llew8s5 sending API message:
+[ 2025-08-01 15:37:24 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: zqy5qc6qbw9kx2llew8s5, MessageType: GET_OPEN_ORDERS
+[ 2025-08-01 15:37:24 ] -  [32minfo[39m  - REDIS_MANAGER | Attempting to connect Redis client...
+[ 2025-08-01 15:37:24 ] -  [32minfo[39m  - REDIS_MANAGER | Redis client connected successfully to redis://localhost:6379!
+[ 2025-08-01 15:37:24 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added GET_OPEN_ORDERS message to ORDER_QUEUE
+[ 2025-08-01 15:37:24 ] -  [32minfo[39m  - PHASE 3 | User zqy5qc6qbw9kx2llew8s5 successfully queued GET_OPEN_ORDERS message
+[ 2025-08-01 15:37:24 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel zqy5qc6qbw9kx2llew8s5:, parsedMessage
+[ 2025-08-01 15:37:24 ] -  [32minfo[39m  - PHASE 3 | User zqy5qc6qbw9kx2llew8s5 received message:
+[ 2025-08-01 15:37:24 ] -  [32minfo[39m  - PHASE 3 | User zqy5qc6qbw9kx2llew8s5 sending API message:
+[ 2025-08-01 15:37:24 ] -  [32minfo[39m  - ORDER_QUEUE | Adding message to queue - ClientId: zqy5qc6qbw9kx2llew8s5, MessageType: GET_OPEN_ORDERS
+[ 2025-08-01 15:37:24 ] -  [32minfo[39m  - REDIS_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:37:24 ] -  [32minfo[39m  - ORDER_QUEUE | Successfully added GET_OPEN_ORDERS message to ORDER_QUEUE
+[ 2025-08-01 15:37:24 ] -  [32minfo[39m  - PHASE 3 | User zqy5qc6qbw9kx2llew8s5 successfully queued GET_OPEN_ORDERS message
+[ 2025-08-01 15:37:24 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel zqy5qc6qbw9kx2llew8s5:, parsedMessage
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - PHASE 3 | User zqy5qc6qbw9kx2llew8s5 connection closed (Code: 1005, Reason: )
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - PHASE 3 | User zqy5qc6qbw9kx2llew8s5 cleanup completed
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - User Left: zqy5qc6qbw9kx2llew8s5
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: zqy5qc6qbw9kx2llew8s5
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SubscriptionManager | User zqy5qc6qbw9kx2llew8s5 unsubscribed from zqy5qc6qbw9kx2llew8s5
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - PHASE 3 | User zqy5qc6qbw9kx2llew8s5 disconnected (Code: 1005, Reason: ). Active users: 1
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - PHASE 3 | Connection closed. Active connections: 1
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - PHASE 3 | New WebSocket connection from ::1 (Active: 2)
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - PHASE 3 | User q1bvayxq36mzjaxao8wvin constructed from ::1
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - PHASE 3 | User q1bvayxq36mzjaxao8wvin connected from ::1. Active users: 2
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: q1bvayxq36mzjaxao8wvin
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SubscriptionManager | User q1bvayxq36mzjaxao8wvin subscribed to q1bvayxq36mzjaxao8wvin
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - PHASE 3 | User q1bvayxq36mzjaxao8wvin received message:
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - PHASE 3 | User q1bvayxq36mzjaxao8wvin subscribing to:
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: depth@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SubscriptionManager | User q1bvayxq36mzjaxao8wvin subscribed to depth@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: depth@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SubscriptionManager | User q1bvayxq36mzjaxao8wvin subscribed to depth@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: trade@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SubscriptionManager | User q1bvayxq36mzjaxao8wvin subscribed to trade@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: trade@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SubscriptionManager | User q1bvayxq36mzjaxao8wvin subscribed to trade@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - PHASE 3 | New WebSocket connection from ::1 (Active: 3)
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - PHASE 3 | User 382yjngsemy6jx80bhamwx constructed from ::1
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - PHASE 3 | User 382yjngsemy6jx80bhamwx connected from ::1. Active users: 3
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: 382yjngsemy6jx80bhamwx
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SubscriptionManager | User 382yjngsemy6jx80bhamwx subscribed to 382yjngsemy6jx80bhamwx
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - PHASE 3 | User 382yjngsemy6jx80bhamwx received message:
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - PHASE 3 | User 382yjngsemy6jx80bhamwx subscribing to:
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SubscriptionManager | User 382yjngsemy6jx80bhamwx subscribed to depth@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SubscriptionManager | User 382yjngsemy6jx80bhamwx subscribed to depth@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SubscriptionManager | User 382yjngsemy6jx80bhamwx subscribed to trade@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SubscriptionManager | User 382yjngsemy6jx80bhamwx subscribed to trade@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user q1bvayxq36mzjaxao8wvin for event cmdqbb0wx0000kcd0262heesn with 246 price points
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user q1bvayxq36mzjaxao8wvin for event cmdqbb0wx0000kcd0262heesn with 246 price points
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user q1bvayxq36mzjaxao8wvin for event cmdqbb0wx0000kcd0262heesn with 246 price points
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user q1bvayxq36mzjaxao8wvin for event cmdqbb0wx0000kcd0262heesn with 246 price points
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user 382yjngsemy6jx80bhamwx for event cmdqbb0wx0000kcd0262heesn with 246 price points
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user 382yjngsemy6jx80bhamwx for event cmdqbb0wx0000kcd0262heesn with 246 price points
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user 382yjngsemy6jx80bhamwx for event cmdqbb0wx0000kcd0262heesn with 246 price points
+[ 2025-08-01 15:37:53 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user 382yjngsemy6jx80bhamwx for event cmdqbb0wx0000kcd0262heesn with 246 price points
+[ 2025-08-01 15:37:55 ] -  [32minfo[39m  - PHASE 3 HEALTH | Uptime: 0.08h, Connections: 3, UserManager: 3, Memory: 17.85MB
+[ 2025-08-01 15:38:55 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 3, Peak: 3, Total: 10
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - PHASE 3 | User 382yjngsemy6jx80bhamwx received message:
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - PHASE 3 | User 382yjngsemy6jx80bhamwx unsubscribing from:
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - SubscriptionManager | User 382yjngsemy6jx80bhamwx unsubscribed from depth@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - SubscriptionManager | User 382yjngsemy6jx80bhamwx unsubscribed from depth@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - SubscriptionManager | User 382yjngsemy6jx80bhamwx unsubscribed from trade@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - SubscriptionManager | User 382yjngsemy6jx80bhamwx unsubscribed from trade@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - PHASE 3 | User 382yjngsemy6jx80bhamwx connection closed (Code: 1005, Reason: )
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - PHASE 3 | User 382yjngsemy6jx80bhamwx cleanup completed
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - User Left: 382yjngsemy6jx80bhamwx
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: 382yjngsemy6jx80bhamwx
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - SubscriptionManager | User 382yjngsemy6jx80bhamwx unsubscribed from 382yjngsemy6jx80bhamwx
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - PHASE 3 | User 382yjngsemy6jx80bhamwx disconnected (Code: 1005, Reason: ). Active users: 2
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - PHASE 3 | Connection closed. Active connections: 2
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - PHASE 3 | New WebSocket connection from ::1 (Active: 3)
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - PHASE 3 | User c32i1ehyxqqyw6g3fdwm9 constructed from ::1
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - PHASE 3 | User c32i1ehyxqqyw6g3fdwm9 connected from ::1. Active users: 3
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: c32i1ehyxqqyw6g3fdwm9
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - SubscriptionManager | User c32i1ehyxqqyw6g3fdwm9 subscribed to c32i1ehyxqqyw6g3fdwm9
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - PHASE 3 | User c32i1ehyxqqyw6g3fdwm9 received message:
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - PHASE 3 | User c32i1ehyxqqyw6g3fdwm9 subscribing to:
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: event_summaries
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - SubscriptionManager | User c32i1ehyxqqyw6g3fdwm9 subscribed to event_summaries
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - PHASE 3 | New WebSocket connection from ::1 (Active: 4)
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - PHASE 3 | User 3sl6ebv6uvydeg2jxmzi16 constructed from ::1
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - PHASE 3 | User 3sl6ebv6uvydeg2jxmzi16 connected from ::1. Active users: 4
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: 3sl6ebv6uvydeg2jxmzi16
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - SubscriptionManager | User 3sl6ebv6uvydeg2jxmzi16 subscribed to 3sl6ebv6uvydeg2jxmzi16
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - PHASE 3 | User 3sl6ebv6uvydeg2jxmzi16 received message:
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - PHASE 3 | User 3sl6ebv6uvydeg2jxmzi16 subscribing to:
+[ 2025-08-01 15:39:22 ] -  [32minfo[39m  - SubscriptionManager | User 3sl6ebv6uvydeg2jxmzi16 subscribed to event_summaries
+[ 2025-08-01 15:39:22 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:39:23 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:39:25 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:39:27 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:39:30 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:39:32 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:39:34 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:39:36 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:39:37 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - PHASE 3 | User 3sl6ebv6uvydeg2jxmzi16 received message:
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - PHASE 3 | User 3sl6ebv6uvydeg2jxmzi16 unsubscribing from:
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - SubscriptionManager | User 3sl6ebv6uvydeg2jxmzi16 unsubscribed from event_summaries
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - PHASE 3 | User 3sl6ebv6uvydeg2jxmzi16 connection closed (Code: 1005, Reason: )
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - PHASE 3 | User 3sl6ebv6uvydeg2jxmzi16 cleanup completed
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - User Left: 3sl6ebv6uvydeg2jxmzi16
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: 3sl6ebv6uvydeg2jxmzi16
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - SubscriptionManager | User 3sl6ebv6uvydeg2jxmzi16 unsubscribed from 3sl6ebv6uvydeg2jxmzi16
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - PHASE 3 | User 3sl6ebv6uvydeg2jxmzi16 disconnected (Code: 1005, Reason: ). Active users: 3
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - PHASE 3 | Connection closed. Active connections: 3
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - PHASE 3 | New WebSocket connection from ::1 (Active: 4)
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - PHASE 3 | User spygo76ut141qcbyx5nk6 constructed from ::1
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - PHASE 3 | User spygo76ut141qcbyx5nk6 connected from ::1. Active users: 4
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: spygo76ut141qcbyx5nk6
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - SubscriptionManager | User spygo76ut141qcbyx5nk6 subscribed to spygo76ut141qcbyx5nk6
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - PHASE 3 | User spygo76ut141qcbyx5nk6 received message:
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - PHASE 3 | User spygo76ut141qcbyx5nk6 subscribing to:
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - SubscriptionManager | User spygo76ut141qcbyx5nk6 subscribed to depth@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - SubscriptionManager | User spygo76ut141qcbyx5nk6 subscribed to depth@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - SubscriptionManager | User spygo76ut141qcbyx5nk6 subscribed to trade@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - SubscriptionManager | User spygo76ut141qcbyx5nk6 subscribed to trade@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - PHASE 3 | New WebSocket connection from ::1 (Active: 5)
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - PHASE 3 | User snhfyz2g0315l4yorfav7 constructed from ::1
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - PHASE 3 | User snhfyz2g0315l4yorfav7 connected from ::1. Active users: 5
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - SUBSCRIBE_MANAGER | Client already connected or connecting. Skipping new connection attempt.
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - SubscriptionManager | Subscribed to Redis channel: snhfyz2g0315l4yorfav7
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - SubscriptionManager | User snhfyz2g0315l4yorfav7 subscribed to snhfyz2g0315l4yorfav7
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - PHASE 3 | User snhfyz2g0315l4yorfav7 received message:
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - PHASE 3 | User snhfyz2g0315l4yorfav7 subscribing to:
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - SubscriptionManager | User snhfyz2g0315l4yorfav7 subscribed to depth@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - SubscriptionManager | User snhfyz2g0315l4yorfav7 subscribed to depth@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - SubscriptionManager | User snhfyz2g0315l4yorfav7 subscribed to trade@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - SubscriptionManager | User snhfyz2g0315l4yorfav7 subscribed to trade@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user spygo76ut141qcbyx5nk6 for event cmdqbb0wx0000kcd0262heesn with 252 price points
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user spygo76ut141qcbyx5nk6 for event cmdqbb0wx0000kcd0262heesn with 252 price points
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user spygo76ut141qcbyx5nk6 for event cmdqbb0wx0000kcd0262heesn with 252 price points
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user spygo76ut141qcbyx5nk6 for event cmdqbb0wx0000kcd0262heesn with 252 price points
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user snhfyz2g0315l4yorfav7 for event cmdqbb0wx0000kcd0262heesn with 252 price points
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user snhfyz2g0315l4yorfav7 for event cmdqbb0wx0000kcd0262heesn with 252 price points
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user snhfyz2g0315l4yorfav7 for event cmdqbb0wx0000kcd0262heesn with 252 price points
+[ 2025-08-01 15:39:38 ] -  [32minfo[39m  - SubscriptionManager | ✅ Sent snapshot to user snhfyz2g0315l4yorfav7 for event cmdqbb0wx0000kcd0262heesn with 252 price points
+[ 2025-08-01 15:39:39 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:39:42 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:39:44 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:39:46 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:39:48 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:39:49 ] -  [33mwarn[39m  - SubscriptionManager | Unknown message type from channel event_summaries:, parsedMessage
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - PHASE 3 | User blhtb2nyynrdx8ocyro4m8 connection closed (Code: 1001, Reason: )
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - PHASE 3 | User blhtb2nyynrdx8ocyro4m8 cleanup completed
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - User Left: blhtb2nyynrdx8ocyro4m8
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: blhtb2nyynrdx8ocyro4m8
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - SubscriptionManager | User blhtb2nyynrdx8ocyro4m8 unsubscribed from blhtb2nyynrdx8ocyro4m8
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - PHASE 3 | User blhtb2nyynrdx8ocyro4m8 disconnected (Code: 1001, Reason: ). Active users: 4
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - PHASE 3 | Connection closed. Active connections: 4
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - PHASE 3 | User snhfyz2g0315l4yorfav7 connection closed (Code: 1001, Reason: )
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - PHASE 3 | User snhfyz2g0315l4yorfav7 cleanup completed
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - User Left: snhfyz2g0315l4yorfav7
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: snhfyz2g0315l4yorfav7
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - SubscriptionManager | User snhfyz2g0315l4yorfav7 unsubscribed from snhfyz2g0315l4yorfav7
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - SubscriptionManager | User snhfyz2g0315l4yorfav7 unsubscribed from depth@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - SubscriptionManager | User snhfyz2g0315l4yorfav7 unsubscribed from depth@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - SubscriptionManager | User snhfyz2g0315l4yorfav7 unsubscribed from trade@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - SubscriptionManager | User snhfyz2g0315l4yorfav7 unsubscribed from trade@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - PHASE 3 | User snhfyz2g0315l4yorfav7 disconnected (Code: 1001, Reason: ). Active users: 3
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - PHASE 3 | Connection closed. Active connections: 3
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - PHASE 3 | User spygo76ut141qcbyx5nk6 connection closed (Code: 1001, Reason: )
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - PHASE 3 | User spygo76ut141qcbyx5nk6 cleanup completed
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - User Left: spygo76ut141qcbyx5nk6
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: spygo76ut141qcbyx5nk6
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - SubscriptionManager | User spygo76ut141qcbyx5nk6 unsubscribed from spygo76ut141qcbyx5nk6
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - SubscriptionManager | User spygo76ut141qcbyx5nk6 unsubscribed from depth@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - SubscriptionManager | User spygo76ut141qcbyx5nk6 unsubscribed from depth@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - SubscriptionManager | User spygo76ut141qcbyx5nk6 unsubscribed from trade@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - SubscriptionManager | User spygo76ut141qcbyx5nk6 unsubscribed from trade@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - PHASE 3 | User spygo76ut141qcbyx5nk6 disconnected (Code: 1001, Reason: ). Active users: 2
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - PHASE 3 | Connection closed. Active connections: 2
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - PHASE 3 | User c32i1ehyxqqyw6g3fdwm9 connection closed (Code: 1001, Reason: )
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - PHASE 3 | User c32i1ehyxqqyw6g3fdwm9 cleanup completed
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - User Left: c32i1ehyxqqyw6g3fdwm9
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: c32i1ehyxqqyw6g3fdwm9
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - SubscriptionManager | User c32i1ehyxqqyw6g3fdwm9 unsubscribed from c32i1ehyxqqyw6g3fdwm9
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: event_summaries
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - SubscriptionManager | User c32i1ehyxqqyw6g3fdwm9 unsubscribed from event_summaries
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - PHASE 3 | User c32i1ehyxqqyw6g3fdwm9 disconnected (Code: 1001, Reason: ). Active users: 1
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - PHASE 3 | Connection closed. Active connections: 1
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - PHASE 3 | User q1bvayxq36mzjaxao8wvin connection closed (Code: 1001, Reason: )
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - PHASE 3 | User q1bvayxq36mzjaxao8wvin cleanup completed
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - User Left: q1bvayxq36mzjaxao8wvin
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: q1bvayxq36mzjaxao8wvin
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - SubscriptionManager | User q1bvayxq36mzjaxao8wvin unsubscribed from q1bvayxq36mzjaxao8wvin
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: depth@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - SubscriptionManager | User q1bvayxq36mzjaxao8wvin unsubscribed from depth@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: depth@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - SubscriptionManager | User q1bvayxq36mzjaxao8wvin unsubscribed from depth@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: trade@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - SubscriptionManager | User q1bvayxq36mzjaxao8wvin unsubscribed from trade@cmdqbb0wx0000kcd0262heesn-yes
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - SubscriptionManager | Unsubscribed from Redis channel: trade@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - SubscriptionManager | User q1bvayxq36mzjaxao8wvin unsubscribed from trade@cmdqbb0wx0000kcd0262heesn-no
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - PHASE 3 | User q1bvayxq36mzjaxao8wvin disconnected (Code: 1001, Reason: ). Active users: 0
+[ 2025-08-01 15:39:51 ] -  [32minfo[39m  - PHASE 3 | Connection closed. Active connections: 0
+[ 2025-08-01 15:40:55 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 15:42:55 ] -  [32minfo[39m  - PHASE 3 HEALTH | Uptime: 0.17h, Connections: 0, UserManager: 0, Memory: 20.19MB
+[ 2025-08-01 15:42:55 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 15:44:55 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 15:46:55 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 15:47:55 ] -  [32minfo[39m  - PHASE 3 HEALTH | Uptime: 0.25h, Connections: 0, UserManager: 0, Memory: 20.25MB
+[ 2025-08-01 15:48:55 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 15:50:55 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 15:52:55 ] -  [32minfo[39m  - PHASE 3 HEALTH | Uptime: 0.33h, Connections: 0, UserManager: 0, Memory: 20.30MB
+[ 2025-08-01 15:52:55 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 15:54:55 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 15:56:55 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 15:57:55 ] -  [32minfo[39m  - PHASE 3 HEALTH | Uptime: 0.42h, Connections: 0, UserManager: 0, Memory: 20.35MB
+[ 2025-08-01 15:58:55 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 16:00:55 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 16:02:55 ] -  [32minfo[39m  - PHASE 3 HEALTH | Uptime: 0.50h, Connections: 0, UserManager: 0, Memory: 20.39MB
+[ 2025-08-01 16:02:55 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 16:04:55 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 16:06:55 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 16:07:55 ] -  [32minfo[39m  - PHASE 3 HEALTH | Uptime: 0.58h, Connections: 0, UserManager: 0, Memory: 20.44MB
+[ 2025-08-01 16:08:55 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 16:10:55 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 16:12:55 ] -  [32minfo[39m  - PHASE 3 HEALTH | Uptime: 0.67h, Connections: 0, UserManager: 0, Memory: 20.47MB
+[ 2025-08-01 16:12:55 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 16:23:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 16:23:22 ] -  [32minfo[39m  - PHASE 3 HEALTH | Uptime: 0.84h, Connections: 0, UserManager: 0, Memory: 20.51MB
+[ 2025-08-01 16:25:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 16:27:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 16:28:22 ] -  [32minfo[39m  - PHASE 3 HEALTH | Uptime: 0.92h, Connections: 0, UserManager: 0, Memory: 20.55MB
+[ 2025-08-01 16:29:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 16:31:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 16:33:22 ] -  [32minfo[39m  - PHASE 3 HEALTH | Uptime: 1.01h, Connections: 0, UserManager: 0, Memory: 20.59MB
+[ 2025-08-01 16:33:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 16:35:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 16:37:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 16:38:22 ] -  [32minfo[39m  - PHASE 3 HEALTH | Uptime: 1.09h, Connections: 0, UserManager: 0, Memory: 20.64MB
+[ 2025-08-01 16:39:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 16:41:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 16:43:22 ] -  [32minfo[39m  - PHASE 3 HEALTH | Uptime: 1.17h, Connections: 0, UserManager: 0, Memory: 20.68MB
+[ 2025-08-01 16:43:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 16:45:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 16:47:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 16:48:22 ] -  [32minfo[39m  - PHASE 3 HEALTH | Uptime: 1.26h, Connections: 0, UserManager: 0, Memory: 19.98MB
+[ 2025-08-01 16:49:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 16:51:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 16:53:22 ] -  [32minfo[39m  - PHASE 3 HEALTH | Uptime: 1.34h, Connections: 0, UserManager: 0, Memory: 20.01MB
+[ 2025-08-01 16:53:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 16:55:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 16:57:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 16:58:22 ] -  [32minfo[39m  - PHASE 3 HEALTH | Uptime: 1.42h, Connections: 0, UserManager: 0, Memory: 20.06MB
+[ 2025-08-01 16:59:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 17:01:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 17:03:22 ] -  [32minfo[39m  - PHASE 3 HEALTH | Uptime: 1.51h, Connections: 0, UserManager: 0, Memory: 20.10MB
+[ 2025-08-01 17:03:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 17:05:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 17:07:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 17:08:22 ] -  [32minfo[39m  - PHASE 3 HEALTH | Uptime: 1.59h, Connections: 0, UserManager: 0, Memory: 20.14MB
+[ 2025-08-01 17:09:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 17:11:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 17:13:22 ] -  [32minfo[39m  - PHASE 3 HEALTH | Uptime: 1.67h, Connections: 0, UserManager: 0, Memory: 20.18MB
+[ 2025-08-01 17:13:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 17:15:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 17:17:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 17:18:22 ] -  [32minfo[39m  - PHASE 3 HEALTH | Uptime: 1.76h, Connections: 0, UserManager: 0, Memory: 20.23MB
+[ 2025-08-01 17:19:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 17:21:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 17:23:22 ] -  [32minfo[39m  - PHASE 3 HEALTH | Uptime: 1.84h, Connections: 0, UserManager: 0, Memory: 20.26MB
+[ 2025-08-01 17:23:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 17:25:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 17:27:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 17:28:22 ] -  [32minfo[39m  - PHASE 3 HEALTH | Uptime: 1.92h, Connections: 0, UserManager: 0, Memory: 20.31MB
+[ 2025-08-01 17:29:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 17:31:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 17:33:22 ] -  [32minfo[39m  - PHASE 3 HEALTH | Uptime: 2.01h, Connections: 0, UserManager: 0, Memory: 20.35MB
+[ 2025-08-01 17:33:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 17:35:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 17:37:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 17:38:22 ] -  [32minfo[39m  - PHASE 3 HEALTH | Uptime: 2.09h, Connections: 0, UserManager: 0, Memory: 20.39MB
+[ 2025-08-01 17:39:22 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 19:14:24 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14
+[ 2025-08-01 19:14:24 ] -  [32minfo[39m  - PHASE 3 HEALTH | Uptime: 3.69h, Connections: 0, UserManager: 0, Memory: 20.43MB
+[ 2025-08-01 19:16:24 ] -  [32minfo[39m  - PHASE 3 METRICS | Active: 0, Peak: 5, Total: 14

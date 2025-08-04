@@ -188,9 +188,9 @@ PredictTrade solves the problem of opaque and slow prediction markets by providi
 
    **`apps/server/.env`**
    ```env
-   DATABASE_URL="postgresql://dev:dev@localhost:5432/repo?schema=public"
+   DATABASE_URL="your-postgre-url"
    REDIS_URL="redis://localhost:6379"
-   SYNTHETIC_MARKET_MAKER_USER_ID="synthetic_market_maker_user_id"
+   SYNTHETIC_MARKET_MAKER_USER_ID="your-market-maker-id"
    ```
 
    **`services/wss/.env`**

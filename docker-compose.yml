@@ -6,9 +6,9 @@ services:
      - 5432:5432
     restart: always
     environment:
-      POSTGRES_USER: dev
-      POSTGRES_PASSWORD: dev
-      POSTGRES_DB: repo
+      POSTGRES_USER: {your_username}
+      POSTGRES_PASSWORD: {your_password}
+      POSTGRES_DB: {your_db_name}
     volumes:
       - timescaledb-data:/var/lib/postgresql/data
     

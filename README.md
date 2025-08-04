@@ -352,12 +352,7 @@ docker-compose -f docker-compose.prod.yml up -d
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details on:
-
-- Code style and standards
-- Pull request process
-- Development workflow
-- Testing requirements
+We welcome contributions!
 
 ---
 
@@ -372,7 +367,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 Built with modern web technologies and best practices in system design. Special thanks to the open-source community for the incredible tools and libraries that made this project possible.
 
 ---
-
-**Ready to trade on the future?** 🚀
-
-[Get Started](#-getting-started) | [View Demo](your-demo-url) | [API Docs](your-api-docs-url)
